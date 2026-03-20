@@ -213,4 +213,5 @@ outputs:
   - name: 'step_file'
     comment: 'STEP file generation'
     type: export_3d
+    run_by_default: false
     dir: .

@@ -1,0 +1,78 @@
+name: Export ECAD
+on:
+  push:
+    paths:
+      - "**.kicad_sch"
+      - "**.kicad_pcb"
+      - ".github/workflows/scripts/config.kibot.yaml"
+      - ".github/workflows/generate-gerbers.yaml"
+  workflow_dispatch:
+  release:
+    types: [ published ]
+    
+jobs:
+  export-ecad:
+    name: Export ECAD
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad9_auto
+      
+    steps:
+    - name: Install dependencies
+      run: |
+            apt update
+            apt install -y zip
+
+    - name: Generate Short SHA Environment Variable
+      run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+        
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch            
+
+    - name: Update the PCBs with on default branch with git hash
+      if: github.event_name == 'release' || steps.extract_branch.outputs.branch == env.main_branch
+      run: |
+        export COMMIT=$(git rev-parse --short HEAD)
+        echo "COMMIT = ${COMMIT}"    
+        echo "ref: ${{ github.ref }}"
+        echo "default: ${{ env.default }}"
+        sed -i "s!<<hash>>!${COMMIT}!" hardware/wafel-eval-board.kicad_pcb
+
+    - name: Update the PCBs with the git hash and BETA.
+      if: steps.extract_branch.outputs.branch != env.main_branch
+      run: |
+        export COMMIT=$(git rev-parse --short HEAD)
+        echo "COMMIT = ${COMMIT}"
+        sed -i "s!<<hash>>!BETA-${COMMIT}!" hardware/wafel-eval-board.kicad_pcb
+
+    - name: Generate Export Files
+      run: |
+        cd hardware
+        rm -rf wafel-eval-board/
+        kibot -c ../.github/workflows/scripts/config.kibot.yaml -e wafel-eval-board.kicad_sch -b wafel-eval-board.kicad_pcb -d wafel-eval-board
+
+    - name: Zip Export Files for Release
+      run: |
+        cd hardware
+        zip -r -j WAFEL-Eval-Board-${{ github.event.release.tag_name }}.zip wafel-eval-board/
+
+    - name: Upload Export Files as Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: WAFEL-Eval-Board.zip
+        path: hardware/wafel-eval-board/
+        if-no-files-found: error
+        retention-days: 60
+
+    - name: Upload Artifacts to Release
+      uses: softprops/action-gh-release@v1
+      if: github.event_name == 'release'
+      with:
+        files: |
+          hardware/WAFEL-Eval-Board-${{ github.event.release.tag_name }}.zip
+
+

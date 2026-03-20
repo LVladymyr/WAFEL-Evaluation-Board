@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "wafel-eval-board")(type "KiCad")(uri "${KIPRJMOD}/wafel-eval-board.pretty")(options "")(descr ""))
+)

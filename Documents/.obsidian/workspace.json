@@ -1,0 +1,248 @@
+{
+  "main": {
+    "id": "53355302f35e2e64",
+    "type": "split",
+    "children": [
+      {
+        "id": "edd2e28dc177a63c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "277d259024cd6ec0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SLUAA09A Translation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SLUAA09A Translation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0cea37cd79c818c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "568ea5ce1357f478",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "236a29ecfcb7ddc5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловий менеджер"
+            }
+          },
+          {
+            "id": "ddeb096022ea241e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Пошук"
+            }
+          },
+          {
+            "id": "1cb5f0059d625502",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "0df500ffa7736fee",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c5536026ec3e0df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3826dc81dd4f0b05",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Reverse charge protection.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Зворотні посилання для Reverse charge protection"
+            }
+          },
+          {
+            "id": "9f591e631afbb071",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Reverse charge protection.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Вихідні посилання з Reverse charge protection"
+            }
+          },
+          {
+            "id": "85faf95472af69c4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Мітки"
+            }
+          },
+          {
+            "id": "67c6232b8aecc865",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Всі властивості"
+            }
+          },
+          {
+            "id": "83736868ab4c5d46",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Reverse charge protection.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Вміст Reverse charge protection"
+            }
+          },
+          {
+            "id": "da2ca9770419a3e8",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 690.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Відкрити провідник файлів": false,
+      "graph:Граф": false,
+      "canvas:Створити нове полотно": false,
+      "daily-notes:Сьогоднішня нотатка": false,
+      "templates:Вставити шаблон": false,
+      "command-palette:Відкрити меню команд": false,
+      "bases:Створити нову базу": false,
+      "markdown-importer:Імпорт Markdown-файлів": false,
+      "copilot:Open Copilot Chat": false
+    }
+  },
+  "active": "277d259024cd6ec0",
+  "lastOpenFiles": [
+    "Pasted image 20260403155612.png",
+    "Pasted image 20260403140707.png",
+    "Pasted image 20260403140523.png",
+    "Requirements to bms.md",
+    "SLUAA09A Translation.md",
+    "MOSFET protections.md",
+    "Шини живлення.md",
+    "Pasted image 20260402193022.png",
+    "SLUAA09A Translation.md.tmp.377917.1774805729934",
+    "SLUAA09A Translation.md.tmp.377917.1774805723405",
+    "SLUAA09A Translation.md.tmp.377917.1774805719090",
+    "SLUAA09A Translation.md.tmp.377917.1774805705963",
+    "SLUAA09A Translation.md.tmp.377917.1774805701191",
+    "SLUAA09A Translation.md.tmp.377917.1774805696867",
+    "SLUAA09A Translation.md.tmp.377917.1774805689751",
+    "SLUAA09A Translation.md.tmp.377917.1774805677637",
+    "SLUAA09A Translation.md.tmp.377917.1774805672740",
+    "SLUAA09A Translation.md.tmp.377917.1774805666339",
+    "images/sluaan9a-fig9-3.png",
+    "images/sluaan9a-fig9-2.png",
+    "images/sluaan9a-fig9-1.png",
+    "images/sluaan9a-fig8-21.png",
+    "images/sluaan9a-fig8-18.png",
+    "images/sluaan9a-fig7-3.png",
+    "images/sluaan9a-fig7-2.png",
+    "Reverse charge protection.md",
+    "SLUAAN9 Translation.md",
+    "README.md",
+    "Switch 6s4p to 8s3p.md",
+    "copilot/copilot-conversations/hi@20260329_180130.md",
+    "copilot/memory/Recent Conversations.md",
+    "copilot/copilot-conversations/If_a_lead_ball_and_a_feather_are_dropped_simultaneously@20260329_175957.md",
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md"
+  ]
+}

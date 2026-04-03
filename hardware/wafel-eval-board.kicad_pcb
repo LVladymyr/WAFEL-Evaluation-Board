@@ -4884,13 +4884,13 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "37d27381-1e69-4357-83f8-8d4b82da0a0e")
-		(at 147.1 94.8 180)
+		(at 142.275 93 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C203"
 			(at 0 -1.43 0)
 			(layer "F.SilkS")
-			(uuid "83280cd1-6493-4aba-b758-f4d432f695f0")
+			(uuid "5d971186-8d8a-4317-a186-af5341a6e346")
 			(effects
 				(font
 					(size 1 1)
@@ -4901,7 +4901,7 @@
 		(property "Value" "2.2u"
 			(at 0 1.43 0)
 			(layer "F.Fab")
-			(uuid "2e97d4ca-0ae9-485f-89d6-659191533a28")
+			(uuid "35dae004-457a-4671-8c74-152b56d69d8e")
 			(effects
 				(font
 					(size 1 1)
@@ -4913,7 +4913,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3600f256-ea6c-4147-84a2-15a9317cb206")
+			(uuid "13d82482-bbd3-444d-ae98-f1f31c9cbc64")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4925,7 +4925,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "64183c11-9034-434e-b482-0c412a3db16a")
+			(uuid "b11b3048-1ae6-438b-899e-6506ec45612a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21770,36 +21770,20 @@
 		(uuid "efb6cf54-e790-443c-9fcd-0e23a5728fa8")
 	)
 	(segment
-		(start 142.9 92)
-		(end 145.7 94.8)
+		(start 140.5125 92.0125)
+		(end 141.5 93)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 14)
-		(uuid "30f48d57-12b5-4d2a-abc3-0cb4819d19f5")
+		(uuid "099ed7f1-e537-45fe-8c9c-2ffe3dd948b6")
 	)
 	(segment
 		(start 139.9875 92.0125)
-		(end 142.8875 92.0125)
+		(end 140.5125 92.0125)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 14)
-		(uuid "77b36d5f-3954-4436-99a5-b9794f875c1f")
-	)
-	(segment
-		(start 142.8875 92.0125)
-		(end 142.9 92)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 14)
-		(uuid "86fcbdcc-ab09-40e1-8694-7affb0dd3336")
-	)
-	(segment
-		(start 145.7 94.8)
-		(end 146.325 94.8)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 14)
-		(uuid "87be8930-2f8f-45e1-825c-77c309f09477")
+		(uuid "486a210c-f5e8-4265-bae6-55d294002cbd")
 	)
 	(segment
 		(start 129.2 81.2)

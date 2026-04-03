@@ -5387,6 +5387,16 @@
 	)
 	(bus
 		(pts
+			(xy 111.76 106.68) (xy 111.76 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f1481fa-d080-4f54-9fdf-8be8953d1680")
+	)
+	(bus
+		(pts
 			(xy 160.02 130.81) (xy 157.48 130.81)
 		)
 		(stroke
@@ -5947,16 +5957,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 102.87) (xy 187.96 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fa7a031-9757-42be-a336-e3325ca17e6a")
-	)
-	(wire
-		(pts
 			(xy 179.07 57.15) (xy 179.07 58.42)
 		)
 		(stroke
@@ -6064,16 +6064,6 @@
 			(type default)
 		)
 		(uuid "7e15640b-577b-44a1-8879-c41ddaaff9ae")
-	)
-	(bus
-		(pts
-			(xy 111.76 105.41) (xy 111.76 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80838206-4207-47e1-8791-de1de9eb8d8d")
 	)
 	(bus
 		(pts
@@ -6827,13 +6817,23 @@
 	)
 	(bus
 		(pts
-			(xy 180.34 113.03) (xy 199.39 113.03)
+			(xy 185.42 113.03) (xy 199.39 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e965a637-8ebe-4f10-9966-7e099b29bf1d")
+	)
+	(wire
+		(pts
+			(xy 185.42 102.87) (xy 189.23 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9f00103-5199-4b91-ab30-19cc532dc6bd")
 	)
 	(wire
 		(pts
@@ -6847,7 +6847,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 107.95) (xy 186.69 107.95)
+			(xy 185.42 107.95) (xy 189.23 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6967,7 +6967,7 @@
 	)
 	(bus
 		(pts
-			(xy 111.76 105.41) (xy 120.65 105.41)
+			(xy 111.76 106.68) (xy 120.65 106.68)
 		)
 		(stroke
 			(width 0)
@@ -7646,7 +7646,7 @@
 		(uuid "ed905c3d-0494-402b-a7a3-af037a81c04b")
 	)
 	(label "BAT+"
-		(at 187.96 102.87 0)
+		(at 185.42 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8006,7 +8006,7 @@
 			)
 		)
 		(property "Value" "BLM18KG471SN1D"
-			(at 241.554 104.14 90)
+			(at 247.65 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8128,7 +8128,7 @@
 			)
 		)
 		(property "Value" "BLM18KG471SN1D"
-			(at 216.154 127 90)
+			(at 220.98 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9598,7 +9598,7 @@
 			)
 		)
 		(property "Value" "BLM18KG471SN1D"
-			(at 216.154 104.14 90)
+			(at 220.98 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10318,7 +10318,7 @@
 			(uuid "da8ca12b-276b-40ad-8966-c1cb17ba21b3")
 		)
 		(instances
-			(project ""
+			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "#PWR0101")
 					(unit 1)
@@ -11239,7 +11239,7 @@
 			)
 		)
 		(property "Value" "BLM18KG471SN1D"
-			(at 241.554 127 90)
+			(at 247.65 127 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11912,6 +11912,73 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "C109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 191.77 102.87 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1fcea38-7141-4ffa-b1e6-178edd116c62")
+		(property "Reference" "H102"
+			(at 195.58 101.5999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BAT+"
+			(at 195.58 104.1399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 191.77 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 191.77 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae5cd8e3-a426-42ca-8dda-af62579e5cfd")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "H102")
 					(unit 1)
 				)
 			)
@@ -12700,7 +12767,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 189.23 107.95 270)
+		(at 191.77 107.95 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12709,7 +12776,7 @@
 		(dnp no)
 		(uuid "ea346c5f-938b-4bfd-b940-c53bcde17df0")
 		(property "Reference" "H101"
-			(at 193.04 106.6799 90)
+			(at 195.58 106.6799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12718,7 +12785,7 @@
 			)
 		)
 		(property "Value" "PACK-"
-			(at 193.04 109.2199 90)
+			(at 195.58 109.2199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12727,7 +12794,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 189.23 107.95 0)
+			(at 191.77 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12736,7 +12803,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 189.23 107.95 0)
+			(at 191.77 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12745,7 +12812,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 189.23 107.95 0)
+			(at 191.77 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12823,7 +12890,7 @@
 			(uuid "3794987a-3543-480a-8c89-9a6994b3ebc8")
 		)
 		(instances
-			(project ""
+			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "#PWR0111")
 					(unit 1)
@@ -13196,7 +13263,7 @@
 	)
 	(sheet
 		(at 120.65 99.06)
-		(size 59.69 17.78)
+		(size 64.77 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -13229,7 +13296,7 @@
 			)
 		)
 		(pin "PACK-" output
-			(at 180.34 107.95 0)
+			(at 185.42 107.95 0)
 			(uuid "b8a83035-12e1-4232-9b48-ddfea9e53a32")
 			(effects
 				(font
@@ -13249,7 +13316,7 @@
 			)
 		)
 		(pin "{PCHG PDSG CHG DSG}" output
-			(at 180.34 113.03 0)
+			(at 185.42 113.03 0)
 			(uuid "658e3f8d-f53f-48c4-b981-d460d55bf07d")
 			(effects
 				(font
@@ -13259,7 +13326,7 @@
 			)
 		)
 		(pin "{SDA SCL ALERT DDSG DCHG DFETOFF CFETOFF HDQ}" bidirectional
-			(at 120.65 105.41 180)
+			(at 120.65 106.68 180)
 			(uuid "e32f5cbb-1628-4248-9d9c-d665ead18b5e")
 			(effects
 				(font
@@ -13269,7 +13336,7 @@
 			)
 		)
 		(pin "BAT+" output
-			(at 180.34 102.87 0)
+			(at 185.42 102.87 0)
 			(uuid "e4dee126-4245-416d-bf3a-fdc0abb54bd2")
 			(effects
 				(font
@@ -13292,6 +13359,48 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 102.87 165.1)
+		(size 25.4 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5ab6bc33-292e-4a51-947f-86660ef7cdb4")
+		(property "Sheetname" "High-Side N-MOSFET"
+			(at 102.87 164.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "hs-mosfet.kicad_sch"
+			(at 102.87 179.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(page "3")
 				)
 			)
 		)

@@ -37,7 +37,7 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.3,
+          "drill": 0.2,
           "height": 0.5,
           "width": 0.5
         },
@@ -716,7 +716,7 @@
       "meta": {
         "version": 0
       },
-      "model_mode": 4,
+      "model_mode": 0,
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
@@ -740,6 +740,18 @@
     [
       "204526d9-bdaf-4b36-9252-b50630c4791c",
       "Frontend"
+    ],
+    [
+      "5ab6bc33-292e-4a51-947f-86660ef7cdb4",
+      "High-Side N-MOSFET"
+    ],
+    [
+      "be7298a7-6fe1-4540-a0ad-84330c0fdd5b",
+      "MOSFET-CASCADE-CHG"
+    ],
+    [
+      "fff85bb6-8e8e-42b2-b656-f76779941b8f",
+      "MOSFET-CASCADE-DSG"
     ]
   ],
   "text_variables": {}

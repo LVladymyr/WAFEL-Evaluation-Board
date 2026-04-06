@@ -1,1 +1,0 @@
-echo "Initializing hardware directory..."

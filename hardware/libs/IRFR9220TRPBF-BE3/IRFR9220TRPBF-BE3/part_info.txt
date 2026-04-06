@@ -1,0 +1,9 @@
+Manufacturer=Vishay
+PartNumber=IRFR9220TRPBF-BE3
+PartCategory=MOSFET (P-Channel)
+PackageCategory=Other
+PinCount=3
+Version=1.3
+Released=2021-07-02 15:07:31
+Downloaded=2026-04-04 14:25:02
+3D=N

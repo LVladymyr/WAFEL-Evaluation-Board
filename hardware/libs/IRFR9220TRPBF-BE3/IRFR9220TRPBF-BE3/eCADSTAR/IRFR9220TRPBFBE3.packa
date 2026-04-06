@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "IRFR9220TRPBF-BE3"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-07-02-15:07:31)
+    (mountForm default
+        (footprintRef "IRFR9220TRPBFBE3")
+        (spec "System")
+    )
+)

@@ -13,15 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SLUAA09A Translation.md",
+                "file": "Switch 6s4p to 8s3p.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SLUAA09A Translation"
+              "title": "Switch 6s4p to 8s3p"
+            }
+          },
+          {
+            "id": "16047052472be7f7",
+            "type": "leaf",
+            "state": {
+              "type": "smart-release-notes-view",
+              "state": {},
+              "icon": "file-text",
+              "title": "Release Notes"
+            }
+          },
+          {
+            "id": "023526ff50447b8e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tps79333-ep/tps79333-ep.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tps79333-ep"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -174,14 +199,23 @@
               "icon": "message-square",
               "title": "Copilot"
             }
+          },
+          {
+            "id": "78e7541cc234b981",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 690.5,
-    "collapsed": true
+    "width": 509.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,40 +227,46 @@
       "command-palette:Відкрити меню команд": false,
       "bases:Створити нову базу": false,
       "markdown-importer:Імпорт Markdown-файлів": false,
-      "copilot:Open Copilot Chat": false
+      "copilot:Open Copilot Chat": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "smart-connections:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "277d259024cd6ec0",
+  "active": "023526ff50447b8e",
   "lastOpenFiles": [
-    "Pasted image 20260403155612.png",
-    "Pasted image 20260403140707.png",
-    "Pasted image 20260403140523.png",
+    "78af5f924c08/_page_2_Picture_1.jpeg",
+    "78af5f924c08/_page_1_Figure_7.jpeg",
+    "78af5f924c08/_page_1_Figure_6.jpeg",
+    "78af5f924c08/_page_1_Picture_5.jpeg",
+    "78af5f924c08/_page_1_Picture_4.jpeg",
+    "78af5f924c08/_page_0_Figure_11.jpeg",
+    "78af5f924c08/78af5f924c08_meta.json",
+    "78af5f924c08/78af5f924c08.md",
+    "78af5f924c08",
+    "tps79333-ep/_page_21_Figure_4.jpeg",
+    "tps79333-ep/_page_21_Picture_8.jpeg",
+    "tps79333-ep/tps79333-ep.md",
+    "lm5164/lm5164.md",
+    "tps79333-ep/_page_20_Picture_8.jpeg",
+    "tps79333-ep/_page_20_Figure_4.jpeg",
+    "tps79333-ep/_page_19_Picture_11.jpeg",
+    "tps79333-ep/tps79333-ep_meta.json",
+    "tps79333-ep",
+    "lm5164/lm5164_meta.json",
+    "lm5164",
+    "Шини живлення.md",
+    "Requirements to bms.md~",
     "Requirements to bms.md",
+    "Reverse charge protection.md",
+    "Switch 6s4p to 8s3p.md",
     "SLUAA09A Translation.md",
     "MOSFET protections.md",
-    "Шини живлення.md",
-    "Pasted image 20260402193022.png",
+    "README.md",
     "SLUAA09A Translation.md.tmp.377917.1774805729934",
     "SLUAA09A Translation.md.tmp.377917.1774805723405",
     "SLUAA09A Translation.md.tmp.377917.1774805719090",
-    "SLUAA09A Translation.md.tmp.377917.1774805705963",
-    "SLUAA09A Translation.md.tmp.377917.1774805701191",
-    "SLUAA09A Translation.md.tmp.377917.1774805696867",
-    "SLUAA09A Translation.md.tmp.377917.1774805689751",
-    "SLUAA09A Translation.md.tmp.377917.1774805677637",
-    "SLUAA09A Translation.md.tmp.377917.1774805672740",
-    "SLUAA09A Translation.md.tmp.377917.1774805666339",
-    "images/sluaan9a-fig9-3.png",
-    "images/sluaan9a-fig9-2.png",
-    "images/sluaan9a-fig9-1.png",
-    "images/sluaan9a-fig8-21.png",
-    "images/sluaan9a-fig8-18.png",
-    "images/sluaan9a-fig7-3.png",
-    "images/sluaan9a-fig7-2.png",
-    "Reverse charge protection.md",
     "SLUAAN9 Translation.md",
-    "README.md",
-    "Switch 6s4p to 8s3p.md",
     "copilot/copilot-conversations/hi@20260329_180130.md",
     "copilot/memory/Recent Conversations.md",
     "copilot/copilot-conversations/If_a_lead_ball_and_a_feather_are_dropped_simultaneously@20260329_175957.md",
@@ -240,9 +280,6 @@
     "copilot/copilot-custom-prompts/Make longer.md",
     "copilot/copilot-custom-prompts/Make shorter.md",
     "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md"
+    "copilot/copilot-custom-prompts/Explain like I am 5.md"
   ]
 }

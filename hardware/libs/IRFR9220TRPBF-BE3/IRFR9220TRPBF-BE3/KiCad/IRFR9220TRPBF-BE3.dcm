@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IRFR9220TRPBF-BE3
+D MOSFET 200V P-CH MOSFET (D- S)
+K
+F https://www.vishay.com/docs/91283/sihfr922.pdf
+$ENDCMP
+#
+#End Doc Library

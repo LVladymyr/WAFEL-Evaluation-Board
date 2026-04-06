@@ -1,4 +1,6 @@
 (sym_lib_table
-  (version 7)
-  (lib (name "wafel-eval-board")(type "KiCad")(uri "${KIPRJMOD}/wafel-eval-board.kicad_sym")(options "")(descr ""))
+	(version 7)
+	(lib (name "wafel-eval-board") (type "KiCad") (uri "${KIPRJMOD}/wafel-eval-board.kicad_sym") (options "") (descr ""))
+	(lib (name "NUCLEO-L34KC") (type "KiCad") (uri "${KIPRJMOD}/components/NUCLEO-L432KC") (options "") (descr ""))
+  (lib (name "IRFR9220TRPBF")(type "KiCad")(uri "${KIPRJMOD}/libs/IRFR9220TRPBF-BE3/IRFR9220TRPBF-BE3/KiCad/IRFR9220TRPBF-BE3.kicad_sym")(options "")(descr ""))
 )

@@ -1,0 +1,15 @@
+.IRFR9220TRPBF-BE3 :1 ;MOSFET 200V P-CH MOSFET (D- S)
+IRFR9220TRPBFBE3
+*STM Q
+*NGS
+*PLB 1="G" 2="D" 3="S"
+*MXP 3
+*DFN IRFR9220TRPBF-BE3
+~!Mouser Part Number (78-IRFR9220TRPBF-BE3)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/IRFR9220TRPBF-BE3?qs=7MVldsJ5Uayk8Succj4uGA%3D%3D)
+~!Manufacturer_Name (Vishay)
+~!Manufacturer_Part_Number (IRFR9220TRPBF-BE3)
+~!Link Datasheet (https://www.vishay.com/docs/91283/sihfr922.pdf)
+~!Height (2.507mm)
+IRFR9220TRPBF-BE3
+1.1!U 2.1!U 3.1!U 

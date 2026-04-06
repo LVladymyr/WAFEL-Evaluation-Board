@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "IRFR9220TRPBFBE3"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "IRFR9220TRPBFBE3")
+        (spec "default")
+    )
+)

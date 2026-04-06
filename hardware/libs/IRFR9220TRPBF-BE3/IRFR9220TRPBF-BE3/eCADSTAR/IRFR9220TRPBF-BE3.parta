@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_14639206"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-07-02-15:07:31)
+    (utime 2023-10-20-06:25:37)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "IRFR9220TRPBF-BE3")
+)
+
+
+(pinAssign "ECS_14639206"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-07-02-15:07:31)
+    (utime 2023-10-20-06:25:37)
+    (interface
+        (port "1" (symbPinId 1) (portName "G") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "D") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "S") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_14639206")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "IRFR9220TRPBF-BE3")
+)
+
+
+(part "IRFR9220TRPBF-BE3"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-07-02-15:07:31)
+    (utime 2023-10-20-06:25:37)
+    (packageRef "IRFR9220TRPBF-BE3")
+    (pinAssignRef "ECS_14639206")
+    (interface
+        (port "1" (symbPinId 1) (portName "G") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "D") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "S") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "Q")
+    (property "description" "MOSFET 200V P-CH MOSFET (D- S)")
+    (property "Mouser_Part_Number" "78-IRFR9220TRPBF-BE3")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/IRFR9220TRPBF-BE3?qs=7MVldsJ5Uayk8Succj4uGA%3D%3D")
+    (property "Manufacturer_Name" "Vishay")
+    (property "Manufacturer_Part_Number" "IRFR9220TRPBF-BE3")
+    (property "Datasheet_Link" "https://www.vishay.com/docs/91283/sihfr922.pdf")
+    (property "compAreaTopHeight" 2.507)
+)
+
+

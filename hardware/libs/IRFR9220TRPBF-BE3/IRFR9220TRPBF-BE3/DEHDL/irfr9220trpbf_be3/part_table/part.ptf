@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'IRFR9220TRPBF_BE3'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Vishay", "IRFR9220TRPBF-BE3" (!) = "", "IRFR9220TRPBFBE3", "Other", "78-IRFR9220TRPBF-BE3", "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/IRFR9220TRPBF-BE3?qs=7MVldsJ5Uayk8Succj4uGA%3D%3D", "MOSFET 200V P-CH MOSFET (D- S)", "https://www.vishay.com/docs/91283/sihfr922.pdf", "2.507 mm"
+END_PART
+
+END.

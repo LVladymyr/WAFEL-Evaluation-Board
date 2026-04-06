@@ -22,6 +22,10 @@ regular charging 5A but recuperation could generate up to ?15A everything above 
 CAN protection
 in 
 
+based on STM32L431
+Should cover needs of consumption Go-Foc S100 at the most.
+
+While be compartible with 300W and 500W in spike electrical engine.
 
 SOFTWARE:
 

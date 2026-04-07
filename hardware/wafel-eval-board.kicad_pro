@@ -769,7 +769,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR122-123,R113,Q1,F1",
     "variants": []
   },
   "sheets": [
@@ -800,6 +800,10 @@
     [
       "1ed1b631-44e8-47fe-8167-eec9969fc398",
       "PRE-DSG-MOSFET"
+    ],
+    [
+      "95f215e1-2c63-4fc6-b759-568a8f71e3cc",
+      "MCU"
     ]
   ],
   "text_variables": {},

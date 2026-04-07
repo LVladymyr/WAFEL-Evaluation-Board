@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tps79333-ep/tps79333-ep.md",
+                "file": "Todos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tps79333-ep"
+              "title": "Todos"
             }
           }
         ],
@@ -235,6 +235,14 @@
   },
   "active": "023526ff50447b8e",
   "lastOpenFiles": [
+    "SPI MCU AFE.md",
+    "Requirements_to_BMS.md",
+    "Reverse charge protection.md",
+    "Todos.md",
+    "Sleep_Wakeup_Strategy.md",
+    "MCU.md",
+    "Шини живлення.md",
+    "tps79333-ep/tps79333-ep.md",
     "78af5f924c08/_page_2_Picture_1.jpeg",
     "78af5f924c08/_page_1_Figure_7.jpeg",
     "78af5f924c08/_page_1_Figure_6.jpeg",
@@ -246,19 +254,15 @@
     "78af5f924c08",
     "tps79333-ep/_page_21_Figure_4.jpeg",
     "tps79333-ep/_page_21_Picture_8.jpeg",
-    "tps79333-ep/tps79333-ep.md",
     "lm5164/lm5164.md",
     "tps79333-ep/_page_20_Picture_8.jpeg",
     "tps79333-ep/_page_20_Figure_4.jpeg",
-    "tps79333-ep/_page_19_Picture_11.jpeg",
     "tps79333-ep/tps79333-ep_meta.json",
     "tps79333-ep",
     "lm5164/lm5164_meta.json",
     "lm5164",
-    "Шини живлення.md",
     "Requirements to bms.md~",
     "Requirements to bms.md",
-    "Reverse charge protection.md",
     "Switch 6s4p to 8s3p.md",
     "SLUAA09A Translation.md",
     "MOSFET protections.md",
@@ -276,10 +280,6 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
     "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md"
+    "copilot/copilot-custom-prompts/Generate table of contents.md"
   ]
 }

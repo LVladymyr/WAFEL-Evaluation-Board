@@ -4561,16 +4561,6 @@
 		)
 		(uuid "a42a30ec-6899-4e4b-8eb0-0d251b11f006")
 	)
-	(bus
-		(pts
-			(xy 63.5 179.07) (xy 83.82 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5b87115-cc9c-40d4-9c63-bd50c3e8bd8f")
-	)
 	(wire
 		(pts
 			(xy 63.5 118.11) (xy 43.18 118.11)
@@ -5160,16 +5150,6 @@
 			(justify right bottom)
 		)
 		(uuid "32607d38-e559-4a22-900a-1c2b9018ee10")
-	)
-	(label "TS[1..6]"
-		(at 63.5 179.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4d937f57-0688-40b5-9917-57af5500716f")
 	)
 	(label "CELL4"
 		(at 63.5 140.97 180)
@@ -11870,16 +11850,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "TS[1..6]" output
-			(at 83.82 179.07 180)
-			(uuid "533f3112-994c-4287-aa68-ed8e70d460aa")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "SPI{MOSI MISO SCLK CS} ALERT RST_SHUT WAKE" bidirectional

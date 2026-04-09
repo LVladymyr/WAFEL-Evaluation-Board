@@ -4597,7 +4597,7 @@
 	)
 	(polyline
 		(pts
-			(xy 46.99 125.73) (xy 46.99 196.85)
+			(xy 46.99 129.54) (xy 46.99 196.85)
 		)
 		(stroke
 			(width 0)
@@ -9113,7 +9113,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k 3435K"
+		(property "Value" "10K"
 			(at 74.93 140.0174 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16741,7 +16741,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k 3435K"
+		(property "Value" "10k"
 			(at 40.64 187.0074 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19492,7 +19492,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k 3435K"
+		(property "Value" "10k"
 			(at 74.93 162.8774 0)
 			(show_name no)
 			(do_not_autoplace no)

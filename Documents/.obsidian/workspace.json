@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todos.md",
+                "file": "SPI MCU AFE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Todos"
+              "title": "SPI MCU AFE"
             }
           }
         ],
@@ -235,10 +235,11 @@
   },
   "active": "023526ff50447b8e",
   "lastOpenFiles": [
+    "SLUAA09A Translation.md",
     "SPI MCU AFE.md",
     "Requirements_to_BMS.md",
-    "Reverse charge protection.md",
     "Todos.md",
+    "Reverse charge protection.md",
     "Sleep_Wakeup_Strategy.md",
     "MCU.md",
     "Шини живлення.md",
@@ -264,7 +265,6 @@
     "Requirements to bms.md~",
     "Requirements to bms.md",
     "Switch 6s4p to 8s3p.md",
-    "SLUAA09A Translation.md",
     "MOSFET protections.md",
     "README.md",
     "SLUAA09A Translation.md.tmp.377917.1774805729934",

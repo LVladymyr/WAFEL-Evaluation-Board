@@ -41,6 +41,13 @@
 *   **Protocol:** SPI for AFE communication (enhanced noise immunity).
 *   **Features:** Real-time cell monitoring, NFC-triggered Wake-on-CAN boot sequence.
 
+## 6. Assembly requirement
+* Not use complex to sold components!
+* Not use small SMD componnts, only some that could be added with cheap hot air soldering gun
+
+## 7. Cost requirement
+* **Designed PCB** should cost less then 70 USD of parts without soldering
+
 # Attaches
 ## A. Estimating regen current
 Estimating regen current is a mix of physics and ESC configuration. Here is the best way to estimate it for your 300W–500W scooter:

@@ -1,12 +1,8 @@
 Also wrote a task list:
-1. Change DC_DC to green one, and improve protection to it. 
-2. Look into AFE development and check which pins we are not use and could reconfiure them to add more thermo resistors and place it in most critical part of BMS. Alsp investigate where it should be.
-3. Investigate, does we need mosfets chains that balance cells outside of AFE.
-4. Update DC-DC Converter (Implement LM5163 'green' ultra-low Iq circuit + F115 fusible link) 
-5. Configure AFE Thermistors (Route unused pins to FETs, Pre-charge resistor, and Battery cells)
-6. Implement External Cell Balancing (Add external MOSFETs and bleed resistors for >100mA balancing)
-7. Route Current Sense (Connect SRP/SRN pins to main Shunt Resistor with RC filter)
-8. Route MOSFET Control Lines (Connect CHG, DSG, PCHG, PDSG to the hs-mosfet board)
+1. Configure AFE Thermistors (Route unused pins to FETs, Pre-charge resistor, and Battery cells) 
+2. Implement External Cell Balancing (Add external MOSFETs and bleed resistors for >100mA balancing)
+3. Route Current Sense (Connect SRP/SRN pins to main Shunt Resistor with RC filter) 
+4. Route MOSFET Control Lines (Connect CHG, DSG, PCHG, PDSG to the hs-mosfet board)
 
 Termoresitors:
 Where should we place these 6 Thermistors? (The Critical Zones)

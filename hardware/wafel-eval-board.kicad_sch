@@ -1744,7 +1744,7 @@
 
 (property "Description" "Resistor, small symbol" (at 190.5 30.48 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C17477" (at 190.5 25.4 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "9537458b-1da9-4514-8704-d5d6e057bcb0")) (pin "2" (uuid "f7979fcc-9c51-4fc7-ae56-e6162355cb18")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R105") (unit 1))))) 
+(property "LCSC" "C17477" (at 190.5 25.4 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "9537458b-1da9-4514-8704-d5d6e057bcb0")) (pin "2" (uuid "f7979fcc-9c51-4fc7-ae56-e6162355cb18")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R105") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 207.01 48.26 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "2e2831e0-9dea-475f-af4c-62624017743c") 
 
@@ -1882,7 +1882,7 @@
 
 (property "Notes" "1%" (at 223.52 43.18 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C17539" (at 226.06 41.9099 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "d958fecb-0055-4d58-8889-f073e97439fe")) (pin "2" (uuid "3da55d34-af7a-4296-9ff2-cc53a55293ca")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R108") (unit 1))))) 
+(property "LCSC" "C17539" (at 226.06 41.9099 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "d958fecb-0055-4d58-8889-f073e97439fe")) (pin "2" (uuid "3da55d34-af7a-4296-9ff2-cc53a55293ca")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R108") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 144.78 40.64 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "50ccfc32-35dc-4769-a010-01dbc6cd0ca5") 
 
@@ -1924,7 +1924,7 @@
 
 (property "Description" "Resistor, small symbol" (at 203.2 43.18 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C17742" (at 203.2 38.1 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "752d46e9-008a-46fa-8b21-dfe04f4677fa")) (pin "2" (uuid "49163e24-d8fa-4e2f-944a-1d7eda337343")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R107") (unit 1))))) 
+(property "LCSC" "C17742" (at 203.2 38.1 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "752d46e9-008a-46fa-8b21-dfe04f4677fa")) (pin "2" (uuid "49163e24-d8fa-4e2f-944a-1d7eda337343")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R107") (unit 1))))) 
 
 (symbol (lib_id "Jumper:SolderJumper_3_Open") (at 97.79 100.33 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no) (uuid "54faee88-c0c7-41f5-b32b-1cd0daa45c4b") 
 
@@ -1970,7 +1970,7 @@
 
 (property "Notes" "1%" (at 223.52 55.88 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49654429" (at 226.06 54.6099 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "b5fe649b-18a3-44d7-b49b-6d95bbee8b2d")) (pin "2" (uuid "7cbc85e4-65db-46de-b289-f7dc5d2458c2")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R109") (unit 1))))) 
+(property "LCSC" "C49654429" (at 226.06 54.6099 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "b5fe649b-18a3-44d7-b49b-6d95bbee8b2d")) (pin "2" (uuid "7cbc85e4-65db-46de-b289-f7dc5d2458c2")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R109") (unit 1))))) 
 
 (symbol (lib_id "Device:L") (at 128.27 30.48 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5f7a0b5d-7982-45a2-8a5d-9bdfe1322191") 
 
@@ -2182,7 +2182,7 @@
 
 (property "Description" "Resistor, small symbol" (at 156.21 48.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C3013228" (at 157.48 45.72 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "d1adbb41-1d37-40cd-843a-308f662f4f93")) (pin "2" (uuid "b6be7638-4c3c-46f0-8078-f1d82dc79547")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R104") (unit 1))))) 
+(property "LCSC" "C3013228" (at 157.48 45.72 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "1" (uuid "d1adbb41-1d37-40cd-843a-308f662f4f93")) (pin "2" (uuid "b6be7638-4c3c-46f0-8078-f1d82dc79547")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3" (reference "R104") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 69.85 40.64 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "a055ed2d-71e1-40e2-8bd8-cfae5eef6d6b") 
 

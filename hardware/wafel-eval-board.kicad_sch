@@ -621,6 +621,207 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -752,6 +953,268 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Jumper:SolderJumper_3_Open"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at -2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_3_Open"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 3-pole, open"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property private "KLC_S5.1" "This is a generic symbol, it has fp-filter, but no default footprint"
+				(at 0 -17.78 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property private "KLC_S3.3" "Graphical-Symbol: thickness is 6mm, fill is background"
+				(at 0 -20.32 0)
+				(show_name yes)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Solder Jumper SPDT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_3_Open_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.032 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.016) (xy -1.016 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.016 -1.016)
+					(mid -2.0276 0)
+					(end -1.016 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -0.508 1.016)
+					(end 0.508 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.016 1.016)
+					(mid 2.0276 0)
+					(end 1.016 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.032 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_3_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2641,13 +3104,13 @@
 		(uuid "67ea8124-cc65-4174-8818-523116556f60")
 	)
 	(junction
-		(at 171.45 152.4)
+		(at 44.45 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "734aed85-ddfb-4353-b741-52e047657337")
+		(uuid "7621fea8-cce0-48aa-8451-32d1fef6f8bb")
 	)
 	(junction
-		(at 165.1 152.4)
+		(at 44.45 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "80b439e2-c9d9-443f-9e17-c69cfd353b0b")
@@ -2671,7 +3134,7 @@
 		(uuid "a2cf7f1b-a0bb-474e-a7f5-d46d9f754e3c")
 	)
 	(junction
-		(at 175.26 137.16)
+		(at 44.45 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "abdf2656-d5af-4b69-811e-7f29f4386a67")
@@ -2715,7 +3178,7 @@
 		(uuid "aaf315ce-8fb3-4c43-96dc-f7f60398ebe6")
 	)
 	(bus_entry
-		(at 154.94 130.81)
+		(at 66.04 118.11)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2724,7 +3187,7 @@
 		(uuid "0780a0e5-8507-448f-bf8b-c2fd58c7fef5")
 	)
 	(bus_entry
-		(at 167.64 130.81)
+		(at 66.04 105.41)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2733,7 +3196,7 @@
 		(uuid "091c1273-3daa-4075-ac3b-88536e886f6d")
 	)
 	(bus_entry
-		(at 137.16 130.81)
+		(at 66.04 135.89)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2742,7 +3205,7 @@
 		(uuid "19fad5aa-ef04-4fd8-b646-b112fc16ccc7")
 	)
 	(bus_entry
-		(at 142.24 130.81)
+		(at 66.04 130.81)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2751,7 +3214,7 @@
 		(uuid "20d5d8e6-21b4-4c5d-8aeb-28e8f59bd9fe")
 	)
 	(bus_entry
-		(at 147.32 130.81)
+		(at 66.04 125.73)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2760,7 +3223,7 @@
 		(uuid "2246f0b1-1739-4072-9921-df7afd57f411")
 	)
 	(bus_entry
-		(at 139.7 130.81)
+		(at 66.04 133.35)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2769,7 +3232,7 @@
 		(uuid "3094d3c2-959b-432f-8ac0-758b80896912")
 	)
 	(bus_entry
-		(at 129.54 130.81)
+		(at 66.04 143.51)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2778,7 +3241,7 @@
 		(uuid "3af3895c-1dfa-4bad-8748-4ff929b1f97f")
 	)
 	(bus_entry
-		(at 160.02 130.81)
+		(at 66.04 113.03)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2787,7 +3250,7 @@
 		(uuid "60e45e18-7d6f-4e5a-a078-13aeea0160ee")
 	)
 	(bus_entry
-		(at 149.86 130.81)
+		(at 66.04 123.19)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2796,7 +3259,7 @@
 		(uuid "60fc2bfa-76ca-4d93-a5ed-60b7b49c6b05")
 	)
 	(bus_entry
-		(at 134.62 130.81)
+		(at 66.04 138.43)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2805,7 +3268,7 @@
 		(uuid "8770bf4d-b136-4cc5-8653-9bd30351ecea")
 	)
 	(bus_entry
-		(at 124.46 130.81)
+		(at 66.04 148.59)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2814,7 +3277,7 @@
 		(uuid "a925a62b-c04f-428b-befc-d70d802cfdcc")
 	)
 	(bus_entry
-		(at 127 130.81)
+		(at 66.04 146.05)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2823,7 +3286,7 @@
 		(uuid "aa1eba92-c7ac-4f49-b39d-827b07daf8ab")
 	)
 	(bus_entry
-		(at 162.56 130.81)
+		(at 66.04 110.49)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2832,7 +3295,7 @@
 		(uuid "abc37416-9195-4431-8194-23608b2be533")
 	)
 	(bus_entry
-		(at 165.1 130.81)
+		(at 66.04 107.95)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2841,7 +3304,7 @@
 		(uuid "b4ed9b90-0513-473c-a252-27bb3f418449")
 	)
 	(bus_entry
-		(at 144.78 130.81)
+		(at 66.04 128.27)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2850,7 +3313,7 @@
 		(uuid "c78756c9-8d55-49c5-b48d-3009c9803955")
 	)
 	(bus_entry
-		(at 157.48 130.81)
+		(at 66.04 115.57)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2859,7 +3322,7 @@
 		(uuid "cdc921e4-855f-42a8-8481-a4e5a13112a3")
 	)
 	(bus_entry
-		(at 152.4 130.81)
+		(at 66.04 120.65)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2868,7 +3331,7 @@
 		(uuid "d3d15eb3-af54-4012-8761-fa95ad0afdf7")
 	)
 	(bus_entry
-		(at 132.08 130.81)
+		(at 66.04 140.97)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -2878,7 +3341,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 133.35) (xy 124.46 153.67)
+			(xy 63.5 148.59) (xy 43.18 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2908,7 +3371,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 133.35) (xy 121.92 139.7)
+			(xy 63.5 151.13) (xy 57.15 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2918,7 +3381,7 @@
 	)
 	(bus
 		(pts
-			(xy 162.56 130.81) (xy 160.02 130.81)
+			(xy 66.04 110.49) (xy 66.04 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2928,7 +3391,17 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 152.4) (xy 171.45 152.4)
+			(xy 71.12 105.41) (xy 71.12 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c055b32-2c68-4a38-81ca-5229f4caf081")
+	)
+	(wire
+		(pts
+			(xy 48.26 101.6) (xy 44.45 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2948,7 +3421,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 133.35) (xy 152.4 139.7)
+			(xy 63.5 120.65) (xy 57.15 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2958,7 +3431,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 152.4) (xy 171.45 152.4)
+			(xy 44.45 107.95) (xy 44.45 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2966,15 +3439,15 @@
 		)
 		(uuid "10ce8998-9aee-4db9-8658-46b3ba4f00ce")
 	)
-	(bus
+	(wire
 		(pts
-			(xy 106.68 101.6) (xy 120.65 101.6)
+			(xy 97.79 104.14) (xy 97.79 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "12e73eb7-d75f-4fd3-a654-f0af568a0e25")
+		(uuid "13b76bba-12eb-4857-858e-d091ddb86a6f")
 	)
 	(wire
 		(pts
@@ -2988,7 +3461,7 @@
 	)
 	(bus
 		(pts
-			(xy 142.24 130.81) (xy 139.7 130.81)
+			(xy 66.04 130.81) (xy 66.04 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2998,7 +3471,17 @@
 	)
 	(wire
 		(pts
-			(xy 127 133.35) (xy 127 139.7)
+			(xy 44.45 101.6) (xy 40.64 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "154fce2d-afb2-4923-a363-4c31e26674ea")
+	)
+	(wire
+		(pts
+			(xy 63.5 146.05) (xy 57.15 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3015,16 +3498,6 @@
 			(type default)
 		)
 		(uuid "16176ea2-ff40-463f-8f8f-b4d1956e4e35")
-	)
-	(wire
-		(pts
-			(xy 149.86 116.84) (xy 149.86 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "185089c2-b062-4daa-afc0-7648641134e6")
 	)
 	(wire
 		(pts
@@ -3068,7 +3541,17 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 153.67) (xy 165.1 152.4)
+			(xy 114.3 101.6) (xy 114.3 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e42ecb7-6566-4179-be13-97fa4186a104")
+	)
+	(wire
+		(pts
+			(xy 43.18 107.95) (xy 44.45 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3078,7 +3561,7 @@
 	)
 	(bus
 		(pts
-			(xy 160.02 130.81) (xy 157.48 130.81)
+			(xy 66.04 113.03) (xy 66.04 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3098,7 +3581,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 137.16) (xy 171.45 142.24)
+			(xy 40.64 86.36) (xy 40.64 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3118,7 +3601,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 133.35) (xy 157.48 139.7)
+			(xy 63.5 115.57) (xy 57.15 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3148,7 +3631,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 133.35) (xy 162.56 139.7)
+			(xy 63.5 110.49) (xy 57.15 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3158,7 +3641,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 137.16) (xy 179.07 137.16)
+			(xy 44.45 86.36) (xy 48.26 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3178,13 +3661,13 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 101.6) (xy 201.93 101.6)
+			(xy 53.34 93.98) (xy 55.88 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "383742ce-a9e8-4865-b8c8-7b6089a65862")
+		(uuid "382b7b2f-eac2-4b25-b907-63fc35224fe5")
 	)
 	(polyline
 		(pts
@@ -3198,7 +3681,7 @@
 	)
 	(bus
 		(pts
-			(xy 147.32 130.81) (xy 144.78 130.81)
+			(xy 66.04 125.73) (xy 66.04 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3206,19 +3689,9 @@
 		)
 		(uuid "3c25fdbe-27d1-40a2-9b9c-b605e7acdb84")
 	)
-	(bus
-		(pts
-			(xy 120.65 111.76) (xy 116.84 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3cc4f7a0-77cd-434e-93d4-874006f01ba4")
-	)
 	(wire
 		(pts
-			(xy 137.16 133.35) (xy 137.16 139.7)
+			(xy 63.5 135.89) (xy 57.15 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3256,16 +3729,6 @@
 		)
 		(uuid "491308e1-998d-4890-8615-8a351d9925d2")
 	)
-	(bus
-		(pts
-			(xy 106.68 106.68) (xy 106.68 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a3fdbf0-6210-488f-9052-ea8b6b5c778e")
-	)
 	(wire
 		(pts
 			(xy 148.59 50.8) (xy 162.56 50.8)
@@ -3278,7 +3741,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 133.35) (xy 160.02 153.67)
+			(xy 63.5 113.03) (xy 43.18 113.03)
 		)
 		(stroke
 			(width 0)
@@ -3295,16 +3758,6 @@
 			(type default)
 		)
 		(uuid "4cd6c0b7-ee02-42c0-94fb-c322bd3d185c")
-	)
-	(bus
-		(pts
-			(xy 106.68 118.11) (xy 57.15 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cffb947-0359-47b6-b2e6-c678a621248a")
 	)
 	(wire
 		(pts
@@ -3328,23 +3781,23 @@
 	)
 	(bus
 		(pts
-			(xy 57.15 118.11) (xy 57.15 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "503af57c-b664-4e94-abc1-c20bb7abc617")
-	)
-	(bus
-		(pts
-			(xy 139.7 130.81) (xy 137.16 130.81)
+			(xy 66.04 133.35) (xy 66.04 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "51072a21-321b-41cc-bc5b-01f6c6ac0cb6")
+	)
+	(bus
+		(pts
+			(xy 156.21 128.27) (xy 156.21 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5523f358-9394-43b2-a1e3-9d56832923c1")
 	)
 	(wire
 		(pts
@@ -3368,7 +3821,7 @@
 	)
 	(bus
 		(pts
-			(xy 134.62 130.81) (xy 132.08 130.81)
+			(xy 66.04 138.43) (xy 66.04 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3388,7 +3841,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 133.35) (xy 134.62 153.67)
+			(xy 63.5 138.43) (xy 43.18 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3398,7 +3851,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 133.35) (xy 149.86 153.67)
+			(xy 63.5 123.19) (xy 43.18 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3408,7 +3861,7 @@
 	)
 	(bus
 		(pts
-			(xy 144.78 130.81) (xy 142.24 130.81)
+			(xy 66.04 128.27) (xy 66.04 130.81)
 		)
 		(stroke
 			(width 0)
@@ -3418,13 +3871,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 120.65) (xy 186.69 121.92)
+			(xy 102.87 100.33) (xy 104.14 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5f65fa82-8853-4361-b1b2-87a3d3b8a1ef")
+		(uuid "5ef6c6cc-64a2-4278-b1a7-a601bbd3b54b")
 	)
 	(wire
 		(pts
@@ -3435,6 +3888,16 @@
 			(type default)
 		)
 		(uuid "5fd25b01-617e-4d74-bb60-4b2f53d9a293")
+	)
+	(bus
+		(pts
+			(xy 156.21 123.19) (xy 165.1 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6066f66d-85b1-414d-ab64-b118e8511bbd")
 	)
 	(wire
 		(pts
@@ -3448,7 +3911,7 @@
 	)
 	(bus
 		(pts
-			(xy 129.54 130.81) (xy 127 130.81)
+			(xy 66.04 143.51) (xy 66.04 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3458,33 +3921,13 @@
 	)
 	(bus
 		(pts
-			(xy 185.42 114.3) (xy 201.93 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65b06eb1-fc99-4953-bca8-4d25cb7f7c5c")
-	)
-	(bus
-		(pts
-			(xy 116.84 130.81) (xy 124.46 130.81)
+			(xy 66.04 156.21) (xy 66.04 148.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "67ec4f42-54dd-4097-982b-06edf2e2b5a2")
-	)
-	(bus
-		(pts
-			(xy 57.15 106.68) (xy 59.69 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a9f71b2-0409-4b57-9a2f-7eb5fa2b56c8")
 	)
 	(wire
 		(pts
@@ -3508,23 +3951,13 @@
 	)
 	(bus
 		(pts
-			(xy 154.94 130.81) (xy 152.4 130.81)
+			(xy 66.04 118.11) (xy 66.04 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6c991517-c9ac-4ca6-a991-3c68b2649e1e")
-	)
-	(wire
-		(pts
-			(xy 149.86 127) (xy 179.07 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f39fc51-9a70-4f66-a8cc-d202042a57ae")
 	)
 	(wire
 		(pts
@@ -3538,7 +3971,17 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 105.41) (xy 247.65 105.41)
+			(xy 77.47 133.35) (xy 83.82 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7190ec0e-9a49-4232-a25a-2fd41c80f7ed")
+	)
+	(wire
+		(pts
+			(xy 203.2 140.97) (xy 210.82 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3568,7 +4011,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 133.35) (xy 142.24 139.7)
+			(xy 63.5 130.81) (xy 57.15 130.81)
 		)
 		(stroke
 			(width 0)
@@ -3608,7 +4051,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 133.35) (xy 175.26 137.16)
+			(xy 44.45 82.55) (xy 44.45 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3618,7 +4061,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 137.16) (xy 179.07 138.43)
+			(xy 48.26 86.36) (xy 48.26 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3628,17 +4071,7 @@
 	)
 	(bus
 		(pts
-			(xy 106.68 106.68) (xy 120.65 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83d6a81d-2b88-41fa-bb58-747364f48ff8")
-	)
-	(bus
-		(pts
-			(xy 152.4 130.81) (xy 149.86 130.81)
+			(xy 66.04 120.65) (xy 66.04 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3666,6 +4099,26 @@
 		)
 		(uuid "8a107a15-f924-42dd-ab1f-36e7becb7784")
 	)
+	(bus
+		(pts
+			(xy 144.78 149.86) (xy 165.1 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b13702a-5747-4af7-830e-f64b782bb408")
+	)
+	(wire
+		(pts
+			(xy 77.47 128.27) (xy 83.82 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fc3ca3f-54ab-4d48-af17-672242a7f65b")
+	)
 	(wire
 		(pts
 			(xy 146.05 29.21) (xy 148.59 29.21)
@@ -3675,6 +4128,16 @@
 			(type default)
 		)
 		(uuid "90d10bff-69ff-46cb-aaea-44e9f5da9227")
+	)
+	(wire
+		(pts
+			(xy 114.3 106.68) (xy 114.3 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "918f0b8c-321e-4ac5-8fca-5af70aad43d4")
 	)
 	(wire
 		(pts
@@ -3688,7 +4151,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 133.35) (xy 147.32 139.7)
+			(xy 63.5 125.73) (xy 57.15 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3708,7 +4171,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 132.08) (xy 186.69 135.89)
+			(xy 60.96 93.98) (xy 71.12 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3718,7 +4181,7 @@
 	)
 	(bus
 		(pts
-			(xy 132.08 130.81) (xy 129.54 130.81)
+			(xy 66.04 140.97) (xy 66.04 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3728,7 +4191,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 133.35) (xy 144.78 153.67)
+			(xy 63.5 128.27) (xy 43.18 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3786,9 +4249,19 @@
 		)
 		(uuid "a3e87a75-bdb0-4712-9713-ef7df802ad3b")
 	)
+	(bus
+		(pts
+			(xy 63.5 179.07) (xy 83.82 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5b87115-cc9c-40d4-9c63-bd50c3e8bd8f")
+	)
 	(wire
 		(pts
-			(xy 154.94 133.35) (xy 154.94 153.67)
+			(xy 63.5 118.11) (xy 43.18 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3808,7 +4281,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 152.4) (xy 179.07 151.13)
+			(xy 48.26 101.6) (xy 48.26 100.33)
 		)
 		(stroke
 			(width 0)
@@ -3838,13 +4311,33 @@
 	)
 	(bus
 		(pts
-			(xy 165.1 130.81) (xy 162.56 130.81)
+			(xy 66.04 107.95) (xy 66.04 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ab239ee8-07cc-4503-969f-907203592512")
+	)
+	(wire
+		(pts
+			(xy 114.3 100.33) (xy 111.76 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae8320df-fe69-4dc4-96e0-622cb51adf19")
+	)
+	(wire
+		(pts
+			(xy 78.74 100.33) (xy 92.71 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4e7d6b2-c3a1-44d2-ad57-9489c4bb5f49")
 	)
 	(wire
 		(pts
@@ -3868,7 +4361,17 @@
 	)
 	(bus
 		(pts
-			(xy 167.64 130.81) (xy 165.1 130.81)
+			(xy 144.78 128.27) (xy 156.21 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8c83dd9-11be-4cff-a716-99fd735a8617")
+	)
+	(bus
+		(pts
+			(xy 66.04 105.41) (xy 66.04 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3878,33 +4381,13 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 120.65) (xy 186.69 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb0dbe30-5723-49f6-8c5b-3352f9f5b7bf")
-	)
-	(wire
-		(pts
-			(xy 119.38 161.29) (xy 119.38 166.37)
+			(xy 45.72 153.67) (xy 45.72 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bb444fe4-8b1b-4b4a-9248-e5f07bac2dce")
-	)
-	(wire
-		(pts
-			(xy 186.69 140.97) (xy 186.69 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc43b989-ec20-4e61-8c6c-d7d06ed922da")
 	)
 	(wire
 		(pts
@@ -3928,7 +4411,7 @@
 	)
 	(bus
 		(pts
-			(xy 137.16 130.81) (xy 134.62 130.81)
+			(xy 66.04 135.89) (xy 66.04 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3938,7 +4421,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 133.35) (xy 132.08 139.7)
+			(xy 63.5 140.97) (xy 57.15 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3958,7 +4441,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 133.35) (xy 165.1 152.4)
+			(xy 63.5 107.95) (xy 44.45 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3966,9 +4449,29 @@
 		)
 		(uuid "c68d3d8d-ec5a-4c51-8a43-c9f974709408")
 	)
+	(bus
+		(pts
+			(xy 66.04 137.16) (xy 83.82 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c80c9d04-efbd-43a1-869c-629f9273e2ba")
+	)
 	(wire
 		(pts
-			(xy 171.45 149.86) (xy 171.45 152.4)
+			(xy 71.12 95.25) (xy 71.12 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8fb95be-4f71-4308-9d05-b1d59b5f6147")
+	)
+	(wire
+		(pts
+			(xy 40.64 99.06) (xy 40.64 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3978,7 +4481,7 @@
 	)
 	(bus
 		(pts
-			(xy 149.86 130.81) (xy 147.32 130.81)
+			(xy 66.04 123.19) (xy 66.04 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4008,13 +4511,23 @@
 	)
 	(bus
 		(pts
-			(xy 127 130.81) (xy 124.46 130.81)
+			(xy 66.04 146.05) (xy 66.04 148.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ce5564bf-0a1c-48d6-b268-3712f073f8be")
+	)
+	(wire
+		(pts
+			(xy 203.2 137.16) (xy 209.55 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d03efa3f-f08a-4048-b668-5819acc086b7")
 	)
 	(wire
 		(pts
@@ -4028,13 +4541,23 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 133.35) (xy 139.7 153.67)
+			(xy 63.5 133.35) (xy 43.18 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d700d98d-d646-46eb-b7f4-d34151f8509e")
+	)
+	(wire
+		(pts
+			(xy 154.94 143.51) (xy 165.1 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d841a3ba-c7fc-4381-8e74-1a5783cc903a")
 	)
 	(wire
 		(pts
@@ -4098,17 +4621,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 144.78) (xy 184.15 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e91788c1-292a-4c9c-9157-a0bfaa5d941f")
-	)
-	(wire
-		(pts
-			(xy 171.45 137.16) (xy 175.26 137.16)
+			(xy 40.64 86.36) (xy 44.45 86.36)
 		)
 		(stroke
 			(width 0)
@@ -4118,17 +4631,7 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 107.95) (xy 201.93 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9f00103-5199-4b91-ab30-19cc532dc6bd")
-	)
-	(wire
-		(pts
-			(xy 129.54 133.35) (xy 129.54 153.67)
+			(xy 63.5 143.51) (xy 43.18 143.51)
 		)
 		(stroke
 			(width 0)
@@ -4158,7 +4661,7 @@
 	)
 	(bus
 		(pts
-			(xy 157.48 130.81) (xy 154.94 130.81)
+			(xy 66.04 115.57) (xy 66.04 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4178,7 +4681,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 110.49) (xy 247.65 110.49)
+			(xy 203.2 146.05) (xy 210.82 146.05)
 		)
 		(stroke
 			(width 0)
@@ -4205,6 +4708,16 @@
 			(type default)
 		)
 		(uuid "f7d763ff-026f-4652-a6ac-43b8e892d6b6")
+	)
+	(wire
+		(pts
+			(xy 43.18 153.67) (xy 45.72 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7f0c076-0657-4127-a922-9c3bb3637e60")
 	)
 	(wire
 		(pts
@@ -4236,18 +4749,28 @@
 		)
 		(uuid "fd35d093-7e9f-4719-ac3f-5c908922eafe")
 	)
-	(bus
-		(pts
-			(xy 116.84 111.76) (xy 116.84 130.81)
+	(label "CH"
+		(at 77.47 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(uuid "0388a310-0d6d-41ed-917f-ba80fc877bbd")
+	)
+	(label "CH"
+		(at 209.55 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(uuid "fddbc44c-ae7f-4bcc-b900-d79d9edcb471")
+		(uuid "084aaf5c-5324-4b62-9a66-833eb88fae80")
 	)
 	(label "CELL2"
-		(at 127 133.35 270)
+		(at 63.5 146.05 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4266,8 +4789,18 @@
 		)
 		(uuid "1b419a12-c134-43bc-a0c2-9edd96f4a1f1")
 	)
+	(label "BAT+"
+		(at 77.47 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c3f06a3-240b-4bd7-9968-0b26fe97a5b8")
+	)
 	(label "CELL16"
-		(at 162.56 133.35 270)
+		(at 63.5 110.49 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4276,18 +4809,8 @@
 		)
 		(uuid "32607d38-e559-4a22-900a-1c2b9018ee10")
 	)
-	(label "FUSE"
-		(at 158.75 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3743f307-d5bc-4215-a0f2-8e23d24affe8")
-	)
 	(label "TS[1..6]"
-		(at 106.68 101.6 0)
+		(at 63.5 179.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4297,7 +4820,7 @@
 		(uuid "4d937f57-0688-40b5-9917-57af5500716f")
 	)
 	(label "CELL4"
-		(at 132.08 133.35 270)
+		(at 63.5 140.97 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4307,7 +4830,7 @@
 		(uuid "59f2bac4-9cc5-4461-8de9-788f0435ade5")
 	)
 	(label "CELL8"
-		(at 142.24 133.35 270)
+		(at 63.5 130.81 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4327,7 +4850,7 @@
 		(uuid "7d96f345-b30f-4bde-b7a6-3dafde5902f1")
 	)
 	(label "CELL11"
-		(at 149.86 133.35 270)
+		(at 63.5 123.19 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4337,7 +4860,7 @@
 		(uuid "872f66e8-31b9-493c-8099-ab0abf6e6f74")
 	)
 	(label "CELL5"
-		(at 134.62 133.35 270)
+		(at 63.5 138.43 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4347,7 +4870,7 @@
 		(uuid "9c831dcf-cd1b-4dc0-b256-fe551565fa7a")
 	)
 	(label "CELL0"
-		(at 121.92 133.35 270)
+		(at 63.5 151.13 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4357,7 +4880,7 @@
 		(uuid "9db262d0-b135-4306-b143-0b84e3f1d24a")
 	)
 	(label "CELL9"
-		(at 144.78 133.35 270)
+		(at 63.5 128.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4367,7 +4890,7 @@
 		(uuid "9eab04c6-e011-4d19-9755-f554eecb6b50")
 	)
 	(label "CELL12"
-		(at 152.4 133.35 270)
+		(at 63.5 120.65 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4377,7 +4900,7 @@
 		(uuid "a012a334-2ca0-4827-8fb2-48966c685471")
 	)
 	(label "CELL3"
-		(at 129.54 133.35 270)
+		(at 63.5 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4387,7 +4910,7 @@
 		(uuid "a22f864a-7605-4ed4-801d-c20e4ebba632")
 	)
 	(label "CELL7"
-		(at 139.7 133.35 270)
+		(at 63.5 133.35 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4396,8 +4919,18 @@
 		)
 		(uuid "b004f43d-6704-4833-8ec3-1b9916c248af")
 	)
+	(label "CELL17"
+		(at 86.36 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0de909d-2a26-43c2-b109-fab142c5fe94")
+	)
 	(label "CELL15"
-		(at 160.02 133.35 270)
+		(at 63.5 113.03 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4407,7 +4940,7 @@
 		(uuid "b4a38ed2-7c13-460f-a6b1-94e494f952c0")
 	)
 	(label "CELL1"
-		(at 124.46 133.35 270)
+		(at 63.5 148.59 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4417,7 +4950,7 @@
 		(uuid "bbc64916-e300-45cb-9e39-288c821a0b77")
 	)
 	(label "CELL6"
-		(at 137.16 133.35 270)
+		(at 63.5 135.89 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4437,7 +4970,7 @@
 		(uuid "c535aad1-a024-422d-98cc-368d32d28ab6")
 	)
 	(label "BAT+"
-		(at 175.26 133.35 0)
+		(at 44.45 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4447,7 +4980,7 @@
 		(uuid "c671afe3-8a1e-4d61-aca4-cfdf98cdce9f")
 	)
 	(label "CELL17"
-		(at 165.1 133.35 270)
+		(at 63.5 107.95 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4457,7 +4990,7 @@
 		(uuid "c7c05b4c-a33c-4c06-9b4c-fc396ccc06bd")
 	)
 	(label "CELL13"
-		(at 154.94 133.35 270)
+		(at 63.5 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4467,7 +5000,7 @@
 		(uuid "ca040e61-382f-4ca6-b667-3751a093f7eb")
 	)
 	(label "CELL14"
-		(at 157.48 133.35 270)
+		(at 63.5 115.57 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4477,7 +5010,7 @@
 		(uuid "e76d3792-f1c8-4a1b-9bb7-3ebf03072012")
 	)
 	(label "CELL10"
-		(at 147.32 133.35 270)
+		(at 63.5 125.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4487,7 +5020,7 @@
 		(uuid "ed905c3d-0494-402b-a7a3-af037a81c04b")
 	)
 	(label "BAT+"
-		(at 191.77 107.95 0)
+		(at 154.94 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4496,108 +5029,9 @@
 		)
 		(uuid "eedbbe8c-9376-47b0-946d-132ca412844e")
 	)
-	(label "CH"
-		(at 86.36 29.21 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f08343b2-10f9-4b0c-ae30-a8482e7aad83")
-	)
-	(label "CH"
-		(at 194.31 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f7386dc7-2130-4320-8d05-b1d081b0f21d")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 181.61 120.65 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "03607980-01fa-4147-add5-f39e0ed4a9ca")
-		(property "Reference" "#PWR0122"
-			(at 175.26 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 181.61 123.19 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 181.61 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ed9c3766-4f99-4e34-ad9a-8e019b36818c")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0122")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 152.4 142.24 0)
-		(mirror x)
+		(at 54.61 120.65 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4606,8 +5040,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06b01a80-68da-42c4-847e-3680e4a5bccd")
-		(property "Reference" "H116"
-			(at 153.6701 146.05 90)
+		(property "Reference" "H114"
+			(at 50.8 119.3799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4618,7 +5052,7 @@
 			)
 		)
 		(property "Value" "CELL12"
-			(at 151.1301 146.05 90)
+			(at 50.8 121.9199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4629,7 +5063,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 152.4 142.24 0)
+			(at 54.61 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4640,7 +5074,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 142.24 0)
+			(at 54.61 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4651,7 +5085,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 152.4 142.24 0)
+			(at 54.61 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4667,7 +5101,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H116")
+					(reference "H114")
 					(unit 1)
 				)
 			)
@@ -4675,8 +5109,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 124.46 156.21 0)
-		(mirror x)
+		(at 40.64 148.59 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4685,8 +5118,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "086fac2a-508e-40a5-b2fe-dfdbe063ba01")
-		(property "Reference" "H105"
-			(at 125.7301 160.02 90)
+		(property "Reference" "H103"
+			(at 36.83 147.3199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4697,7 +5130,7 @@
 			)
 		)
 		(property "Value" "CELL1"
-			(at 123.1901 160.02 90)
+			(at 36.83 149.8599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4708,7 +5141,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 124.46 156.21 0)
+			(at 40.64 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4719,7 +5152,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 156.21 0)
+			(at 40.64 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4730,7 +5163,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 124.46 156.21 0)
+			(at 40.64 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4746,7 +5179,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H105")
+					(reference "H103")
 					(unit 1)
 				)
 			)
@@ -4842,7 +5275,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e5aa194-b811-4eea-be6b-5706bc6b54d3")
-		(property "Reference" "#PWR0115"
+		(property "Reference" "#PWR0109"
 			(at 113.03 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -4902,7 +5335,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0115")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -4910,8 +5343,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 137.16 142.24 0)
-		(mirror x)
+		(at 54.61 135.89 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4920,8 +5352,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "248d4a37-127c-4b1c-b1ef-b9a26527a5f0")
-		(property "Reference" "H110"
-			(at 138.4301 146.05 90)
+		(property "Reference" "H108"
+			(at 50.8 134.6199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4932,7 +5364,7 @@
 			)
 		)
 		(property "Value" "CELL6"
-			(at 135.8901 146.05 90)
+			(at 50.8 137.1599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4943,7 +5375,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 137.16 142.24 0)
+			(at 54.61 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4954,7 +5386,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 142.24 0)
+			(at 54.61 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4965,7 +5397,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 137.16 142.24 0)
+			(at 54.61 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4981,7 +5413,86 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H110")
+					(reference "H108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 71.12 107.95 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29f115f2-8bee-4471-84e8-421f1e96a7a5")
+		(property "Reference" "#PWR0113"
+			(at 71.12 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 71.12 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 71.12 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5983d0dd-42cb-4f0d-bd43-aa53d4e6c851")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -5070,41 +5581,38 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 162.56 142.24 0)
-		(mirror x)
+		(lib_id "Device:LED")
+		(at 107.95 100.33 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "320bb893-a4ad-43ab-a0e1-fd20db4ccc81")
-		(property "Reference" "H120"
-			(at 163.8301 146.05 90)
+		(uuid "2fa97f8b-a61e-4845-9450-d1edf5342b69")
+		(property "Reference" "D101"
+			(at 107.95 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "CELL16"
-			(at 161.2901 146.05 90)
+		(property "Value" "LED"
+			(at 107.95 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 162.56 142.24 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 107.95 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5115,7 +5623,99 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 142.24 0)
+			(at 107.95 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 107.95 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 107.95 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "74f3688f-3015-4c38-87fa-2953b9aef2c8")
+		)
+		(pin "1"
+			(uuid "7026cb9b-8f4c-46f6-913c-fbe4d0257753")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "D101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 54.61 110.49 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "320bb893-a4ad-43ab-a0e1-fd20db4ccc81")
+		(property "Reference" "H118"
+			(at 50.8 109.2199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CELL16"
+			(at 50.8 111.7599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 54.61 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5126,7 +5726,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 162.56 142.24 0)
+			(at 54.61 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5142,7 +5742,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H120")
+					(reference "H118")
 					(unit 1)
 				)
 			)
@@ -5160,7 +5760,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "324b62da-ddfb-409c-afdf-edabd0757145")
-		(property "Reference" "#PWR0117"
+		(property "Reference" "#PWR0112"
 			(at 179.07 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5220,7 +5820,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0117")
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -5228,8 +5828,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 139.7 156.21 0)
-		(mirror x)
+		(at 40.64 133.35 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5238,8 +5837,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "326b220c-985e-4fd3-958a-4a1af885e080")
-		(property "Reference" "H111"
-			(at 140.9701 160.02 90)
+		(property "Reference" "H109"
+			(at 36.83 132.0799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5250,7 +5849,7 @@
 			)
 		)
 		(property "Value" "CELL7"
-			(at 138.4301 160.02 90)
+			(at 36.83 134.6199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5261,7 +5860,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 139.7 156.21 0)
+			(at 40.64 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5272,7 +5871,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 156.21 0)
+			(at 40.64 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5283,7 +5882,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 139.7 156.21 0)
+			(at 40.64 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5299,7 +5898,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H111")
+					(reference "H109")
 					(unit 1)
 				)
 			)
@@ -5307,8 +5906,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 142.24 142.24 0)
-		(mirror x)
+		(at 54.61 130.81 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5317,8 +5915,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "40216289-e63d-4d80-969f-e11a061b4bb4")
-		(property "Reference" "H112"
-			(at 143.5101 146.05 90)
+		(property "Reference" "H110"
+			(at 50.8 129.5399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5329,7 +5927,7 @@
 			)
 		)
 		(property "Value" "CELL8"
-			(at 140.9701 146.05 90)
+			(at 50.8 132.0799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5340,7 +5938,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 142.24 142.24 0)
+			(at 54.61 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5351,7 +5949,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 142.24 0)
+			(at 54.61 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5362,7 +5960,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 142.24 142.24 0)
+			(at 54.61 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5378,7 +5976,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H112")
+					(reference "H110")
 					(unit 1)
 				)
 			)
@@ -5465,8 +6063,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 129.54 156.21 0)
-		(mirror x)
+		(at 40.64 143.51 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5475,8 +6072,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41852dce-950e-4cef-8ec1-aae6d830c006")
-		(property "Reference" "H107"
-			(at 130.8101 160.02 90)
+		(property "Reference" "H105"
+			(at 36.83 142.2399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5487,7 +6084,7 @@
 			)
 		)
 		(property "Value" "CELL3"
-			(at 128.2701 160.02 90)
+			(at 36.83 144.7799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5498,7 +6095,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 129.54 156.21 0)
+			(at 40.64 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5509,7 +6106,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 156.21 0)
+			(at 40.64 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5520,7 +6117,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 129.54 156.21 0)
+			(at 40.64 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5536,7 +6133,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H107")
+					(reference "H105")
 					(unit 1)
 				)
 			)
@@ -5544,8 +6141,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 144.78 156.21 0)
-		(mirror x)
+		(at 40.64 128.27 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5554,8 +6150,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41cbd8d9-d117-4cf1-9aaf-a4d20201ac7c")
-		(property "Reference" "H113"
-			(at 146.0501 160.02 90)
+		(property "Reference" "H111"
+			(at 36.83 126.9999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5566,7 +6162,7 @@
 			)
 		)
 		(property "Value" "CELL9"
-			(at 143.5101 160.02 90)
+			(at 36.83 129.5399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5577,7 +6173,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 144.78 156.21 0)
+			(at 40.64 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5588,7 +6184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 156.21 0)
+			(at 40.64 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5599,7 +6195,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 144.78 156.21 0)
+			(at 40.64 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5615,7 +6211,86 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H113")
+					(reference "H111")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 114.3 109.22 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4690c09e-6bb7-4ee3-a760-7c0bb2aeea9d")
+		(property "Reference" "#PWR0120"
+			(at 114.3 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0aa8c52d-b4ff-481b-9e89-3c7d8b849441")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "#PWR0120")
 					(unit 1)
 				)
 			)
@@ -5633,7 +6308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50abb9ce-4759-4668-acfc-242d96575b8c")
-		(property "Reference" "R111"
+		(property "Reference" "R103"
 			(at 181.61 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5708,7 +6383,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R111")
+					(reference "R103")
 					(unit 1)
 				)
 			)
@@ -5809,8 +6484,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 186.69 138.43 0)
-		(mirror x)
+		(at 58.42 93.98 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5819,8 +6493,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "51bcefdd-aae3-4f2c-8db7-04103a35b26f")
-		(property "Reference" "R113"
-			(at 193.04 139.7 0)
+		(property "Reference" "R105"
+			(at 55.88 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5831,7 +6505,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 193.04 137.16 0)
+			(at 55.88 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5842,7 +6516,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 186.69 138.43 0)
+			(at 58.42 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5853,7 +6527,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 138.43 0)
+			(at 58.42 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5864,7 +6538,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 186.69 138.43 0)
+			(at 58.42 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5883,7 +6557,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R113")
+					(reference "R105")
 					(unit 1)
 				)
 			)
@@ -5983,7 +6657,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54ad7e6d-6ddf-4eab-88c6-cac8b2b66b71")
-		(property "Reference" "R110"
+		(property "Reference" "R102"
 			(at 158.75 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6045,7 +6719,113 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R110")
+					(reference "R102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_3_Open")
+		(at 97.79 100.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "54faee88-c0c7-41f5-b32b-1cd0daa45c4b")
+		(property "Reference" "JP101"
+			(at 104.14 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SJ3O"
+			(at 104.14 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 3-pole, open"
+			(at 97.79 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property private "KLC_S5.1" "This is a generic symbol, it has fp-filter, but no default footprint"
+			(at 97.79 118.11 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property private "KLC_S3.3" "Graphical-Symbol: thickness is 6mm, fill is background"
+			(at 97.79 120.65 0)
+			(hide yes)
+			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "127e1dc6-3ae7-4cc8-a59c-5fde566d42b2")
+		)
+		(pin "3"
+			(uuid "d3eee52e-c296-4dd9-b038-3e014227a38e")
+		)
+		(pin "2"
+			(uuid "d67e112c-4d66-4278-9e79-64bdcb931d28")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "JP101")
 					(unit 1)
 				)
 			)
@@ -6063,7 +6843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5e430982-2217-4e5a-9c70-629088bd149c")
-		(property "Reference" "R112"
+		(property "Reference" "R104"
 			(at 181.61 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6138,7 +6918,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R112")
+					(reference "R104")
 					(unit 1)
 				)
 			)
@@ -6146,7 +6926,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 250.19 105.41 270)
+		(at 213.36 140.97 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6156,8 +6936,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64328c10-12f8-40b0-b73c-acc7fb2c62aa")
-		(property "Reference" "H103"
-			(at 254 104.1399 90)
+		(property "Reference" "H120"
+			(at 217.17 139.6999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6168,7 +6948,7 @@
 			)
 		)
 		(property "Value" "PACK-"
-			(at 254 106.6799 90)
+			(at 217.17 142.2399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6179,7 +6959,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 250.19 105.41 0)
+			(at 213.36 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6190,7 +6970,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 105.41 0)
+			(at 213.36 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6201,7 +6981,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 250.19 105.41 0)
+			(at 213.36 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6217,7 +6997,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H103")
+					(reference "H120")
 					(unit 1)
 				)
 			)
@@ -6235,7 +7015,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c361e92-3d6b-4ca6-9631-6ebba78b9c54")
-		(property "Reference" "#PWR0120"
+		(property "Reference" "#PWR0116"
 			(at 207.01 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6295,7 +7075,86 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0120")
+					(reference "#PWR0116")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 114.3 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "77ddf91e-eafb-40d4-a3d8-fb8d18df7d78")
+		(property "Reference" "R107"
+			(at 118.11 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "5.1k"
+			(at 118.11 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 114.3 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 114.3 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "68a4c31a-ab8f-423b-bae1-f7adcac37d27")
+		)
+		(pin "1"
+			(uuid "61eac7a1-d6a4-431d-a690-f3847cf53d79")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "R107")
 					(unit 1)
 				)
 			)
@@ -6392,7 +7251,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d309100-bfc9-4334-a626-2643c8841d95")
-		(property "Reference" "#PWR0112"
+		(property "Reference" "#PWR0107"
 			(at 91.44 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -6452,7 +7311,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0112")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)
@@ -6656,7 +7515,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d9c10a8-e09b-4362-9026-d7e55387b6ac")
-		(property "Reference" "#PWR0119"
+		(property "Reference" "#PWR0115"
 			(at 198.12 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6716,7 +7575,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0119")
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -6802,8 +7661,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 157.48 142.24 0)
-		(mirror x)
+		(at 54.61 115.57 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6812,8 +7670,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "982dde28-b0db-4917-9008-96d9d265754d")
-		(property "Reference" "H118"
-			(at 158.7501 146.05 90)
+		(property "Reference" "H116"
+			(at 50.8 114.2999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6824,7 +7682,7 @@
 			)
 		)
 		(property "Value" "CELL14"
-			(at 156.2101 146.05 90)
+			(at 50.8 116.8399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6835,7 +7693,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 157.48 142.24 0)
+			(at 54.61 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6846,7 +7704,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 142.24 0)
+			(at 54.61 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6857,7 +7715,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 157.48 142.24 0)
+			(at 54.61 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6873,7 +7731,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H118")
+					(reference "H116")
 					(unit 1)
 				)
 			)
@@ -6984,7 +7842,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e18bda8-2656-4a37-b5c8-e32073129def")
-		(property "Reference" "R109"
+		(property "Reference" "R101"
 			(at 115.57 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7048,7 +7906,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R109")
+					(reference "R101")
 					(unit 1)
 				)
 			)
@@ -7229,7 +8087,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 250.19 110.49 270)
+		(at 213.36 146.05 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7239,8 +8097,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a5b0c3bf-a519-4807-94fe-ef6004bc203a")
-		(property "Reference" "H101"
-			(at 254 109.2199 90)
+		(property "Reference" "H121"
+			(at 217.17 144.7799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7251,7 +8109,7 @@
 			)
 		)
 		(property "Value" "PACK-"
-			(at 254 111.7599 90)
+			(at 217.17 147.3199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7262,7 +8120,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 250.19 110.49 0)
+			(at 213.36 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7273,7 +8131,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 110.49 0)
+			(at 213.36 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7284,7 +8142,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 250.19 110.49 0)
+			(at 213.36 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7300,7 +8158,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H101")
+					(reference "H121")
 					(unit 1)
 				)
 			)
@@ -7308,7 +8166,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 119.38 166.37 0)
+		(at 45.72 158.75 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7318,8 +8177,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9aa8502-cc28-4c73-8608-8e688eb04d71")
-		(property "Reference" "#PWR0104"
-			(at 119.38 172.72 0)
+		(property "Reference" "#PWR0110"
+			(at 45.72 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7330,7 +8189,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 119.38 171.45 0)
+			(at 45.72 163.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7340,7 +8199,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 166.37 0)
+			(at 45.72 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7351,7 +8210,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 166.37 0)
+			(at 45.72 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7362,7 +8221,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 166.37 0)
+			(at 45.72 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7378,7 +8237,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0104")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -7386,7 +8245,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 171.45 146.05 180)
+		(at 40.64 95.25 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7395,8 +8254,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "acb85405-fccb-428b-9ada-08d081ea8b7c")
-		(property "Reference" "F201"
-			(at 167.64 147.32 0)
+		(property "Reference" "F101"
+			(at 36.83 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7406,7 +8265,7 @@
 			)
 		)
 		(property "Value" "25A"
-			(at 167.64 144.78 0)
+			(at 36.83 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7416,7 +8275,7 @@
 			)
 		)
 		(property "Footprint" "Fuse:Fuse_Littelfuse-NANO2-451_453"
-			(at 173.228 146.05 90)
+			(at 42.418 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7427,7 +8286,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 146.05 0)
+			(at 40.64 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7438,7 +8297,7 @@
 			)
 		)
 		(property "Description" "Fuse"
-			(at 171.45 146.05 0)
+			(at 40.64 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7449,7 +8308,7 @@
 			)
 		)
 		(property "LCSC" "C178980"
-			(at 171.45 146.05 90)
+			(at 40.64 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7468,7 +8327,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "F201")
+					(reference "F101")
 					(unit 1)
 				)
 			)
@@ -7555,7 +8414,8 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 119.38 158.75 0)
+		(at 40.64 153.67 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7564,30 +8424,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0a72f81-f185-41ae-8c14-d2b011009a55")
-		(property "Reference" "H121"
-			(at 120.65 165.1 90)
+		(property "Reference" "H101"
+			(at 31.75 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "BAT-"
-			(at 118.11 165.1 90)
+			(at 31.75 154.94 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 119.38 158.75 0)
+			(at 40.64 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7598,7 +8458,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 158.75 0)
+			(at 40.64 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7609,7 +8469,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 119.38 158.75 0)
+			(at 40.64 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7625,7 +8485,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H121")
+					(reference "H101")
 					(unit 1)
 				)
 			)
@@ -7643,7 +8503,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2b47973-cd17-46d3-8fea-d7077c63ec66")
-		(property "Reference" "#PWR0125"
+		(property "Reference" "#PWR0118"
 			(at 259.08 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -7703,7 +8563,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0125")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -7814,7 +8674,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8793e1c-f482-4f35-a660-e76bfab2bd12")
-		(property "Reference" "#PWR0121"
+		(property "Reference" "#PWR0117"
 			(at 214.63 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -7874,7 +8734,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0121")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -7882,8 +8742,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 154.94 156.21 0)
-		(mirror x)
+		(at 40.64 118.11 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7892,8 +8751,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bb217717-9c2d-467c-8ada-ed0219c05c34")
-		(property "Reference" "H117"
-			(at 156.2101 160.02 90)
+		(property "Reference" "H115"
+			(at 36.83 116.8399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7904,7 +8763,7 @@
 			)
 		)
 		(property "Value" "CELL13"
-			(at 153.6701 160.02 90)
+			(at 36.83 119.3799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7915,7 +8774,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 154.94 156.21 0)
+			(at 40.64 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7926,7 +8785,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 156.21 0)
+			(at 40.64 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7937,7 +8796,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 154.94 156.21 0)
+			(at 40.64 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7953,7 +8812,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H117")
+					(reference "H115")
 					(unit 1)
 				)
 			)
@@ -7961,7 +8820,7 @@
 	)
 	(symbol
 		(lib_id "wafel-eval-board:Fuse_3Terminal")
-		(at 179.07 144.78 270)
+		(at 48.26 93.98 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7970,8 +8829,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bc153ddd-9ec7-41fd-8ae8-1fe241d31023")
-		(property "Reference" "F1"
-			(at 184.15 148.59 90)
+		(property "Reference" "F102"
+			(at 53.34 97.79 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7981,7 +8840,7 @@
 			)
 		)
 		(property "Value" "Fuse3T"
-			(at 184.15 151.13 90)
+			(at 53.34 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7991,7 +8850,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 179.07 144.78 0)
+			(at 48.26 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8002,7 +8861,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 179.07 144.78 0)
+			(at 48.26 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8013,7 +8872,7 @@
 			)
 		)
 		(property "Description" "3-Terminal Battery Protection Fuse"
-			(at 179.07 144.78 0)
+			(at 48.26 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8035,7 +8894,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "F1")
+					(reference "F102")
 					(unit 1)
 				)
 			)
@@ -8053,7 +8912,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be2e5a11-bd3b-4d20-89ed-a364062a7466")
-		(property "Reference" "#PWR0118"
+		(property "Reference" "#PWR0114"
 			(at 189.23 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -8113,7 +8972,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0118")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -8131,7 +8990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bfcd5770-6cb8-4ca2-98cc-7862437ca733")
-		(property "Reference" "#PWR0108"
+		(property "Reference" "#PWR0104"
 			(at 60.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8191,7 +9050,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0108")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -8199,8 +9058,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 121.92 142.24 0)
-		(mirror x)
+		(at 54.61 151.13 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8209,8 +9067,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c027b982-3b84-4e88-a7c2-337bb4986c62")
-		(property "Reference" "H104"
-			(at 123.1901 146.05 90)
+		(property "Reference" "H102"
+			(at 50.8 149.8599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8221,7 +9079,7 @@
 			)
 		)
 		(property "Value" "CELL0"
-			(at 120.6501 146.05 90)
+			(at 50.8 152.3999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8232,7 +9090,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 121.92 142.24 0)
+			(at 54.61 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8243,7 +9101,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 142.24 0)
+			(at 54.61 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8254,7 +9112,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 121.92 142.24 0)
+			(at 54.61 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8270,7 +9128,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H104")
+					(reference "H102")
 					(unit 1)
 				)
 			)
@@ -8360,8 +9218,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 132.08 142.24 0)
-		(mirror x)
+		(at 54.61 140.97 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8370,8 +9227,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c90b11fd-951e-4855-a161-3e28d9a882b2")
-		(property "Reference" "H108"
-			(at 133.3501 146.05 90)
+		(property "Reference" "H106"
+			(at 50.8 139.6999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8382,7 +9239,7 @@
 			)
 		)
 		(property "Value" "CELL4"
-			(at 130.8101 146.05 90)
+			(at 50.8 142.2399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8393,7 +9250,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 132.08 142.24 0)
+			(at 54.61 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8404,7 +9261,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 142.24 0)
+			(at 54.61 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8415,7 +9272,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 132.08 142.24 0)
+			(at 54.61 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8431,7 +9288,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H108")
+					(reference "H106")
 					(unit 1)
 				)
 			)
@@ -8532,8 +9389,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 160.02 156.21 0)
-		(mirror x)
+		(at 40.64 113.03 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8542,8 +9398,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ccab1912-41b4-4c11-8190-a7a4acf62b8d")
-		(property "Reference" "H119"
-			(at 161.2901 160.02 90)
+		(property "Reference" "H117"
+			(at 36.83 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8554,7 +9410,7 @@
 			)
 		)
 		(property "Value" "CELL15"
-			(at 158.7501 160.02 90)
+			(at 36.83 114.2999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8565,7 +9421,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 160.02 156.21 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8576,7 +9432,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 156.21 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8587,7 +9443,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 160.02 156.21 0)
+			(at 40.64 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8603,7 +9459,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H119")
+					(reference "H117")
 					(unit 1)
 				)
 			)
@@ -8872,8 +9728,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 127 142.24 0)
-		(mirror x)
+		(at 54.61 146.05 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8882,8 +9737,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d606e960-9447-4547-ac71-c02755faec9c")
-		(property "Reference" "H106"
-			(at 128.2701 146.05 90)
+		(property "Reference" "H104"
+			(at 50.8 144.7799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8894,7 +9749,7 @@
 			)
 		)
 		(property "Value" "CELL2"
-			(at 125.7301 146.05 90)
+			(at 50.8 147.3199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8905,7 +9760,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 127 142.24 0)
+			(at 54.61 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8916,7 +9771,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 142.24 0)
+			(at 54.61 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8927,7 +9782,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 127 142.24 0)
+			(at 54.61 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8943,7 +9798,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H106")
+					(reference "H104")
 					(unit 1)
 				)
 			)
@@ -8961,7 +9816,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da8bec2e-0a4c-4570-b762-bce8c383d42c")
-		(property "Reference" "#PWR0110"
+		(property "Reference" "#PWR0105"
 			(at 69.85 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9021,7 +9876,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0110")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -9029,8 +9884,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 134.62 156.21 0)
-		(mirror x)
+		(at 40.64 138.43 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9039,8 +9893,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dbc0134f-3e83-4b1b-b4cb-29a00c6aa2b2")
-		(property "Reference" "H109"
-			(at 135.8901 160.02 90)
+		(property "Reference" "H107"
+			(at 36.83 137.1599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9051,7 +9905,7 @@
 			)
 		)
 		(property "Value" "CELL5"
-			(at 133.3501 160.02 90)
+			(at 36.83 139.6999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9062,7 +9916,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 134.62 156.21 0)
+			(at 40.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9073,7 +9927,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 156.21 0)
+			(at 40.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9084,7 +9938,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 134.62 156.21 0)
+			(at 40.64 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9100,7 +9954,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H109")
+					(reference "H107")
 					(unit 1)
 				)
 			)
@@ -9108,8 +9962,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GDS")
-		(at 184.15 127 0)
-		(mirror x)
+		(at 73.66 100.33 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9118,8 +9971,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dbf67907-4db1-40bb-a56e-b6159e909726")
-		(property "Reference" "Q1"
-			(at 193.04 127 0)
+		(property "Reference" "Q101"
+			(at 76.2 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9129,7 +9982,7 @@
 			)
 		)
 		(property "Value" "AO3422"
-			(at 193.04 129.54 0)
+			(at 76.2 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9139,7 +9992,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 129.54 0)
+			(at 68.58 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9150,7 +10003,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 127 0)
+			(at 73.66 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9161,7 +10014,7 @@
 			)
 		)
 		(property "Description" "N-MOSFET transistor, gate/drain/source"
-			(at 184.15 127 0)
+			(at 73.66 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9183,7 +10036,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "Q1")
+					(reference "Q101")
 					(unit 1)
 				)
 			)
@@ -9202,7 +10055,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "df64850c-54ae-46c5-96a2-971e61174c84")
-		(property "Reference" "R117"
+		(property "Reference" "R106"
 			(at 256.54 31.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9266,7 +10119,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "R117")
+					(reference "R106")
 					(unit 1)
 				)
 			)
@@ -9274,8 +10127,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 165.1 156.21 0)
-		(mirror x)
+		(at 40.64 107.95 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9284,8 +10136,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "df8041df-0e5d-407b-bcdd-7f5c392bca98")
-		(property "Reference" "H102"
-			(at 166.3701 160.02 90)
+		(property "Reference" "H119"
+			(at 36.83 106.6799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9296,7 +10148,7 @@
 			)
 		)
 		(property "Value" "BAT+"
-			(at 163.8301 160.02 90)
+			(at 36.83 109.2199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9307,7 +10159,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 165.1 156.21 0)
+			(at 40.64 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9318,7 +10170,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 156.21 0)
+			(at 40.64 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9329,7 +10181,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 165.1 156.21 0)
+			(at 40.64 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9345,7 +10197,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H102")
+					(reference "H119")
 					(unit 1)
 				)
 			)
@@ -9353,8 +10205,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 147.32 142.24 0)
-		(mirror x)
+		(at 54.61 125.73 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9363,8 +10214,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e47105ff-0ce3-407d-b9ca-1808d715a383")
-		(property "Reference" "H114"
-			(at 148.5901 146.05 90)
+		(property "Reference" "H112"
+			(at 50.8 124.4599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9375,7 +10226,7 @@
 			)
 		)
 		(property "Value" "CELL10"
-			(at 146.0501 146.05 90)
+			(at 50.8 126.9999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9386,7 +10237,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 147.32 142.24 0)
+			(at 54.61 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9397,7 +10248,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 142.24 0)
+			(at 54.61 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9408,7 +10259,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 147.32 142.24 0)
+			(at 54.61 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9424,7 +10275,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H114")
+					(reference "H112")
 					(unit 1)
 				)
 			)
@@ -9432,8 +10283,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
-		(at 149.86 156.21 0)
-		(mirror x)
+		(at 40.64 123.19 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9442,8 +10292,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e87704bc-2573-49af-bfdf-632572560885")
-		(property "Reference" "H115"
-			(at 151.1301 160.02 90)
+		(property "Reference" "H113"
+			(at 36.83 121.9199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9454,7 +10304,7 @@
 			)
 		)
 		(property "Value" "CELL11"
-			(at 148.5901 160.02 90)
+			(at 36.83 124.4599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9465,7 +10315,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 149.86 156.21 0)
+			(at 40.64 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9476,7 +10326,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 156.21 0)
+			(at 40.64 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9487,7 +10337,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole with connection"
-			(at 149.86 156.21 0)
+			(at 40.64 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9503,7 +10353,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H115")
+					(reference "H113")
 					(unit 1)
 				)
 			)
@@ -9521,7 +10371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9003b68-12ff-414e-9d9d-217b986938b2")
-		(property "Reference" "#PWR0126"
+		(property "Reference" "#PWR0119"
 			(at 259.08 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9581,7 +10431,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0126")
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
@@ -9599,7 +10449,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed124afe-3601-45ea-877f-b5dee856e5b3")
-		(property "Reference" "#PWR0111"
+		(property "Reference" "#PWR0106"
 			(at 72.39 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -9659,7 +10509,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0111")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -9677,7 +10527,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed69e210-1b56-4eb7-b842-e40348e9084f")
-		(property "Reference" "#PWR0114"
+		(property "Reference" "#PWR0108"
 			(at 101.6 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -9737,7 +10587,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0114")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -9755,7 +10605,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f358cb9e-9ea9-4490-aa1a-bdd339f37923")
-		(property "Reference" "#PWR0116"
+		(property "Reference" "#PWR0111"
 			(at 130.81 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -9815,7 +10665,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0116")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -10024,7 +10874,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbcc5ce8-d193-4036-8423-96162cb40c36")
-		(property "Reference" "#PWR0107"
+		(property "Reference" "#PWR0103"
 			(at 49.53 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10084,15 +10934,15 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0107")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(sheet
-		(at 120.65 99.06)
-		(size 64.77 17.78)
+		(at 83.82 116.84)
+		(size 60.96 64.77)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -10107,7 +10957,7 @@
 		)
 		(uuid "204526d9-bdaf-4b36-9252-b50630c4791c")
 		(property "Sheetname" "Frontend"
-			(at 120.65 98.3484 0)
+			(at 83.82 116.1284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10118,7 +10968,7 @@
 			)
 		)
 		(property "Sheetfile" "frontend.kicad_sch"
-			(at 120.65 117.4246 0)
+			(at 83.82 182.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10129,7 +10979,7 @@
 			)
 		)
 		(pin "CELL[0..17]" input
-			(at 120.65 111.76 180)
+			(at 83.82 137.16 180)
 			(uuid "cd260d1c-2f21-4e57-800d-4ef85fbf6883")
 			(effects
 				(font
@@ -10139,17 +10989,17 @@
 			)
 		)
 		(pin "BAT+" input
-			(at 185.42 107.95 0)
+			(at 83.82 133.35 180)
 			(uuid "e4dee126-4245-416d-bf3a-fdc0abb54bd2")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(pin "{PCHG PDSG CHG DSG LD PACK}" output
-			(at 185.42 114.3 0)
+			(at 144.78 149.86 0)
 			(uuid "1bbf3108-441e-42d2-8d8d-300e42b463c0")
 			(effects
 				(font
@@ -10159,18 +11009,8 @@
 			)
 		)
 		(pin "CH" input
-			(at 185.42 101.6 0)
+			(at 83.82 128.27 180)
 			(uuid "86de0c16-705b-4c5c-88a9-7acbef547869")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "FUSE" output
-			(at 149.86 116.84 270)
-			(uuid "241fe791-33b7-4d7e-8159-dafe0935f4fe")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10178,8 +11018,18 @@
 				(justify left)
 			)
 		)
+		(pin "FUSE" output
+			(at 97.79 116.84 90)
+			(uuid "241fe791-33b7-4d7e-8159-dafe0935f4fe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(pin "TS[1..6]" output
-			(at 120.65 101.6 180)
+			(at 83.82 179.07 180)
 			(uuid "533f3112-994c-4287-aa68-ed8e70d460aa")
 			(effects
 				(font
@@ -10188,14 +11038,14 @@
 				(justify left)
 			)
 		)
-		(pin "SPI{MOSI MISO SCLK CS} ALERT RST_SHUT" bidirectional
-			(at 120.65 106.68 180)
-			(uuid "760917e2-6ec8-4175-bf93-c96c39d1f5f6")
+		(pin "SPI{MOSI MISO SCLK CS} ALERT RST_SHUT WAKE" bidirectional
+			(at 144.78 128.27 0)
+			(uuid "a9a763de-e278-43b2-baaf-d8d999ed4b2d")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(instances
@@ -10207,7 +11057,7 @@
 		)
 	)
 	(sheet
-		(at 201.93 99.06)
+		(at 165.1 134.62)
 		(size 38.1 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10223,7 +11073,7 @@
 		)
 		(uuid "5ab6bc33-292e-4a51-947f-86660ef7cdb4")
 		(property "Sheetname" "High-Side N-MOSFET"
-			(at 201.93 98.3484 0)
+			(at 165.1 133.9084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10234,7 +11084,7 @@
 			)
 		)
 		(property "Sheetfile" "hs-mosfet.kicad_sch"
-			(at 201.93 117.4246 0)
+			(at 165.1 152.9846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10245,7 +11095,7 @@
 			)
 		)
 		(pin "PACK+" output
-			(at 240.03 105.41 0)
+			(at 203.2 140.97 0)
 			(uuid "4af9951a-120f-4bee-a642-42299700fcb0")
 			(effects
 				(font
@@ -10255,7 +11105,7 @@
 			)
 		)
 		(pin "PACK-" output
-			(at 240.03 110.49 0)
+			(at 203.2 146.05 0)
 			(uuid "cd7bacee-fd5c-47aa-b706-e9e5243aacca")
 			(effects
 				(font
@@ -10265,7 +11115,7 @@
 			)
 		)
 		(pin "BAT+" input
-			(at 201.93 107.95 180)
+			(at 165.1 143.51 180)
 			(uuid "15f34dbc-4e21-4876-b614-a7fdf66a2c31")
 			(effects
 				(font
@@ -10275,17 +11125,17 @@
 			)
 		)
 		(pin "CH" output
-			(at 201.93 101.6 180)
+			(at 203.2 137.16 0)
 			(uuid "524e4460-fd87-4ca6-a685-983336cfb4f7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(pin "{PCHG PDSG CHG DSG PACK LD}" input
-			(at 201.93 114.3 180)
+			(at 165.1 149.86 180)
 			(uuid "4ea8320d-b6ae-4006-bed8-c4359e737cc5")
 			(effects
 				(font
@@ -10303,7 +11153,7 @@
 		)
 	)
 	(sheet
-		(at 59.69 93.98)
+		(at 165.1 110.49)
 		(size 43.18 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10319,7 +11169,7 @@
 		)
 		(uuid "95f215e1-2c63-4fc6-b759-568a8f71e3cc")
 		(property "Sheetname" "MCU"
-			(at 59.69 93.2684 0)
+			(at 165.1 109.7784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10330,7 +11180,7 @@
 			)
 		)
 		(property "Sheetfile" "MCU.kicad_sch"
-			(at 59.69 111.0746 0)
+			(at 165.1 127.5846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10341,7 +11191,7 @@
 			)
 		)
 		(pin "CAN{H L}" bidirectional
-			(at 102.87 97.79 0)
+			(at 208.28 114.3 0)
 			(uuid "1bfd3b74-af4a-4ae5-8bf6-5e89342aaab7")
 			(effects
 				(font
@@ -10351,7 +11201,7 @@
 			)
 		)
 		(pin "SPI{MOSI MISO SCLK CS} ALERT RST_SHUT" bidirectional
-			(at 59.69 106.68 180)
+			(at 165.1 123.19 180)
 			(uuid "7e2f1b01-4c03-42ea-aaeb-2659505ad823")
 			(effects
 				(font

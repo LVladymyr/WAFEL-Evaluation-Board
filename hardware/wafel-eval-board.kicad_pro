@@ -600,7 +600,7 @@
   "schematic": {
     "annotate_start_num": 0,
     "annotation": {
-      "method": 0,
+      "method": 1,
       "sort_order": 0
     },
     "bom_export_filename": "",
@@ -718,7 +718,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 2,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -769,7 +769,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R107,JP101,D101,#PWR113,#PWR120",
     "variants": []
   },
   "sheets": [

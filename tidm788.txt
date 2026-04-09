@@ -1,0 +1,3757 @@
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Revision History
+Rev
+
+ECN #
+
+Approved Date
+
+Approved by
+
+Notes
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+N/A
+
+A
+
+A
+
+B
+
+B
+
+C
+
+C
+
+D
+
+D
+
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 1 of 7
+File: CoverSheet.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+A
+
+3
+
+4
+
+5
+
+6
+
+A
+
+Designator
+High-side MOSFETs and driver.SchDoc
+BAT+
+
+PACK+
+
+Fuse
+
+BAT-
+
+PACK
+LD
+
+PACK+
+
+CHG
+DSG
+PDSG
+
+BAT+
+
+PACK-
+
+PACK-
+
+Designator
+Aux power.SchDoc
+
+5V
+
+POW_EN
+
+Cell16
+
+COD29
+D29
+PID2901 PID2902
+
+PIR1 402
+COR114
+R114
+
+PMEG2010AEH,115
+
+5.1k
+Designator
+Monitor and Cell balancing.SchDoc
+
+B
+
+B
+
+POW_EN
+
+FUSE_MCU
+
+PACK
+LD
+
+Designator
+MCU and Communication.SchDoc
+CHG
+DSG
+PDSG
+
+FUSE_AFE
+
+PIR1 401
+
+COP3
+P3
+
+Header 17
+
+COD28
+D28
+5V_AFE
+SHUT
+ALERT
+
+PID2802 PID2801
+
+PMEG2010AEH,115
+
+5V
+SHUT
+ALERT
+
+BAT_ADC
+BATS_EN
+
+BAT_ADC
+BATS_EN
+
+FETOFF
+DCHG
+DDSG
+
+FETOFF
+DCHG
+DDSG
+
+SCL
+SDA
+
+COP4
+P4
+CANH
+CANL
+
+PIP402 2
+
+Header 2
+
+SCL
+SDA
+C
+
+COR113
+R113
+
+BAT-
+
+PIP401 1
+
+Current-
+
+C
+
+Cell16
+Cell15
+Cell14
+Cell13
+Cell12
+Cell11
+Cell10
+Cell9
+Cell8
+Cell7
+Cell6
+Cell5
+Cell4
+Cell3
+Cell2
+Cell1
+Cell0
+
+Current+
+
+17PIP3017
+16PIP3016
+15PIP3015
+14PIP3014
+13PIP3013
+12PIP3012
+11PIP3011
+10PIP3010
+9PIP309
+8PIP308
+7PIP307
+6PIP306
+5PIP305
+4PIP304
+3PIP303
+2PIP302
+1PIP301
+
+PIR11301
+
+PACK-
+
+PIR11302
+
+0.002
+
+PIR1 102
+
+COR111
+R111
+
+COR112
+R112
+
+0
+
+PIR11201
+
+PIR1 101
+
+PIR11202
+
+0.002
+
+GND
+
+D
+
+D
+
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 2 of 7
+File: High level sch.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+GND
+Cell10
+
+PIC1501
+COC15
+C15
+PIC1502 2.2µF
+
+COR47
+R47
+
+POCell7
+Cell7
+
+COR31
+R31
+
+PIR3101
+
+100
+
+COR14
+R14
+PIR1401
+
+PIR1402
+
+PIQ703 COQ7
+
+COR13
+R13
+
+PIR1301
+
+3
+
+80.6
+
+DMG2302UK-7
+Q7
+1
+PIQ701
+
+PIR1302
+
+COR30
+R30
+
+PIR3001
+
+PID701 COD7
+PID702 COR29
+
+2
+
+PIR2901
+
+COR12
+R12
+
+100
+PIR1202
+
+PIQ603
+
+3
+
+80.6
+
+COR11
+R11
+PIR1101
+
+DMG2302UK-7
+COQ6
+Q6
+
+PIR3102
+
+1
+
+PIR1102
+
+PIQ601
+
+COR28
+R28
+
+PIR2801
+
+COR63
+R63
+
+PIR6301
+
+PIR4601
+
+PIC701
+COC7
+C7
+PIC702 0.22µF
+PIR3002
+
+VC6
+
+PIR2902
+
+PIC601
+
+COR46
+R46
+0
+
+COC6
+C6
+
+PIR6302
+
+COR68
+R68
+
+0
+
+PIR4802
+
+VC7
+
+R29
+
+POCell6
+Cell6
+
+PIR4602
+
+0
+
+10k
+D7
+5.6V
+
+PIQ702
+
+PIR1201
+
+PIR3502
+
+VC14
+VC13
+VC12
+
+VC11
+
+COR48
+R48
+
+VC10
+VC9
+VC8
+VC7
+VC6
+VC5
+VC4
+VC3
+VC2
+VC1
+VC0
+
+PIR4801
+
+0
+
+PIR6802
+
+PIR6801
+
+0 COR70
+R70
+
+PIR4902
+COR49
+R49
+0
+
+PIR4901
+
+PIR7002
+
+PIR50 2 PIR6202 PIR6402
+0
+
+0
+
+COR66
+R66
+
+0
+
+PIR50 1 PIR6201 PIR6401
+
+PIR6 01
+
+PIR7001
+
+0
+COR69
+R69
+
+PIR6 02
+
+COR50
+COR64
+R50 COR62
+R62 R64
+
+COR65
+R65
+
+PIR6901
+
+0
+COR67
+R67
+
+0
+
+PIR6502
+
+PIR6902
+
+PIR6702
+
+0
+PIR6501
+
+PIR6701
+
+0
+SRP
+
+PID601
+PID602 COR27
+PIR2701
+
+PIR2702
+
+10k
+
+2
+
+PIQ502
+
+PID502
+
+POCell4
+Cell4
+
+100
+3
+
+COR7
+R7
+PIR701
+
+1
+PIQ401
+
+PIR702
+
+PID401
+
+2
+
+PIQ402
+
+PID402
+
+PIR2301
+
+100
+
+COR6
+R6
+PIR601
+
+PIR602
+
+PIQ303
+
+3
+
+80.6
+
+COR5
+R5
+PIR501
+
+DMG2302UK-7
+COQ3
+Q3
+1
+
+PIR502
+
+PIQ301
+
+COR22
+R22
+
+PIR2201
+
+2
+PIR301
+
+3
+PIR302
+
+COR20
+R20
+
+PIR2001
+
+PID201 COD2
+PID202 COR19
+
+2
+
+Cell1
+POCell1
+
+PIR1901
+
+PIQ103 COQ1
+
+3
+
+COR1
+R1
+PIR101
+
+DMG2302UK-7
+Q1
+1
+
+PIR102
+
+PIQ101
+
+2
+
+PIQ102
+
+D
+
+PIR4001
+
+1
+PIQ1101
+
+PIR4002
+
+PID1402
+
+PIR3902
+
+PIQ10 3
+
+COR38
+R38
+
+DMG2302UK-7
+COQ10
+Q10
+1
+
+PIR3802
+
+PID1301 COD13
+PID1302 COR52
+
+PIR1802
+
+PIR1701
+
+PIR1702
+
+PIR5201
+
+COR36
+R36
+PIR3601
+
+VC0
+Cell8
+
+COC1
+C1
+
+PIC102 0.22µF
+
+PIQ903
+
+PID901 COD9
+
+PID10 1
+
+PID902
+
+PID10 2
+
+DMG2302UK-7
+COQ9
+Q9
+1
+
+PIR3602
+
+PIQ901
+
+PIQ902
+
+GND
+
+PIC101
+
+PIR3702
+
+80.6
+
+PIC902 0.22µF
+
+GND
+
+100
+
+COR37
+R37
+PIR3701
+
+COR93
+R93
+
+PIR9301
+
+39
+PDSG PIU1039
+
+POPDSG
+PDSG
+
+38
+FUSE PIU1038
+
+POFUSE0AFE
+FUSE_AFE
+
+1
+PIQ1901
+
+249
+
+A
+
+PIQ1903COQ19
+
+PIQ1902
+
+37
+BREG PIU1037
+
+PIC2901
+PIC2902
+
+COC26
+C26
+1µF
+PIC2601 PIC2602
+
+35
+REG1 PIU1035
+
+COC25
+C25
+
+1µF
+PIC2501 PIC2502
+
+33
+RST_SHUT PIU1033
+
+19
+PIU1019
+NC
+
+32
+DDSG PIU1032
+
+PODDSG
+DDSG
+
+20
+PIU1020
+SRN
+
+31
+DCHG PIU1031
+
+PODCHG
+DCHG
+
+PIC2401
+PIR90 2
+COC24
+C24 COR90
+R90
+10k
+2402
+PIC100pF
+PIR90 1
+
+30
+DFETOFF PIU1030
+29
+CFETOFF PIU1029
+
+TS4
+
+28
+HDQ PIU1028
+
+TS3
+
+COR88
+
+POALERT
+ALERT
+
+GND
+
+POSHUT
+SHUT
+PO5V0AFE
+5V_AFE
+
+GND
+
+POFETOFF
+FETOFF
+
+PIC2301
+PIR8902
+COC23
+C23 COR89
+R89
+10k
+2302
+PIC100pF
+PIR8901
+R88
+PIR8802
+
+27
+SDA PIU1027
+26
+SCL PIU1026
+25
+ALERT PIU1025
+
+24
+
+Q19
+ZXTN25100BFHTA
+COC29
+C29
+1µF
+
+PIC2701
+COC27
+C27
+PIC2702 0.022µF
+
+34
+REG2 PIU1034
+
+PIU1024 REG18
+
+B
+
+GND
+
+POSDA
+SDA
+POSCL
+SCL
+
+PIR8801
+
+COR87100 PIR8701
+R87
+PIR8702
+100
+
+17
+VSS PIU1017
+
+GND
+
+VC12
+
+COR84
+R84
+
+WAKE
+
+PIR8402
+
+1
+PIR8401 PIS101
+
+2
+PIS102
+
+GND
+
+COS1
+S1
+
+10k
+
+PIR5702
+
+PIR5602
+
+VC11
+
+PID1201
+PID1202
+
+COR51
+R51
+
+PIR5101
+
+COR83
+R83
+
+Cell16
+
+POCell16
+Cell16
+
+PIR8301
+
+100
+
+COR77
+R77
+
+PIC1201
+
+PIR7701
+
+PIR7702
+
+80.6
+
+PIC1202 0.22µF
+
+PIQ1603 COQ16
+
+COR76
+R76
+
+PIR5502
+
+PIR7601
+
+VC10
+
+PIR7602
+
+PIR7102
+
+100
+PIR7502
+
+COR74
+R74
+PIR7401
+
+COR71
+R71
+0
+
+PIQ1503
+
+DMG2302UK-7
+COQ15
+Q15
+1
+
+PIR7402
+
+COR80
+R80
+
+PIQ1501 PIR8001
+
+PID1801 COD18
+PID1802 COR79
+
+80.6
+
+PIR7101
+VC9
+
+COR81
+R81
+PIR8101
+
+80.6
+
+PIR5302
+
+PIR5202
+
+PID1902
+
+10k
+D19
+5.6V
+
+COR75
+R75
+PIR7501
+
+PIR8102
+
+PIQ1502
+
+100
+PIR7302
+
+80.6
+
+COR72
+R72
+
+PIR5102
+
+PIR7201
+
+80.6
+
+10k
+COD12
+D12
+5.6V
+
+PIQ1403
+
+COR78
+R78
+
+PIQ1401 PIR7801
+
+PIQ1402
+
+Cell13
+
+DMG2302UK-7
+COQ14
+Q14
+1
+
+PIR7202
+
+PIQ1702 COQ17
+Q17
+
+1
+PIQ1701
+
+PIR8002
+
+PIQ1703
+
+PID1701
+PID1702
+
+ZXMP10A13FTA
+
+PIR8602
+
+PIC2801
+
+Cell16
+
+COC28
+C28
+
+PIC2802 470pF
+
+COR92
+R92
+1.0M
+
+PIR9201
+PIR9102
+
+TS2
+
+PIRT102
+
+PIRT202
+
+PIRT101
+
+TS3
+
+CORT1
+RT1
+
+PIRT201
+
+TS4
+
+PIRT302
+
+PIC30 1
+COC30
+C30
+
+CORT2
+RT2
+
+PIC30 2 470pF
+
+PIC3101
+
+COR91
+R91
+3.3M
+
+PIRT402
+COC31
+C31
+
+CORT3
+RT3
+
+PIRT301
+
+PIC3102 470pF
+
+PIRT401
+
+PIC3401
+COC34
+C34
+
+CORT4
+RT4
+
+PIC3402 470pF
+
+GND
+
+PIR9101
+
+PIR7902
+
+PIC20 1
+
+VC14
+
+665k
+
+PIR8601
+
+PIQ1803 COQ18
+Q18
+
+1
+
+POBAT0ADC
+BAT_ADC
+
+COC20
+C20
+
+PIC20 2 0.22µF
+
+PIR8502
+COR85
+R85
+
+PIR7802
+
+10k
+COD17
+D17
+5.6V
+
+PIR8501
+
+PIQ1801
+
+PIQ1802
+
+POCurrent0
+Current+
+
+COR96
+R96
+PIR9601
+
+PIC3201
+PIC3 01
+COC32
+COC33
+C32
+C33
+PIC3202 0.1µF PIC3 02 100pF
+
+BSS123
+Current-
+
+COR95
+R95
+PIR9501
+
+SRP
+
+PIR9602
+
+100
+
+POBATS0EN
+BATS_EN
+
+13.3k
+
+SRN
+
+PIR9502
+
+100
+D
+
+VC13
+
+GND
+
+COD10
+D10
+D9
+BAT42WS-7-FMMSZ4685T1G
+3.6V
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+3
+
+PIR9202
+
+TS1
+
+COR86
+R86
+
+R79
+
+PIR7901
+
+COR73
+R73
+PIR7301
+
+COC10
+C10
+PIC10 2 0.22µF
+
+VC15
+
+PIC2101
+COC21
+C21
+PIC2102 0.22µF
+
+10k
+D18
+5.6V
+
+POCell14
+Cell14
+
+PIC10 1
+
+C
+
+PIC2 02 0.22µF
+
+PID1901 COD19
+
+Cell15
+POCell15
+
+PIC1 01
+COC11
+C11
+PIC1 02 0.22µF
+
+VC16
+
+PIC2 01
+
+COR82
+1
+R82 PIR8202
+PIQ1601 PIR8201
+
+PIQ1602
+
+PIR5402
+
+PIR8302
+
+COC22
+C22
+
+DMG2302UK-7
+Q16
+
+80.6
+
+VC8
+
+2
+
+PIR9302
+
+100
+
+36
+REGIN PIU1036
+
+PIC1301
+COC13
+C13
+PIC1302 0.22µF
+
+R52
+
+POCell9
+Cell9
+
+COC9
+C9
+
+40
+PCHG PIU1040
+
+PIC1901
+COC19
+C19
+PIC1902 2.2µF bq76952PFBR
+
+10k
+D13
+5.6V
+
+VC1
+
+10k
+D1
+5.6V
+
+COR53
+R53
+
+PIQ1001 PIR5301
+
+PIQ10 2
+
+PID101 COD1
+PID102 COR17
+
+PIR5802
+
+COR54
+R54
+100
+
+80.6
+
+PIR1902
+
+POLD
+LD
+
+23
+PIU1023
+TS3
+
+10k
+D14
+5.6V
+
+PIR5401
+
+PIR3801
+
+COR18
+R18
+
+PIR5501
+
+COR39
+R39
+PIR3901
+
+TS2
+
+COC12
+C12
+
+COR55
+R55
+
+PID1401 COD14
+
+Cell10
+Cell10
+POCell10
+
+PIR2002
+
+100
+
+1
+
+DMG2302UK-7
+Q11
+
+VC2
+
+PIC901
+
+PIR1801
+
+PIQ1 03 COQ11
+PIQ1 02
+
+R17
+
+POCell0
+Cell0
+
+3
+
+80.6
+
+2
+
+PIR202
+
+80.6
+
+100
+
+COR40
+R40
+
+100
+
+COR2
+R2
+PIR201
+
+R56
+
+PIR4102
+
+COC17
+C17
+
+PIR5902
+
+PID1502 COR56
+PIR5601
+
+PIR4101
+
+R19
+
+LD
+
+COR94
+R94
+
+10k
+D15
+5.6V
+
+COR41
+R41
+
+10k
+D2
+5.6V
+
+PIQ202
+
+PID1501 COD15
+
+POCell11
+Cell11
+
+PIC201
+COC2
+C2
+PIC202 0.22µF
+
+COR57
+R57
+
+PIQ1201 PIR5701
+
+VC3
+
+PIC301
+COC3
+C3
+PIC302 0.22µF
+
+PIR2102
+
+DMG2302UK-7
+COQ2
+Q2
+1
+PIQ201
+
+1
+
+PIR4202
+
+2
+
+COR3
+R3
+
+PIQ1203
+
+DMG2302UK-7
+COQ12
+Q12
+
+PIQ1202
+
+PIR2101
+
+100
+
+PIQ203
+
+100
+PIR4302
+
+80.6
+PIR4201
+
+PID301 COD3
+PID302 COR21
+
+COR4
+R4
+PIR402
+
+PIR4301
+
+COR42
+R42
+
+PIR2302
+
+41
+LD PIU1041
+
+PIC1702 100pF
+
+PIC1401
+COC14
+C14
+PIC1402 0.22µF
+
+R58
+
+PIR5801
+
+COR43
+R43
+
+PIR2402
+
+R21
+
+80.6
+
+PIQ1302
+
+Cell12
+POCell12
+
+PIC401
+COC4
+C4
+PIC402 0.22µF
+
+PIR6002
+
+VC13
+
+10k
+D16
+5.6V
+
+VC4
+
+PIR2502
+
+PIR2202
+
+POCell2
+Cell2
+
+PID1601 COD16
+PID1602 COR58
+
+0
+
+PIR3401
+
+COR59
+R59
+
+1
+PIQ1301
+PIR5901
+
+PIR4401
+PIR4402
+COR34
+R34 80.6
+
+10k
+D3
+5.6V
+
+PIQ302
+
+PIR401
+
+COR44
+R44
+
+PIR3402
+
+10k
+COD4
+D4
+5.6V
+COR23
+R23
+
+POCell3
+Cell3
+C
+
+COR24
+R24
+
+PIR2401
+
+PIQ1303
+
+DMG2302UK-7
+COQ13
+Q13
+
+2
+
+PIQ403
+
+80.6
+
+DMG2302UK-7
+COQ4
+Q4
+
+100
+PIR4502
+
+80.6
+
+PIR2602
+
+COR25
+R25
+PIR2501
+
+COR8
+R8
+PIR801
+PIR802
+
+PIR4501
+
+10k
+D5
+5.6V
+
+2
+VC14
+3
+PIU103 VC13
+4
+PIU104
+VC12
+5
+PIU105
+VC11
+6
+PIU106
+VC10
+7
+PIU107 VC9
+8
+PIU108 VC8
+9
+PIU109 VC7
+10
+PIU1010 VC6
+11
+PIU1011
+VC5
+12
+PIU1012 VC4
+13
+PIU1013
+VC3
+14
+PIU1014
+VC2
+15
+PIU1015
+VC1
+16
+PIU1016 VC0
+
+2
+
+PIR2601
+
+PID501 COD5
+
+PIR9401
+
+2
+
+PIR902
+
+PIR6001
+
+COR45
+R45
+
+COC5
+C5
+
+PIC502 0.22µF
+COR26
+R26
+
+3
+
+PIR901
+
+1
+PIQ501
+
+POCell13
+Cell13
+
+PIC501
+
+2
+
+3
+
+COR9
+R9
+
+DMG2302UK-7
+Q5
+
+2
+
+PIQ503 COQ5
+
+3
+
+PIR1002
+
+80.6
+
+COR60
+R60
+
+Cell13
+
+3
+
+100
+
+COR10
+R10
+PIR1001
+
+POPACK
+PACK
+
+22
+PIU1022
+TS2
+
+PIC1701
+VC5
+
+3
+
+2
+
+R27
+
+PACK
+
+21
+PIU1021 TS1
+
+WAKE
+
+5.6V
+
+POCell5
+Cell5
+
+42
+PACK PIU1042
+
+18
+
+TS1
+
+COD6
+D6
+
+PIQ602
+
+B
+
+PIR9402
+
+48
+PIU1048
+VC16
+
+PIU1018 SRP
+
+SRN
+
+PIC602 0.22µF
+PIR2802
+
+PODSG
+DSG
+
+PIU102
+
+COR35
+R35
+
+10k
+D8
+5.6V
+
+DSG
+
+1
+PIU101
+VC15
+
+PIR3501
+
+PIR3202
+
+BAS516,115
+
+43
+DSG PIU1043
+
+t°
+
+PID802
+
+PIC802 0.22µF
+
+47
+PIU1047
+BAT
+
+t°
+
+PID801 COD8
+
+VC16
+VC15
+
+PIR6102
+
+100
+
+t°
+
+2
+
+PIQ802
+
+COR32
+R32
+
+PIR3201
+
+PIR6101
+
+t°
+
+PIQ801
+
+PID1101
+
+3
+
+1
+
+PIR1502
+
+PID1102
+
+BAS516,115
+
+COC8
+C8
+
+3
+
+3
+
+COR15
+R15
+PIR1501
+
+DMG2302UK-7
+Q8
+
+Cell16
+
+PIC801
+
+2
+
+PIQ803 COQ8
+
+80.6
+
+A
+
+VC8
+
+PIR3302
+
+2
+
+100
+
+COD20
+D20
+Cell16 PID2002
+PID2001
+
+POCHG
+CHG
+
+44
+NC PIU1044
+
+3
+
+PIR3301
+
+PIR1602
+
+45
+CHG PIU1045
+
+3
+
+COR16
+R16
+
+PIR1601
+
+COR61
+R61
+
+46
+
+PIU1046 CP1
+
+PIC1801
+COC18
+C18
+PIC1802 1µF
+
+2
+
+Cell8
+
+POCell8
+Cell8
+
+COD11
+D11
+
+COU1
+U1
+
+PIC1601
+COC16
+C16
+PIC1602 100pF
+
+3
+
+COR33
+R33
+
+0
+
+3
+
+PIR4701
+
+2
+
+PIR4702
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 3 of 7
+File: Monitor and Cell balancing.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+5V is from DC/DC and BQ769x2
+
+COU2
+U2
+3
+OUT PIU203
+
+4
+PIU204
+NC
+
+5
+NC PIU205
+
+3V3
+
+COC41
+C41
+
+PID2602
+
+PIC4101 PIC4102
+
+COD26
+D26
+
+PID2601
+
+GND
+
+PIU201
+
+GND
+A
+
+0.1µF COC42
+C42
+
+MMSZ4690T1G
+5.6V
+
+PIC4201
+
+PIC4202
+
+0.1µF
+COU4
+U4
+
+TLV70433DBVT
+5V
+
+3
+PIU403
+VCC
+
+7
+
+CANH PIU407
+
+POCANH
+CANH
+
+PIR1 0 1
+COR110
+R110
+
+COR107
+R107
+PIR10701
+100
+COR106 PIR10601
+R106
+PIR10602
+100
+
+1
+
+RXD
+GND
+
+COR105
+
+STB
+
+R105
+PIR10502
+
+4
+PIU404
+
+CANL PIU406
+
+RXD
+
+5
+
+NC PIU405
+8
+PIU408
+STB
+
+PIR10501
+
+100
+
+60.4
+
+6
+
+PIU401 TXD
+
+PIR10702
+
+COC43
+PIR1 0 2 PIC4302 PIC4301
+C43
+PIR10901
+3V3
+
+COR109
+R1090.1µF
+60.4
+
+PIR10902
+
+2
+GND PIU402
+
+POCANL
+CANL
+
+PID2701
+
+TCAN1044VDDFR
+
+PID2702 COD27
+
+2
+
+3V3
+TXD
+
+1
+
+PIC3701
+COC37
+C37
+PIC3702 2.2µF
+
+A
+
+2
+PIU202
+IN
+
+1
+
+5V
+
+PO5V
+5V
+
+D27
+NUP3105LT1G
+
+1. When CAN bus has WUP, RXD will be pull low and indicate MCU to pull STB low
+
+PID2703
+
+3
+
+2. 3V3 is from MCU VCC, 5V is from DC/DC
+GND
+
+PIC3601
+PIC3801
+COC36
+COC38
+C36
+C38
+PIC3602 10µF PIC3802 0.1µF
+3V3
+
+POFUSE0MCU
+FUSE_MCU
+COC35
+C35
+PIC3501
+
+GND
+
+GND
+
+COU3
+U3
+
+B
+
+10
+PIU3010
+DVCC
+
+LED1
+LED2
+LED3
+
+PIC3502
+
+470pF
+
+POBAT0ADC
+BAT_ADC
+
+23
+P4.0/UCA1STE/ISOTXD/ISORXD PIU3023
+22
+P4.1/UCA1CLK PIU3022
+21
+P4.2/UCA1RXD/UCA1SOMI/UCA1RXD PIU3021
+20
+P4.3/UCA1TXD/UCA1SIMO/UCA1TXD PIU3020
+19
+P4.4/UCB1STE PIU3019
+18
+P4.5/UCB1CLK PIU3018
+17
+P4.6/UCB1SIMO/UCB1SDA PIU3017
+16
+P4.7/UCB1SOMI/UCB1SCL PIU3016
+
+7
+6
+5
+PIU305
+P1.2/UCB0SIMO/UCB0SDA/TB0TRG/A2/VEREF4
+PIU304 P1.3/UCB0SOMI/UCB0SCL/A3
+31
+PIU3031 P1.4/UCA0STE/TCK/A4
+30
+PIU3030
+P1.5/UCA0CLK/TMS/A5
+29
+PIU3029
+P1.6/UCA0RXD/UCA0SOMI/TB0.1/TDI/TCLK/A6
+28
+PIU3028 P1.7/UCA0TXD/UCA0SIMO/TB0.2/TDO/A7/VREF+
+PIU307 P1.0/UCB0STE/SMCLK/COMP0.0/A0/VEREF+
+PIU306 P1.1/UCB0CLK/ACLK/COMP0.1/A1
+
+PODDSG
+DDSG
+PODCHG
+DCHG
+POFETOFF
+FETOFF
+POALERT
+ALERT
+BATS_EN
+POBATS0EN
+SDA_MCU
+SCL_MCU
+
+27
+
+10.0k
+
+PIRT502
+PIC40 1
+COC40
+C40
+PIC40 2 470pF PIRT501
+
+PIU3027 P2.0/TB1.1/COMP0.O
+
+STB
+TXD
+RXD
+PTC_Pull
+C
+
+COR108
+R108
+
+PIR10801
+
+PIU3026
+
+POSHUT
+SHUT
+
+PIR10802
+
+POPOW0EN
+POW_EN
+
+37
+P5.0/TB2.1/MFM.RX/A8 PIU3037
+36
+P5.1/TB2.2/MFM.TX/A9 PIU3036
+
+26
+P2.1/TB1.2/COMP1.O
+25
+PIU3025
+P2.2/TB1CLK
+24
+PIU3024
+P2.3/TB1TRG
+15
+PIU3015 P2.4/COMP1.1
+14
+PIU3014
+P2.5/COMP1.0
+13
+PIU3013 P2.6/MCLK/XOUT
+12
+PIU3012 P2.7/TB0CLK/XIN
+
+PTC_Pull
+
+8 SBCLK
+TEST/SBWTCK PIU308
+
+t°
+
+B
+
+CORT5
+RT5
+TMP6131DECR
+
+3V3
+
+PIR10402
+
+COR104
+R104
+47.0k
+
+SBIO
+
+9
+RST/NMI/SBWTDIO PIU309
+
+3
+2
+PIU302 P3.1
+1
+PIU301
+P3.2
+38
+PIU3038 P3.3
+35
+PIU3035 P3.4/SMCLK
+34
+PIU3034 P3.5
+33
+PIU3033 P3.6
+32
+PIU3032 P3.7
+PIU303 P3.0/MCLK
+
+GND
+
+PIR10401 PIS201
+1
+2
+PIS202
+PIC3901
+COS2
+S2
+COC39
+C39
+PIC3902 1000pF
+
+C
+11
+DVSS PIU3011
+
+MSP430FR2155TDBTR
+
+PIR9701SBCLK
+
+D22 100
+D21
+MMSZ4685T1G
+MMSZ4685T1G
+3.6V
+3.6V
+
+Header 4
+
+COD23
+D23
+Red
+
+LED3
+
+PID2402
+PID2401
+PIR10 02
+
+COD24
+D24
+Red
+
+PID2502
+PID2501
+PIR10102
+
+COD25
+D25
+
+1
+
+PID2101 COD21 PID201 COD22
+PID2102 PID202
+
+PIR9702
+
+2
+
+PID2302
+PID2301
+PIR9 02
+
+SBIO
+
+PIR9801
+
+100
+
+COR97
+R97
+
+2
+
+PIR9802
+
+1
+
+3V3
+
+1
+
+4PIP104
+3PIP103
+2PIP102
+1PIP101
+
+2
+
+COR98
+R98
+
+COP1
+P1
+
+LED2
+
+LED1
+
+GND
+
+COP2
+P2
+
+COR99
+R99
+
+COR100
+R100
+
+COR101
+R101
+
+470
+
+470
+
+470
+
+PIR9 01
+
+PIR10 01
+
+PIP201 1
+
+SCL
+POSCL
+SDA
+POSDA
+
+PIP203 3
+
+PIR10101
+
+2 PIP202
+4 PIP204
+
+SCL_MCU
+SDA_MCU
+
+Header 2X2
+
+PIR10202
+
+PIR10302
+
+COR102
+COR103
+R102 R103
+
+GND
+
+PIR10201
+
+10k
+
+10k
+
+PIR10301
+
+GND
+3V3
+D
+
+D
+
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 4 of 7
+File: MCU and Communication.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+A
+
+A
+
+COC48
+C48
+GND
+
+COR118
+R118
+
+PIC4802 PIC4801
+PIR11801
+
+NC
+
+COL1
+L1
+
+COD30
+D30
+POCell16
+Cell16
+
+PID3002
+
+PID3001
+
+BAS516,115
+
+PIL101
+
+PIR11802
+
+NC
+
+COU5
+U5
+PIL102
+
+10µH
+
+COR115
+R115
+
+PIR11501
+
+2
+PIU502
+VIN
+
+PIR11502
+
+COL2
+L2
+COR117
+R117
+
+7 PIR11701
+BST PIU507
+
+100
+
+PIC4 01
+COC44
+C44
+PIC4 02 4.7µF
+
+PIC4501
+COC45
+C45
+PIC4502 4.7µF
+
+0
+3
+
+POPOW0EN
+POW_EN
+PIC4601
+COC46
+C46
+PIC4602 0.1µF PIC4701 COC47
+C47
+PIC4702 10µF
+PIR1 602
+
+8
+SW PIU508
+
+PIU503
+
+EN/UVLO
+
+4
+PIU504
+RON
+
+COR116
+R116
+82.5k
+
+PIR11702
+
+PIC4901
+COC49
+C49
+PIC4902 2200pF
+
+PIL201
+
+PIR11901
+
+COC51
+C51
+
+PIR11902
+
+PIC5102
+
+523k
+
+6
+PGOOD PIU506
+
+PIC50 1
+
+5
+FB PIU505
+
+PIC5101
+
+1500pF
+
+COC50
+C50
+
+PIC50 2 100pF
+
+GND
+
+COR121
+R121
+200k
+
+PIC5201
+
+PIR12101
+
+PIC5301
+
+PIC5401
+COC53
+C53
+
+COC54
+C54
+
+PIC5202 4.7µF PIC5302 4.7µF PIC5402 4.7µF
+
+PIR120 2
+COR120
+R120
+
+LM5163DDAR
+
+B
+
+PIR12102
+
+COC52
+C52
+
+9
+PAD PIU509
+1
+GND PIU501
+
+PIR1 601
+
+PO5V
+5V
+
+PIL202
+
+68µH
+
+COR119
+R119
+
+PIR120 1
+
+63.4k
+
+B
+
+GND
+
+C
+
+C
+
+D
+
+D
+
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/25
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 5 of 7
+File: Aux power.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+COR125
+R125
+
+PIR12501
+
+POPDSG
+PDSG
+
+PIR12502
+
+49.9k
+
+PID3 01 COD33
+
+PID3 02
+
+A
+
+COD34
+D34
+D33
+MMSZ5267BT1G PID3401 PID3402
+75V
+16V
+COR126
+R126
+PIR12602
+
+GND
+
+A
+
+PACK-
+
+PIR12601
+
+PID4502 COD45
+
+1.0M
+3
+
+PIR12802
+
+1,2,5,6
+
+4
+
+PIQ2404
+
+PID4102
+
+COR128
+R128
+
+PIQ2403
+
+GND
+
+PIR12801
+
+510
+
+PID4101
+
+COR127
+R127
+
+PIQ2406 PIR12702
+PIQ2405
+PIQ2402
+PIQ2401
+
+PIR12701
+
+PID4302
+COD41
+D41
+
+COD43
+D43
+MMSZ5267BT1GMMSZ5267BT1G
+75V
+75V
+
+PID4301
+
+510
+
+COQ24
+Q24
+
+DMN10H220L-7
+
+PIR12201
+
+PIF102
+
+2
+PIQ2002
+
+GND
+
+200
+1
+PIF101
+
+COF1
+F1
+
+PIQ20 1
+
+1
+
+2
+
+0.1µF
+
+2
+PIQ2302
+
+PIQ2301
+
+PIL502
+
+600 ohm
+COQ22
+Q22
+CSD19536KTT
+3
+PIQ2203
+
+PIR13801
+
+0.1µF
+
+D46
+BAT46W-7-F
+
+PIR14001
+
+COR138
+R138
+
+PIR12402
+
+COR124
+R124
+
+COD32 10M
+D32
+16V
+
+PID3201
+
+PIR12401
+
+COL4
+L4
+PIL401
+
+PIQ2 01
+
+PIL402
+
+COR142
+R142
+
+PIR13802
+
+PIR14201
+
+20k
+
+COD44
+D44
+
+COR141
+R141
+
+PIR14101
+
+3
+PIQ2103
+
+CHG
+POCHG
+
+499
+
+PIR12302
+
+PIL302
+
+2
+PIQ2602
+
+PIL801
+
+PIR13701
+COR137
+R137
+
+PID3902 COD39
+COR131
+R131
+10M
+
+PID3901
+
+PIR13101
+
+COL7
+L7
+PIL702
+
+PID40 2 COD40 PIR13702
+
+PIR13102
+
+3
+PIQ2603
+
+D39
+MMSZ5246B-7-F
+16V
+
+PIQ2101
+
+1
+
+PID4201 COD42
+
+2N7002W-7-F
+
+PIR13401
+
+D47
+ES3D-E3/57T
+
+COR136
+R136
+
+PIR13402
+
+511
+
+PIR13601
+
+10k
+
+PACK-
+
+COQ28
+Q28
+2
+
+PACK-
+
+COR135
+R135
+
+3
+
+PIQ2802
+
+C
+
+PID4702
+
+PIR13602
+
+COR134
+R134
+PIL601
+
+PID4701 COD47
+
+D42
+BAT46W-7-F
+
+PID4202
+
+COL6
+L6
+PIL602
+
+PIC5901
+COC59
+C59
+PIC5902 0.1µF
+
+PIQ2901
+
+PIQ2903
+
+3
+PIQ2503
+
+PIQ2501
+
+PIC60 1
+COC60
+C60
+PIC60 2 0.1µF
+
+10M
+
+D40
+MMSZ5246B-7-F
+
+Q29
+
+CSD19536KTT
+600 ohm
+
+600 ohm
+
+PID40 1
+
+PIQ2902 COQ29
+
+PIL701
+
+COQ25
+Q25
+2
+PIQ2502
+
+B
+
+COL8
+L8
+PIL802
+
+CSD19536KTT
+600 ohm
+COQ26
+Q26
+
+1
+
+COL3
+L3
+PIL301
+
+1
+
+COR123
+R123
+PIR12301
+
+2
+PIQ2102
+
+PIR14102
+
+20k
+
+POPACK0
+PACK+
+
+CSD19536KTT
+600 ohm
+
+600 ohm
+
+PIR14202
+
+49.9k
+
+3
+PIQ2703
+
+PIQ2601
+
+COQ21
+Q21
+CSD19536KTT
+
+BAT-
+
+COQ27
+Q27
+2
+PIQ2702
+
+PIR14002
+
+49.9k
+
+BAT46W-7-F
+
+1
+
+PID3202
+
+D31
+SMBJ60A-13-F
+60V
+
+2
+PIQ2202
+
+1
+
+PID3101 COD31
+PID3102
+
+PID4602
+COD46
+PID4601
+
+COR140
+R140
+
+PIR13902
+
+5.1k
+
+Charger wake up from shutdown
+Predischarge detection
+
+PIQ2701
+
+1
+
+COL5
+L5
+PIL501
+
+PIC5 01
+COC55
+C55
+PIC5 02 0.1µF
+
+POLD
+LD
+
+2
+
+COQ23
+Q23
+CSD19536KTT
+3
+PIQ2303
+
+PIF201
+
+0678L9300-02
+
+PIC5601
+COC56
+C56
+PIC5602 0.1µF
+
+PIR13901
+
+3
+
+PIF202
+
+COR139
+R139
+
+POPACK
+PACK
+OCC recovery detection
+Charger detection in Sleep mode
+
+PID4402 PID4401
+
+COF2
+F2
+POBAT0
+BAT+
+
+COC58
+C58
+PIC5802 PIC5801
+
+POFuse
+Fuse
+
+NC
+
+B
+
+COC57
+C57
+PIC5702 PIC5701
+
+1
+
+3
+PIF103
+
+PIR12202
+
+3
+PIQ2003
+
+D45
+BAT46W-7-F
+
+FDC3535
+
+COQ20
+Q20
+
+COR122
+R122
+
+PID4501
+
+PIQ2803
+
+PIR13501
+
+PIR13502
+
+C
+
+511
+
+PID3801
+PID3802
+
+COD38
+D38
+
+PIQ2801
+
+1
+
+BZT52C5V1S-7-F
+5.1V
+DMG1013UW-7
+
+PID3701
+PIR12902
+
+COD37
+D37
+
+COR129
+R129
+
+BAS516,115
+
+PID3702
+
+56k
+
+PIR12901
+
+PIR13 01
+
+COR133
+R133
+
+PIR13 02
+PIR13202
+
+511
+
+COR132
+R132
+
+511
+DSG
+PODSG
+
+PIR13001
+
+PID3501
+PID3502
+
+D
+
+PIR13201
+
+COR130
+R130
+100
+COD35
+D35
+
+NC
+
+PIR13002
+
+PID3601
+PID3602
+
+COD36
+D36
+
+D
+
+BAT46W-7-F
+
+Optional
+GND
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 6 of 7
+File: High-side MOSFETs and driver.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+A
+
+A
+
+PCB Number: TIDA-010208
+PCB Rev: E1
+CO!PCB1
+
+COLogo1
+Logo1
+
+COLogo2
+Logo2
+
+PCB
+LOGO
+
+PCB
+LOGO
+
+CAUTION. READ USER GUIDE BEFORE USE
+
+FCC disclaimer
+
+COLogo3
+Logo3
+
+PCB
+LOGO
+WEEE logo
+
+B
+
+B
+
+Variant/Label Table
+Variant
+
+Label Text
+
+001
+002
+
+C
+
+C
+
+D
+
+D
+
+Texas Instruments and/or its licensors do not warrant the accuracy or completeness of this specification or any information contained therein. Texas Instruments and/or its licensors do not
+warrant that this design will meet the specifications, will be suitable for your application or fit for any particular purpose, or will operate in an implementation. Texas Instruments and/or its
+licensors do not warrant that the design is production worthy. You should completely validate and test your design implementation to confirm the system functionality for your application.
+1
+
+2
+
+3
+
+4
+
+N/A
+Orderable: EVM_orderable
+TID #:
+TIDA-010208
+Number: TIDA-010208
+Rev: E1
+SVN Rev: Version control disabled
+Drawn By:
+Engineer: Ryan Tan
+5
+
+Designed for: Public Release
+Mod. Date: 2020/12/10
+Project Title: 10s-16s Battery Pack reference design
+Sheet Title:
+Assembly Variant: [No Variations]
+Sheet: 7 of 7
+File: EVM_Hardware.SchDoc
+Size: B
+Contact: http://www.ti.com/support
+6
+
+http://www.ti.com
+© Texas Instruments
+
+2017
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, or other requirements. These resources are subject to change without notice. TI grants you
+permission to use these resources only for development of an application that uses the TI products described in the resource. Other
+reproduction and display of these resources is prohibited. No license is granted to any other TI intellectual property right or to any third party
+intellectual property right. TI disclaims responsibility for, and you will fully indemnify TI and its representatives against, any claims, damages,
+costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale (https:www.ti.com/legal/termsofsale.html) or other applicable terms available either
+on ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s
+applicable warranties or warranty disclaimers for TI products.IMPORTANT NOTICE
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2021, Texas Instruments Incorporated
+
+

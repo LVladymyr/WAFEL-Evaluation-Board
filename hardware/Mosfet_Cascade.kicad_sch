@@ -982,7 +982,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d57b102-4b75-45c9-a342-136476b6be54")
-		(property "Reference" "R402"
+		(property "Reference" "R403"
 			(at 135.89 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1046,7 +1046,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
-					(reference "R402")
+					(reference "R403")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
@@ -1068,7 +1068,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2061c47f-58cc-45ba-bb98-39a50759e370")
-		(property "Reference" "R403"
+		(property "Reference" "R404"
 			(at 148.59 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1132,7 +1132,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
-					(reference "R403")
+					(reference "R404")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
@@ -1240,7 +1240,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4208278b-5f68-492e-b917-79cec4887184")
-		(property "Reference" "R401"
+		(property "Reference" "R402"
 			(at 123.19 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1304,7 +1304,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
-					(reference "R401")
+					(reference "R402")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
@@ -1587,7 +1587,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d06479c2-0616-4743-9922-5ef363f14edd")
-		(property "Reference" "R404"
+		(property "Reference" "R401"
 			(at 85.09 84.4549 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1651,7 +1651,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
-					(reference "R404")
+					(reference "R401")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"

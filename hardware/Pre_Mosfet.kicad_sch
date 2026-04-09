@@ -1124,7 +1124,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2d03c4e1-bf1a-4604-867d-954686fed678")
-		(property "Reference" "Q701"
+		(property "Reference" "Q601"
 			(at 157.48 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1222,11 +1222,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "Q702")
+					(reference "Q701")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "Q701")
+					(reference "Q601")
 					(unit 1)
 				)
 			)
@@ -1243,7 +1243,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "31a319b3-8f67-4c08-b67c-040037d80494")
-		(property "Reference" "R704"
+		(property "Reference" "R604"
 			(at 176.53 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1305,11 +1305,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "R708")
+					(reference "R704")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "R704")
+					(reference "R604")
 					(unit 1)
 				)
 			)
@@ -1327,7 +1327,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "61c223f9-1b6e-44ce-b344-1418b5529721")
-		(property "Reference" "D702"
+		(property "Reference" "D602"
 			(at 151.13 99.0601 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1391,11 +1391,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "D704")
+					(reference "D702")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "D702")
+					(reference "D602")
 					(unit 1)
 				)
 			)
@@ -1413,7 +1413,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6f16f5fc-ffba-40b3-812b-b1ea05388f82")
-		(property "Reference" "#PWR0701"
+		(property "Reference" "#PWR0601"
 			(at 124.46 135.255 0)
 			(hide yes)
 			(show_name no)
@@ -1473,11 +1473,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "#PWR0702")
+					(reference "#PWR0701")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "#PWR0701")
+					(reference "#PWR0601")
 					(unit 1)
 				)
 			)
@@ -1495,7 +1495,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ebceb6d-c858-4ca1-b24b-8d5d76ad421b")
-		(property "Reference" "R701"
+		(property "Reference" "R601"
 			(at 132.08 102.235 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1557,11 +1557,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "R703")
+					(reference "R701")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "R701")
+					(reference "R601")
 					(unit 1)
 				)
 			)
@@ -1579,7 +1579,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92d0993f-37a7-4f8e-986a-4cf58d0b7a6b")
-		(property "Reference" "D701"
+		(property "Reference" "D601"
 			(at 127 118.7449 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1643,11 +1643,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "D703")
+					(reference "D701")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "D701")
+					(reference "D601")
 					(unit 1)
 				)
 			)
@@ -1664,7 +1664,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea3d1b21-d467-437c-832f-eeae26aa4545")
-		(property "Reference" "R705"
+		(property "Reference" "R603"
 			(at 176.53 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1726,11 +1726,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "R707")
+					(reference "R703")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "R705")
+					(reference "R603")
 					(unit 1)
 				)
 			)
@@ -1748,7 +1748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee168491-6a73-4aea-a47e-7f9e8532ec54")
-		(property "Reference" "R702"
+		(property "Reference" "R602"
 			(at 140.97 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1812,11 +1812,11 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
-					(reference "R706")
+					(reference "R702")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
-					(reference "R702")
+					(reference "R602")
 					(unit 1)
 				)
 			)

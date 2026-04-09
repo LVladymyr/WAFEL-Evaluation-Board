@@ -46,7 +46,7 @@
 * Not use small SMD componnts, only some that could be added with cheap hot air soldering gun
 
 ## 7. Cost requirement
-* **Designed PCB** should cost less then 70 USD of parts without soldering
+* **Designed PCB** should cost less then 70 USD of parts without soldering [[budget_estimate]]
 
 # Attaches
 ## A. Estimating regen current

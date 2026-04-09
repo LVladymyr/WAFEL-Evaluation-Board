@@ -235,13 +235,14 @@
   },
   "active": "023526ff50447b8e",
   "lastOpenFiles": [
-    "SLUAA09A Translation.md",
+    "MCU.md",
     "SPI MCU AFE.md",
     "Requirements_to_BMS.md",
+    "budget_estimate.md",
+    "SLUAA09A Translation.md",
     "Todos.md",
     "Reverse charge protection.md",
     "Sleep_Wakeup_Strategy.md",
-    "MCU.md",
     "Шини живлення.md",
     "tps79333-ep/tps79333-ep.md",
     "78af5f924c08/_page_2_Picture_1.jpeg",
@@ -279,7 +280,6 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md"
+    "copilot/copilot-custom-prompts/Generate glossary.md"
   ]
 }

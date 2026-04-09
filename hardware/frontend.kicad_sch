@@ -135,6 +135,164 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -3097,16 +3255,6 @@
 		)
 		(uuid "45121205-26e0-4e42-bc1d-a242b99947be")
 	)
-	(text "Used also as Wake UP"
-		(exclude_from_sim no)
-		(at 72.39 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "af6d13a7-ed3f-40e4-bfd7-d4e0cefae046")
-	)
 	(text "AFE"
 		(exclude_from_sim no)
 		(at 21.844 21.844 0)
@@ -3144,10 +3292,22 @@
 		(uuid "0e58c217-6a25-4c26-96c5-19e679a65940")
 	)
 	(junction
+		(at 49.53 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14a64dfe-70f7-4257-b3fc-040e145cbc1e")
+	)
+	(junction
 		(at 137.16 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "19ab207f-bbe8-4033-b8b4-a4f09aea63a8")
+	)
+	(junction
+		(at 27.94 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e383a02-9931-4bfc-b9b7-04a6aada103f")
 	)
 	(junction
 		(at 208.28 133.35)
@@ -3186,13 +3346,19 @@
 		(uuid "332f3b94-7046-4c98-ae45-f45b84f372d7")
 	)
 	(junction
+		(at 60.96 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34d3879b-e429-4579-9e3b-25464442ff40")
+	)
+	(junction
 		(at 104.14 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "37932802-aeee-45d7-80a6-45d7e7a2234a")
 	)
 	(junction
-		(at 66.04 157.48)
+		(at 111.76 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "38a027ed-6c1f-4728-8e0a-f0304f5adb3f")
@@ -3204,7 +3370,13 @@
 		(uuid "392e1e19-9a41-4167-ac3f-c777a286edbc")
 	)
 	(junction
-		(at 82.55 144.78)
+		(at 49.53 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a9994d2-ece3-4e4a-ba9e-abb0e6b194ff")
+	)
+	(junction
+		(at 95.25 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3bf8c55d-4272-4910-af7b-78964ceac392")
@@ -3246,16 +3418,40 @@
 		(uuid "675af338-d823-47f4-a520-755313f10272")
 	)
 	(junction
+		(at 27.94 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f757e89-bef3-45ab-8c81-7b6a5703bf86")
+	)
+	(junction
+		(at 16.51 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "71a2c55d-a188-4808-ad9e-792bf004d33f")
+	)
+	(junction
 		(at 135.89 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73b783d4-41bb-439e-b2cb-3ab85d88c9bd")
 	)
 	(junction
+		(at 60.96 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "751292e1-9126-47d1-b1fd-ca69d787ee34")
+	)
+	(junction
 		(at 208.28 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b57ff6d-31e1-4df2-9d88-a58a35a935c2")
+	)
+	(junction
+		(at 16.51 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7cf98e70-c9ff-4e4b-9b5f-144e8e52f81f")
 	)
 	(junction
 		(at 201.93 133.35)
@@ -3291,13 +3487,25 @@
 		(at 88.9 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c8cee6fd-ef47-464a-9481-a618f66988d0")
+		(uuid "c6a82baa-1c25-4f4c-ac7b-855c301c7194")
+	)
+	(junction
+		(at 27.94 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c900ba8b-d0ce-4f7b-a548-8a5cedd5c4d4")
 	)
 	(junction
 		(at 212.09 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ce3d0d1f-a115-4688-a524-b34209b242c1")
+	)
+	(junction
+		(at 16.51 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1b19b06-77da-47dc-8a20-fb4cc538fc5c")
 	)
 	(junction
 		(at 162.56 22.86)
@@ -3421,15 +3629,6 @@
 		(uuid "0ab1b679-067f-4923-afdb-3cfb031f2a04")
 	)
 	(bus_entry
-		(at 93.98 115.57)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "100d6bd2-95fc-4868-abde-1136d3092bb8")
-	)
-	(bus_entry
 		(at 251.46 74.93)
 		(size 2.54 2.54)
 		(stroke
@@ -3437,15 +3636,6 @@
 			(type default)
 		)
 		(uuid "10422de7-df0d-4f3d-af2b-184f8392aa2f")
-	)
-	(bus_entry
-		(at 93.98 118.11)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "117a425b-c675-4081-8322-936b2d4e973e")
 	)
 	(bus_entry
 		(at 137.16 80.01)
@@ -3466,7 +3656,7 @@
 		(uuid "15995969-e90d-4401-a5a4-884dd670d88f")
 	)
 	(bus_entry
-		(at 88.9 113.03)
+		(at 88.9 110.49)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -3511,8 +3701,8 @@
 		(uuid "2723b94f-6512-4f43-a76a-470edcd53337")
 	)
 	(bus_entry
-		(at 86.36 144.78)
-		(size 2.54 2.54)
+		(at 91.44 142.24)
+		(size -2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
@@ -3565,15 +3755,6 @@
 		(uuid "3eba19e6-3407-4148-b6fa-7a782053c367")
 	)
 	(bus_entry
-		(at 93.98 107.95)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4254c87f-5bbb-4701-a645-937afb1df264")
-	)
-	(bus_entry
 		(at 251.46 80.01)
 		(size 2.54 2.54)
 		(stroke
@@ -3581,15 +3762,6 @@
 			(type default)
 		)
 		(uuid "47570531-ab9d-49ff-af01-2614dbc780af")
-	)
-	(bus_entry
-		(at 93.98 128.27)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b0f6f50-2741-4c71-be35-7fb8fb682f7b")
 	)
 	(bus_entry
 		(at 88.9 90.17)
@@ -3653,15 +3825,6 @@
 			(type default)
 		)
 		(uuid "7909db51-05a0-44b3-b586-fe86c0142ced")
-	)
-	(bus_entry
-		(at 93.98 130.81)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ba38c11-1e8e-4ce4-9ee2-c6249dda4c3a")
 	)
 	(bus_entry
 		(at 137.16 95.25)
@@ -3772,7 +3935,7 @@
 		(uuid "9a29919a-cb89-459e-a5d6-0ad70f29fd27")
 	)
 	(bus_entry
-		(at 88.9 121.92)
+		(at 88.9 120.65)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -3934,15 +4097,6 @@
 		(uuid "dca7d449-49b4-4107-a1cb-6aff1b131ef3")
 	)
 	(bus_entry
-		(at 93.98 125.73)
-		(size 2.54 -2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5a45564-2580-4872-8144-1cf28594fc0f")
-	)
-	(bus_entry
 		(at 87.63 82.55)
 		(size 2.54 -2.54)
 		(stroke
@@ -3995,16 +4149,6 @@
 			(type default)
 		)
 		(uuid "fd8c95bd-f882-40ad-b3d0-5ab59810a506")
-	)
-	(wire
-		(pts
-			(xy 53.34 133.35) (xy 57.15 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00b02f36-ae41-46b1-b14d-145521bd923c")
 	)
 	(wire
 		(pts
@@ -4108,7 +4252,17 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 119.38) (xy 106.68 119.38)
+			(xy 16.51 177.8) (xy 16.51 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0be1625b-90bc-4ddd-8cb1-f44382ea1d1a")
+	)
+	(wire
+		(pts
+			(xy 91.44 118.11) (xy 106.68 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4165,16 +4319,6 @@
 			(type default)
 		)
 		(uuid "0f1e40db-5211-4538-a4e5-8f72336e28a0")
-	)
-	(wire
-		(pts
-			(xy 53.34 148.59) (xy 57.15 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11e56a27-e7ff-4fce-975c-bffcd7ccaf62")
 	)
 	(bus
 		(pts
@@ -4266,16 +4410,6 @@
 		)
 		(uuid "1b49c1b4-9151-4ef5-8e5d-2862c324648c")
 	)
-	(bus
-		(pts
-			(xy 93.98 107.95) (xy 93.98 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b7d3b5c-d6e4-465d-b128-0f093c8861bb")
-	)
 	(wire
 		(pts
 			(xy 172.72 33.02) (xy 172.72 34.29)
@@ -4348,7 +4482,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 125.73) (xy 106.68 125.73)
+			(xy 93.98 125.73) (xy 106.68 125.73)
 		)
 		(stroke
 			(width 0)
@@ -4358,7 +4492,17 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 157.48) (xy 77.47 157.48)
+			(xy 16.51 184.15) (xy 27.94 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21cb7491-f4dd-4c37-834c-03115b3b7421")
+	)
+	(wire
+		(pts
+			(xy 95.25 154.94) (xy 100.33 154.94)
 		)
 		(stroke
 			(width 0)
@@ -4408,6 +4552,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 151.13) (xy 60.96 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "256efb6a-89a3-4367-a488-f23e99cb63ab")
+	)
+	(wire
+		(pts
 			(xy 135.89 153.67) (xy 135.89 156.21)
 		)
 		(stroke
@@ -4428,6 +4582,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 142.24) (xy 60.96 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "273bc359-55f2-4973-b737-53757701b509")
+	)
+	(wire
+		(pts
 			(xy 220.98 57.15) (xy 227.33 57.15)
 		)
 		(stroke
@@ -4435,16 +4599,6 @@
 			(type default)
 		)
 		(uuid "2743a7c3-655b-4ca7-83be-94b0fc4574e4")
-	)
-	(wire
-		(pts
-			(xy 53.34 143.51) (xy 57.15 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27531820-2eb1-431f-be3c-2cf66b76949f")
 	)
 	(wire
 		(pts
@@ -4608,6 +4762,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 166.37) (xy 49.53 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fc481ff-f4b6-4da1-b5ef-4a6c49666c69")
+	)
+	(wire
+		(pts
 			(xy 201.93 147.32) (xy 212.09 147.32)
 		)
 		(stroke
@@ -4615,16 +4779,6 @@
 			(type default)
 		)
 		(uuid "2fcb78e1-c4fc-4643-ae1d-0fcc8db91a50")
-	)
-	(wire
-		(pts
-			(xy 53.34 153.67) (xy 57.15 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30cd70ae-cb8d-4f1d-8443-0ea14d68d759")
 	)
 	(wire
 		(pts
@@ -4688,7 +4842,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 110.49) (xy 106.68 110.49)
+			(xy 91.44 107.95) (xy 106.68 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4705,6 +4859,16 @@
 			(type default)
 		)
 		(uuid "354d6918-8a0b-4de2-b683-5171fb8d1a43")
+	)
+	(wire
+		(pts
+			(xy 49.53 149.86) (xy 49.53 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35cbf24f-3257-4311-b178-4709dfa01c3f")
 	)
 	(wire
 		(pts
@@ -4728,6 +4892,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 148.59) (xy 27.94 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36a0dc4f-d3d6-4313-aa6e-6841dc309d81")
+	)
+	(wire
+		(pts
 			(xy 157.48 33.02) (xy 162.56 33.02)
 		)
 		(stroke
@@ -4748,6 +4922,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 167.64) (xy 27.94 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37417024-b8a8-4221-9040-5862a67cc730")
+	)
+	(wire
+		(pts
 			(xy 245.11 80.01) (xy 251.46 80.01)
 		)
 		(stroke
@@ -4755,6 +4939,26 @@
 			(type default)
 		)
 		(uuid "39431caa-2dbf-43ec-a01c-547df9408205")
+	)
+	(wire
+		(pts
+			(xy 27.94 165.1) (xy 27.94 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "397ed5dd-87b6-49f9-ad62-fa257b60a3d4")
+	)
+	(wire
+		(pts
+			(xy 27.94 158.75) (xy 27.94 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39c4bec4-b57a-498e-96d9-d6e8ff65ef2a")
 	)
 	(wire
 		(pts
@@ -4775,6 +4979,16 @@
 			(type default)
 		)
 		(uuid "3bb537f7-b6d9-48ee-a86c-981c2eee7e6e")
+	)
+	(wire
+		(pts
+			(xy 49.53 167.64) (xy 60.96 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bfa151f-9ad2-4122-8845-781421431df0")
 	)
 	(bus
 		(pts
@@ -4858,6 +5072,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 158.75) (xy 60.96 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "405f058b-f63a-4a4d-ab3f-7cd5e4d475cc")
+	)
+	(wire
+		(pts
 			(xy 127 171.45) (xy 127 172.72)
 		)
 		(stroke
@@ -4888,7 +5112,7 @@
 	)
 	(bus
 		(pts
-			(xy 88.9 95.25) (xy 88.9 121.92)
+			(xy 88.9 95.25) (xy 88.9 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4968,6 +5192,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 160.02) (xy 60.96 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "487316e1-d383-48a4-bfa0-199112028acb")
+	)
+	(wire
+		(pts
 			(xy 106.68 62.23) (xy 104.14 62.23)
 		)
 		(stroke
@@ -4998,7 +5232,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 144.78) (xy 74.93 144.78)
+			(xy 104.14 142.24) (xy 102.87 142.24)
 		)
 		(stroke
 			(width 0)
@@ -5015,6 +5249,16 @@
 			(type default)
 		)
 		(uuid "4e8b12a1-d494-4934-8d9b-3adf30b43ea0")
+	)
+	(wire
+		(pts
+			(xy 16.51 151.13) (xy 27.94 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f15ece5-d8d2-446e-a4d8-e2ecc6d30414")
 	)
 	(wire
 		(pts
@@ -5058,16 +5302,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 138.43) (xy 66.04 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5579cbb5-d525-408e-9a2a-9e4408c7e81d")
-	)
-	(wire
-		(pts
 			(xy 245.11 95.25) (xy 251.46 95.25)
 		)
 		(stroke
@@ -5096,15 +5330,15 @@
 		)
 		(uuid "5a9e92dc-4cef-4b32-9f94-03c779a4f790")
 	)
-	(bus
+	(wire
 		(pts
-			(xy 93.98 128.27) (xy 93.98 130.81)
+			(xy 16.51 182.88) (xy 16.51 184.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5cd77dc0-5df4-4829-af6e-0f7f90e4b76d")
+		(uuid "5b221601-9a48-4e02-9b8b-55b4fe47706c")
 	)
 	(wire
 		(pts
@@ -5216,6 +5450,26 @@
 		)
 		(uuid "627d2e9e-b9f5-43bb-9086-d7aefe4cd3e7")
 	)
+	(wire
+		(pts
+			(xy 16.51 160.02) (xy 27.94 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6416b033-c072-4c3a-85b9-211e561525f3")
+	)
+	(wire
+		(pts
+			(xy 93.98 134.62) (xy 111.76 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642eee7b-7ae3-48b3-97f9-996a87156ad5")
+	)
 	(bus
 		(pts
 			(xy 139.7 82.55) (xy 139.7 85.09)
@@ -5225,6 +5479,16 @@
 			(type default)
 		)
 		(uuid "661a79d5-1a51-4e51-80b5-03e7cd1c6c65")
+	)
+	(wire
+		(pts
+			(xy 16.51 149.86) (xy 16.51 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67e71392-2c21-4386-ac66-fb354ad64ec9")
 	)
 	(wire
 		(pts
@@ -5308,7 +5572,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 157.48) (xy 72.39 157.48)
+			(xy 111.76 154.94) (xy 105.41 154.94)
 		)
 		(stroke
 			(width 0)
@@ -5356,6 +5620,16 @@
 		)
 		(uuid "6f4d2fb2-9015-4e31-bb11-84a0014eea7b")
 	)
+	(wire
+		(pts
+			(xy 16.51 144.78) (xy 16.51 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f6be904-d639-449e-9496-0d480d87076e")
+	)
 	(bus
 		(pts
 			(xy 139.7 123.19) (xy 139.7 124.46)
@@ -5388,7 +5662,7 @@
 	)
 	(bus
 		(pts
-			(xy 88.9 123.19) (xy 88.9 121.92)
+			(xy 88.9 123.19) (xy 88.9 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5428,6 +5702,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 143.51) (xy 27.94 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7396fd45-57d2-44e7-a8d3-1d22f66f4769")
+	)
+	(wire
+		(pts
 			(xy 195.58 97.79) (xy 208.28 97.79)
 		)
 		(stroke
@@ -5438,6 +5722,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 161.29) (xy 16.51 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "768689ab-4bb2-4e2f-af91-48775e2e52c3")
+	)
+	(wire
+		(pts
 			(xy 90.17 82.55) (xy 106.68 82.55)
 		)
 		(stroke
@@ -5445,6 +5739,16 @@
 			(type default)
 		)
 		(uuid "77da1c2e-93a8-4f9a-8805-a011f0fb59d5")
+	)
+	(wire
+		(pts
+			(xy 16.51 151.13) (xy 16.51 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cf29e9a-f29b-4637-a64b-a2496378ba9e")
 	)
 	(wire
 		(pts
@@ -5508,6 +5812,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 184.15) (xy 16.51 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "830bf4a0-575e-46fb-a2a0-c008feba8a9c")
+	)
+	(wire
+		(pts
 			(xy 241.3 143.51) (xy 243.84 143.51)
 		)
 		(stroke
@@ -5548,7 +5862,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 157.48) (xy 66.04 163.83)
+			(xy 111.76 154.94) (xy 111.76 161.29)
 		)
 		(stroke
 			(width 0)
@@ -5578,6 +5892,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 125.73) (xy 93.98 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88e6026e-02bb-4233-ae5c-4e8cd3bc61c0")
+	)
+	(wire
+		(pts
 			(xy 135.89 153.67) (xy 140.97 153.67)
 		)
 		(stroke
@@ -5585,6 +5909,16 @@
 			(type default)
 		)
 		(uuid "896efb62-a57b-4dea-9900-11bf179bd9b9")
+	)
+	(wire
+		(pts
+			(xy 27.94 160.02) (xy 27.94 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b02c37c-1d65-4c1f-b532-2a8d4a5257c1")
 	)
 	(bus
 		(pts
@@ -5598,7 +5932,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 138.43) (xy 66.04 139.7)
+			(xy 111.76 134.62) (xy 111.76 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5625,6 +5959,16 @@
 			(type default)
 		)
 		(uuid "8ccaacda-9e2b-434a-8813-b4eb9f232caa")
+	)
+	(wire
+		(pts
+			(xy 16.51 167.64) (xy 16.51 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d0931d5-8bc7-4e2f-9d2b-ea65c5a4633f")
 	)
 	(wire
 		(pts
@@ -5658,17 +6002,17 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 110.49) (xy 106.68 107.95)
+			(xy 27.94 181.61) (xy 27.94 184.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "900a8ffb-7fcd-4359-abb7-7c7ee3f1071f")
+		(uuid "90b466da-b1c9-4794-9090-cbee01929a16")
 	)
 	(wire
 		(pts
-			(xy 66.04 149.86) (xy 66.04 157.48)
+			(xy 111.76 147.32) (xy 111.76 154.94)
 		)
 		(stroke
 			(width 0)
@@ -5695,6 +6039,16 @@
 			(type default)
 		)
 		(uuid "93b946af-c679-4a6c-9a64-4a934f365922")
+	)
+	(wire
+		(pts
+			(xy 27.94 143.51) (xy 27.94 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93f0af98-8dfd-4c30-aca0-440e0640640c")
 	)
 	(bus
 		(pts
@@ -5756,16 +6110,6 @@
 		)
 		(uuid "9773d5c1-cf64-4341-8556-0d7f4a06ca28")
 	)
-	(wire
-		(pts
-			(xy 53.34 158.75) (xy 57.15 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98b1bebc-0b3d-4d72-ada8-49ce19d8dce5")
-	)
 	(bus
 		(pts
 			(xy 193.04 80.01) (xy 193.04 85.09)
@@ -5785,6 +6129,26 @@
 			(type default)
 		)
 		(uuid "99079e87-8560-48a4-a0a0-a660fa3f92d2")
+	)
+	(wire
+		(pts
+			(xy 27.94 142.24) (xy 27.94 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9934e71a-8b0b-469e-8a20-420a6fe49a77")
+	)
+	(wire
+		(pts
+			(xy 60.96 148.59) (xy 60.96 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b304c6a-37d1-4109-ba51-9cd7f4015f0c")
 	)
 	(wire
 		(pts
@@ -5956,16 +6320,6 @@
 		)
 		(uuid "a8cb2fb8-55c6-4ff1-bb00-4e5d917258d8")
 	)
-	(bus
-		(pts
-			(xy 76.2 130.81) (xy 93.98 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8dc8ae6-b253-4285-b6eb-75e5cae2e309")
-	)
 	(wire
 		(pts
 			(xy 220.98 82.55) (xy 227.33 82.55)
@@ -5998,6 +6352,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 160.02) (xy 60.96 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad6275e9-8b42-49a7-a9de-4646e55c708b")
+	)
+	(wire
+		(pts
 			(xy 151.13 64.77) (xy 151.13 60.96)
 		)
 		(stroke
@@ -6008,7 +6372,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 144.78) (xy 86.36 144.78)
+			(xy 95.25 142.24) (xy 91.44 142.24)
 		)
 		(stroke
 			(width 0)
@@ -6048,6 +6412,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 175.26) (xy 27.94 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b415bbc9-6bd9-4511-a4a8-23ac26b4a1ce")
+	)
+	(wire
+		(pts
 			(xy 151.13 161.29) (xy 151.13 171.45)
 		)
 		(stroke
@@ -6065,6 +6439,16 @@
 			(type default)
 		)
 		(uuid "b8d6642e-b5d9-4330-bff7-5e819c29ddc9")
+	)
+	(wire
+		(pts
+			(xy 49.53 167.64) (xy 49.53 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9a42d5b-c05d-4545-9bf5-a81a4ec84d9d")
 	)
 	(wire
 		(pts
@@ -6108,16 +6492,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 119.38) (xy 106.68 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be72b2f8-32d5-4d6b-b33f-265ee4ec098b")
-	)
-	(wire
-		(pts
 			(xy 245.11 100.33) (xy 251.46 100.33)
 		)
 		(stroke
@@ -6138,13 +6512,23 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 144.78) (xy 82.55 157.48)
+			(xy 95.25 142.24) (xy 95.25 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bf11ea81-05df-4aca-b724-8c43053092d0")
+	)
+	(wire
+		(pts
+			(xy 27.94 176.53) (xy 27.94 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfae430f-0fbc-45e0-b757-fd749709b15e")
 	)
 	(wire
 		(pts
@@ -6155,6 +6539,16 @@
 			(type default)
 		)
 		(uuid "c0fabb27-7f12-4b96-95f4-e4dbacd0411d")
+	)
+	(wire
+		(pts
+			(xy 16.51 176.53) (xy 27.94 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c14c0d29-aecd-41ff-a7b9-28789a46030e")
 	)
 	(bus
 		(pts
@@ -6348,6 +6742,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 143.51) (xy 60.96 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf2a412e-8ecc-4300-8ed0-a578f2fcb0da")
+	)
+	(wire
+		(pts
 			(xy 201.93 133.35) (xy 201.93 140.97)
 		)
 		(stroke
@@ -6358,16 +6762,6 @@
 	)
 	(bus
 		(pts
-			(xy 93.98 125.73) (xy 93.98 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d00da001-1e3d-4fcd-9abe-67d5d788f47b")
-	)
-	(bus
-		(pts
 			(xy 87.63 64.77) (xy 87.63 67.31)
 		)
 		(stroke
@@ -6375,6 +6769,16 @@
 			(type default)
 		)
 		(uuid "d014a239-bb66-48dc-a1c8-ebdda50e27d0")
+	)
+	(wire
+		(pts
+			(xy 49.53 151.13) (xy 49.53 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1a1c380-5942-4962-97b2-52aae6c9c9ac")
 	)
 	(bus
 		(pts
@@ -6408,7 +6812,7 @@
 	)
 	(bus
 		(pts
-			(xy 88.9 123.19) (xy 88.9 148.59)
+			(xy 88.9 123.19) (xy 88.9 147.32)
 		)
 		(stroke
 			(width 0)
@@ -6488,6 +6892,26 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 161.29) (xy 49.53 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d75fb4a1-0a94-421b-82c7-f9f007eccfdc")
+	)
+	(wire
+		(pts
+			(xy 60.96 165.1) (xy 60.96 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d78acd58-775e-4ce0-82a1-370d5302b2c9")
+	)
+	(wire
+		(pts
 			(xy 208.28 62.23) (xy 215.9 62.23)
 		)
 		(stroke
@@ -6508,7 +6932,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 144.78) (xy 82.55 144.78)
+			(xy 97.79 142.24) (xy 95.25 142.24)
 		)
 		(stroke
 			(width 0)
@@ -6525,6 +6949,16 @@
 			(type default)
 		)
 		(uuid "dc252940-22df-4bdc-ad6b-05ca4e809590")
+	)
+	(wire
+		(pts
+			(xy 60.96 143.51) (xy 60.96 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcbe7cde-96e2-486c-9691-6a4929519f62")
 	)
 	(wire
 		(pts
@@ -6545,6 +6979,16 @@
 			(type default)
 		)
 		(uuid "defedeb1-0586-4312-9d27-2994b081e432")
+	)
+	(wire
+		(pts
+			(xy 49.53 144.78) (xy 49.53 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfd296e4-515b-4e99-ae88-649fe4ef5d11")
 	)
 	(bus
 		(pts
@@ -6828,6 +7272,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 166.37) (xy 16.51 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdc6627e-f4aa-4da8-95b8-25c972dec4e2")
+	)
+	(wire
+		(pts
 			(xy 99.06 41.91) (xy 104.14 41.91)
 		)
 		(stroke
@@ -6885,6 +7339,16 @@
 			(justify left bottom)
 		)
 		(uuid "08ca1557-dc62-4a10-9724-8884af7e5bee")
+	)
+	(label "TS3"
+		(at 27.94 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a72c3ec-19fc-4042-aed1-e211ed0cc62c")
 	)
 	(label "CELL3"
 		(at 227.33 128.27 0)
@@ -6996,16 +7460,6 @@
 		)
 		(uuid "16a830bc-a1eb-49ae-81f1-528aa2d4781f")
 	)
-	(label "TS5"
-		(at 57.15 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "186b72b9-ecd4-48e0-ab10-38fe6adb2249")
-	)
 	(label "SCL"
 		(at 69.85 92.71 0)
 		(effects
@@ -7055,16 +7509,6 @@
 			(justify left bottom)
 		)
 		(uuid "21fd6630-2ce6-4eff-9d30-191d354f56c9")
-	)
-	(label "TS2_W"
-		(at 57.15 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2732ec39-145a-4fb1-becf-1e8bec0496ec")
 	)
 	(label "CELL16"
 		(at 245.11 59.69 0)
@@ -7126,16 +7570,6 @@
 		)
 		(uuid "2f92e170-7381-4174-9d28-410d778a44c9")
 	)
-	(label "TS3"
-		(at 57.15 148.59 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2fa4f774-f0c5-47f2-8e99-e157b482565e")
-	)
 	(label "VC15"
 		(at 195.58 62.23 0)
 		(effects
@@ -7155,16 +7589,6 @@
 			(justify left bottom)
 		)
 		(uuid "30140ca9-0b4f-4e9e-a831-7e2422638f27")
-	)
-	(label "TS2"
-		(at 57.15 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "31dd76e9-8cca-4c2e-acb7-11fb7ac38534")
 	)
 	(label "CELL17"
 		(at 227.33 57.15 0)
@@ -7187,7 +7611,7 @@
 		(uuid "37facd6e-540a-4c6c-8c46-9de838b5b84a")
 	)
 	(label "SPI.CFETOFF"
-		(at 96.52 119.38 0)
+		(at 96.52 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7205,16 +7629,6 @@
 			(justify left bottom)
 		)
 		(uuid "405acdb5-4b0a-43b9-888a-55b3c43cf6c2")
-	)
-	(label "TS2_W"
-		(at 96.52 125.73 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "41629000-52db-4441-b7f9-ebe4660fb4c8")
 	)
 	(label "SPI.SDA"
 		(at 96.52 92.71 0)
@@ -7316,6 +7730,16 @@
 		)
 		(uuid "5da619f2-c9d4-4937-96f7-d49652d6f314")
 	)
+	(label "TS1"
+		(at 27.94 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f5b45f2-b32e-43fb-969f-91a5daa99329")
+	)
 	(label "LD"
 		(at 96.52 82.55 0)
 		(effects
@@ -7327,12 +7751,12 @@
 		(uuid "5fe01bfa-b2e1-45a5-b24e-38ca2068a0dc")
 	)
 	(label "WAKE"
-		(at 86.36 144.78 180)
+		(at 91.44 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "60cb5c08-e4c5-4184-a7aa-2cef49644897")
 	)
@@ -7445,16 +7869,6 @@
 			(justify left bottom)
 		)
 		(uuid "7bdb85fd-0128-4f54-9402-052effb96a38")
-	)
-	(label "TS1"
-		(at 57.15 133.35 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "822300f0-5431-4044-8fad-dc020f6bd0d9")
 	)
 	(label "CELL7"
 		(at 227.33 107.95 0)
@@ -7585,6 +7999,16 @@
 			(justify left bottom)
 		)
 		(uuid "90311682-2d7d-4b3b-86df-d9ff6b32fbab")
+	)
+	(label "TS5"
+		(at 27.94 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91602b46-50d1-464d-bc0f-80036c3f841e")
 	)
 	(label "PCHG"
 		(at 96.52 69.85 0)
@@ -7826,6 +8250,16 @@
 		)
 		(uuid "b05ebb5b-fe52-4518-986d-aa81103a0ce4")
 	)
+	(label "TS2"
+		(at 60.96 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0fae460-f2bf-41ce-b660-d5f1bbf00c5a")
+	)
 	(label "VC12"
 		(at 261.62 143.51 0)
 		(effects
@@ -8036,16 +8470,6 @@
 		)
 		(uuid "eed8303b-bd3b-422d-8059-66d890d322b6")
 	)
-	(label "TS4"
-		(at 57.15 153.67 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ef2706af-d528-4894-bafe-7df67f2ce2a1")
-	)
 	(label "VC14"
 		(at 261.62 153.67 0)
 		(effects
@@ -8077,7 +8501,7 @@
 		(uuid "f0776df4-a84b-4ac2-bb0e-007392ba0e86")
 	)
 	(label "RST_SHUT"
-		(at 96.52 110.49 0)
+		(at 96.52 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8166,6 +8590,16 @@
 		)
 		(uuid "fdc9c9f3-888f-40da-a907-92d6b47f222c")
 	)
+	(label "TS4"
+		(at 60.96 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe064be7-8bb2-432d-a295-2b70c2539926")
+	)
 	(label "CELL13"
 		(at 245.11 67.31 0)
 		(effects
@@ -8186,17 +8620,6 @@
 			(justify left)
 		)
 		(uuid "361b2922-03d0-4777-8c10-97fad9070d19")
-	)
-	(hierarchical_label "TS[1..6]"
-		(shape output)
-		(at 76.2 130.81 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3b1aa5ea-6b78-42e4-b2fa-635778e9eb23")
 	)
 	(hierarchical_label "BAT+"
 		(shape input)
@@ -8689,7 +9112,8 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 77.47 144.78 90)
+		(at 100.33 142.24 270)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8699,7 +9123,7 @@
 		(dnp no)
 		(uuid "0cd2b973-59d5-4095-b0f3-25363bb4ba62")
 		(property "Reference" "R205"
-			(at 80.01 149.86 90)
+			(at 97.79 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8710,7 +9134,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 80.01 147.32 90)
+			(at 97.79 137.16 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8721,7 +9145,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 77.47 144.78 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8732,7 +9156,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 144.78 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8743,7 +9167,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 77.47 144.78 0)
+			(at 100.33 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9101,9 +9525,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 153.67 90)
-		(mirror x)
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 33.02 146.05 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9111,9 +9534,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "159a7332-8c2c-4f22-8aba-c26d27c6fd59")
-		(property "Reference" "TS205"
-			(at 48.26 153.67 90)
+		(fields_autoplaced yes)
+		(uuid "19414d6e-8be7-458b-addd-9c0e20f6a250")
+		(property "Reference" "J201"
+			(at 35.56 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9123,9 +9547,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 51.3079 156.21 0)
-			(hide yes)
+		(property "Value" "Conn_01x02"
+			(at 35.56 148.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9135,8 +9558,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 158.75 0)
+		(property "Footprint" ""
+			(at 33.02 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9147,7 +9570,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 158.75 0)
+			(at 33.02 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9157,8 +9580,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 53.34 153.67 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 33.02 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9169,12 +9592,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "98699636-6a2e-42df-8d29-83e639217b15")
+			(uuid "a4929ad8-da36-486f-9af9-d12a9d4bfe78")
+		)
+		(pin "2"
+			(uuid "2d0b9602-8556-460a-ada5-88841c72782b")
 		)
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS205")
+					(reference "J201")
 					(unit 1)
 				)
 			)
@@ -9537,6 +9963,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 33.02 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22b6d60f-cfd4-4510-a88e-ac6504bb96b1")
+		(property "Reference" "J203"
+			(at 35.56 179.0699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 35.56 181.6099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 33.02 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "423585a2-6ec2-4b76-ab9c-4a38a3e1ae3a")
+		)
+		(pin "2"
+			(uuid "7113ce8d-f575-42de-9af9-0dfcf70d1010")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "J203")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:BAT54SDW")
 		(at 151.13 57.15 270)
 		(unit 4)
@@ -9720,7 +10228,8 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 74.93 157.48 270)
+		(at 102.87 154.94 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9730,7 +10239,7 @@
 		(dnp no)
 		(uuid "29f6399b-7489-4e7e-8da0-3087e101b21a")
 		(property "Reference" "R204"
-			(at 74.93 152.4 90)
+			(at 102.87 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9740,7 +10249,7 @@
 			)
 		)
 		(property "Value" "50k"
-			(at 74.93 154.94 90)
+			(at 102.87 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9750,7 +10259,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 74.93 157.48 0)
+			(at 102.87 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9761,7 +10270,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 157.48 0)
+			(at 102.87 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9772,7 +10281,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 74.93 157.48 0)
+			(at 102.87 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9792,6 +10301,85 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "R204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 49.53 168.91 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c4d9bcd-aedf-4ed0-8623-aab7ad6b414a")
+		(property "Reference" "#PWR0224"
+			(at 49.53 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 49.53 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 49.53 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3a92e8e6-319b-4378-9c4c-1c3f9fbaef36")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "#PWR0224")
 					(unit 1)
 				)
 			)
@@ -10316,85 +10904,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 133.35 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3a01a56f-2f7a-4293-9d9c-e7e1c01d5b6a")
-		(property "Reference" "TS201"
-			(at 48.26 133.35 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.3079 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 53.34 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f586a209-4a94-47cd-8219-f55be2136107")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 218.44 87.63 90)
 		(unit 1)
@@ -10579,9 +11088,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 158.75 90)
-		(mirror x)
+		(lib_id "power:GND")
+		(at 16.51 168.91 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10589,20 +11098,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "42935ead-377f-4d73-ac9c-a4b4b8422904")
-		(property "Reference" "TS206"
-			(at 48.26 158.75 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.3079 161.29 0)
+		(fields_autoplaced yes)
+		(uuid "3be89a37-f22d-4120-aa72-3fc9458e24c2")
+		(property "Reference" "#PWR0221"
+			(at 16.51 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10610,11 +11109,20 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 163.83 0)
+		(property "Value" "GND"
+			(at 16.51 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10625,7 +11133,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 163.83 0)
+			(at 16.51 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10635,8 +11143,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 53.34 158.75 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 16.51 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10647,12 +11155,94 @@
 			)
 		)
 		(pin "1"
-			(uuid "7bee0a0f-172a-4af7-85d2-c9b6637831a6")
+			(uuid "c587b281-2c32-4fa0-858c-4dec65d15593")
 		)
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS206")
+					(reference "#PWR0221")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 16.51 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e46b44c-2bc2-4177-a46a-21ed051e934d")
+		(property "Reference" "C227"
+			(at 19.05 146.0562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 19.05 148.5962 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 16.51 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1ab9af6-3310-459a-89ed-6dc9d338630d")
+		)
+		(pin "2"
+			(uuid "e49e9caa-b462-47a0-aa4e-fa155adb5780")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "C227")
 					(unit 1)
 				)
 			)
@@ -11091,6 +11681,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 66.04 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "505b420f-6aaa-4445-af58-b925abec06eb")
+		(property "Reference" "J204"
+			(at 68.58 146.0499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 68.58 148.5899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 66.04 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c312b0a2-c795-4003-af22-a5e3dba9cc9e")
+		)
+		(pin "2"
+			(uuid "a15362f0-5041-4a18-b854-8c439517c9e6")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "J204")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 212.09 147.32 0)
 		(unit 1)
@@ -11357,6 +12029,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 16.51 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58efaaff-770c-4c38-9f43-d17ca9d8827d")
+		(property "Reference" "C229"
+			(at 19.05 179.0762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 19.05 181.6162 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 16.51 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4e0636a3-7789-4114-8c23-c9137d063aae")
+		)
+		(pin "2"
+			(uuid "181c996c-6559-4aa5-a7c0-c52f7dcce2ab")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "C229")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:BAT54SDW")
 		(at 135.89 57.15 270)
 		(unit 2)
@@ -11538,6 +12292,88 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "C222")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 49.53 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "625ac80b-6520-4c36-a60d-b981b50ea489")
+		(property "Reference" "C230"
+			(at 52.07 146.0562 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 52.07 148.5962 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 49.53 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "be886524-6ede-4bd8-9d99-cfd3d18c69d4")
+		)
+		(pin "2"
+			(uuid "ccdb674f-47c7-4afb-9853-3c9c022b3305")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "C230")
 					(unit 1)
 				)
 			)
@@ -11901,6 +12737,85 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "C207")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 16.51 152.4 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e4dbf70-3b15-4875-9539-becc993f96a7")
+		(property "Reference" "#PWR0220"
+			(at 16.51 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 16.51 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 16.51 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ad2d8417-e436-4fff-89b4-e210fb1077ee")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "#PWR0220")
 					(unit 1)
 				)
 			)
@@ -13231,86 +14146,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 148.59 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8f743f26-b94a-4836-9cec-9773aa29651a")
-		(property "Reference" "TS204"
-			(at 48.26 148.59 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.3079 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 53.34 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fc16332d-0b91-4f68-94af-fb3affcd2662")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS204")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 218.44 102.87 90)
 		(unit 1)
@@ -13660,7 +14495,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 163.83 0)
+		(at 111.76 161.29 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13671,7 +14507,7 @@
 		(fields_autoplaced yes)
 		(uuid "9d236992-5896-48f5-88d0-64b428d71f87")
 		(property "Reference" "#PWR0203"
-			(at 66.04 170.18 0)
+			(at 111.76 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13682,7 +14518,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 66.04 168.91 0)
+			(at 111.76 166.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13692,7 +14528,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 163.83 0)
+			(at 111.76 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13703,7 +14539,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 163.83 0)
+			(at 111.76 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13714,7 +14550,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 66.04 163.83 0)
+			(at 111.76 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13817,6 +14653,88 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "#PWR0219")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 66.04 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f1514b9-db28-4485-938d-9aa1939b749d")
+		(property "Reference" "J205"
+			(at 68.58 162.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 68.58 165.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 66.04 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "867b1af2-ed8b-4029-aac6-893d5d6ccbb9")
+		)
+		(pin "2"
+			(uuid "42d3db96-cfd6-4fdc-aaf5-1320749a415d")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "J205")
 					(unit 1)
 				)
 			)
@@ -14264,8 +15182,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
-		(at 68.58 144.78 0)
-		(mirror y)
+		(at 109.22 142.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14275,29 +15192,29 @@
 		(dnp no)
 		(uuid "a436896f-f696-4112-90d1-fc7bee009d55")
 		(property "Reference" "Q201"
-			(at 69.85 140.97 0)
+			(at 120.65 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "2N7002"
-			(at 74.93 138.43 0)
+			(at 123.19 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 63.5 146.685 0)
+			(at 114.3 144.145 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14310,7 +15227,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
-			(at 63.5 148.59 0)
+			(at 114.3 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14322,7 +15239,7 @@
 			)
 		)
 		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
-			(at 68.58 144.78 0)
+			(at 109.22 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15124,6 +16041,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 16.51 185.42 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "baecd6fe-1dda-4362-ae76-9eb50d0faf31")
+		(property "Reference" "#PWR0222"
+			(at 16.51 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 16.51 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 16.51 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "405474a6-e093-4606-be45-f555e2b1b1a5")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "#PWR0222")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 151.13 130.81 270)
 		(unit 1)
@@ -15297,6 +16293,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 49.53 152.4 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c262df52-0bc6-4ef3-be23-078562437c1e")
+		(property "Reference" "#PWR0223"
+			(at 49.53 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 49.53 157.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d33a27d7-7467-4cc9-9cf0-81cb0b9071e4")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "#PWR0223")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 143.51 153.67 90)
 		(unit 1)
@@ -15452,86 +16527,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "JP213")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 143.51 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ca83a8e6-c1d4-4298-b19e-c544bba57676")
-		(property "Reference" "TS203"
-			(at 48.26 143.51 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.3079 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 53.34 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e97cec99-0fa0-4ebe-82c6-7dda99365938")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS203")
 					(unit 1)
 				)
 			)
@@ -15783,6 +16778,88 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "#PWR0212")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 16.51 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d296724c-d7d3-4199-adff-977de332c7bb")
+		(property "Reference" "C228"
+			(at 19.05 162.5662 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 19.05 165.1062 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 16.51 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0a1250d2-cd10-4dce-b746-228e214b710b")
+		)
+		(pin "2"
+			(uuid "cc573544-8d04-4126-a993-883489ca87c4")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "C228")
 					(unit 1)
 				)
 			)
@@ -16447,6 +17524,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 33.02 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e2100a96-2a52-4576-b7f2-64a384a12fd6")
+		(property "Reference" "J202"
+			(at 35.56 162.5599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 35.56 165.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 33.02 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a90319af-9b0a-4584-8912-8a171950a2b5")
+		)
+		(pin "2"
+			(uuid "18929193-60d7-4798-a949-ff8b351833e2")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "J202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 218.44 107.95 90)
 		(unit 1)
@@ -16633,6 +17792,88 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "R213")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 49.53 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6b3ad76-351a-4fb2-af54-d24f4e42caf5")
+		(property "Reference" "C231"
+			(at 52.07 162.5662 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C_Small"
+			(at 52.07 165.1062 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 49.53 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "25508957-fd92-48c8-a53b-83ba76319de6")
+		)
+		(pin "2"
+			(uuid "a27519c1-3a6a-4e35-ba06-ea2f00cc435e")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "C231")
 					(unit 1)
 				)
 			)
@@ -17108,85 +18349,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "#FLG0201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 53.34 138.43 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "effe4673-e1b2-498e-8174-14737252ac66")
-		(property "Reference" "TS202"
-			(at 48.26 138.43 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.3079 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 53.34 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 53.34 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3ff7cf61-1ef4-4bd4-912b-1899d3fac3f0")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "TS202")
 					(unit 1)
 				)
 			)

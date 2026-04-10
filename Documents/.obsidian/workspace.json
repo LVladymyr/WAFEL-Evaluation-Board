@@ -37,12 +37,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_Architecture/Table of configuration BQ7694204.md",
+                "file": "3_Hardware_Design/Switch 6s4p to 8s3p.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Table of configuration BQ7694204"
+              "title": "Switch 6s4p to 8s3p"
             }
           }
         ],
@@ -215,7 +215,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 779.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -230,11 +230,15 @@
       "copilot:Open Copilot Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": false,
-      "smart-connections:Smart Lookup: Open lookup view": false
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-lookup:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "6f59c3215452d485",
+  "active": "78e7541cc234b981",
   "lastOpenFiles": [
+    "2_Architecture/Table of configuration BQ7694204.md",
+    "2_Architecture/Шини живлення.md",
+    "2_Architecture/SPI MCU AFE.md",
     "4_References/datasheets/TIDA-010208.pdf",
     "4_References/datasheets/bq76952_1.pdf",
     "4_References/datasheets/BQ769x2 Calibration and OTP Programming Guide.pdf",
@@ -245,9 +249,7 @@
     "4_References/datasheets/sluubz5a.pdf",
     "4_References/datasheets/bq76952.txt",
     "4_References/datasheets/sluub41d.pdf",
-    "4_References/datasheets/sluub41d.txt",
     "2_Architecture/Sleep_Wakeup_Strategy.md",
-    "2_Architecture/Table of configuration BQ7694204.md",
     "4_References/SLUAA09A Translation.md",
     "2_Architecture/Recuperation_Strategy.md",
     "4_References/78af5f924c08/_page_2_Picture_1.jpeg",
@@ -266,8 +268,6 @@
     "3_Hardware_Design/Switch 6s4p to 8s3p.md",
     "3_Hardware_Design/Reverse charge protection.md",
     "3_Hardware_Design/MOSFET protections.md",
-    "2_Architecture/Шини живлення.md",
-    "2_Architecture/SPI MCU AFE.md",
     "2_Architecture/MCU.md",
     "1_Requirements/budget_estimate.md",
     "1_Requirements/Requirements_to_BMS.md",

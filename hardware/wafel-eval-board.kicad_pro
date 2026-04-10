@@ -769,7 +769,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "Q1001,R102,R110-126,R901-917,R1001-1004,JP102-116,JP901-915,#PWR119-120,#PWR808,#PWR901-902,C115-131,C804,C901-917,D202,D1001",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -811,7 +811,47 @@
     ],
     [
       "e09fd686-bb52-45eb-aef5-6296923cd8d3",
-      "cb_mosfet"
+      "cb_mosfet_0"
+    ],
+    [
+      "089e3a75-fc55-4cb8-a85f-c6fcc50d0279",
+      "cb_mosfet_1"
+    ],
+    [
+      "6a59009f-05f8-427b-b667-a4406aef648a",
+      "cb_mosfet_2"
+    ],
+    [
+      "0d8cf65a-a19d-4e0b-a583-6e416c2e4913",
+      "cb_mosfet_3"
+    ],
+    [
+      "775e48b4-7b74-46fa-bfb3-e3afa1d1fd60",
+      "cb_mosfet_4"
+    ],
+    [
+      "af60cf90-24d9-416b-9aa4-037cf043dc11",
+      "cb_mosfet_5"
+    ],
+    [
+      "f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97",
+      "cb_mosfet_6"
+    ],
+    [
+      "c2e2dc40-a39e-4e1d-a36e-8f696f876f0c",
+      "cb_mosfet_7"
+    ],
+    [
+      "23a1c076-1ace-49e7-804f-6308616d5543",
+      "cb_mosfet_8"
+    ],
+    [
+      "d72d673e-fa32-419c-8d5a-dd84f5466010",
+      "cb_mosfet_9"
+    ],
+    [
+      "e332d889-cebe-400a-9d60-052f7f7ee759",
+      "cb_mosfet_10"
     ]
   ],
   "text_variables": {},

@@ -5305,7 +5305,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29f115f2-8bee-4471-84e8-421f1e96a7a5")
-		(property "Reference" "#PWR0107"
+		(property "Reference" "#PWR0106"
 			(at 64.77 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -5365,7 +5365,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0107")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -10041,7 +10041,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da8bec2e-0a4c-4570-b762-bce8c383d42c")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR0107"
 			(at 69.85 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -10101,7 +10101,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0106")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)

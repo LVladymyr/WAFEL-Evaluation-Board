@@ -161,6 +161,338 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -1203,6 +1535,12 @@
 		(uuid "29be04d7-827a-4256-ae8b-3229c325ec60")
 	)
 	(junction
+		(at 63.5 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34078df4-65e0-4d8e-adfc-09479ae387d3")
+	)
+	(junction
 		(at 58.42 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1213,6 +1551,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "630bf82f-fe20-4d74-bc58-b2dde63f9b39")
+	)
+	(junction
+		(at 63.5 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "68d0fa2e-428c-41c9-bee7-a004b6e7c173")
 	)
 	(junction
 		(at 58.42 123.19)
@@ -1231,6 +1575,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8837e816-4ac4-4ae8-9014-a35a400b6ccf")
+	)
+	(junction
+		(at 67.31 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "895736bc-f676-4fd0-bc86-2a35c95c820d")
 	)
 	(junction
 		(at 116.84 148.59)
@@ -1278,7 +1628,13 @@
 		(at 58.42 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ca1cdd4a-fbbd-4548-a36f-99dae69f9736")
+		(uuid "c7c08b1d-45f4-4d18-a8d9-d22627b8e9e8")
+	)
+	(junction
+		(at 58.42 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e840868d-8870-4db3-9c16-ff57fe3b63a5")
 	)
 	(junction
 		(at 223.52 135.89)
@@ -1757,6 +2113,16 @@
 			(type default)
 		)
 		(uuid "2a45a624-29ab-4061-86ef-c298ef3f50a4")
+	)
+	(wire
+		(pts
+			(xy 67.31 41.91) (xy 67.31 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a7d4507-60ac-4bfc-8991-cfe8ea364da6")
 	)
 	(wire
 		(pts
@@ -2360,6 +2726,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 52.07) (xy 63.5 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9af1e26e-1536-410a-a53c-bc7ed8f9ef4a")
+	)
+	(wire
+		(pts
 			(xy 252.73 62.23) (xy 247.65 62.23)
 		)
 		(stroke
@@ -2390,6 +2766,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 38.1) (xy 58.42 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f4f7746-5b23-4ff7-bfb9-5920e98af0b7")
+	)
+	(wire
+		(pts
 			(xy 116.84 147.32) (xy 116.84 148.59)
 		)
 		(stroke
@@ -2417,6 +2803,16 @@
 			(type default)
 		)
 		(uuid "a76d1130-094a-4d1a-85d3-37f41f16380e")
+	)
+	(wire
+		(pts
+			(xy 67.31 49.53) (xy 67.31 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8067886-6b72-48ec-a6fe-1f8d9ea317ac")
 	)
 	(wire
 		(pts
@@ -2520,6 +2916,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 52.07) (xy 58.42 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baeccef8-a6a9-4cc0-86f3-a7b063c6fb7f")
+	)
+	(wire
+		(pts
 			(xy 240.03 72.39) (xy 232.41 72.39)
 		)
 		(stroke
@@ -2527,6 +2933,16 @@
 			(type default)
 		)
 		(uuid "bb54367b-08ec-4337-8891-1ef82f88ee12")
+	)
+	(wire
+		(pts
+			(xy 58.42 38.1) (xy 58.42 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbe00be1-fe89-4528-b1ba-0f8d4dfa41f7")
 	)
 	(wire
 		(pts
@@ -2557,6 +2973,16 @@
 			(type default)
 		)
 		(uuid "bdb272e0-3be0-41a2-8886-de3d4b528b4f")
+	)
+	(wire
+		(pts
+			(xy 63.5 45.72) (xy 63.5 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be2d1062-15b1-45d7-b805-de7bc6f317c1")
 	)
 	(wire
 		(pts
@@ -2727,6 +3153,16 @@
 			(type default)
 		)
 		(uuid "cb42de01-edf7-487c-b7f7-ec530f53edd9")
+	)
+	(wire
+		(pts
+			(xy 67.31 38.1) (xy 63.5 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef4c92f-6a45-4709-a059-3d38be14da39")
 	)
 	(wire
 		(pts
@@ -3020,7 +3456,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 45.72) (xy 58.42 45.72)
+			(xy 68.58 38.1) (xy 67.31 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3119,12 +3555,12 @@
 		(uuid "ff313edc-72ea-489e-b942-4f2bf69e8f53")
 	)
 	(label "VC7"
-		(at 156.21 59.69 180)
+		(at 156.21 59.69 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "00be09b5-b9ed-4199-8dbc-b5c28d76efca")
 	)
@@ -3219,12 +3655,12 @@
 		(uuid "1e92fffd-17a0-41dd-8057-7d65f88b5472")
 	)
 	(label "VC7"
-		(at 185.42 54.61 0)
+		(at 185.42 54.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "220c1103-3de1-4a6b-b0f7-7e0cb36009c2")
 	)
@@ -3259,22 +3695,22 @@
 		(uuid "2cb0362a-8d5c-4a47-9f32-e00da1a43e9f")
 	)
 	(label "VC8"
-		(at 185.42 49.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2f04e763-06b0-4a8a-8cc9-b0aaeea06e27")
-	)
-	(label "VC3"
-		(at 156.21 85.09 180)
+		(at 185.42 49.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
+		)
+		(uuid "2f04e763-06b0-4a8a-8cc9-b0aaeea06e27")
+	)
+	(label "VC3"
+		(at 156.21 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
 		(uuid "37bb1826-c2b3-41f5-9929-20decdb01354")
 	)
@@ -3339,12 +3775,12 @@
 		(uuid "4555e6c9-7fec-4de2-9c7b-b07343d89358")
 	)
 	(label "VC6"
-		(at 185.42 59.69 0)
+		(at 185.42 59.69 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "48b7587d-273d-40d9-9608-4362586648d1")
 	)
@@ -3379,22 +3815,22 @@
 		(uuid "525a5a66-cfe1-4915-95f9-ab63b5847008")
 	)
 	(label "VC8"
-		(at 156.21 54.61 180)
+		(at 156.21 54.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "5a27d0cb-2aef-4245-8771-b9b252a3c5db")
 	)
 	(label "VC6"
-		(at 156.21 69.85 180)
+		(at 156.21 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "5b281f2a-332c-43e1-97d2-a9190b095b04")
 	)
@@ -3429,7 +3865,7 @@
 		(uuid "6268fd02-ea79-42e7-af8b-067631c4c29d")
 	)
 	(label "VC0"
-		(at 62.23 45.72 180)
+		(at 68.58 38.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3439,32 +3875,32 @@
 		(uuid "6348b94d-0909-4a8e-968a-45e6339e5ad1")
 	)
 	(label "VC6"
-		(at 156.21 64.77 180)
+		(at 156.21 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "63febf28-2868-43df-a6a0-ee85b4e62f7c")
+	)
+	(label "VC5"
+		(at 185.42 64.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "63febf28-2868-43df-a6a0-ee85b4e62f7c")
-	)
-	(label "VC5"
-		(at 185.42 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
 		(uuid "643c0fae-c429-4965-8fc0-367309aa8891")
 	)
 	(label "VC5"
-		(at 185.42 69.85 0)
+		(at 185.42 69.85 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "64ba3031-086f-48ea-82da-bbd8d37930ea")
 	)
@@ -3509,22 +3945,22 @@
 		(uuid "69a90cea-c290-4890-b121-68665c430e0b")
 	)
 	(label "VC4"
-		(at 156.21 80.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7075eb4b-83e6-46a5-a533-936749deaa4a")
-	)
-	(label "VC2"
-		(at 185.42 85.09 0)
+		(at 156.21 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
+		)
+		(uuid "7075eb4b-83e6-46a5-a533-936749deaa4a")
+	)
+	(label "VC2"
+		(at 185.42 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
 		(uuid "78166214-eb22-4c31-8efd-78c42d585aae")
 	)
@@ -3759,12 +4195,12 @@
 		(uuid "cc04d967-eb47-4e71-a800-9fa892e518f8")
 	)
 	(label "VC9"
-		(at 156.21 49.53 180)
+		(at 156.21 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "cc3cd545-dd9d-4d27-b026-7ee0d8167245")
 	)
@@ -3869,12 +4305,12 @@
 		(uuid "e8030569-ec26-4b1f-9921-43336740a2a7")
 	)
 	(label "VC5"
-		(at 156.21 74.93 180)
+		(at 156.21 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "e97fc086-58ac-4de4-a443-862601293d18")
 	)
@@ -3899,22 +4335,22 @@
 		(uuid "ec84655b-7767-42ab-ac7d-7c75c01f18b1")
 	)
 	(label "VC4"
-		(at 185.42 74.93 0)
+		(at 185.42 74.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "ece98e2b-e005-4d6f-a27e-ff0f3e8b01d3")
 	)
 	(label "VC3"
-		(at 185.42 80.01 0)
+		(at 185.42 80.01 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "eebf66de-ddd3-47bd-8369-8db0e9bcd693")
 	)
@@ -4636,7 +5072,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n 50V 0805"
+		(property "Value" "100n"
 			(at 60.96 50.8062 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5001,7 +5437,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "704e39df-72c5-493a-a174-38fda69368dc")
-		(property "Reference" "#PWR0902"
+		(property "Reference" "#PWR0903"
 			(at 223.52 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -5061,7 +5497,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "#PWR0902")
+					(reference "#PWR0903")
 					(unit 1)
 				)
 			)
@@ -5516,6 +5952,99 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "C903")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 63.5 41.91 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "92b163e2-319d-46e7-9c11-59bbeed2d98a")
+		(property "Reference" "D901"
+			(at 62.23 40.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BZT52C5V6S"
+			(at 62.23 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 63.5 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19077441"
+			(at 66.04 40.6399 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "b9c4fbd3-05b2-4ab4-a589-41588960f17a")
+		)
+		(pin "1"
+			(uuid "b9cdf2e5-cbbb-4fee-935a-3d4f1332aa1c")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
+					(reference "D901")
 					(unit 1)
 				)
 			)
@@ -6223,7 +6752,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf5349e6-d542-4ec5-afee-b30a8a7a2721")
-		(property "Reference" "#PWR0903"
+		(property "Reference" "#PWR0902"
 			(at 116.84 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -6283,7 +6812,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "#PWR0903")
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -6632,6 +7161,88 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "R904")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 67.31 45.72 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f503e520-dcaa-410c-a0a5-67096f7e9b8b")
+		(property "Reference" "D902"
+			(at 69.85 44.1324 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 69.85 46.6724 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 67.31 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "46cdcb61-5810-447c-8457-ef2ed3e71b6d")
+		)
+		(pin "1"
+			(uuid "fe2afd6e-524d-4807-b10e-227a4d0c8a84")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
+					(reference "D902")
 					(unit 1)
 				)
 			)

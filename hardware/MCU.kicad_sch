@@ -3867,7 +3867,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59a552a9-43e6-4df8-be26-886f040b07af")
-		(property "Reference" "#PWR0804"
+		(property "Reference" "#PWR0805"
 			(at 199.39 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3927,7 +3927,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0804")
+					(reference "#PWR0805")
 					(unit 1)
 				)
 			)
@@ -4333,7 +4333,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77544ac8-987c-412d-99ab-3b68bed30c61")
-		(property "Reference" "C803"
+		(property "Reference" "C804"
 			(at 226.06 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4409,7 +4409,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C803")
+					(reference "C804")
 					(unit 1)
 				)
 			)
@@ -4427,7 +4427,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d30eb0a-2e21-4131-a822-a3653eab6db5")
-		(property "Reference" "#PWR0808"
+		(property "Reference" "#PWR0804"
 			(at 161.29 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -4487,7 +4487,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0808")
+					(reference "#PWR0804")
 					(unit 1)
 				)
 			)
@@ -4505,7 +4505,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9053a533-d4a6-4e3d-9c5a-e1724c4449ba")
-		(property "Reference" "C802"
+		(property "Reference" "C803"
 			(at 226.06 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4581,7 +4581,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C802")
+					(reference "C803")
 					(unit 1)
 				)
 			)
@@ -4788,7 +4788,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b94db6c7-3751-4001-8591-cd589affbad4")
-		(property "Reference" "#PWR0806"
+		(property "Reference" "#PWR0807"
 			(at 204.47 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4848,7 +4848,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0806")
+					(reference "#PWR0807")
 					(unit 1)
 				)
 			)
@@ -5009,7 +5009,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c268d241-f403-4871-801b-02833641610d")
-		(property "Reference" "C801"
+		(property "Reference" "C802"
 			(at 214.63 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5085,7 +5085,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C801")
+					(reference "C802")
 					(unit 1)
 				)
 			)
@@ -5288,7 +5288,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cce43f36-9cd4-40e9-b9eb-bda56c6d96b6")
-		(property "Reference" "#PWR0807"
+		(property "Reference" "#PWR0808"
 			(at 222.25 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -5348,7 +5348,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0807")
+					(reference "#PWR0808")
 					(unit 1)
 				)
 			)
@@ -5366,7 +5366,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d297b98b-a7fd-4b83-8197-6ed7f63b9b7d")
-		(property "Reference" "C804"
+		(property "Reference" "C801"
 			(at 165.1 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5430,7 +5430,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C804")
+					(reference "C801")
 					(unit 1)
 				)
 			)
@@ -5448,7 +5448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3697389-801e-43f8-8787-8bf1e505b1c2")
-		(property "Reference" "#PWR0805"
+		(property "Reference" "#PWR0806"
 			(at 201.93 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -5508,7 +5508,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0805")
+					(reference "#PWR0806")
 					(unit 1)
 				)
 			)

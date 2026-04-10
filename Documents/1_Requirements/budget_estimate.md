@@ -5,7 +5,7 @@ Based on live pricing data from JLCPCB and standard supplier costs for the major
 ### Main ICs and Active Components
 | Component | Ref | Qty | Unit Price | Total | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BQ76952** (Battery Monitor) | U201 | 1 | $2.60 | $2.60 | *Live JLCPCB price (LCSC: C3038665)* |
+| **BQ7694204** (Battery Monitor) | U201 | 1 | $2.60 | $2.60 | *Live JLCPCB price (LCSC: C3038665)* |
 | **NUCLEO-L432KC** (MCU) | U801 | 1 | ~$15.00 | $15.00 | *External (ST module), typically not assembled by JLC* |
 | **IPB085N15NM6** (150V MOSFET) | Q401-Q503 | 6 | ~$2.00 | $12.00 | *Estimated Mouser/Digikey or JLC equivalent* |
 | **LM5163DDAR** (Buck Converter) | U102 | 1 | $1.09 | $1.09 | *Live JLCPCB price (LCSC: C2873264)* |

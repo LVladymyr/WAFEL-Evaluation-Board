@@ -1,0 +1,1229 @@
+www.ti.com
+
+Table of Contents
+
+User’s Guide
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+Willy Massouth
+ABSTRACT
+This document is a collection of frequently asked questions (FAQ) for the BQ76940 family of analog front end
+(AFE) devices.
+
+Table of Contents
+1 Device Features...................................................................................................................................................................... 4
+1.1 Can I use the part as a standalone protector?................................................................................................................... 4
+1.2 Can I use my microcontroller with the AFE?...................................................................................................................... 4
+1.3 I have a design with the BQ76925 AFE. Can I extend that design to more cells with this AFE?.......................................4
+1.4 Which cells should I short to reduce the cell count?.......................................................................................................... 4
+1.5 The VC1 pin has a higher absolute maximum than VC0. Can I short cell 1 and get the benefit of the additional
+margin to VSS on my lowest cell?........................................................................................................................................ 4
+1.6 Open cell detection is not mentioned in the data sheet. Does the device have this feature?............................................ 4
+1.7 When does the device recover from a fault?......................................................................................................................4
+1.8 How do I clear the status register bits, address 0x00?...................................................................................................... 4
+1.9 When the fault bit is cleared in the SYS_STAT register, the FETs do not turn back on. Is this correct?............................ 4
+1.10 Is an automotive grade version available?.......................................................................................................................4
+1.11 For higher cell counts such as 20 cells, is there any recommendation on how to stack the BQ76940 devices?.............5
+1.12 Why is the DEVICE_XREADY bit high on my part and it cannot be cleared?................................................................. 5
+1.13 How can I tell if the voltage readings are correct or dormant values?............................................................................. 5
+1.14 Will the BQ769x0 share the bus with a BQ34z100-G1?.................................................................................................. 5
+1.15 What is the ALERT pin timing?........................................................................................................................................ 5
+2 Unused Pins............................................................................................................................................................................ 6
+2.1 SRP and SRN.................................................................................................................................................................... 6
+2.2 TS1, TS2, TS3................................................................................................................................................................... 6
+2.3 CHG and DSG................................................................................................................................................................... 6
+2.4 NC pins...............................................................................................................................................................................6
+3 FETs......................................................................................................................................................................................... 7
+3.1 When does the AFE turn on FETs?....................................................................................................................................7
+3.2 Can the device drive high-side FETs?................................................................................................................................7
+3.3 Will load detection work with high-side FET configurations?............................................................................................. 7
+3.4 Does load present detection work with the charge FET on?..............................................................................................7
+3.5 How does the part detect a load?...................................................................................................................................... 7
+3.6 Will load detection work with parallel FET configurations?................................................................................................ 7
+3.7 The charge FET driver uses resistive turn off of the FET. Would this affect the turn off speed of the charge
+MOSFET, and would this be the way too long?....................................................................................................................7
+3.8 The source capability for both CHG and DSG pin is not in the data sheet. What is the typical output voltage for
+CHG and DSG pin?.............................................................................................................................................................. 7
+3.9 Does the AFE turn off the FETs when it loses adequate drive voltage for the FETs?........................................................ 8
+3.10 Can I drive multiple FETs in parallel for higher current?.................................................................................................. 8
+3.11 Can my circuit be configured with split charge and discharge paths?..............................................................................8
+4 ADC.......................................................................................................................................................................................... 9
+4.1 Why is the ADC not reading 0x3FFF at 6 V?..................................................................................................................... 9
+4.2 How do I calculate the battery voltage from the BAT_HI and BAT_LO ADC registers?.....................................................9
+4.3 How do I apply the calibration voltages?............................................................................................................................9
+4.4 Can I calibrate the voltages?..............................................................................................................................................9
+5 Coulomb Counter (CC).........................................................................................................................................................10
+5.1 How do I understand the data range of the CC?..............................................................................................................10
+5.2 How does the CC range match to the SC protection levels?........................................................................................... 10
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+1
+
+Table of Contents
+
+www.ti.com
+
+5.3 How does the CC support the current protection thresholds?......................................................................................... 10
+5.4 How do I measure instantaneous current with the CC?...................................................................................................10
+5.5 The CC resolution is described in volts (mV, µV). How do I determine current?..............................................................10
+5.6 Why does the CC value read not change when I set the CC_ONESHOT bit?................................................................ 10
+5.7 Why does the CC show a different value after shutdown and wake up?......................................................................... 10
+6 Communications................................................................................................................................................................... 11
+6.1 Is the communications interface fully I2C compliant?....................................................................................................... 11
+6.2 Does the communications interface support sequential register reads?.......................................................................... 11
+6.3 Why does my voltage (or current) read erratically?..........................................................................................................11
+6.4 Where can I get information on the communications CRC?.............................................................................................11
+6.5 Can I use the CRC part without CRC?............................................................................................................................. 11
+6.6 Does the part need pullups on the SDA and SCL lines?..................................................................................................11
+6.7 Does the BQ769x0 AFE ever drive the SCL line?............................................................................................................11
+6.8 When does the CC_Ready bit in the SYS_STAT release?.............................................................................................. 11
+6.9 What is the communication protocol for the cell groups (internal stacked device)? Is it still I2C?.................................... 11
+6.10 When the PACK– is switched off, will the part be damaged when the communication signals pull to PACK+?.............11
+6.11 Is there a version or can I get the part with a SMBus interface?.................................................................................... 11
+6.12 Is the companion controller interface SMBus and does it use SBS Data format?......................................................... 12
+6.13 Why does the AFE not ACK its address?...................................................................................................................... 12
+7 Temperature Sensing........................................................................................................................................................... 13
+7.1 Where are the temperature sensing thresholds?............................................................................................................. 13
+7.2 I’m switching the temperature source selection bit TEMP_SEL, but I don’t see the temperature change, why?............ 13
+7.3 I only want to use one temperature sensor. Can I leave the others unconnected?......................................................... 13
+7.4 Are the NTC temperature sensors required for operation?..............................................................................................13
+7.5 I want more than three temperature sensors on the BQ76940. Can I multiplex more sensors?..................................... 13
+7.6 Previous gas gauge designs have had a resistor in parallel with the thermistor. Is this needed with the BQ769x0?...... 13
+7.7 Do I need a capacitor across the thermistor?.................................................................................................................. 13
+7.8 How do I understand the die temperature drift specification?.......................................................................................... 14
+8 Calibration............................................................................................................................................................................. 15
+8.1 How do I calibrate current and voltage on the device? Is calibration done on the part at the factory, or do I need to
+do something at production?.............................................................................................................................................. 15
+8.2 Can I set each device to a different voltage setting?........................................................................................................15
+8.3 Can I set a different threshold for each cell input?........................................................................................................... 15
+8.4 Can I make adjustments to calibration for higher accuracy in my system?..................................................................... 15
+8.5 Other TI protectors have had coarse OV settings. Can I achieve better resolution with the BQ769x0?..........................15
+8.6 Can I change the thresholds dynamically during operation, and if so what is the timing on register writes to take
+effect?.................................................................................................................................................................................15
+8.7 Can I block write to the EEPROM?.................................................................................................................................. 15
+9 Cell Balancing....................................................................................................................................................................... 16
+9.1 How does balancing work?.............................................................................................................................................. 16
+9.2 Can I balance all cells at once?....................................................................................................................................... 16
+9.3 Is it safe to balance every other cell?...............................................................................................................................16
+9.4 How many cells can I balance at once?...........................................................................................................................16
+9.5 Is it okay to balance adjacent cells?.................................................................................................................................16
+9.6 The standard schematic uses large value input filter resistors. How can I achieve the maximum internal balance
+current?...............................................................................................................................................................................17
+9.7 Can the BQ769x0 support external balancing?............................................................................................................... 17
+9.8 Can I use single-ended capacitor connections for my input filter rather than the differential connection shown in
+the system diagram?.......................................................................................................................................................... 17
+9.9 Can the device turn off balance FETs by itself?............................................................................................................... 17
+9.10 How much does the temperature rise during balancing?...............................................................................................17
+9.11 Why does the cell voltage change during balancing?.................................................................................................... 18
+10 Power................................................................................................................................................................................... 19
+10.1 Can I short all cell inputs to ground while applying BAT?...............................................................................................19
+10.2 What is the limit of VC15 (or the top used cell input) with respect to BAT?................................................................... 19
+10.3 Can REGSRC operate at a higher voltage than VC5X?................................................................................................ 19
+10.4 Can I connect cells randomly?....................................................................................................................................... 19
+10.5 Why does the application diagram have Rf and Cf and why points A and B?............................................................... 19
+10.6 Will the part be damaged if points A and B are floated?................................................................................................ 19
+10.7 Can the Cf have a lower voltage rating than the PACK voltage?................................................................................... 19
+10.8 The data sheet shows a large variation in power supply current (IDD). Will this cause large offset currents
+between cell sets?.............................................................................................................................................................. 19
+10.9 Is there a load mismatch on the cell groups?.................................................................................................................19
+2
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Trademarks
+
+10.10 When I measure supply and offset currents, why do I see peak values much higher than the data sheet
+maximums?........................................................................................................................................................................ 20
+10.11 Does connecting fewer than the maximum cells, for example, 13 cells, on a BQ76940 create an imbalance in
+the cell groups?.................................................................................................................................................................. 20
+10.12 How can I reset the part?............................................................................................................................................. 20
+10.13 Can the device be reset by a power transient?............................................................................................................20
+10.14 Will an excessive load (short circuit) on REGOUT reset the part?.............................................................................. 20
+10.15 Why is a FET source follower used for REGSRC?...................................................................................................... 20
+10.16 Do I need a large package on the REGSRC FET?......................................................................................................20
+10.17 Does the external REGSRC FET gain affect the LDO response?............................................................................... 20
+10.18 What is the efficiency of the LDO?............................................................................................................................... 20
+10.19 What is the maximum LDO current?............................................................................................................................ 21
+10.20 Will the part operate properly with transients below VSHUT?..................................................................................... 21
+10.21 Can I use a hold-up circuit on the BAT or REGSRC pin, or both, to extend the operating time under pack short
+circuit or overcurrent conditions?........................................................................................................................................21
+10.22 I will not use the REGOUT voltage from the AFE. Do I still need to supply REGSRC and a capacitor on
+REGOUT?.......................................................................................................................................................................... 21
+11 Power State Switching....................................................................................................................................................... 22
+11.1 When entering SHIP mode, will the AFE or controller enter the low power state first?..................................................22
+11.2 When the pack wakes up, will the AFE or controller wake up first?............................................................................... 22
+11.3 What happens if my boot switch sticks or the boot signal is left on?..............................................................................22
+12 EVM...................................................................................................................................................................................... 23
+12.1 Will there be an evaluation module (EVM) for the devices or family?............................................................................23
+12.2 The EVM has a TI controller, can I use my own?...........................................................................................................23
+12.3 My controller is 5 V. Can I use this with the BQ769x0 and EVM?..................................................................................23
+12.4 Can I talk to both the SMBus and I2C on the EVM at the same time?........................................................................... 23
+12.5 Can I configure fewer than the maximum cells on the EVM?........................................................................................ 23
+12.6 I want to configure fewer cells on my EVM. Which cells should I short?....................................................................... 23
+12.7 What TI interface can I use to communicate with the device?....................................................................................... 23
+12.8 Can I use my existing BQxx EVSW for communication with the EVM?.........................................................................23
+12.9 Can I implement external balancing on the EVM?......................................................................................................... 23
+12.10 Where can I get the AFE software for the EVM?......................................................................................................... 23
+12.11 Is the EVM a finished design?...................................................................................................................................... 24
+12.12 The BQ78350 gauge on the EVM does not respond. How do I get the gauge to work?............................................. 24
+13 Revision History................................................................................................................................................................. 24
+
+List of Figures
+Figure 7-1. Die Temperature Characteristic...............................................................................................................................14
+
+Trademarks
+All trademarks are the property of their respective owners.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+3
+
+Device Features
+
+www.ti.com
+
+1 Device Features
+1.1 Can I use the part as a standalone protector?
+The device is an AFE. It requires a host to set registers, turn on FETs, and recover from faults. It does not
+function as a standalone protector.
+
+1.2 Can I use my microcontroller with the AFE?
+Yes, communication with the AFE is through an I2C-like interface. The ALERT signal should also be connected
+to a GPIO to signal interrupt to the microcontroller. Analog signals may be desired based on the system design.
+A companion controller family (BQ78350) offers various features for protection and gauging without the designer
+having to develop code. Example code for the MSP430 microcontroller is also available in the product folder.
+
+1.3 I have a design with the BQ76925 AFE. Can I extend that design to more cells with this
+AFE?
+BQ76940 is not a drop-in replacement for the BQ76925. Modification of the circuit and code will be required
+since the architecture is different. The cell voltages are available through the digital interface rather than as an
+analog signal with the BQ76925. Study the data sheets and system schematics.
+
+1.4 Which cells should I short to reduce the cell count?
+The top cell and bottom two cells of each cell group should be used. For a recommendation on which cells to
+short, see the table in the data sheet.
+
+1.5 The VC1 pin has a higher absolute maximum than VC0. Can I short cell 1 and get the benefit
+of the additional margin to VSS on my lowest cell?
+No. The bottom cell must be used.
+
+1.6 Open cell detection is not mentioned in the data sheet. Does the device have this feature?
+No. It may be possible to implement a cell connection test using the balancing control; however, the part may be
+damaged by open connections.
+
+1.7 When does the device recover from a fault?
+The fault recovery is determined by the host controller. For the controller used, refer to the data sheet or system
+design documentation.
+
+1.8 How do I clear the status register bits, address 0x00?
+The status register bits are cleared by writing 1 to the set bit. To clear all bits, write 0xFF to register 0x00. Writing
+0x00 to the register does not clear the bits.
+
+1.9 When the fault bit is cleared in the SYS_STAT register, the FETs do not turn back on. Is this
+correct?
+Yes, the AFE requires control by the host to recover the system from the fault. The host must turn on the FET
+controls after appropriate recovery delay or conditions. Clearing the status is not sufficient.
+
+1.10 Is an automotive grade version available?
+The BQ769x0 devices are intended for the industrial market, automotive grade devices are not planned. For
+automotive designs consider a system with the BQ79616-Q1 or other automotive parts as these become
+available.
+
+4
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Device Features
+
+1.11 For higher cell counts such as 20 cells, is there any recommendation on how to stack the
+BQ76940 devices?
+A TI Reference Design using 2 BQ76930 devices stacked for a 20S application is available - (TIDA-01093). The
+BQ76940 can similarly be stacked for applications needing more than 20 cells.
+
+1.12 Why is the DEVICE_XREADY bit high on my part and it cannot be cleared?
+For the BQ76930 and BQ76940 it typically indicates that the voltage on the bottom cell group is adequate,
+but one of the upper cell groups’ supply voltage is below VSHUT. Raise all cell group supply voltages above
+VPORA and clear the status bit. If any of the TSn pins is missing a thermistor or pull-down resistor, or if these
+thermistors or pull-down resistors are connected to the wrong reference, it will also cause a DEVICE_XREADY
+fault. Another possibility is that the part has been damaged.
+DEVICE_XREADY on the BQ76920 typically indicates a malfunctioned part which may need replaced.
+
+1.13 How can I tell if the voltage readings are correct or dormant values?
+If the DEVICE_XREADY is set, the voltage register values from the device should not be used. If the user would
+like a way to check if the part is alive, construct a circuit that can be controlled by the system microcontroller,
+which would short the thermistor on an upper cell group. The microcontroller could then observe the voltage
+change based on its control and know that the part was functioning. This could be used even if the thermistors
+are not used by selecting the external temperature sensing for this test. Note that the temperature selection
+change may take 2 seconds to update.
+
+1.14 Will the BQ769x0 share the bus with a BQ34z100-G1?
+Yes, the default (-00) BQ769x0 device address (7 bit) is 0x08 while the BQ34z100-G1 address is 0x55, so they
+should share the bus without issue.
+
+1.15 What is the ALERT pin timing?
+The alert pin does not have noise discrimination. It is sampled at about 256 kHz. If it is sampled high, it will be
+driven high approximately 3 clocks (12 µs) later. A pulldown resistor or capacitor may help avoid false detection
+on the pin. The time constant on the pulldown should allow the pin to settle below the 1-V threshold within
+approximately 250 µs to avoid the part from detecting the residual ALERT pin voltage after a status register
+clear. A 500-kΩ pulldown resistor and a 470-pF capacitor are commonly used.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+5
+
+Unused Pins
+
+www.ti.com
+
+2 Unused Pins
+How should I connect pins if I am not using them?
+
+2.1 SRP and SRN
+These pins should be connected to VSS.
+
+2.2 TS1, TS2, TS3
+TS1, TS2, and TS3 are inputs and should have a pulldown. TS1 is needed as an input to boot the part. A 1- to
+100-kΩ pulldown may be suitable.
+
+2.3 CHG and DSG
+CHG and DSG are outputs and have pulldowns when set low. These pins may be left unconnected.
+
+2.4 NC pins
+Some pins named NC need to be connected, refer to the data sheet Pin Function tables. For the BQ76930, pins
+11 and 12 should connect to the CAP2 pin. For the BQ76940, pins 11 and 12 should connect to the CAP2 pin,
+pins 16 and 17 should connect to the CAP3 pin.
+
+6
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+FETs
+
+3 FETs
+3.1 When does the AFE turn on FETs?
+The AFE only turns on FETs under command of the host and if there is not a latched fault present.
+
+3.2 Can the device drive high-side FETs?
+Not directly. An external circuit is required to control high-side FETs.
+High-side P-channel FETs can be controlled by a N-channel FET controlled by the CHG and DSG outputs. Turn
+off may be slow with P-channel FETs.
+High-side N-channel FETs need a charge-pump type driver or other supply to provide a voltage above the FET
+sources. The BQ76200 high-side N-channel FET driver can be used with the BQ769x0 to control high-side FETs.
+
+3.3 Will load detection work with high-side FET configurations?
+No. The load detection is sensed through the CHG pin. With typical high-side FET applications, there is no path
+to pull up the CHG pin for the load detection circuit to operate. If a load detection is desired, TI suggests that the
+microcontroller read the pack voltage.
+
+3.4 Does load present detection work with the charge FET on?
+LOAD_PRESENT does not work with the CHG_EN set high (1). To use the load detection feature, set DSG_ON
+and CHG_ON low (0). When a load is on the PACK terminals, the CHG pin will be pulled up through the FET
+drive circuit and LOAD_PRESENT will be set when the voltage is above the VLOAD_DETECT threshold.
+
+3.5 How does the part detect a load?
+A load detection circuit is present on the CHG pin and activated whenever the CHG pin is disabled. This
+circuit detects if the CHG pin is externally pulled above VLOAD_DETECT when the high impedance pull-down path
+should actually be holding the CHG pin to VSS. The state of the load detection circuit can be read from the
+[LOAD_PRESENT] bit of the SYS_CTRL1 register. The Load Detection feature is described in more detail in the
+device datasheet.
+
+3.6 Will load detection work with parallel FET configurations?
+Load detection will not work if the charge FET connects directly to the sense resistor. If the charge FET connects
+after the discharge FET, the charge pack terminal will be pulled up through the charge FET body diode and load
+detection should work.
+
+3.7 The charge FET driver uses resistive turn off of the FET. Would this affect the turn off speed
+of the charge MOSFET, and would this be the way too long?
+The standard circuit diagram does not drive the charge FET off; it is turned off by the gate source resistor.
+Turn-off time for the circuit shown in the data sheet can be long. Because charge current is typically low, a long
+turn-off time is considered okay, but the designer must check the safe operating range of the FETs used. In
+many cases, the resistive turn off of the charge FET is typical. In some cases, a push-pull driver may be needed
+for the system. TI does not have a typical application diagram with a push-pull driver.
+
+3.8 The source capability for both CHG and DSG pin is not in the data sheet. What is the typical
+output voltage for CHG and DSG pin?
+When on, the typical output voltage is 12 V, as shown in the data sheet (VFETON). For low REGSRC voltages,
+VFET will be up to 2 V below REGSRC. The drive current is low as noted by the long rise-time specification.
+When off, there is a resistor pull down to VSS, as shown in the data sheet. The data sheet does not include DC
+drive current; load is expected to be about 1 MΩ or higher resistance. Gate source resistors may be adjusted
+lower for faster turn which would increase the continuous current. A high percentage of the CHG pin voltage
+needs to be available at the FET gate, so this should be kept in mind when adjusting the gate source resistors.
+While limits can be calculated from rise and fall times in the data sheet, the nominal pullup resistances when the
+outputs are high is 5 kΩ. The data sheet shows the nominal pulldown resistances for the outputs.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+7
+
+FETs
+
+www.ti.com
+
+3.9 Does the AFE turn off the FETs when it loses adequate drive voltage for the FETs?
+No, the user must account for voltage drop in their system design and be sure the system operates safely in
+all conditions. Controller software should be written to understand system voltage drops and turn off FETs when
+needed to prevent damage. Protection delays should be set to allow adequate voltage for FETs at the protection
+time.
+
+3.10 Can I drive multiple FETs in parallel for higher current?
+Yes. Check the available TI Reference Designs in the BQ769x0 product folders for different system examples
+using multiple FETs. TIDA-00449 uses the BQ76930 with parallel FETs. TIDA-010030 demonstrates the
+BQ76940 and BQ76200 high-side FET driver with parallel FETs.
+
+3.11 Can my circuit be configured with split charge and discharge paths?
+Yes, but load detection will not be possible in this configuration. The BQ78350 companion gauge also does not
+support a split path configuration.
+
+8
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+ADC
+
+4 ADC
+4.1 Why is the ADC not reading 0x3FFF at 6 V?
+The ADC is scaled and does not use the full 14-bit data range. The input range is limited to 6 V. The maximum
+data range of the ADC register is limited to 0x3DE1 or about 6.075 V.
+
+4.2 How do I calculate the battery voltage from the BAT_HI and BAT_LO ADC registers?
+The BAT_HI and BAT_LO registers are not directly from the ADC. The cell voltages are summed and the result
+(divided by 4) is stored in the registers. To get the battery voltage, concatenate the register values and multiply
+by 4, multiply by the gain, and add the offset multiplied by the number of cells. The equation is shown in the data
+sheet.
+
+4.3 How do I apply the calibration voltages?
+Calibration values must be read from the IC and applied to the ADC readings in the microcontroller. Refer to the
+description in the data sheet.
+
+4.4 Can I calibrate the voltages?
+You may choose to calibrate the cell and battery voltages in your microcontroller in addition to the calibration
+data provided in the IC. You might choose a single-point or multiple-point calibration. These values will need to
+be entered, retained, and used in your microcontroller.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+9
+
+Coulomb Counter (CC)
+
+www.ti.com
+
+5 Coulomb Counter (CC)
+5.1 How do I understand the data range of the CC?
+The CC uses 16 bits, but the full 16-bit data range is not used. Full scale data range is ±32000 or ±270 mV.
+However the recommended range for the CC is ±200 mV. The bit value is approximately 270 mV/32000 =
+8.44 µV. Positive values are charge current; negative values are discharge current. Data is 2’s complement, so
+negative current has the highest bit set. For details, refer to the latest data sheet description.
+
+5.2 How does the CC range match to the SC protection levels?
+The CC has a recommended range of ±200 mV. When the RSNS bit is set to 1, the SCD threshold has
+the range of 44 to 200 mV. The current protection thresholds correspond to negative CC reading values.
+However, the protection threshold is expressed without units. Further, the two values are not directly related: The
+protection thresholds are comparator-based while the CC is an integrating ADC.
+
+5.3 How does the CC support the current protection thresholds?
+The CC is not used for the current protection thresholds. The CC is an integrating converter and does not
+respond fast enough for the SCD or OCD delays. The system microcontroller could use the CC value to
+implement system current thresholds which respond more slowly than the hardware protections in the AFE.
+
+5.4 How do I measure instantaneous current with the CC?
+The CC is an integrating converter and cannot measure instantaneous current. It may be considered an average
+over the 250-ms integration period.
+
+5.5 The CC resolution is described in volts (mV, µV). How do I determine current?
+Divide the CC voltage by the sense resistor value, or:
+Current = CC value × CC LSB value / sense resistor
+Be sure to convert units where needed. Remember that the CC is an integrating converter and the calculation
+will give an ‘average’ current.
+
+5.6 Why does the CC value read not change when I set the CC_ONESHOT bit?
+The CC_READY bit must be cleared before the CC_ONESHOT bit is set. Note also that the CC_EN bit
+should be cleared or a CC conversion may already be in progress. After the coulomb counter has started, the
+conversion must align with the 250 ms measurement schedule period, so it can take up to a maximum of 500 ms
+before the first measurement is available.
+
+5.7 Why does the CC show a different value after shutdown and wake up?
+The CC_CFG register (0x0B) defaults to 0x00 after power-on reset; however, the recommended setting is 0x19.
+After waking the part, be sure to set the CC_CFG register. In the BQ76940/BQ76930/BQ76920 Evaluation
+Software, this register may be written separately, or it is set by the Read Device button.
+
+10
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Communications
+
+6 Communications
+6.1 Is the communications interface fully I2C compliant?
+No, refer to the data sheet for supported modes, operation, and timing.
+
+6.2 Does the communications interface support sequential register reads?
+Yes.
+
+6.3 Why does my voltage (or current) read erratically?
+Any 16-bit value should be read with a sequential read to obtain an atomic value. Imagine a situation where
+the data value is varying between 0x07FF and 0x0800. Reading as separate bytes and re-assembling the value
+could result in 0x0700, 0x07FF, 0x0800, or 0x08FF if the byte reads fall across the update boundary.
+
+6.4 Where can I get information on the communications CRC?
+Refer to the data sheet for a description of the CRC polynomial and calculation. Example microcontroller code
+with CRC is also available for download from the product folder.
+
+6.5 Can I use the CRC part without CRC?
+No. The part will not accept writes without the CRC. The part will read the present register, and the controller can
+ignore the CRC.
+
+6.6 Does the part need pullups on the SDA and SCL lines?
+Yes, the BQ769x0 devices do not have internal pullups.
+
+6.7 Does the BQ769x0 AFE ever drive the SCL line?
+No, it is a target device only and does not drive the SCL line. This device does not do clock stretching.
+
+6.8 When does the CC_Ready bit in the SYS_STAT release?
+The CC_Ready bit must be cleared by the processor. Clearing the CC_Ready bit also reduces the additional
+supply current (dIALERT) that results from the ALERT pin driving high. The processor timeline must allow
+recognition of the status, read the CC value, and clear the status before the next update. If the processor
+misses an update, the CC value for that interval is lost and the accumulated charge value in the processor will
+be incorrect.
+
+6.9 What is the communication protocol for the cell groups (internal stacked device)? Is it still
+I2C?
+No. The internal communication interface and protocol are proprietary. It is sealed inside the package, cannot be
+observed externally, and no data is available.
+
+6.10 When the PACK– is switched off, will the part be damaged when the communication
+signals pull to PACK+?
+If the communication ground is PACK–, damage is very likely. Clamp circuits on SDA and SCL to VSS may
+cause an uncontrolled current path through the interface. Using a separate communication ground as with the
+EVM will also provide an unprotected current path and may not be acceptable. For protecting the communication
+lines referenced to PACK–, some methods may include:
+•
+•
+•
+•
+
+ISO isolation device
+High-side protection FETs, the BQ76200 high-side N-channel FET driver is available to drive high-side FETs
+Alternative external circuitry to AC-couple the communications signaling lines, if possible
+Some external circuit to detect if FETs are off and isolate the communication bus (if communication is not
+required)
+
+6.11 Is there a version or can I get the part with a SMBus interface?
+No. The BQ769x0 family of AFEs use I2C-like communication. To communicate with your battery via SMBus, a
+microcontroller or companion controller would handle protection functions and provide SMBus interface.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+11
+
+Communications
+
+www.ti.com
+
+6.12 Is the companion controller interface SMBus and does it use SBS Data format?
+The BQ78350-R1A has an SMBus interface to external systems. Refer to the latest data sheet for information.
+
+6.13 Why does the AFE not ACK its address?
+Be sure power is applied to REGSRC as well as BAT (and VC5X, VC10X when appropriate). A voltage could
+be present on REGOUT due to a pullup of SCL, SDA, or ALERT, but the part needs power from the REGSRC
+supply pin to operate. REGOUT should be supplied by the part after it is booted.
+Also, be sure 3.3 V present on the CAP1 pin after the part is booted.
+
+12
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Temperature Sensing
+
+7 Temperature Sensing
+7.1 Where are the temperature sensing thresholds?
+The AFE does not have temperature protection thresholds. It allows measurement of temperature as a voltage
+from either an internal sensor or external thermistor. The number of sensors varies with the device type.
+Temperature must be read by the system microcontroller and protection thresholds implemented appropriately.
+When a FET action is desired from the temperature threshold, the microcontroller must write the FET control bit
+off in the BQ769x0 AFE.
+
+7.2 I’m switching the temperature source selection bit TEMP_SEL, but I don’t see the
+temperature change, why?
+Temperature is only measured every 2 s. Be sure to allow sufficient time after changing the selection before
+reading the temperature register value or values.
+
+7.3 I only want to use one temperature sensor. Can I leave the others unconnected?
+Although the TS pins are not digital logic input signals, they are inputs and should not be left floating or
+unexpected operation may result. Provide a pulldown resistor in place of the thermistors, typical values in the
+range of 1 to 100 kΩ would be acceptable.
+
+7.4 Are the NTC temperature sensors required for operation?
+No, thermistors are not required for operation of the device. The TEMP_SEL bit defaults to 0 to measure die
+temperature rather than the thermistor. TS1 needs to be allowed to be pulled above the 1-V max boot threshold
+to start the device. Because the TS pins are identified as inputs, TI requires pulldown resistors to the appropriate
+references to avoid unexpected operation. The TS2 and TS3 should not be pulled up.
+
+7.5 I want more than three temperature sensors on the BQ76940. Can I multiplex more
+sensors?
+This operation is not supported by the device. The device will not tell you when it is making measurements, so
+if you multiplex sensors externally, be sure to allow sufficient time for measurements to settle. Consider adding
+temperature sensors to your microcontroller.
+
+7.6 Previous gas gauge designs have had a resistor in parallel with the thermistor. Is this
+needed with the BQ769x0?
+A parallel resistor is not required for operation. It may alter the range and shape of the temperature characteristic
+for easier conversion of voltage to temperature, so use of a resistor may depend on your measurement system.
+
+7.7 Do I need a capacitor across the thermistor?
+Because the TS pin is switched, a small capacitor will slow the edge rate and stabilize the voltage, both may be
+desirable. However, the device should operate without the capacitor.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+13
+
+Temperature Sensing
+
+www.ti.com
+
+7.8 How do I understand the die temperature drift specification?
+The die temperature drift is the characteristic which allows temperature measurement. The voltage will decrease
+with temperature. Over the specified range of –25 to 85°C, the behavior may look like Figure 7-1. Calibration of
+the system will be needed to obtain a good temperature reading.
+
+V
+
+Tolerance
+at 25°C
+1.25
+1.20
+1.15
+
+Slope is
+typical only
+Temperature
+uncertaintly without
+calibration
+(Plus slope variation)
+
+t40
+
+25
+
+85
+
+°C
+
+Figure 7-1. Die Temperature Characteristic
+
+14
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Calibration
+
+8 Calibration
+8.1 How do I calibrate current and voltage on the device? Is calibration done on the part at the
+factory, or do I need to do something at production?
+The part is calibrated at the factory to the data sheet limits. The host should do calculation of the cell voltages
+based on the gain and offset values stored in the device. Additional calibration could be done based on the
+microcontroller implementation. The device does not have stored current calibration values. Current calibration
+may be done at the system level to compensate for gain and offset due to device variations and for outside
+factors such as sense resistor tolerance. Any current calibration should be done after the CC_CFG register is set
+to the recommended value (see 5.7).
+
+8.2 Can I set each device to a different voltage setting?
+Yes. The device is calibrated at the factory during production, and default thresholds are programmed into the
+part. However, the device operates from thresholds in the registers. When installed in a system, the settings
+can be overwritten by the battery system microcontroller. If your code design provides it, each system can be
+calibrated and result in a unique setting for that board or device combination. The step size for voltage protection
+settings is 16 counts or about 6.1 mV (see the latest data sheet).
+
+8.3 Can I set a different threshold for each cell input?
+No, all cell measurements use the same threshold. Variation between cells is set at production and will be within
+the data sheet specifications.
+
+8.4 Can I make adjustments to calibration for higher accuracy in my system?
+Not inside the device. System calibration factors could be applied by the microcontroller if its firmware is
+designed to provide those.
+
+8.5 Other TI protectors have had coarse OV settings. Can I achieve better resolution with the
+BQ769x0?
+Yes. Because the BQ769x0 is an AFE rather than a protector, it has default settings, but operates from registers
+so the thresholds can be overwritten by the host. While the default protection thresholds are fixed, the voltage
+protection step size is about 6.1 mV and may be calibrated by the host for each system. Additionally firmware
+protection could be implemented. Refer to the device datasheet for accuracy specifications.
+
+8.6 Can I change the thresholds dynamically during operation, and if so what is the timing on
+register writes to take effect?
+Register writes are not restricted. If the protection threshold is changed while a fault is being evaluated before
+the final comparison, the fault timer is cleared and the fault is not expected to be set. Timing will not be apparent
+to the user.
+
+8.7 Can I block write to the EEPROM?
+The BQ769x0 is register-based; it does not have a user selectable EEPROM.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+15
+
+Cell Balancing
+
+www.ti.com
+
+9 Cell Balancing
+9.1 How does balancing work?
+The BQ769x0 uses resistive balancing. The basic balancing circuit is a FET internal to the device between
+each adjacent VCx pin pair of the cell group. When the FET is turned on by a register command, it pulls the
+VCx pins together and current is drawn from the cell through the VCx input resistors which limit the current.
+When charging, part of the charge current bypasses the balanced cell. When not charging, current is drawn
+from the cell. Either way, the power is dissipated as heat in the input resistors and device. Control of which cells
+to balance is left to the controller algorithm. There are no restrictions on which balance bits can be set by the
+controller. The controller algorithm must be designed to prevent unsafe bit combinations and achieve the desired
+balance. Certain events in the AFE will clear the balance registers, refer to the data sheet.
+
+9.2 Can I balance all cells at once?
+The device will allow you to write the balance register to turn on all balancing FETs, however typically you should
+not do this since this may damage the IC.
+As an example, if a BQ76920 has all 5 cells at 4 V with a 20-V pack voltage and all balance bits are set in the
+register, the VCx inputs will attempt to pull to the same value, or half the pack voltage. The resulting potential
+10 V on all VCx inputs will cause the absolute maximum voltage of VC0 to VSS of 3.6 V to be exceeded. While
+there are input resistors which may limit current, the device may clamp the voltage to a lower value and the
+device may be permanently damaged.
+
+9.3 Is it safe to balance every other cell?
+Typically, yes. Because balancing will typically increase the adjacent cell voltage by ½ of the normal cell
+voltage, balancing every other cell would double the voltage of the middle cell. Because the absolute maximum
+differential voltage is 9 V, balancing every other cell should be okay up to 4.5 V/cell.
+
+9.4 How many cells can I balance at once?
+With every other cell in a cell group or set being allowed, 9 cells could be balanced in a BQ76940. Power
+dissipation of the package may limit the number of cells which can safely be balanced.
+
+9.5 Is it okay to balance adjacent cells?
+The data sheet states that adjacent cells should not be balanced simultaneously. The part does not restrict
+selection of adjacent cells.
+Whether it is safe depends on which cells are balancing and the cell voltages. If 2 adjacent cells are balanced,
+the VCx pin between the cells does not change significantly in voltage. The differential input voltage of the
+next cell effectively doubles. If voltages impressed on the device are within the absolute maximum limits (both
+single-ended and differential), this is okay.
+As an example, assume all cells are at 4 V. If cells 4 and 5 are balanced, the VC3 input pulls to VC4, which is
+approximately the cell 4 voltage or 16 V. This is within the single-ended absolute maximum voltage of 3 × 7.2 =
+21.6 V. VC3-VC2 voltage doubles, or is 8 V; this is within the 9-V absolute maximum differential voltage for this
+input pair. So this balance combination should be okay. However, if cell 1 and cell 2 are balanced, VC0 pulls to
+the cell 1 value of 4 V. Because this is above the absolute maximum of 3.6 V, this combination of balancing could
+damage the device and should not be selected.
+As another example, if the cell voltages are 3.6 V, the absolute maximum on VC0 from the above example would
+not be violated, and cells 1 and 2 could be balanced at the same time. However, if cells 4 and 5 were also
+simultaneously selected for balancing, VC2 would be approximately the cell 1 voltage of 3.6 V and VC3 would be
+approximately the cell 4 voltage of 14.4 V. VC3-VC2 would be 10.8 V and would exceed the absolute maximum
+of 9 V.
+When external balancing is used, the control voltage for the external FETs is developed across the input resistor.
+With adjacent cells selected for balancing, one of the FETs may not receive an adequate control voltage and its
+balancing will be ineffective.
+Adjacent cells in adjacent groups may be balanced simultaneously, for example cells 5 and 6 with a BQ76930.
+Because the cells are in different groups, they have separate input resistors for each group and the balancing
+16
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Cell Balancing
+
+can operate independently, even with external balancing. Be cautious of common path resistances between
+groups. See Section 4 of the BQ769x0 Family Top 10 Design Considerations document for more information.
+Because of the complexity of determining when adjacent cell balancing may be safe, the user should follow the
+data sheet recommendation.
+
+9.6 The standard schematic uses large value input filter resistors. How can I achieve the
+maximum internal balance current?
+The standard schematic has large input filter resistors to reduce transient voltages to the inputs. This results in a
+low balance current. A higher balance current can be achieved by reducing the value of the input filter resistors.
+Refer to the data sheet for the maximum internal balance current for the device. The BQ76930 and BQ76940
+are limited to 5 mA of internal balance current, and the BQ76920 is limited to 50 mA. The power filter must also
+be reduced (filter for the VCnX pins) to prevent the cell inputs from swinging faster than the power pins and
+exceeding the device absolute maximum limits. Significant pack level transient suppression may be required.
+
+9.7 Can the BQ769x0 support external balancing?
+Yes, external N-channel or P-channel FETs may be used. This allows maintaining large input filter resistors for
+better transient filtering. The system designer should be aware that some combinations of balancing may not
+work with external balancing. Refer to Section 4 of the BQ769x0 Family Top 10 Design Considerations document
+for more information.
+
+9.8 Can I use single-ended capacitor connections for my input filter rather than the differential
+connection shown in the system diagram?
+Yes, as long as absolute maximum values are not exceeded this should be okay. A typical risk to the AFE is
+when an upper cell input is connected before a lower one, a high voltage is impressed across the VC(n+1)
+– VCn pin pair and the input could be damaged. Differential capacitors tend to divide the voltage across the
+unconnected inputs and allow the voltages across the inputs to change slowly. Using single-ended capacitors
+should provide more consistent filtering across the inputs, but may require additional protection components
+such as Zener diodes at the inputs.
+
+9.9 Can the device turn off balance FETs by itself?
+No, the FETs must be turned off by the host. The device will turn off the balance FETs during certain fault
+conditions as described in the data sheet. However, it does not turn off the FETs when the pack is balanced or to
+prevent discharge of the cell or cells being balanced.
+
+9.10 How much does the temperature rise during balancing?
+The temperature rise will depend on the balancing current used and the cell voltages during balancing as well as
+the package thermal characteristics. See thermal data for the package in the data sheet. The package is not a
+high power package however, so realize that the thermal resistance will be rather high and the allowable balance
+power will be limited. The 85 deg C maximum recommended operating temperature may also limit the balance
+current or power for a system.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+17
+
+Cell Balancing
+
+www.ti.com
+
+9.11 Why does the cell voltage change during balancing?
+The BQ76930EVM and BQ76940EVM use large (1-µF) Cc filter capacitors. The voltage measurement starts
+while the voltage is still settling after the balance on-time. The bottom cells in each cell group or set are affected
+depending on the cell voltage and the number of cells balanced. To avoid this, use a shorter time constant for the
+input filter network, such as 0.1-µF Cc capacitors.
+The cell groups operate on independent timelines for balancing and measurement. The balance current on the
+top or bottom cell of a group will act on any common path resistance to create a voltage which can be measured
+by the adjacent cell in the adjacent group. Cell 5 voltage can be influenced by cell 6 balance current, and cell 6
+voltage can be influenced by cell 5 balance current. The same situation can occur at cells 10 and 11. To avoid
+this, minimize the resistance in the path between the high-current balance path and the cells.
+
+18
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Power
+
+10 Power
+10.1 Can I short all cell inputs to ground while applying BAT?
+For the BQ76940 and BQ76930, this is likely to violate the absolute maximum limits of the device, and TI does
+not recommend it. For the BQ76920, no damage is expected, but TI does not recommended it.
+
+10.2 What is the limit of VC15 (or the top used cell input) with respect to BAT?
+The maximum voltage between the top cell input and the BAT pin or between the top VCn pin and its group
+power pin is 7 V. A diode should be used between the top VCn pin of each group for the BQ76930 and
+BQ76940, as shown in the data sheet simplified schematics. For the BQ76920, a diode may be added if needed
+to avoid damage.
+
+10.3 Can REGSRC operate at a higher voltage than VC5X?
+Yes. REGSRC does not have a limit with respect to VC5X in the data sheet. The pins power different circuits in
+the device. Both should be within their recommended operating condition range.
+
+10.4 Can I connect cells randomly?
+Refer to Section 10 of the BQ769x0 Family Top 10 Design Considerations document for details on random
+cell connections. For the BQ76920, it is possible to connect cells in random sequence without violating the
+absolute maximum ratings. For the BQ76930 and BQ76940, extra components may be required to assure that
+cell voltages do not violate the abs max voltages on the cell input pins.
+
+10.5 Why does the application diagram have Rf and Cf and why points A and B?
+The cells are separated into groups of 5, or sets, which need a lower impedance connection back to the cells.
+The BAT and VCnX pins are “power” pins and should be filtered to prevent transients. When the diagram was
+drawn in this way, the A and B points allowed fewer lines crossing on the diagram.
+
+10.6 Will the part be damaged if points A and B are floated?
+Points A and B are expected to be connected on the circuit board before power is applied. If the points are
+floated, one or more absolute maximum voltage limits could be exceeded and the part could be damaged.
+
+10.7 Can the Cf have a lower voltage rating than the PACK voltage?
+The BAT voltage is split into “sets” of cells (3 for the BQ76940), which have an absolute maximum voltage.
+Because the capacitor voltage must be limited to the absolute maximum voltage of the IC connected, capacitors
+with voltage rating lower than BAT pin voltage might be used. However, be aware of the capacitance versus
+voltage characteristics of capacitors and follow the derating guidelines of your organization.
+
+10.8 The data sheet shows a large variation in power supply current (IDD). Will this cause large
+offset currents between cell sets?
+No, the large variation is due to operating modes shown and manufacturing variations in lots. Also, the power
+includes both the BAT and REGSRC current. Offset current is shown separately in the data sheet.
+
+10.9 Is there a load mismatch on the cell groups?
+In general, no, the design uses power from the top of the stack. Any current through VCnX should be only a
+small bias current. This bias current is shown in the data sheet for different modes in the Leakage and Offset
+Currents section of the electrical characteristics (dINOM). An exception is the increase in current on VC5X when
+ALERT is high, as shown in the data sheet (dIALERT). Clearing ALERT promptly when set will reduce the effect of
+this current.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+19
+
+Power
+
+www.ti.com
+
+10.10 When I measure supply and offset currents, why do I see peak values much higher than
+the data sheet maximums?
+The part has a sampling characteristic when measuring cell voltages. The data sheet values are average
+currents at a specific mode of operation. Additionally, REGSRC current does not include the currents for
+external loads from circuitry attached to REGOUT or I2C communication. Refer to the data sheet for possible
+clarifications of current measurement conditions.
+
+10.11 Does connecting fewer than the maximum cells, for example, 13 cells, on a BQ76940
+create an imbalance in the cell groups?
+No, the device supply current (IDD) is always drawn from the top of the stack, regardless of the cell count. The
+designer should be careful to source the current for REGSRC from the top of the stack, also.
+
+10.12 How can I reset the part?
+Send the part to ship mode, then boot the part with a momentary voltage on TS1. The device does not have
+a reset pin. If the I2C SDA line is stuck low, the controller should send nine clock pulses to recover the bus as
+described in the I2C specification.
+
+10.13 Can the device be reset by a power transient?
+Each cell group or set may shut down if the voltage transitions into the VSHUT region. This may require the
+device to have XREADY cleared or be rebooted.
+A sufficient transient on the CAPx pins may cause a POR of the group and may also result in XREADY or
+apparent shutdown. The CAPx pin capacitors for the device should be routed appropriately with the connections
+shown in the data sheet to avoid noise coupling into these pins.
+
+10.14 Will an excessive load (short circuit) on REGOUT reset the part?
+No. Short circuit or excessive load will cause loss of some functionality of the IC. Expected influences are on
+the current measurement and communications with the device. A secondary effect is that if the load causes the
+voltage of REGSRC to drop, the FET drive voltages may drop without the regulator voltage being affected.
+
+10.15 Why is a FET source follower used for REGSRC?
+The FET is used with the BQ76930 and BQ76940 to provide current for REGSRC from the battery positive while
+reducing the voltage to a suitable value for the IC. The FET also dissipates the power resulting from the load
+current and dropped voltage external to the IC. The BQ76920 does not use a FET because the battery voltage is
+within the REGSRC range. Refer to Section 9 of the BQ769x0 Family Top 10 Design Considerations document
+for more details.
+
+10.16 Do I need a large package on the REGSRC FET?
+You may not need a large FET. REGSRC must provide power for the internal circuitry, FET drive, and external
+load on REGOUT. The package should be selected for the power dissipation expected from the battery voltage,
+REGOUT load current, and thermal characteristics of the board. If regulator current is low, a small package and
+inexpensive FET may be used.
+
+10.17 Does the external REGSRC FET gain affect the LDO response?
+Not significantly. The external FET provides a source follower to provide a roughly regulated voltage to the
+REGSRC pin to reduce dissipation in the device because the regulator current flows from the top of the battery
+through the FET to the REGSRC pin. Final regulation is done internal to the device.
+
+10.18 What is the efficiency of the LDO?
+It is a series regulator and is not efficient. Any current drawn from the LDO will cause a power loss in the part
+of the current times the voltage between REGSRC and REGOUT. Consider the load current and use external
+components to drop the voltage to REGSRC and reduce power in the IC if appropriate.
+
+20
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Power
+
+10.19 What is the maximum LDO current?
+The data sheet does not provide a recommended maximum current. The 20 mA shown in the test conditions
+may be a good recommended maximum.
+
+10.20 Will the part operate properly with transients below VSHUT?
+No. The part will shut down if the supply voltage drops slowly below its VSHUT threshold, such as when cells
+self-discharge or are pulled to a very-low voltage before UV protection. Rapid transitions below VSHUT caused
+by load transients can disrupt operation of the IC causing DEVICE_XREADY status. System design must keep
+cell group supply voltages above VSHUT for all transient conditions.
+
+10.21 Can I use a hold-up circuit on the BAT or REGSRC pin, or both, to extend the operating
+time under pack short circuit or overcurrent conditions?
+For the BQ76920, yes, a hold-up circuit can be used to maintain a voltage above VSHUT during heavy pack
+loads.
+Similarly a hold-up circuit can be used on REGSRC to maintain voltage for FET drive and REGOUT. Because
+the FET drive comes from REGSRC also, realize the FET drive voltage will drop before the REGOUT voltage.
+Be sure to size the circuit components and set protection delays to maintain an adequate FET drive voltage with
+maximum REGOUT load.
+For the BQ76930 and BQ76940, a hold-up circuit on BAT is not suitable. Implementing a hold-up circuit on BAT,
+VC10X, or VC5X may cause device absolute maximum limits to be exceeded and may result in device damage.
+For these devices, set the protection thresholds and timing to provide protection while the part has adequate
+power. Refer to section 9 the BQ769x0 Family Top 10 Design Considerations application report for more details.
+
+10.22 I will not use the REGOUT voltage from the AFE. Do I still need to supply REGSRC and a
+capacitor on REGOUT?
+Yes, REGSRC and REGOUT are required. REGSRC powers the FET drivers, and REGOUT powers assorted
+internal circuitry, including the communication buffers and coulomb counter. If you are not using the REGOUT
+voltage externally, a capacitor value on the low side of the recommended range should be fine. The REGSRC
+pin should have an approximately 1-µF capacitor.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+21
+
+Power State Switching
+
+www.ti.com
+
+11 Power State Switching
+11.1 When entering SHIP mode, will the AFE or controller enter the low power state first?
+The controller must write to the AFE to change the power mode, so it must remain active long enough to
+complete the register write. When the AFE transitions to SHIP mode, the external regulator is turned off. The
+controller must complete operations before power is lost. The controller will likely be off before voltages have
+settled in the AFE.
+
+11.2 When the pack wakes up, will the AFE or controller wake up first?
+This depends on the system design. If the AFE powers the microcontroller, the AFE wakes first. If the
+microcontroller is operated from a separate supply, the microcontroller may provide the wake signal for the
+AFE.
+
+11.3 What happens if my boot switch sticks or the boot signal is left on?
+If the boot switch sticks or the boot circuit drives a voltage onto the TS pin continuously, the device will convert
+that voltage during the temperature measurement interval if the external temperature sense option is selected
+(TEMP_SEL = 1). The converted value in the register will not correctly represent temperature. If the voltage is
+within absolute maximum limits for the TS pin, the part should not be damaged. The controller may respond to
+the inaccurate voltage as a temperature fault or fail to respond to a fault depending on the value forced on the
+pin.
+If the bottom cell voltage is used for boot as shown in the data sheet simple diagram, the cell voltage may
+exceed the absolute maximum. A resistor should be used to limit the input. After the part has been booted and
+if external temperature monitoring is enabled, a cell voltage on TS will be switched to the internal regulator and
+could push up the 3.3-V regulator voltage. A limiting circuit may be required to accommodate the dynamic range
+of the cell voltage and the thermistor resistance.
+
+22
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+EVM
+
+12 EVM
+12.1 Will there be an evaluation module (EVM) for the devices or family?
+Yes, there are three separate EVMs each using the -00 version of the device. See the Tools & Software section
+of the device product folders or EVM tool folders for information on the BQ76920EVM, BQ76930EVM, and
+BQ76940EVM.
+
+12.2 The EVM has a TI controller, can I use my own?
+Yes, although the EVM has a TI controller, it can be disconnected from the I2C lines and the BQ769x0 I2C
+lines connected to your controller. When using your own controller, be sure to remove the connection to the TI
+controller to avoid bus conflicts. Note that the device version on the EVM is -00 and provides REGOUT at 2.5 V.
+
+12.3 My controller is 5 V. Can I use this with the BQ769x0 and EVM?
+The absolute maximum and recommended maximum voltage on the SDA, SCL, and ALERT pins is 3.6 V. If your
+controller can accept the low signaling levels, it should work fine. Be sure to use pullups from the lower voltage
+side. In some cases, a level translator may be needed. ALERT will need a level translator to prevent forcing
+REGOUT to a higher voltage. Refer to the EVM user guide for options on pullups. The EVM does not have level
+translators.
+
+12.4 Can I talk to both the SMBus and I2C on the EVM at the same time?
+If you are communicating to the TI controller over SMBus, the I2C should not be connected to an external
+interface to avoid collisions. Similarly, if you are talking to the AFE using I2C, the controller should be
+disconnected.
+
+12.5 Can I configure fewer than the maximum cells on the EVM?
+Yes. Unused cells can be shorted at the terminal block for basic operation. Refer to the EVM user's guide or
+schematic.
+
+12.6 I want to configure fewer cells on my EVM. Which cells should I short?
+See the limits and recommendations in the data sheet. Cells should be shorted on the upper group first
+maintaining at least 3 cells on each group. The top cell on each group should be used to provide best voltage
+measurement of the used and unused cells. The bottom 2 cells of each group should also be used.
+
+12.7 What TI interface can I use to communicate with the device?
+The EV2400 is supported by both the BQ76940/BQ76930/BQ76920 Evaluation Software and Battery
+Management Studio (BQStudio). Any TI interface which can communicate with I2C or SMBus at the appropriate
+levels and speed can communicate with the devices, but will not be supported by the software. Similarly, third
+party interfaces are not supported by the software.
+
+12.8 Can I use my existing BQxx EVSW for communication with the EVM?
+No. Each gauge device has a customization of the selected evaluation software. The legacy TI BQEasy or
+EVSW will not communicate with the AFE. The BQ78350 gauge uses Battery Management Studio (BQStudio);
+the AFE uses the BQ76940/BQ76930/BQ76920 Evaluation Software.
+
+12.9 Can I implement external balancing on the EVM?
+The BQ76930 and BQ76940 EVMs use external P-channel FETs for balancing. N-channel FETs could also be
+used with the devices, but are not supported on the boards. External balancing could be used with the BQ76920
+but is not supported on the board.
+
+12.10 Where can I get the AFE software for the EVM?
+The BQ76940, BQ76930, and BQ76920 evaluation software is available from the device product folders and the
+EVM tool folders.
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+Copyright © 2021 Texas Instruments Incorporated
+
+23
+
+EVM
+
+www.ti.com
+
+12.11 Is the EVM a finished design?
+No, the EVM is intended to provide a demonstration of the device and a platform for evaluation. It is not a
+finished system. Additional circuitry may be required for implementation of a battery system.
+
+12.12 The BQ78350 gauge on the EVM does not respond. How do I get the gauge to work?
+Refer to the Gauge Quick Start section of the EVM User Guide for detailed steps on connecting to the gauge.
+Check for the latest version of BQStudio, check that the EV2400 firmware is up to date, and check for the latest
+version of the BQ78350-R1A firmware.
+
+13 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision * (May 2014) to Revision A (October 2021)
+Page
+• Changed Test......................................................................................................................................................4
+• Added BQ78350 and last sentence to Section 1.2 ............................................................................................ 4
+• Changed bq76PL536A-Q1 to BQ79616-Q1 in Section 1.10 ............................................................................. 4
+• Updated Section 1.11 .........................................................................................................................................5
+• Added sentence to Section 1.12 ........................................................................................................................5
+• Added sentence to Section 1.15 ........................................................................................................................5
+• Added sentences to Section 2.4 ........................................................................................................................ 6
+• Added sentences to Section 3.2 ........................................................................................................................ 7
+• Updated Section 3.5 .......................................................................................................................................... 7
+• Added sentence to Section 3.8 ..........................................................................................................................7
+• Added sentence to Section 5.6 ........................................................................................................................10
+• Changed bq76940, bq76930, or bq76920 software to BQ76940/BQ76930/BQ76920 Evaluation Software in
+Section 5.7 .......................................................................................................................................................10
+• Added sentence to Section 6.4 ........................................................................................................................ 11
+• Added sentence to Section 6.7 ........................................................................................................................ 11
+• Added sentence to Section 6.8 ........................................................................................................................ 11
+• Added the BQ76200 high-side N-channel FET driver is available to drive high-side FETs to Section 6.10 .... 11
+• Deleted content from Section 6.12 .................................................................................................................. 12
+• Updated title for Section 7.7 ............................................................................................................................ 13
+• Added sentence to Section 8.1 ........................................................................................................................15
+• Added sentence to Section 8.5 ........................................................................................................................15
+• Added sentence to Section 9.5 ........................................................................................................................16
+• Added sentence to Section 9.6 ........................................................................................................................17
+• Added sentence to Section 9.7 ........................................................................................................................17
+• Added sentence to Section 9.9 ........................................................................................................................17
+• Updated Section 10.4 ...................................................................................................................................... 19
+• Added dINOM and dIALERT to Section 10.9 ....................................................................................................... 19
+• Added sentence to Section 10.12 ....................................................................................................................20
+• Added sentence to Section 10.15 ....................................................................................................................20
+• Added sentence to Section 10.21 ....................................................................................................................21
+• Deleted sentence in Section 12.4 .................................................................................................................... 23
+• Deleted EV2300 from Section 12.7 ................................................................................................................. 23
+• Updated Section 12.8 ...................................................................................................................................... 23
+• Updated Section 12.12 .................................................................................................................................... 24
+
+24
+
+BQ76920, BQ76930, BQ76940 AFE FAQ
+
+SLUUB41A – MAY 2014 – REVISED OCTOBER 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these
+resources.
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for
+TI products.
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2022, Texas Instruments Incorporated
+
+

@@ -1,0 +1,2857 @@
+User's Guide
+SLUUBZ5 – November 2018
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation
+Module
+
+This evaluation module (EVM) is a complete evaluation system for the bq40z80 battery management
+system. The EVM includes one bq40z80, two bq771807 secondary protectors, and a link to Microsoft®
+Windows® based PC software. The circuit module includes one bq40z80 integrated circuit (IC), two
+bq771807 secondary protectors, and all other onboard components necessary to monitor and predict
+capacity, perform cell balancing, monitor critical parameters, protect the cells from overcharge, overdischarge, short-circuit, and overcurrent in 2-, 3-, 4-, 5-, 6-, or 7-series cell Li-ion or Li-polymer battery
+packs. The circuit module connects directly across the cells in a battery. The bq40z80EVM can use the
+on-board EV2400 or an external EV2400 interface board and software to read the bq40z80 data registers,
+program the chipset for different pack configurations, log cycling data for further evaluation, and evaluate
+the overall functionality of the solution under different charge and discharge conditions.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+7
+
+Contents
+Features ....................................................................................................................... 2
+1.1
+Kit Contents.......................................................................................................... 2
+1.2
+Ordering Information ............................................................................................... 2
+1.3
+Documentation ...................................................................................................... 2
+1.4
+bq40z80 and bq771807 Circuit Module Performance Specification Summary ............................. 2
+bq40z80EVM Quick Start Guide ........................................................................................... 3
+2.1
+Items Needed for EVM Setup and Evaluation .................................................................. 3
+2.2
+Software Installation ................................................................................................ 3
+2.3
+EVM Connections ................................................................................................... 4
+2.4
+Update Firmware.................................................................................................... 5
+Battery Management Studio ................................................................................................ 6
+3.1
+Registers Screen.................................................................................................... 6
+3.2
+Setting Programmable bq40z80 Options ........................................................................ 7
+3.3
+Calibration Screen .................................................................................................. 8
+3.4
+Chemistry Screen ................................................................................................. 10
+3.5
+Firmware Screen .................................................................................................. 11
+3.6
+Advanced Comm SMB Screen .................................................................................. 12
+bq40z80EVM Circuit Module Schematic ................................................................................ 14
+4.1
+Pre-Charge ......................................................................................................... 15
+4.2
+Pre-Discharge...................................................................................................... 15
+4.3
+LED Control ........................................................................................................ 15
+4.4
+Emergency Shutdown ............................................................................................ 15
+4.5
+Testing Fuse-Blowing Circuit .................................................................................... 15
+Circuit Module Physical Layouts ......................................................................................... 16
+5.1
+Board Layout ....................................................................................................... 16
+5.2
+bq40z80 RevBSchematic ........................................................................................ 22
+bq40z80EVM Bill of Materials ............................................................................................ 24
+Related Documentation from Texas Instruments ...................................................................... 28
+List of Figures
+
+1
+
+bq40z80 Circuit Module Connection to Cells and System Load or Charger ......................................... 4
+
+2
+
+Registers Screen ............................................................................................................ 6
+
+3
+
+Data Memory Screen........................................................................................................ 7
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+1
+
+Features
+
+www.ti.com
+
+4
+
+Calibration Screen ........................................................................................................... 8
+
+5
+
+Chemistry Screen .......................................................................................................... 10
+
+6
+
+Firmware Screen ........................................................................................................... 11
+
+7
+
+Advanced Comm Screen.................................................................................................. 12
+
+8
+
+bq40z80EVM RevB Top Composite ..................................................................................... 16
+
+9
+
+bq40z80EVM RevB Bottom Composite ................................................................................. 17
+
+10
+
+bq40z80EVM RevB Top Layer ........................................................................................... 18
+
+11
+
+bq40z80EVM RevB Internal Layer 2 - GND ............................................................................ 19
+
+12
+
+bq40z80EVM RevB Internal Layer 3 - Signal .......................................................................... 20
+
+13
+
+bq40z80EVM RevB Bottom Layer ....................................................................................... 21
+
+Trademarks
+Impedance Track is a trademark of Texas Instruments.
+Microsoft, Windows are registered trademarks of Microsoft Corporation.
+All other trademarks are the property of their respective owners.
+
+1
+
+Features
+•
+•
+•
+•
+
+1.1
+
+Kit Contents
+•
+•
+
+1.2
+
+Complete evaluation system for the bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module and
+bq771807 independent overvoltage protection ICs
+Populated circuit module for quick setup
+Jumpers for configuring multifunction pins
+Software that allows data logging for system analysis
+
+bq40z80 and bq771807 circuit module
+Cable to connect the EVM to a PC using the on-board EV2400. If an external EV2400 is used, it can
+be purchased separately.
+
+Ordering Information
+For complete ordering information, see the product page at www.ti.com.
+Table 1. Ordering Information
+
+1.3
+
+EVM PART NUMBER
+
+CHEMISTRY
+
+CONFIGURATION
+
+CAPACITY
+
+bq40z80EVM
+
+Li-ion
+
+1-, 2-, 3-, 4-, 5-, 6-, or 7-cell
+
+Any
+
+Documentation
+See the device data sheets for bq40z80 and bq771807 and technical reference manuals (TRMs) on
+www.ti.com for information on device firmware and hardware.
+
+1.4
+
+bq40z80 and bq771807 Circuit Module Performance Specification Summary
+This section summarizes the performance specifications of the bq40z80 and bq881707 EVM.
+Table 2. Performance Specification Summary
+Specification
+
+2
+
+Minimum
+
+Typical
+
+Maximum
+
+Input voltage Pack+ to Pack–
+
+3
+
+15
+
+32
+
+V
+
+Charge and discharge current
+
+0
+
+2
+
+7
+
+A
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+Units
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Quick Start Guide
+
+www.ti.com
+
+2
+
+bq40z80EVM Quick Start Guide
+This section provides the step-by-step procedures required to use a new EVM and configure it for
+operation in a laboratory environment.
+
+2.1
+
+Items Needed for EVM Setup and Evaluation
+•
+•
+•
+•
+•
+•
+•
+•
+
+2.2
+
+bq40z80 and bq771807 circuit module
+EV2400 communications interface adapter or use on-board EV2400 function
+Cable to connect the EVM to an EV2400 communications interface adapter OR micro-USB cable to
+connect EVM directly to a computer
+If using an external EV2400 communications adapter, it requires a USB cable to connect the
+communications interface adapter (EV2400 or on-EVM) to the computer
+Computer setup with Windows XP, or higher, operating system
+Access to the Internet to download the Battery Management Studio software setup program
+One-to-seven battery cells or 1-kΩ resistors to configure a cell simulator
+A DC power supply that can supply 32 V and 2 A (constant current and constant voltage capability is
+desirable). Caution: Some power supplies can be damaged by application of external voltages. If using
+more than 1 power supply check your equipment requirements and use blocking diodes or other
+isolation techniques, as needed, to prevent damage to your equipment.
+
+Software Installation
+Find the latest software version in the bq40z80 tool folder on www.ti.com. Version 1.3.83 or greater is
+required to use all the bq40z80 features. Use the following steps to install the bq40z80 Battery
+Management Studio software:
+1. Download and run the Battery Management Studio setup program from the Development Tools section
+of the bq40z80EVM product folder on www.ti.com. See Section 3 for detailed information on using the
+tools in the Battery Management Studio.
+2. If the communications interface adapter was not previously installed, after the Battery Management
+Studio installation, a TI USB driver installer pops up. Click “Yes” for the agreement message and follow
+its instructions.
+3. Plug the EVM into a USB port using the USB cable. The Windows system may show a prompt that
+new hardware has been found. When asked, "Can Windows connect to Windows Update to search for
+software?", select "No, not this time", and click "Next". In the next dialog window, it indicates "This
+wizard helps you install software for: TI USB Firmware Updater". Select "Install the software
+automatically (Recommended)" and click "Next". It is common for the next screen to be the Confirm
+File Replace screen. Click "No" to continue. If this screen does not appear, then go to the next step.
+After Windows indicates that the installation was finished, a similar dialog window pops up to install the
+second driver. Proceed with the same installation preference as the first one.
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+3
+
+bq40z80EVM Quick Start Guide
+
+2.3
+
+www.ti.com
+
+EVM Connections
+This section covers the hardware connections for the EVM. See Figure 1.
+
+Figure 1. bq40z80 Circuit Module Connection to Cells and System Load or Charger
+•
+
+Direct connection to the cells: 1N (BAT–), 1P, 2P, 3P, 4P, 5P, 6P, 7P (BAT+)
+Attach the cells to the J12 terminal block. A specific cell connection sequence is not required; although,
+it is good practice to start with lowest cell in the stack (cell 1), then attach cells 2 through 7 in
+sequence. The U1 and U2 devices should not be damaged by other cell connection sequences, but
+there is a possibility that the bq771807 could blow the fuse. Attaching cells starting with cell 1 should
+eliminate this risk. A short should be placed across unused voltage sense inputs up to 7P.
+Table 3. Cell Connection Configuration
+Number of
+Cells
+
+J12 Terminal Block Connections
+1N
+
+2P
+
+3P
+
+4P
+
+5P
+
+6P
+
+7P
+
+⊕
+
+-cell1+
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+2
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+3
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+-cell3+
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+4
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+-cell3+
+
+⊕
+
+-cell4+
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+5
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+-cell3+
+
+⊕
+
+-cell4+
+
+⊕
+
+-cell5+
+
+⊕
+
+short
+
+⊕
+
+short
+
+⊕
+
+6
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+-cell3+
+
+⊕
+
+-cell4+
+
+⊕
+
+-cell5+
+
+⊕
+
+-cell6+
+
+⊕
+
+short
+
+⊕
+
+⊕
+
+cell7+
+
+⊕
+
+7
+
+4
+
+1P
+
+1
+
+⊕
+
+-cell1+
+
+⊕
+
+-cell2+
+
+⊕
+
+-cell3+
+
+⊕
+
+-cell4+
+
+⊕
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+-cell5+
+
+⊕
+
+-cell6+
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Quick Start Guide
+
+www.ti.com
+
+•
+
+•
+
+•
+
+•
+
+•
+
+2.4
+
+A resistor cell simulator can be used instead of battery cells. Connect a resistor between each of the
+contacts on the J12 connector. For example, from 1N to 1P, from 1P to 2P, and so forth, until the
+desired number of cells has been achieved. A power supply can provide power to the cell simulator.
+Set the power supply to the desired cell voltage × the number of cells and attach the ground wire to 1N
+and the positive wire to 4P. For example, for a 6S configuration with a 3.6-V cell voltage, set the power
+supply to 6 × 3.6 = 21.6 V.
+Serial communications port (SMBC, SMBD)
+If the external EV2400 is used, attach the communications interface adapter cable to J19 and to the
+SMB port on the EV2400. The jumper settings for J18 should be to connect pins 2 and 3, and the
+jumper settings for J should be to connect pins 1 and 2. This allows the external EV2400 to talk to the
+bq40z80 over SMBus.
+Alternately, the on-board EV2400 can be used by connecting a micro-USB cable to the EVM at J
+directly to a computer. To use the on-board EV2400, the jumper settings for J18 should be to connect
+pins 1 and 2, and the jumper settings for J should be to connect pins 2 and 3. This allows the on-board
+EV2400 to talk to the bq40z80 over SMBus.
+System load and charger connections across PACK+ and PACK–
+Attach the load or power supply to the J terminal block. The positive load or power supply wire should
+be connected to at least one of the first two terminal block positions labeled PACK+. The ground wire
+for the load or power supply should be connected to the last terminal block positions labeled PACK–.
+System-present pin (SYS PRES)
+To start charge or discharge test, connect the SYS PRES position on the J terminal block to PACK–.
+The SYS PRES can be left open if the non-removable (NR) bit is set to 1 in the Pack Configuration A
+register. To test sleep mode, disconnect the SYS PRES pin.
+Wake-up the device up from shutdown (WAKE)
+Press the Wake pushbutton switch (S1) to temporarily connect Bat+ to Pack+. This applies voltage to
+the PACK pin on the bq40z80 to power-up the regulators and start the initialization sequence.
+Parameter setup
+The default data flash settings configure the device for 7-series Li-Ion cells. The user should change
+the | Data Flash | Settings | DA Configuration register to set up the number of series cells to match the
+physical pack configuration. This provides basic functionality to the setup. Other data flash parameters
+should also be updated to fine tune the gauge to the pack. See the bq40z80 TRM for help with setting
+the parameters.
+
+Update Firmware
+The bq40z80 may need updated firmware. Contact TI support if the device is pre-release, or find the latest
+firmware version in the appropriate bq40z80 folder on www.ti.com. Use the following steps to install the
+bq40z80 Battery Management Studio software:
+1. Run Battery Management Studio from the Start | Programs | Texas Instruments | Battery
+Management Studio menu sequence, or the Battery Management Studio shortcut.
+2. Follow the directions in Section 3.5, select the firmware .srec file downloaded from www.ti.com, and
+click the Program button.
+3. Once programming is finished, the EVM is ready to use with the latest firmware.
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+5
+
+Battery Management Studio
+
+www.ti.com
+
+3
+
+Battery Management Studio
+
+3.1
+
+Registers Screen
+Run Battery Management Studio from the Start | Programs | Texas Instruments | Battery Management
+Studio menu sequence, or the Battery Management Studio shortcut. The Registers screen (see Figure 2)
+appears. The Registers section contains parameters used to monitor gauging. The Bit Registers section
+provides bit level picture of status and fault registers. A green flag indicates that the bit is 0 (low state) and
+a red flag indicates that the bit is 1 (high state). Data begins to appear once the Refresh (single-time scan)
+button is selected, or it scans continuously if the Scan button is selected.
+
+Figure 2. Registers Screen
+The Battery Management Studio program provides a logging function which logs the values that are
+selected by the Log check boxes located beside each parameter in the Register section. To enable this
+function, select the Log button; this causes the Scan button to be selected. When logging is stopped, the
+Scan button is still selected and has to be manually deselected.
+The Log Interval can be set by opening a Watch tab, and using the pull-down at the far right to select the
+desired Log Interval in milli-seconds.
+
+6
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Battery Management Studio
+
+www.ti.com
+
+3.2
+
+Setting Programmable bq40z80 Options
+The bq40z80 data memory comes configured per the default settings detailed in the bq40z80 TRM.
+Ensure that the settings are correctly changed to match the pack and application for the solution being
+evaluated.
+NOTE: The correct setting of these options is essential to get the best performance. The settings
+can be configured using the Data Memory screen (see Figure 3).
+
+Figure 3. Data Memory Screen
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+7
+
+Battery Management Studio
+
+3.3
+
+www.ti.com
+
+Calibration Screen
+The voltages, temperatures, and currents should be calibrated to provide good gauging performance.
+Press the Calibration button to select the Advanced Calibration window. See Figure 4.
+
+Figure 4. Calibration Screen
+
+3.3.1
+•
+•
+•
+
+•
+•
+•
+3.3.2
+
+Voltage Calibration
+Measure the voltage from 1P to 1N (VSS) and enter this value in the Applied Cell 1 Voltage field and
+select the Calibrate Voltage box.
+Measure the voltage from 6P to 1N (VSS) and enter this value in the Applied Battery Voltage field and
+select the Calibrate Battery Voltage box.
+Measure the voltage from Pack+ to Pack– and enter this value in the Applied Pack Voltage field and
+select the Calibrate Pack Voltage box. If the voltage is not present, then turn the charge and discharge
+FETs on by entering a 0x0022 command in the Manufacturer Access register on the Register screen.
+If the device is configured for 7S, measure the voltage from 7P to 1N (VSS) and enter this value in the
+Applied Cell-7 Positive Terminal Voltage field and select the Calibrate Battery Voltage box.
+Press the Calibrate Gas Gauge button to calibrate the voltage measurement system.
+Deselect the Calibrate Voltage boxes after voltage calibration has completed.
+
+Temperature Calibration
+Enter the room temperature in each of the Applied Temperature fields and select the Calibrate box for
+each thermistor to be calibrated. The temperature values must be entered in degrees Celsius.
+• Press the Calibrate Gas Gauge button to calibrate the temperature measurement system.
+• Deselect the Calibrate boxes after temperature calibration has completed.
+•
+
+8
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Battery Management Studio
+
+www.ti.com
+
+3.3.3
+
+Current Calibration
+The Board Offset calibration option is not offered in Battery Management Studio, because it is not required
+when using the bq40z80EVM. The Board Offset calibration option is available in bqProduction.
+• Connect and measure a 2-A current source from 1N (–) and Pack– (+) to calibrate without using the
+FETs. (TI does not recommend calibration using the FETs.)
+• Enter –2000 in the Applied Current field and select the Calibrate Current box.
+• Press the Calibrate Gas Gauge button to calibrate.
+• Deselect the Calibrate Current box after current calibration has completed.
+NOTE: Current can also be calibrated using the FETs. Measure the current in the discharge path
+and enter this value in the Applied Current field.
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+9
+
+Battery Management Studio
+
+3.4
+
+www.ti.com
+
+Chemistry Screen
+The chemistry file contains parameters that the simulations use to model the cell and its operating profile.
+It is critical to program a Chemistry ID that matches the cell into the device. Some of these parameters
+can be viewed in the Data Flash section of the Battery Management Studio.
+Press the Chemistry button to select the Chemistry window.
+
+Figure 5. Chemistry Screen
+•
+•
+•
+
+10
+
+The table can be sorted by clicking the desired column. for example: Click the Chemistry ID column
+header.
+Select the ChemID that matches your cell from the table (see Figure 5).
+Press the Update Chemistry in the Data Flash button to update the chemistry in the device.
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Battery Management Studio
+
+www.ti.com
+
+3.5
+
+Firmware Screen
+Press the Firmware button to select the Firmware Update window. This window allows the user to export
+and import the device firmware.
+
+Figure 6. Firmware Screen
+
+3.5.1
+
+Programming the Flash Memory
+The upper section of the Firmware screen is used to initialize the device by loading the default .srec into
+the flash memory (see Figure 6).
+• Search for the .srec file using the Browse button.
+• Select the Execute after programming box to automatically return the device to Normal mode after
+programming has completed.
+• Press the Program button and wait for the download to complete.
+
+3.5.2
+
+Exporting the Flash Memory
+The lower section of the Firmware screen is used to export all of the flash memory from the device (see
+Figure 6).
+• Press the Browse button and enter an .srec filename.
+• Press the Read Srec to save the flash memory contents to the file. Wait for the download to complete.
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+11
+
+Battery Management Studio
+
+3.6
+
+www.ti.com
+
+Advanced Comm SMB Screen
+Press the Advanced Comm SMB button to select the Advanced SMB Comm window. This tool provides
+access to parameters using SMB and Manufacturing Access commands. See Figure 7.
+
+Figure 7. Advanced Comm Screen
+
+12
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Battery Management Studio
+
+www.ti.com
+
+Examples:
+Reading an SMB Command.
+• Read SBData Voltage (0x09)
+– SMBus Read Word. Command = 0x09
+– Word = 0x3A7B, which is hexadecimal for 14971 mV
+Sending a MAC Gauging() to enable IT via ManufacturerAccess().
+• With Impedance Track™ disabled, send Gauging() (0x0021) to ManufacturerAccess().
+– SMBus Write Word. Command = 0x00. Data = 00 21
+Reading Chemical ID() (0x0006) via ManufacturerAccess()
+• Send Chemical ID() to ManufacturerAccess()
+– SMBus Write Word. Command = 0x00. Data sent = 00 06
+• Read the result from ManufacturerData()
+– SMBus Read Block. Command = 0x23. Data read = 00 01
+– That is 0x0100, chem ID 100
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+13
+
+bq40z80EVM Circuit Module Schematic
+
+4
+
+www.ti.com
+
+bq40z80EVM Circuit Module Schematic
+This section contains information on modifying the EVM and using various features on the reference
+design. The jumpers on the board allow different pin configurations. The pin configuration in the registers
+must match the jumper configuration on the bq40z80EVM . The Pin Configuration register can be set in
+the Data Memory section of bqStudio. If a register is set to an undefined setting, the output is configured
+as high-Z.
+Table 4. bq40z80 EVM-RevB Jumper and Pin Configuration Register Settings
+
+General Description
+
+Jumper
+Connections
+
+Comments
+
+Pack connector with
+SYS_PRES
+
+J1
+
+Connect PACK+ and PACK– to the appropriate pins on
+the battery pack
+
+Header for cell
+connections
+
+J12
+
+Pin 1: 7P, Pin2: 6P, Pin3: 5P, Pin4: 4P, Pin5: 3P, Pin6:
+2P, Pin7: 1P, Pin8: 1N(GND). If using less than 7 cells,
+tie the unused cell pins (6P, 5P, etc) to the highest cell in
+the stack
+Connects Pin 12 as V7SENSE to the middle of the
+voltage divider
+
+Pin
+12
+
+Pin
+13
+
+Pin
+15
+
+Pin
+16
+
+Pin
+17
+
+Pin
+20
+
+14
+
+Pin Configuration Register Setting
+
+V7SENSE
+
+[MFP12_SEL2:MFP12_SEL0]=000
+(EVM DEFAULT)
+
+J20[1,2], J7[1,2]
+
+TS3
+
+[MFP12_SEL2:MFP12_SEL0]=001
+
+J20[2,3]
+
+Connects Pin 12 as TS3 to a 10k NTC
+
+ADCIN1
+
+[MFP12_SEL2:MFP12_SEL0]=010
+
+J20[1,2], J7[2,3]
+
+Connects Pin 12 to Pin 1 of J11. Connect a voltage
+between 0 V and 1 V to have the ADC read the voltage
+at this pin
+
+GPIO
+
+[MFP12_SEL2:MFP12_SEL0]=011
+(DEVICE DEFAULT)
+
+J20[1,2], J7[2,3]
+
+Connects Pin 12 to Pin 1 of J11. Use this pin as a GPIO
+
+/DISP
+
+[MFP13_SEL2:MFP13_SEL0]=000
+(EVM DEFAULT)
+
+J21[1,2], J14[1,2]
+
+Connects Pin 13 (/DISP) to TP5 and S3
+
+TS4
+
+[MFP13_SEL2:MFP13_SEL0]=001
+
+J21[2,3]
+
+Connects Pin 12 as TS4 to a 10k NTC
+
+ADCIN2
+
+[MFP13_SEL2:MFP13_SEL0]=010
+
+J21[1,2], J14[2,3]
+
+Connects Pin 13 to Pin 5 of J11. Connect a voltage
+between 0 V and 1 V to have the ADC read the voltage
+at this pin
+
+GPIO
+
+[MFP13_SEL2:MFP13_SEL0]=011
+(DEVICE DEFAULT)
+
+J21[1,2], J14[2,3]
+
+Connects Pin 13 to Pin 5 of J11. Use this pin as a GPIO
+
+VC7EN
+
+[MFP15_SEL1:MFP15_SEL0]=00
+(EVM DEFAULT)
+
+J6[1,2]
+
+Connects Pin 15 (VC7EN) to the gate of Q6 to enable
+the voltage divider so a scaled voltage of the top of stack
+is applied to VC7SENSE
+
+/DISP
+
+[MFP15_SEL1:MFP15_SEL0]=01
+
+J6[2,3], J8[1,2]
+
+Connects Pin 15 (/DISP) to TP5 and S3
+
+GPIO
+
+[MFP15_SEL1:MFP15_SEL0]=10
+(DEVICE DEFAULT)
+
+J6[2, 3], J8[2, 3]
+
+Connects Pin 15 (GPIO) to Pin 2 of J11
+
+CB7EN
+
+[MFP16_SEL1:MFP16_SEL0]=00
+(EVM DEFAULT)
+
+J10[1,2]
+
+Connects Pin 17 (CB7EN) to the gate of Q11 for external
+cell balancing for the 7th cell
+
+PDSG
+
+[MFP16_SEL1:MFP16_SEL0]=01
+
+J10[2, 3], J9[1,2]
+
+Connects Pin 16 (PDSG) to the gate of Q7 to enable predischarge through Q5
+
+GPIO
+
+[MFP16_SEL1:MFP16_SEL0]=10
+(DEVICE DEFAULT)
+
+J10[2,3], J9[2,3]
+
+Connects Pin 62 to Pin 4 of J11. Use this pin as a GPIO
+
+/PRES
+
+[MFP17_SEL2:MFP17_SEL0]=000
+(EVM DEFAULT)
+
+J5[1,2]
+
+Connects Pin 17 (/PRES) to Pin 3 of J2
+
+SHUTDN
+
+[MFP17_SEL2:MFP17_SEL0]=001
+
+J5[1,2]
+
+Connects Pin 17 (/SHUTDN) to S3 pushbutton
+
+/DISP
+
+[MFP17_SEL2:MFP17_SEL0]=010
+
+J5[2,3], J3[1,2]
+
+Connects Pin 17 (/DISP) to TP5 and S2
+
+PDSG
+
+[MFP17_SEL2:MFP17_SEL0]=011
+
+J5[2,3], J3[2, 3],
+J4[1,2]
+
+Connects Pin 17 (PDSG) to the gate of Q7 to enable predischarge through Q5
+
+GPIO
+
+[MFP17_SEL2:MFP17_SEL0]=100
+(DEVICE DEFAULT)
+
+J5[2,3], J3[2,3],
+J4[2,3]
+
+Connects Pin 17 (GPIO) to Pin 3 of J11
+
+LEDCNTLA
+
+[MFP20_SEL2:MFP20_SEL0]=000
+(EVM DEFAULT)
+
+J15[2,3]
+
+Connects pin 20 to LEDs to be used as LEDCNTLA.
+Must be used with LEDCNTLB and LEDCNTLC
+
+PDSG
+
+[MFP20_SEL2:MFP20_SEL0]=010
+
+J15[1,2], J13[1,2]
+
+Connects pin 20 (PDSG) to the gate of Q7 to enable predischarge through Q5. In this mode, Pins 21 and Pin 22
+are used as GPIOs.
+
+GPIO
+
+[MFP20_SEL2:MFP20_SEL0]=001
+(DEVICE DEFAULT)
+
+J15[1,2], J13[2,3]
+
+Connects Pin 20 to Pin 6 of J11. Use this pin as a GPIO
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Circuit Module Schematic
+
+www.ti.com
+Pin Configuration Register Setting
+
+Jumper
+Connections
+
+LEDCNTLB
+
+[MFP20_SEL2:MFP20_SEL0]=000
+(EVM DEFAULT)
+
+J17[1,2]
+
+Connects pin 21 to LEDs to be used as LEDCNTLB.
+Must be used with LEDCNTLA and LEDCNTLC
+
+GPIO
+
+[MFP20_SEL2:MFP20_SEL0]=010 or
+[MFP20_SEL2:MFP20_SEL0]=001
+(DEVICE DEFAULT)
+
+J17[2,3]
+
+Connects Pin 21 to Pin 7 of J11. Use this pin as a GPIO
+
+LEDCNTLC
+
+[MFP20_SEL2:MFP20_SEL0]=000
+(EVM DEFAULT)
+
+J16[1,2]
+
+Connects pin 22 to LEDs to be used as LEDCNTLC.
+Must be used with LEDCNTLA and LEDCNTLB
+
+GPIO
+
+[MFP20_SEL2:MFP20_SEL0]=010 or
+[MFP20_SEL2:MFP20_SEL0]=001
+(DEVICE DEFAULT)
+
+J16[2,3]
+
+Connects Pin 22 to Pin 8 of J11. Use this pin as a GPIO
+
+General Description
+
+Pin
+21
+
+Pin
+22
+
+4.1
+
+Comments
+
+Pre-Charge
+The EVM provides a power resistor and FET to support a reduced current pre-charge path to charge the
+pack when cell voltages are below the pre-charge voltage threshold. This reduces heating that could lead
+to cell damage or reduced operating lifetime. For a 7-series cell application, the FET must be rated above
+the max voltage, and for this reason the CSD18504Q5A was chosen. The TI CSD18504Q5A is a 50A, 40V device with Rds(on) of 5.3 mΩ when the gate drive voltage is 10 V. The user can change R1 to setup the
+pre-charge current to a different value. R1 is calculated to limit the precharge current to the desired rate.
+Be sure to account for the power dissipation of the series resistor. The pre-charge current is limited to
+(VCHARGER – VBAT)/R1 and maximum power dissipation is (Vcharger – Vbat)2/R1.
+
+4.2
+
+Pre-Discharge
+The EVM provides a pre-discharge FET (Q5) and control options through jumpers to enable a pin to
+function as PDSG to turn the FET on and off. The pre-discharge FET is used in applications where there
+is a need to soft-start into a large capacitive load, such as a starter cap for a motor, in order to reduce the
+instantaneous load current. The pre-discharge FET will slowly charge the cap based on voltage or time.
+See the bq40z80 Technical Reference Manual, SLUUBT5 for full details.
+
+4.3
+
+LED Control
+The EVM is configured to support six LEDs to provide state-of-charge information for the cells. If
+configured with the correct jumpers, press the LED DISPLAY button to illuminate the LEDs for
+approximately 4 seconds. Alternately, the LED's can be turned on with in the Commands tab with the
+LED_TOGGLE to test the LED function, or DISPLAY_PRESS to display the Relative State of Charge.
+
+4.4
+
+Emergency Shutdown
+The Emergency Shutdown function allows the user to disable the charge and discharge FETs with an
+external GPIO pin. The EMSHUT and NR bits must be set high in the DA Configuration register to enable
+this feature. Press the SHUTDOWN pushbutton switch for one second to disable these FETs, and press it
+again for one second to enable them.
+NOTE: Remember to remove the SYS PRES-to-PACK– short, if present.
+
+4.5
+
+Testing Fuse-Blowing Circuit
+To prevent the loss of board functionality during the fuse-blowing test, the actual chemical fuse is not
+provided on the EVM. FET Q drives the FUSE test point low if a fuse-blow condition occurs. FUSE is
+attached to an open drain FET, so a pull-up resistor is required to check whether the FUSE pulls low. A
+FUSEPIN test point is attached to the gate of Q; so, monitoring FUSEPIN can be used to test this
+condition without adding a pull-up resistor. Fuse placement on the application board is shown in the
+bq40z80 data sheet. A chemical fuse can also be soldered to the EVM for in-system testing. When using
+the chemical fuse, remove the shorting resistor R1 from the board.
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+15
+
+Circuit Module Physical Layouts
+
+5
+
+www.ti.com
+
+Circuit Module Physical Layouts
+This section contains the printed-circuit board (PCB) layout, assembly drawings, and schematic for the
+bq40z80 and bq771807 circuit modules.
+
+5.1
+
+Board Layout
+This section shows the dimensions, PCB layers (see through ), and assembly drawing for the bq40z80
+modules.
+
+Figure 8. bq40z80EVM RevB Top Composite
+
+16
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+Figure 9. bq40z80EVM RevB Bottom Composite
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+17
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+Figure 10. bq40z80EVM RevB Top Layer
+
+18
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+Figure 11. bq40z80EVM RevB Internal Layer 2 - GND
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+19
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+Figure 12. bq40z80EVM RevB Internal Layer 3 - Signal
+
+20
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+Figure 13. bq40z80EVM RevB Bottom Layer
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+21
+
+Circuit Module Physical Layouts
+
+5.2
+
+www.ti.com
+
+bq40z80 RevBSchematic
+NOTE: The bq40z80EVM-020 has an incorrect implementation for the reverse polarity circuit. For
+proper charge and discharge behavior, D3 and R7 should be removed. This will be corrected
+on a future version of the EVM.
+
+22
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+Circuit Module Physical Layouts
+
+www.ti.com
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+23
+
+bq40z80EVM Bill of Materials
+
+6
+
+www.ti.com
+
+bq40z80EVM Bill of Materials
+Table 5. bq40z80EVM RevB
+
+24
+
+Count
+
+Designator
+
+Value
+
+23
+
+C1, C2, C3, C4, C5, C7, C8,
+C9, C10, C11, C12, C13,
+C14, C19, C21, C22, C23,
+C24, C25, C26, C27, C30,
+C31
+
+Description
+
+Package Reference
+
+0.1uF
+
+CAP, CERM, 0.1 µF, 50 V,+/- 10%, X7R,
+AEC-Q200 Grade 0, 0603
+
+0603
+
+06035C104K4Z4A
+
+1
+
+C6
+
+0.01uF
+
+CAP, CERM, 0.01 µF, 100 V,+/- 10%, X7R,
+AEC-Q200 Grade 1, 0603
+
+0603
+
+GCM188R72A103KA37J
+
+6
+
+C15, C16, C17, C18, C28,
+C29
+
+100pF
+
+CAP, CERM, 100 pF, 50 V,+/- 5%,
+C0G/NP0, 0603
+
+0603
+
+VJ0603A101JXAAC
+
+Vishay-Vitramon
+
+1
+
+C20
+
+2.2uF
+
+CAP, CERM, 2.2 µF, 100 V,+/- 10%, X7R,
+1812
+
+1812
+
+C1812C225K1RACTU
+
+Kemet
+
+5
+
+C32, C35, C36, C38, C40
+
+0.1uF
+
+CAP, CERM, 0.1 uF, 10 V, +/- 10%, X5R,
+0402
+
+0402
+
+GRM155R61A104KA01
+D
+
+MuRata
+
+2
+
+C33, C34
+
+10uF
+
+CAP, CERM, 10 uF, 16 V, +/- 10%, X5R,
+0805
+
+0805
+
+0805YD106KAT2A
+
+AVX
+
+3
+
+C37, C39, C41
+
+0.47uF
+
+CAP, CERM, 0.47 uF, 6.3 V, +/- 10%, X5R,
+0402
+
+0402
+
+04026D474KAT2A
+
+AVX
+
+1
+
+C42
+
+2200pF
+
+CAP, CERM, 2200 pF, 10 V, +/- 10%, X5R,
+0402
+
+0402
+
+GRM155R61A222KA01
+D
+
+2
+
+D1, D3
+
+16V
+
+Diode, Zener, 16 V, 500 mW, SOD-123
+
+SOD-123
+
+MMSZ5246B-7-F
+
+Diodes Inc.
+
+1
+
+D2
+
+100V
+
+Diode, Ultrafast, 100 V, 0.15 A, SOD-123
+
+SOD-123
+
+1N4148W-7-F
+
+Diodes Inc.
+
+1
+
+D4
+
+Red
+
+LED, Red, SMD
+
+LED_0603
+
+150060RS75000
+
+Wurth Elektronik
+
+2
+
+D5, D6
+
+40V
+
+Diode, Schottky, 40 V, 0.2 A, SOT-323
+
+SOT-323
+
+BAS40W-7-F
+
+Diodes Inc.
+
+6
+
+D7, D8, D9, D10, D11, D12
+
+Green
+
+LED, Green, SMD
+
+1.6x0.8x0.8mm
+
+LTST-C190GKT
+
+Lite-On
+
+3
+
+D13, D14, D15
+
+Green
+
+LED, Green, SMD
+
+LED_0603
+
+150060VS75000
+
+1
+
+F1
+
+Fuse, 30 A, 62 VDC, SMD
+
+9.5x2x5mm
+
+SFK-3030
+
+4
+
+H1, H2, H3, H4
+
+Bumpon, Hemisphere, 0.44 X 0.20, Clear
+
+Transparent Bumpon
+
+SJ-5303 (CLEAR)
+
+3M
+
+1
+
+H5
+
+102-1092-BL-00100
+
+CNC Tech
+
+USB to micro USB cable
+
+Part Number
+
+Manufacturer
+
+AVX
+
+MuRata
+
+MuRata
+
+Wurth Elektronik
+Dexerials Corporation
+
+Terminal Block, 3.5mm, 5x1, Tin, TH
+
+Terminal Block, 3.5mm, 5x1,
+393570005
+TH
+
+J2, J25
+
+Header, 2.54 mm, 2x1, Gold, TH
+
+Header, 2.54mm, 2x1, TH
+
+61300211121
+
+Wurth Elektronik
+
+17
+
+J3, J4, J5, J6, J7, J8, J9,
+J10, J13, J14, J15, J16, J17,
+J18, J20, J21, J22
+
+Header, 2.54mm, 3x1, Gold, SMT
+
+Header, 2.54mm, 3x1, SMT
+
+87898-0304
+
+Molex
+
+1
+
+J11
+
+Terminal Block, 3.5mm, 8-Pos, TH
+
+Terminal Block, 3.5mm, 8Pos, TH
+
+ED555/8DS
+
+On-Shore Technology
+
+1
+
+J1
+
+2
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+
+Molex
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+Copyright © 2018, Texas Instruments Incorporated
+
+bq40z80EVM Bill of Materials
+
+www.ti.com
+
+Table 5. bq40z80EVM RevB (continued)
+Count
+
+Designator
+
+Value
+
+Description
+
+Package Reference
+
+Part Number
+
+Manufacturer
+
+1
+
+J12
+
+Terminal Block, 3.5mm, 8x1, Tin, TH
+
+Terminal Block, 3.5mm, 8x1,
+393570008
+TH
+
+1
+
+J19
+
+Header (friction lock), 100mil, 4x1, R/A, TH
+
+4x1 R/A Header
+
+22/05/3041
+
+Molex
+
+J23
+
+Receptacle, Micro-USB Type B, 0.65 mm,
+5x1, R/A, Bottom Mount SMT
+
+Receptacle, 0.65mm, 5x1,
+R/A, SMT
+
+47346-1001
+
+Molex
+
+1
+
+Molex
+
+1
+
+J28
+
+Header, 2.54mm, 4x1, Tin, TH
+
+Header, 2.54mm, 4x1, TH
+
+22284043
+
+Molex
+
+2
+
+Q1, Q5
+
+-40V
+
+MOSFET, P-CH, -40 V, -8.2 A, SOIC-8
+
+SO-8
+
+FDS4685
+
+ON Semiconductor
+
+1
+
+Q2
+
+40V
+
+MOSFET, N-CH, 40 V, 15 A, DQJ0008A
+(VSONP-8)
+
+DQJ0008A
+
+CSD18504Q5A
+
+Texas Instruments
+
+1
+
+Q3
+
+60V
+
+MOSFET, N-CH, 60 V, 100 A, DNK0008A
+(VSON-CLIP-8)
+
+DNK0008A
+
+CSD18540Q5B
+
+Texas Instruments
+
+1
+
+Q4
+
+60V
+
+MOSFET, N-CH, 60 V, 0.31 A, SOT-323
+
+SOT-323
+
+2N7002KW
+
+Fairchild Semiconductor
+
+3
+
+Q6, Q7, Q11
+
+50V
+
+MOSFET, N-CH, 50 V, 0.28 A, SOT-23
+
+SOT-23
+
+CMPDM7003 TR
+
+Central Semiconductor
+
+1
+
+Q8
+
+40V
+
+Transistor, PNP, 40 V, 0.2 A, SOT-23
+
+SOT-23
+
+CMPT3906 LEAD FREE
+
+Central Semiconductor
+
+SOT-23
+
+DMN6075S-7
+
+Diodes Inc.
+Diodes Inc.
+
+1
+
+Q9
+
+60V
+
+MOSFET, N-CH, 60 V, 2 A, AEC-Q101,
+SOT-23
+
+1
+
+Q10
+
+-250V
+
+MOSFET, P-CH, -250 V, -0.265 A, AECQ101, SOT-223
+
+SOT-223
+
+ZVP4525GTA
+
+1
+
+R1
+
+0
+
+RES, 0, 5%, 2 W, 2512 WIDE
+
+2512 WIDE
+
+RCL12250000Z0EG
+
+Vishay Draloric
+
+2
+
+R2, R9
+
+100
+
+RES, 100, 5%, 1 W, AEC-Q200 Grade 0,
+2512
+
+2512
+
+CRCW2512100RJNEG
+
+Vishay-Dale
+
+2
+
+R3, R6
+
+10k
+
+RES, 10 k, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+
+0603
+
+CRCW060310K0JNEA
+
+Vishay-Dale
+
+10
+
+R4, R5, R8, R15, R16, R21,
+R28, R45, R46, R49
+
+10Meg
+
+RES, 10 M, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+0603
+
+CRCW060310M0JNEA
+
+Vishay-Dale
+
+1
+
+R7
+
+10.0Meg
+
+RES, 10.0 M, 1%, 0.1 W, AEC-Q200 Grade
+0, 0603
+
+0603
+
+CRCW060310M0FKEA
+
+Vishay-Dale
+
+12
+
+R10, R37, R38, R39, R40,
+R41, R42, R43, R47, R48,
+R50, R51
+
+100
+
+RES, 100, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+
+0603
+
+CRCW0603100RJNEA
+
+Vishay-Dale
+
+8
+
+R11, R12, R14, R19, R20,
+R33, R35, R36
+
+1.0k
+
+RES, 1.0 k, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+0603
+
+CRCW06031K00JNEA
+
+Vishay-Dale
+
+1
+
+R13
+
+1.1k
+
+RES, 1.1 k, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+0603
+
+CRCW06031K10JNEA
+
+Vishay-Dale
+
+1
+
+R17
+
+332k
+
+RES, 332 k, 0.1%, 0.1 W, 0603
+
+0603
+
+RG1608P-3323-B-T5
+
+Susumu Co Ltd
+
+1
+
+R18
+
+4.02k
+
+RES, 4.02 k, 1%, 0.1 W, AEC-Q200 Grade
+0, 0603
+
+0603
+
+CRCW06034K02FKEA
+
+Vishay-Dale
+
+3
+
+R22, R27, R34
+
+5.1k
+
+RES, 5.1 k, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+0603
+
+CRCW06035K10JNEA
+
+Vishay-Dale
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+25
+
+bq40z80EVM Bill of Materials
+
+www.ti.com
+
+Table 5. bq40z80EVM RevB (continued)
+
+26
+
+Count
+
+Designator
+
+Value
+
+1
+
+R23
+
+1.00k
+
+RES, 1.00 k, 1%, 0.1 W, 0603
+
+Description
+
+0603
+
+Package Reference
+
+ERJ-3EKF1001V
+
+Part Number
+
+Manufacturer
+
+1
+
+R24
+
+10.0k
+
+RES, 10.0 k, 1%, 0.1 W, 0603
+
+0603
+
+RCG060310K0FKEA
+
+Vishay-Draloric
+
+0603
+
+CRCW0603510RJNEA
+
+Vishay-Dale
+
+Panasonic
+
+1
+
+R25
+
+510
+
+RES, 510, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+
+3
+
+R26, R29, R32
+
+1.00k
+
+RES, 1.00 k, 1%, 0.1 W, AEC-Q200 Grade
+0, 0603
+
+0603
+
+CRCW06031K00FKEA
+
+Vishay-Dale
+
+1
+
+R30
+
+20k
+
+RES, 20 k, 5%, 0.1 W, AEC-Q200 Grade 0,
+0603
+
+0603
+
+CRCW060320K0JNEA
+
+Vishay-Dale
+
+3
+
+R31, R59, R60
+
+10.0k
+
+RES, 10.0 k, 0.1%, 0.1 W, 0603
+
+0603
+
+RG1608P-103-B-T5
+
+Susumu Co Ltd
+
+0603
+
+CRCW0603200RFKEA
+
+1210
+
+PMR25HZPFV1L00
+
+1
+
+R44
+
+200
+
+RES, 200, 1%, 0.1 W, AEC-Q200 Grade 0,
+0603
+
+1
+
+R52
+
+0.001
+
+RES, 0.001, 1%, 1 W, 1210
+
+2
+
+R53, R54
+
+33
+
+RES, 33, 5%, 0.063 W, AEC-Q200 Grade 0,
+0402
+0402
+
+CRCW040233R0JNED
+
+Vishay-Dale
+
+1
+
+R55
+
+2.0k
+
+RES, 2.0 k, 5%, 0.063 W, AEC-Q200 Grade
+0402
+0, 0402
+
+CRCW04022K00JNED
+
+Vishay-Dale
+
+2
+
+R56, R64
+
+10k
+
+RES, 10 k, 5%, 0.063 W, AEC-Q200 Grade
+0, 0402
+
+0402
+
+CRCW040210K0JNED
+
+Vishay-Dale
+
+2
+
+R57, R58
+
+1.0Meg
+
+RES, 1.0 M, 5%, 0.063 W, AEC-Q200
+Grade 0, 0402
+
+0402
+
+CRCW04021M00JNED
+
+Vishay-Dale
+
+3
+
+R61, R62, R63
+
+330
+
+RES, 330, 1%, 0.1 W, AEC-Q200 Grade 0,
+0402
+
+0402
+
+ERJ-2RKF3300X
+
+Panasonic
+
+4
+
+RT1, RT2, RT3, RT4
+
+10k
+
+Thermistor NTC, 10.0k ohm, 1%, Disc,
+5x8.4 mm
+
+Disc, 5x8.4 mm
+
+103AT-2
+
+3
+
+S1, S2, S3
+
+Switch, Tactile, SPST-NO, SMT
+
+Switch, 6.2X5X6.2 mm
+
+1
+
+S4
+
+20
+
+SH-J1, SH-J2, SH-J3, SHJ4, SH-J5, SH-J6, SH-J7,
+SH-J8, SH-J9, SH-J10, SHJ11, SH-J12, SH-J13, SHJ14, SH-J15, SH-J16, SHJ17, SH-J18, SH-J19, SHJ20
+
+9
+
+TP9, TP17, TP18, TP19,
+TP20, TP21, TP22, TP23,
+TP24
+
+2
+
+TP14, TP15
+
+2
+
+U1, U3
+
+1x2
+
+Red
+
+Vishay-Dale
+Rohm
+
+SEMITEC Corporation
+
+KST221JLFS
+
+C&K Components
+
+Switch, SPST-NO, Off-Mom, 0.05A, 12VDC,
+3.9x2.9mm
+SMD
+
+PTS820 J20M SMTR
+LFS
+
+C&K Components
+
+Shunt, 100mil, Gold plated, Black
+
+Shunt
+
+SNT-100-BK-G
+
+Samtec
+
+Test Point, Compact, Black, TH
+
+Black Compact Testpoint
+
+5006
+
+Keystone
+
+Test Point, Compact, Red, TH
+
+Red Compact Testpoint
+
+5005
+
+Keystone
+
+Family 2-5S Overvoltage Protector with
+Internal Delay Timer, DPJ0008A (WSON-8)
+
+DPJ0008A
+
+BQ771807DPJR
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+
+Texas Instruments
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+Copyright © 2018, Texas Instruments Incorporated
+
+bq40z80EVM Bill of Materials
+
+www.ti.com
+
+Table 5. bq40z80EVM RevB (continued)
+Count
+
+Designator
+
+7
+
+U2, U5, U6, U8, U9, U11,
+U12
+
+1
+
+U4
+
+1
+
+Value
+
+Description
+Single-Channel ESD in 0402 Package With
+10pF Capacitance and 6V Breakdown,
+DPY0002A (X1SON-2)
+
+Package Reference
+DPY0002A
+
+Part Number
+
+Manufacturer
+
+TPD1E10B06DPYR
+
+Texas Instruments
+
+Catalog 2S-7S Battery Gauge + Protector
+RSM0032A
+Based on bqExtend, RSM0032A (VQFN-32)
+
+BQ40Z80RSMR
+
+Texas Instruments
+
+U7
+
+25 MHz Mixed Signal Microcontroller with
+128 KB Flash, 8192 B SRAM and 63
+GPIOs, -40 to 85 degC, 80-pin QFP (PN),
+Green (RoHS & no Sb/Br)
+
+MSP430F5529IPN
+
+Texas Instruments
+
+1
+
+U10
+
+Single Output LDO, 150 mA, Fixed 3.3 V
+Output, 2.7 to 10 V Input, with Low IQ, 5-pin
+DBV0005A
+SOT-23 (DBV), -40 to 125 degC, Green
+(RoHS & no Sb/Br)
+
+TPS76333DBVR
+
+Texas Instruments
+
+1
+
+Y1
+
+Resonator, 4 MHz, 39 pF, AEC-Q200 Grade
+4.5x1.2x2 mm
+1, SMD
+
+CSTCR4M00G55B-R0
+
+0
+
+FID1, FID2, FID3, FID4,
+FID5, FID6
+
+Fiducial mark. There is nothing to buy or
+mount.
+
+N/A
+
+N/A
+
+0
+
+J24, J26
+
+Header, 2.54 mm, 7x1, Gold, TH
+
+Header, 2.54 mm, 7x1, TH
+
+PBC07SAAN
+
+Sullins Connector
+Solutions
+
+0
+
+J27
+
+Header, 100mil, 8x1, Tin, TH
+
+Header, 8x1, 100mil, TH
+
+PEC08SAAN
+
+Sullins Connector
+Solutions
+
+PN0080A
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+MuRata
+N/A
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+27
+
+Related Documentation from Texas Instruments
+
+7
+
+Related Documentation from Texas Instruments
+•
+•
+•
+•
+•
+
+28
+
+www.ti.com
+
+bq40z80 data sheet, 1-Series, 2-Series, 3-Series, 4-Series, 5-Series, 6-Series, and 7-Series Li-Ion
+Battery Pack Manager, SLUSCT4
+bq40z80, Technical Reference Manual, SLUUBT5
+bq40z80, Manufacture, Production, and Calibration, SLUA868
+bq40z80, How to Complete a Successful Learning Cycle, SLUA848
+bq771807, BQ7718XY Overvoltage Protection for 2-Series, 3-Series, 4-Series, and 5-Series Cell Li-Ion
+Batteries with Regulated Output Supply, SLUSBU5
+
+bq40z80EVM Li-Ion Battery Pack Manager Evaluation Module
+Copyright © 2018, Texas Instruments Incorporated
+
+SLUUBZ5 – November 2018
+Submit Documentation Feedback
+
+STANDARD TERMS FOR EVALUATION MODULES
+1.
+
+Delivery: TI delivers TI evaluation boards, kits, or modules, including any accompanying demonstration software, components, and/or
+documentation which may be provided together or separately (collectively, an “EVM” or “EVMs”) to the User (“User”) in accordance
+with the terms set forth herein. User's acceptance of the EVM is expressly subject to the following terms.
+1.1 EVMs are intended solely for product or software developers for use in a research and development setting to facilitate feasibility
+evaluation, experimentation, or scientific analysis of TI semiconductors products. EVMs have no direct function and are not
+finished products. EVMs shall not be directly or indirectly assembled as a part or subassembly in any finished product. For
+clarification, any software or software tools provided with the EVM (“Software”) shall not be subject to the terms and conditions
+set forth herein but rather shall be subject to the applicable terms that accompany such Software
+1.2 EVMs are not intended for consumer or household use. EVMs may not be sold, sublicensed, leased, rented, loaned, assigned,
+or otherwise distributed for commercial purposes by Users, in whole or in part, or used in any finished product or production
+system.
+
+2
+
+Limited Warranty and Related Remedies/Disclaimers:
+2.1 These terms do not apply to Software. The warranty, if any, for Software is covered in the applicable Software License
+Agreement.
+2.2 TI warrants that the TI EVM will conform to TI's published specifications for ninety (90) days after the date TI delivers such EVM
+to User. Notwithstanding the foregoing, TI shall not be liable for a nonconforming EVM if (a) the nonconformity was caused by
+neglect, misuse or mistreatment by an entity other than TI, including improper installation or testing, or for any EVMs that have
+been altered or modified in any way by an entity other than TI, (b) the nonconformity resulted from User's design, specifications
+or instructions for such EVMs or improper system design, or (c) User has not paid on time. Testing and other quality control
+techniques are used to the extent TI deems necessary. TI does not test all parameters of each EVM.
+User's claims against TI under this Section 2 are void if User fails to notify TI of any apparent defects in the EVMs within ten (10)
+business days after delivery, or of any hidden defects with ten (10) business days after the defect has been detected.
+2.3 TI's sole liability shall be at its option to repair or replace EVMs that fail to conform to the warranty set forth above, or credit
+User's account for such EVM. TI's liability under this warranty shall be limited to EVMs that are returned during the warranty
+period to the address designated by TI and that are determined by TI not to conform to such warranty. If TI elects to repair or
+replace such EVM, TI shall have a reasonable time to repair such EVM or provide replacements. Repaired EVMs shall be
+warranted for the remainder of the original warranty period. Replaced EVMs shall be warranted for a new full ninety (90) day
+warranty period.
+
+3
+
+Regulatory Notices:
+3.1 United States
+3.1.1
+
+Notice applicable to EVMs not FCC-Approved:
+
+FCC NOTICE: This kit is designed to allow product developers to evaluate electronic components, circuitry, or software
+associated with the kit to determine whether to incorporate such items in a finished product and software developers to write
+software applications for use with the end product. This kit is not a finished product and when assembled may not be resold or
+otherwise marketed unless all required FCC equipment authorizations are first obtained. Operation is subject to the condition
+that this product not cause harmful interference to licensed radio stations and that this product accept harmful interference.
+Unless the assembled kit is designed to operate under part 15, part 18 or part 95 of this chapter, the operator of the kit must
+operate under the authority of an FCC license holder or must secure an experimental authorization under part 5 of this chapter.
+3.1.2
+
+For EVMs annotated as FCC – FEDERAL COMMUNICATIONS COMMISSION Part 15 Compliant:
+
+CAUTION
+This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions: (1) This device may not
+cause harmful interference, and (2) this device must accept any interference received, including interference that may cause
+undesired operation.
+Changes or modifications not expressly approved by the party responsible for compliance could void the user's authority to
+operate the equipment.
+FCC Interference Statement for Class A EVM devices
+NOTE: This equipment has been tested and found to comply with the limits for a Class A digital device, pursuant to part 15 of
+the FCC Rules. These limits are designed to provide reasonable protection against harmful interference when the equipment is
+operated in a commercial environment. This equipment generates, uses, and can radiate radio frequency energy and, if not
+installed and used in accordance with the instruction manual, may cause harmful interference to radio communications.
+Operation of this equipment in a residential area is likely to cause harmful interference in which case the user will be required to
+correct the interference at his own expense.
+
+FCC Interference Statement for Class B EVM devices
+NOTE: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of
+the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential
+installation. This equipment generates, uses and can radiate radio frequency energy and, if not installed and used in accordance
+with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference
+will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which
+can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more
+of the following measures:
+•
+•
+•
+•
+
+Reorient or relocate the receiving antenna.
+Increase the separation between the equipment and receiver.
+Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
+Consult the dealer or an experienced radio/TV technician for help.
+
+3.2 Canada
+3.2.1
+
+For EVMs issued with an Industry Canada Certificate of Conformance to RSS-210 or RSS-247
+
+Concerning EVMs Including Radio Transmitters:
+This device complies with Industry Canada license-exempt RSSs. Operation is subject to the following two conditions:
+(1) this device may not cause interference, and (2) this device must accept any interference, including interference that may
+cause undesired operation of the device.
+Concernant les EVMs avec appareils radio:
+Le présent appareil est conforme aux CNR d'Industrie Canada applicables aux appareils radio exempts de licence. L'exploitation
+est autorisée aux deux conditions suivantes: (1) l'appareil ne doit pas produire de brouillage, et (2) l'utilisateur de l'appareil doit
+accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d'en compromettre le fonctionnement.
+Concerning EVMs Including Detachable Antennas:
+Under Industry Canada regulations, this radio transmitter may only operate using an antenna of a type and maximum (or lesser)
+gain approved for the transmitter by Industry Canada. To reduce potential radio interference to other users, the antenna type
+and its gain should be so chosen that the equivalent isotropically radiated power (e.i.r.p.) is not more than that necessary for
+successful communication. This radio transmitter has been approved by Industry Canada to operate with the antenna types
+listed in the user guide with the maximum permissible gain and required antenna impedance for each antenna type indicated.
+Antenna types not included in this list, having a gain greater than the maximum gain indicated for that type, are strictly prohibited
+for use with this device.
+Concernant les EVMs avec antennes détachables
+Conformément à la réglementation d'Industrie Canada, le présent émetteur radio peut fonctionner avec une antenne d'un type et
+d'un gain maximal (ou inférieur) approuvé pour l'émetteur par Industrie Canada. Dans le but de réduire les risques de brouillage
+radioélectrique à l'intention des autres utilisateurs, il faut choisir le type d'antenne et son gain de sorte que la puissance isotrope
+rayonnée équivalente (p.i.r.e.) ne dépasse pas l'intensité nécessaire à l'établissement d'une communication satisfaisante. Le
+présent émetteur radio a été approuvé par Industrie Canada pour fonctionner avec les types d'antenne énumérés dans le
+manuel d’usage et ayant un gain admissible maximal et l'impédance requise pour chaque type d'antenne. Les types d'antenne
+non inclus dans cette liste, ou dont le gain est supérieur au gain maximal indiqué, sont strictement interdits pour l'exploitation de
+l'émetteur
+3.3 Japan
+3.3.1
+
+Notice for EVMs delivered in Japan: Please see http://www.tij.co.jp/lsds/ti_ja/general/eStore/notice_01.page 日本国内に
+輸入される評価用キット、ボードについては、次のところをご覧ください。
+http://www.tij.co.jp/lsds/ti_ja/general/eStore/notice_01.page
+
+3.3.2
+
+Notice for Users of EVMs Considered “Radio Frequency Products” in Japan: EVMs entering Japan may not be certified
+by TI as conforming to Technical Regulations of Radio Law of Japan.
+
+If User uses EVMs in Japan, not certified to Technical Regulations of Radio Law of Japan, User is required to follow the
+instructions set forth by Radio Law of Japan, which includes, but is not limited to, the instructions below with respect to EVMs
+(which for the avoidance of doubt are stated strictly for convenience and should be verified by User):
+1.
+
+2.
+3.
+
+Use EVMs in a shielded room or any other test facility as defined in the notification #173 issued by Ministry of Internal
+Affairs and Communications on March 28, 2006, based on Sub-section 1.1 of Article 6 of the Ministry’s Rule for
+Enforcement of Radio Law of Japan,
+Use EVMs only after User obtains the license of Test Radio Station as provided in Radio Law of Japan with respect to
+EVMs, or
+Use of EVMs only after User obtains the Technical Regulations Conformity Certification as provided in Radio Law of Japan
+with respect to EVMs. Also, do not transfer EVMs, unless User gives the same notice above to the transferee. Please note
+that if User does not follow the instructions above, User will be subject to penalties of Radio Law of Japan.
+
+【無線電波を送信する製品の開発キットをお使いになる際の注意事項】 開発キットの中には技術基準適合証明を受けて
+いないものがあります。 技術適合証明を受けていないもののご使用に際しては、電波法遵守のため、以下のいずれかの
+措置を取っていただく必要がありますのでご注意ください。
+1.
+2.
+3.
+
+電波法施行規則第6条第1項第1号に基づく平成18年3月28日総務省告示第173号で定められた電波暗室等の試験設備でご使用
+いただく。
+実験局の免許を取得後ご使用いただく。
+技術基準適合証明を取得後ご使用いただく。
+
+なお、本製品は、上記の「ご使用にあたっての注意」を譲渡先、移転先に通知しない限り、譲渡、移転できないものとします。
+上記を遵守頂けない場合は、電波法の罰則が適用される可能性があることをご留意ください。 日本テキサス・イ
+ンスツルメンツ株式会社
+東京都新宿区西新宿６丁目２４番１号
+西新宿三井ビル
+3.3.3
+
+Notice for EVMs for Power Line Communication: Please see http://www.tij.co.jp/lsds/ti_ja/general/eStore/notice_02.page
+電力線搬送波通信についての開発キットをお使いになる際の注意事項については、次のところをご覧ください。http:/
+/www.tij.co.jp/lsds/ti_ja/general/eStore/notice_02.page
+
+3.4 European Union
+3.4.1
+
+For EVMs subject to EU Directive 2014/30/EU (Electromagnetic Compatibility Directive):
+This is a class A product intended for use in environments other than domestic environments that are connected to a
+low-voltage power-supply network that supplies buildings used for domestic purposes. In a domestic environment this
+product may cause radio interference in which case the user may be required to take adequate measures.
+
+4
+
+EVM Use Restrictions and Warnings:
+4.1 EVMS ARE NOT FOR USE IN FUNCTIONAL SAFETY AND/OR SAFETY CRITICAL EVALUATIONS, INCLUDING BUT NOT
+LIMITED TO EVALUATIONS OF LIFE SUPPORT APPLICATIONS.
+4.2 User must read and apply the user guide and other available documentation provided by TI regarding the EVM prior to handling
+or using the EVM, including without limitation any warning or restriction notices. The notices contain important safety information
+related to, for example, temperatures and voltages.
+4.3 Safety-Related Warnings and Restrictions:
+4.3.1
+
+User shall operate the EVM within TI’s recommended specifications and environmental considerations stated in the user
+guide, other available documentation provided by TI, and any other applicable requirements and employ reasonable and
+customary safeguards. Exceeding the specified performance ratings and specifications (including but not limited to input
+and output voltage, current, power, and environmental ranges) for the EVM may cause personal injury or death, or
+property damage. If there are questions concerning performance ratings and specifications, User should contact a TI
+field representative prior to connecting interface electronics including input power and intended loads. Any loads applied
+outside of the specified output range may also result in unintended and/or inaccurate operation and/or possible
+permanent damage to the EVM and/or interface electronics. Please consult the EVM user guide prior to connecting any
+load to the EVM output. If there is uncertainty as to the load specification, please contact a TI field representative.
+During normal operation, even with the inputs and outputs kept within the specified allowable ranges, some circuit
+components may have elevated case temperatures. These components include but are not limited to linear regulators,
+switching transistors, pass transistors, current sense resistors, and heat sinks, which can be identified using the
+information in the associated documentation. When working with the EVM, please be aware that the EVM may become
+very warm.
+
+4.3.2
+
+EVMs are intended solely for use by technically qualified, professional electronics experts who are familiar with the
+dangers and application risks associated with handling electrical mechanical components, systems, and subsystems.
+User assumes all responsibility and liability for proper and safe handling and use of the EVM by User or its employees,
+affiliates, contractors or designees. User assumes all responsibility and liability to ensure that any interfaces (electronic
+and/or mechanical) between the EVM and any human body are designed with suitable isolation and means to safely
+limit accessible leakage currents to minimize the risk of electrical shock hazard. User assumes all responsibility and
+liability for any improper or unsafe handling or use of the EVM by User or its employees, affiliates, contractors or
+designees.
+
+4.4 User assumes all responsibility and liability to determine whether the EVM is subject to any applicable international, federal,
+state, or local laws and regulations related to User’s handling and use of the EVM and, if applicable, User assumes all
+responsibility and liability for compliance in all respects with such laws and regulations. User assumes all responsibility and
+liability for proper disposal and recycling of the EVM consistent with all applicable international, federal, state, and local
+requirements.
+5.
+
+Accuracy of Information: To the extent TI provides information on the availability and function of EVMs, TI attempts to be as accurate
+as possible. However, TI does not warrant the accuracy of EVM descriptions, EVM availability or other information on its websites as
+accurate, complete, reliable, current, or error-free.
+
+6.
+
+Disclaimers:
+6.1 EXCEPT AS SET FORTH ABOVE, EVMS AND ANY MATERIALS PROVIDED WITH THE EVM (INCLUDING, BUT NOT
+LIMITED TO, REFERENCE DESIGNS AND THE DESIGN OF THE EVM ITSELF) ARE PROVIDED "AS IS" AND "WITH ALL
+FAULTS." TI DISCLAIMS ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, REGARDING SUCH ITEMS, INCLUDING BUT
+NOT LIMITED TO ANY EPIDEMIC FAILURE WARRANTY OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS
+FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADE
+SECRETS OR OTHER INTELLECTUAL PROPERTY RIGHTS.
+6.2 EXCEPT FOR THE LIMITED RIGHT TO USE THE EVM SET FORTH HEREIN, NOTHING IN THESE TERMS SHALL BE
+CONSTRUED AS GRANTING OR CONFERRING ANY RIGHTS BY LICENSE, PATENT, OR ANY OTHER INDUSTRIAL OR
+INTELLECTUAL PROPERTY RIGHT OF TI, ITS SUPPLIERS/LICENSORS OR ANY OTHER THIRD PARTY, TO USE THE
+EVM IN ANY FINISHED END-USER OR READY-TO-USE FINAL PRODUCT, OR FOR ANY INVENTION, DISCOVERY OR
+IMPROVEMENT, REGARDLESS OF WHEN MADE, CONCEIVED OR ACQUIRED.
+
+7.
+
+USER'S INDEMNITY OBLIGATIONS AND REPRESENTATIONS. USER WILL DEFEND, INDEMNIFY AND HOLD TI, ITS
+LICENSORS AND THEIR REPRESENTATIVES HARMLESS FROM AND AGAINST ANY AND ALL CLAIMS, DAMAGES, LOSSES,
+EXPENSES, COSTS AND LIABILITIES (COLLECTIVELY, "CLAIMS") ARISING OUT OF OR IN CONNECTION WITH ANY
+HANDLING OR USE OF THE EVM THAT IS NOT IN ACCORDANCE WITH THESE TERMS. THIS OBLIGATION SHALL APPLY
+WHETHER CLAIMS ARISE UNDER STATUTE, REGULATION, OR THE LAW OF TORT, CONTRACT OR ANY OTHER LEGAL
+THEORY, AND EVEN IF THE EVM FAILS TO PERFORM AS DESCRIBED OR EXPECTED.
+
+8.
+
+Limitations on Damages and Liability:
+8.1 General Limitations. IN NO EVENT SHALL TI BE LIABLE FOR ANY SPECIAL, COLLATERAL, INDIRECT, PUNITIVE,
+INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES IN CONNECTION WITH OR ARISING OUT OF THESE
+TERMS OR THE USE OF THE EVMS , REGARDLESS OF WHETHER TI HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES. EXCLUDED DAMAGES INCLUDE, BUT ARE NOT LIMITED TO, COST OF REMOVAL OR
+REINSTALLATION, ANCILLARY COSTS TO THE PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, RETESTING,
+OUTSIDE COMPUTER TIME, LABOR COSTS, LOSS OF GOODWILL, LOSS OF PROFITS, LOSS OF SAVINGS, LOSS OF
+USE, LOSS OF DATA, OR BUSINESS INTERRUPTION. NO CLAIM, SUIT OR ACTION SHALL BE BROUGHT AGAINST TI
+MORE THAN TWELVE (12) MONTHS AFTER THE EVENT THAT GAVE RISE TO THE CAUSE OF ACTION HAS
+OCCURRED.
+8.2 Specific Limitations. IN NO EVENT SHALL TI'S AGGREGATE LIABILITY FROM ANY USE OF AN EVM PROVIDED
+HEREUNDER, INCLUDING FROM ANY WARRANTY, INDEMITY OR OTHER OBLIGATION ARISING OUT OF OR IN
+CONNECTION WITH THESE TERMS, , EXCEED THE TOTAL AMOUNT PAID TO TI BY USER FOR THE PARTICULAR
+EVM(S) AT ISSUE DURING THE PRIOR TWELVE (12) MONTHS WITH RESPECT TO WHICH LOSSES OR DAMAGES ARE
+CLAIMED. THE EXISTENCE OF MORE THAN ONE CLAIM SHALL NOT ENLARGE OR EXTEND THIS LIMIT.
+
+9.
+
+Return Policy. Except as otherwise provided, TI does not offer any refunds, returns, or exchanges. Furthermore, no return of EVM(s)
+will be accepted if the package has been opened and no return of the EVM(s) will be accepted if they are damaged or otherwise not in
+a resalable condition. If User feels it has been incorrectly charged for the EVM(s) it ordered or that delivery violates the applicable
+order, User should contact TI. All refunds will be made in full within thirty (30) working days from the return of the components(s),
+excluding any postage or packaging costs.
+
+10. Governing Law: These terms and conditions shall be governed by and interpreted in accordance with the laws of the State of Texas,
+without reference to conflict-of-laws principles. User agrees that non-exclusive jurisdiction for any dispute arising out of or relating to
+these terms and conditions lies within courts located in the State of Texas and consents to venue in Dallas County, Texas.
+Notwithstanding the foregoing, any judgment may be enforced in any United States or foreign court, and TI may seek injunctive relief
+in any United States or foreign court.
+
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2018, Texas Instruments Incorporated
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, or other requirements. These resources are subject to change without notice. TI grants you
+permission to use these resources only for development of an application that uses the TI products described in the resource. Other
+reproduction and display of these resources is prohibited. No license is granted to any other TI intellectual property right or to any third
+party intellectual property right. TI disclaims responsibility for, and you will fully indemnify TI and its representatives against, any claims,
+damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale (www.ti.com/legal/termsofsale.html) or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products.
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2018, Texas Instruments Incorporated
+
+

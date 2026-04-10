@@ -1,0 +1,987 @@
+www.ti.com
+
+Table of Contents
+
+Application Report
+
+BQ769x2 Software Development Guide
+
+Matt Sunna
+ABSTRACT
+This application report provides examples of communication packets and sequences for the BQ769x2 device
+family of battery monitors (which includes the BQ76952, BQ76942, and BQ769142). Examples include bittransaction details of direct commands, subcommands, and reads and writes to RAM registers. Examples
+include instructions for using the BQStudio Command Sequence panel to perform these read and write
+transactions. Simple code examples are also provided. Use this document along with the device-specific
+Technical Reference Manual and data sheet. These documents are listed in Section 7. BQSTUDIO software
+is also used for many examples and offers a convenient way to view all of the device registers. For the BQ769x2
+device family, version 1.3.102 or above of BQStudio is required.
+The BQ769x2 device family integrates three different communication interfaces - I2C, SPI, and single-wire HDQ.
+The I2C and SPI interfaces include an optional CRC check. For the full list of options, see the device-specific
+data sheet. This document covers many examples using the I2C interface and then covers some of the same
+examples using SPI with CRC.
+
+Table of Contents
+1 Direct Commands................................................................................................................................................................... 3
+1.1 Alarm Enable - 0x66...........................................................................................................................................................3
+1.2 Cell 1 Voltage - 0x14.......................................................................................................................................................... 3
+1.3 Internal Temperature - 0x68............................................................................................................................................... 4
+1.4 CC2 Current - 0x3A............................................................................................................................................................4
+2 Subcommands........................................................................................................................................................................ 6
+2.1 DEVICE_NUMBER - 0x0001............................................................................................................................................. 6
+2.2 MANUFACTURING STATUS - 0x0057.............................................................................................................................. 7
+2.3 FET_ENABLE - 0x0022..................................................................................................................................................... 7
+2.4 RESET - 0x0012................................................................................................................................................................ 7
+3 Reading and Writing RAM Registers.................................................................................................................................... 9
+3.1 Read 'Enabled Protections A'.............................................................................................................................................9
+3.2 Enter CONFIG_UPDATE Mode....................................................................................................................................... 10
+3.3 Write 'Enabled Protections A'........................................................................................................................................... 10
+3.4 Write 'VCell Mode'............................................................................................................................................................ 11
+3.5 Exit CONFIG_UPDATE Mode.......................................................................................................................................... 11
+4 I2C With CRC.........................................................................................................................................................................12
+5 SPI With CRC Examples.......................................................................................................................................................13
+5.1 Direct Command Example: Alarm Enable - 0x66.............................................................................................................14
+5.2 Direct Command Example: Cell 1 Voltage - 0x14............................................................................................................ 15
+5.3 Subcommand Example: Device Number - 0x0001.......................................................................................................... 16
+5.4 Subcommand Example: FET_ENABLE - 0x0022............................................................................................................ 16
+5.5 Subcommand Example: RESET - 0x0012....................................................................................................................... 17
+5.6 RAM Register Read Example: Enabled Protections A.....................................................................................................17
+5.7 RAM Register Write Example: Enabled Protections A..................................................................................................... 18
+6 Simple Code Examples........................................................................................................................................................ 19
+7 References............................................................................................................................................................................ 21
+8 Revision History................................................................................................................................................................... 21
+
+List of Figures
+Figure 1-1. Captured I2C Waveform for Setting Alarm Enable to 0xF082...................................................................................3
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+1
+
+Trademarks
+
+www.ti.com
+
+Figure 1-2. Captured I2C Waveform for Cell 1 Voltage Reading................................................................................................. 3
+Figure 1-3. Captured I2C Waveform for Internal Temperature Reading...................................................................................... 4
+Figure 1-4. Captured I2C Waveform for CC2 Current Reading................................................................................................... 4
+Figure 1-5. BQStudio Example Showing Execution of Multiple Direct Commands..................................................................... 5
+Figure 1-6. Auto Refresh Disabled.............................................................................................................................................. 5
+Figure 2-1. Captured I2C Waveform for DEVICE_NUMBER Subcommand............................................................................... 6
+Figure 2-2. Captured I2C Waveform for MANUFACTURING_STATUS Subcommand............................................................... 7
+Figure 2-3. Captured I2C Waveform for FET_ENABLE Subcommand....................................................................................... 7
+Figure 2-4. Captured I2C Waveform of RESET Subcommand....................................................................................................7
+Figure 2-5. BQStudio Example Showing Execution of Multiple Subcommands.......................................................................... 8
+Figure 3-1. Captured I2C Waveform for Reading 'Enabled Protections A' Register....................................................................9
+Figure 3-2. Captured I2C Waveform for SET_CFGUPATE........................................................................................................10
+Figure 3-3. Captured Waveform for Writing to Enabled Protections A...................................................................................... 10
+Figure 3-4. Captured I2C Waveform for Writing VCell Mode..................................................................................................... 11
+Figure 3-5. Captured I2C Waveform for EXIT_CFGUPDATE.................................................................................................... 11
+Figure 3-6. BQStudio Example Showing Execution of RAM Register Reads and Writes..........................................................12
+Figure 4-1. Captured I2C Waveform for FET_ENABLE Subcommand With CRC.................................................................... 12
+Figure 4-2. Captured I2C Waveform for VCell 1 Command With CRC..................................................................................... 13
+Figure 5-1. Alarm Enable Direct Command...............................................................................................................................14
+Figure 5-2. Cell1 Voltage Read Direct Command......................................................................................................................15
+Figure 5-3. Device Number Subcommand................................................................................................................................ 16
+Figure 5-4. FET_ENABLE Subcommand.................................................................................................................................. 16
+Figure 5-5. RESET Subcommand............................................................................................................................................. 17
+Figure 5-6. Read Enabled Protections A................................................................................................................................... 17
+Figure 5-7. Write Enabled Protections A....................................................................................................................................18
+
+List of Tables
+Table 1-1. Alarm Enable Command Description..........................................................................................................................3
+Table 1-2. Cell 1 Voltage Command Description......................................................................................................................... 3
+Table 1-3. Internal Temperature Command Description.............................................................................................................. 4
+Table 1-4. CC2 Current Command Description........................................................................................................................... 4
+Table 2-1. DEVICE_NUMBER Subcommand Description...........................................................................................................6
+Table 2-2. MANUFACTURING STATUS Subcommand Description............................................................................................7
+Table 2-3. FET_ENABLE Subcommand Description...................................................................................................................7
+Table 2-4. RESET Subcommand Description..............................................................................................................................7
+Table 3-1. Enabled Protections A Description............................................................................................................................. 9
+Table 3-2. SET_CFGUPDATE and EXIT_CFGUPDATE Descriptions...................................................................................... 10
+Table 3-3. VCell Mode Description.............................................................................................................................................11
+
+Trademarks
+All trademarks are the property of their respective owners.
+
+2
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Direct Commands
+
+1 Direct Commands
+A complete list of direct commands can be found in the device-specific Technical Reference Manual. The format
+for a direct command is shown in the following examples.
+
+1.1 Alarm Enable - 0x66
+Table 1-1 shows the Alarm Enable command that uses command 0x66. By default, the register setting for
+Alarm Enable is set to 0xF800. In the example, the setting is changed to 0xF082. The data is in little endian
+format. The device address for the BQ769x2 is 0x10 (8-bits) where the LSB is the R/W bit. A direct command
+follows the format I2C_Write(I2C_ADDR, Command, DataBlock), so for this example the command would be
+I2C_Write(0x10, 0x66, [0x82, 0xF0]).
+Table 1-1. Alarm Enable Command Description
+Command
+0x66
+
+Name
+
+Units
+
+Type
+
+Description
+
+Alarm Enable
+
+Hex
+
+H2
+
+Mask for Alarm Status(). Can be written to change during operation to
+change which alarm sources are enabled.
+
+Figure 1-1. Captured I2C Waveform for Setting Alarm Enable to 0xF082
+
+1.2 Cell 1 Voltage - 0x14
+Table 1-2 shows how to read the voltage for Cell 1. The Cell 1 Voltage command is 0x14 and is a read
+only command. The Cell 1 voltage is read by writing the I2C command 0x14 followed by a 2-byte read. The
+data is returned in little endian format. In the following example, the 16-bit Cell 1 voltage read 0x0E74, which
+corresponds to 3700 mV.
+Table 1-2. Cell 1 Voltage Command Description
+Command
+0x14
+
+Name
+
+Units
+
+Type
+
+Cell 1 Voltage
+
+mV
+
+I2
+
+Description
+16-bit voltage on cell 1
+
+Figure 1-2. Captured I2C Waveform for Cell 1 Voltage Reading
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+3
+
+Direct Commands
+
+www.ti.com
+
+1.3 Internal Temperature - 0x68
+Table 1-3 shows how to read the internal temperature sensor. The units for the 16-bit temperature sensor
+reading are in 0.1 K. In the following example, the reading of 0x0BA6 represents a decimal value of 2982, which
+is 298.2 K. This converts to about 25°C.
+Table 1-3. Internal Temperature Command Description
+Command
+0x68
+
+Name
+
+Units
+
+Type
+
+Int Temperature
+
+0.1 K
+
+I2
+
+Description
+This is the most recent measured internal die temperature.
+
+Figure 1-3. Captured I2C Waveform for Internal Temperature Reading
+
+1.4 CC2 Current - 0x3A
+Table 1-4 shows how to read the 16-bit current measurement from CC2. The current reading in the following
+example shows 7 mA.
+Table 1-4. CC2 Current Command Description
+Command
+0x3A
+
+Name
+
+Units
+
+Type
+
+CC2 Current
+
+userA
+
+I2
+
+Description
+16-bit CC2 current
+
+Figure 1-4. Captured I2C Waveform for CC2 Current Reading
+The Command Sequence module in the BQStudio software enables you to try commands. This tool can also be
+used to create and save command sequences. The Transaction Log in this example shows all of the commands
+that have been covered so far.
+
+4
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Direct Commands
+
+Figure 1-5. BQStudio Example Showing Execution of Multiple Direct Commands
+BQStudio has an Auto Refresh on the Dashboard which periodically reads the registers of the device to refresh
+the measurements displayed. When using the Command Sequence module, it is recommended to disable Auto
+Refresh by clicking on the green banner. The banner will turn red to indicate Auto Refresh is disabled (see
+Figure 1-6).
+
+Figure 1-6. Auto Refresh Disabled
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+5
+
+Subcommands
+
+www.ti.com
+
+2 Subcommands
+Subcommands use a different format from direct commands and are accessed indirectly using the 7-bit
+command address space. They also provide the capability for block transfers. To issue a subcommand, the
+command address is written to 0x3E/0x3F. If data is to be read back, it will be populated in the 32-byte transfer
+buffer which uses addresses 0x40 - 0x5F. Multiple examples follow.
+The timing required for the device to fetch data depends on the specific subcommand and any other processing
+underway within the device, so it will vary during operation. The approximate times for each subcommand are
+shown in the Technical Reference Manual. There are two approaches for addressing this timing when reading
+data from a subcommand:
+The simplest approach is to use a 2 ms wait time after writing to 0x3E/0x3F before reading the result from the
+transfer buffer.
+A second approach is described in Chapter 3 of the Technical Reference Manual. This approach is to
+read from 0x3E/0x3F until the subcommand has completed operation. If the value returned is 0xFF, this
+indicates the subcommand has not completed operation yet. When the subcommand has completed, the
+value returned will match the command that was written. This response only applies to subcommands that
+return data to be read back.
+Certain subcommands write data to a register and must be followed by a write to 0x60/0x61 with the checksum
+and length. This only applies to the FET_Control(), REG12_Control(), CB_Active_Cells(), and CB_SET_LVL()
+subcommands. Examples for calculating checksum and length are provided in the next section since this is also
+required when writing to RAM registers.
+
+2.1 DEVICE_NUMBER - 0x0001
+The device number can be read by first writing the subcommand number 0x0001 (little endian) to the command
+address 0x3E. This is followed by reading from the data buffer at address 0x40. In this example, the device
+number returned is 0x7694 (which represents BQ76942).
+Table 2-1. DEVICE_NUMBER Subcommand Description
+Command
+0x0001
+
+Name
+
+Data
+
+Units
+
+Type
+
+Description
+
+DEVICE_NUMBER
+
+Device Number
+
+Hex
+
+U2
+
+Reports the device number that identifies
+the product. The data is returned in littleendian format
+
+Figure 2-1. Captured I2C Waveform for DEVICE_NUMBER Subcommand
+
+6
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Subcommands
+
+2.2 MANUFACTURING STATUS - 0x0057
+The MANUFACTURING STATUS subcommand reads two bytes from the Manufacturing Status register. First,
+the command 0x0057 is written to 0x3E followed by a read of two bytes from 0x40.
+Table 2-2. MANUFACTURING STATUS Subcommand Description
+Command
+0x0057
+
+Name
+
+Data
+
+Units
+
+Type
+
+Description
+
+MANUFACTURING
+STATUS
+
+Manufacturing Status
+
+Hex
+
+H2
+
+Provides flags for use during manufacturing.
+
+Figure 2-2. Captured I2C Waveform for MANUFACTURING_STATUS Subcommand
+
+2.3 FET_ENABLE - 0x0022
+Some subcommands do not require a data read from the data buffer since they only provide an instruction. The
+FET_ENABLE subcommand is one example. This command is issued by writing 0x0022 to 0x3E.
+Table 2-3. FET_ENABLE Subcommand Description
+Command
+0x0022
+
+Name
+
+Description
+
+FET_ENABLE
+
+Toggle FET_EN in Manufacturing Status. FET_EN = 0 means FET Test Mode. FET_EN =
+1 means Firmware FET Control.
+
+Figure 2-3. Captured I2C Waveform for FET_ENABLE Subcommand
+
+2.4 RESET - 0x0012
+The RESET subcommand performs a reset on the device and returns RAM register settings back to default (or
+OTP programmed) values. This command is issued by writing 0x0012 to 0x3E.
+Table 2-4. RESET Subcommand Description
+Command
+
+Name
+
+Description
+
+0x0012
+
+RESET
+
+Resets the device.
+
+Figure 2-4. Captured I2C Waveform of RESET Subcommand
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+7
+
+Subcommands
+
+www.ti.com
+
+The Transaction Log in this example shows all of the commands that have been covered for executing
+Subcommands.
+
+Figure 2-5. BQStudio Example Showing Execution of Multiple Subcommands
+
+8
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Reading and Writing RAM Registers
+
+3 Reading and Writing RAM Registers
+A full view of registers in RAM can be found in the device-specific Technical Reference Manual and also in
+the Data Memory screen of BQStudio. To enable viewing the RAM register addresses in BQStudio, go to the
+Window->Preferences menu and select 'Show Advanced Views'. Reading from a RAM register is accomplished
+by writing the register address to 0x3E and then reading from the data buffer starting at 0x40. Writing to a RAM
+register starts with writing the register address to 0x3E followed by the data, followed by a write to 0x60/0x61
+with the checksum and length. The checksum and length calculation is described more in the device-specific
+data sheet, but is illustrated in the following examples.
+Note
+When writing to RAM registers, it is highly recommended to first enter CONFIG_UPDATE mode and
+then perform the command to exit CONFIG_UPDATE mode once complete. This ensures stable
+operation while settings are being modified.
+
+3.1 Read 'Enabled Protections A'
+The default settings for the BQ769x2 devices have COV (over-voltage) and SCD (short-circuit) protections
+enable. This is verified in the following by reading from the Enabled Protections A register where the value
+returned is 0x88 from the RAM address 0x9261.
+Table 3-1. Enabled Protections A Description
+Class
+
+Subclass
+
+Name
+
+Type
+
+Min
+
+Max
+
+Default
+
+Unit
+
+Settings
+
+Protection
+
+Enabled Protections A
+
+U1
+
+0x00
+
+0xFF
+
+0x88
+
+Hex
+
+Figure 3-1. Captured I2C Waveform for Reading 'Enabled Protections A' Register
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+9
+
+Reading and Writing RAM Registers
+
+www.ti.com
+
+3.2 Enter CONFIG_UPDATE Mode
+Before writing RAM registers, it is recommended to enter CONFIG_UPDATE mode to prevent settings from
+taking effect until all changes are made. SET_CFGUPDATE follows the Subcommand format.
+Table 3-2. SET_CFGUPDATE and EXIT_CFGUPDATE Descriptions
+Command
+
+Name
+
+Description
+
+0x0090
+
+SET_CFGUPDATE
+
+Enters CONFIG_UPDATE mode.
+
+0x0092
+
+EXIT_CFGUPDATE
+
+Exits CONFIG_UPDATE mode. This also clears the Battery Status()
+[POR] and Battery Status()[WD] bits.
+
+Figure 3-2. Captured I2C Waveform for SET_CFGUPATE
+
+3.3 Write 'Enabled Protections A'
+In this example, the CUV (undervoltage) protection feature is enabled along with the default protections. This
+requires writing 0x8C to RAM address 0x9261. The checksum is calculated on the address and data (0x61,
+0x92, 0x8C) and is the complement of the sum of these bytes. The length also includes the two bytes for device
+address and command address for a total length of 5.
+
+Figure 3-3. Captured Waveform for Writing to Enabled Protections A
+
+10
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Reading and Writing RAM Registers
+
+3.4 Write 'VCell Mode'
+Next, write to the VCell Mode register to configure the device BQ76942 for 9 cells. The following example writes
+0x037F to 0x9304 and then writes the new checksum and length to 0x60/0x61.
+Table 3-3. VCell Mode Description
+Class
+
+Subclass
+
+Name
+
+Type
+
+Min
+
+Max
+
+Default
+
+Unit
+
+Settings
+
+Configuration
+
+VCell Mode
+
+H2
+
+0x0000
+
+0xFFFF
+
+0x0000
+
+Hex
+
+Figure 3-4. Captured I2C Waveform for Writing VCell Mode
+
+3.5 Exit CONFIG_UPDATE Mode
+After writing RAM registers, exit CONFIG_UPDATE mode at which point the new settings will take effect.
+
+Figure 3-5. Captured I2C Waveform for EXIT_CFGUPDATE
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+11
+
+I2C With CRC
+
+www.ti.com
+
+The Transaction Log in this example shows all of the commands that have been covered for reading and writing
+to RAM registers.
+
+Figure 3-6. BQStudio Example Showing Execution of RAM Register Reads and Writes
+
+4 I2C With CRC
+The I2C interface on the BQ769x2 family includes an optional CRC check. The CRC feature can be enabled
+in the Settings:Configuration:Comm Type register. If this register is changed while using BQStudio, the
+SWAP_COMM_MODE() subcommand should be executed and then BQStudio should be restarted so that it
+can detect the new communication mode. Two examples follow of I2C waveform captures with the CRC check
+enabled.
+The CRC for the first data byte is computed on all of the bytes after the I2C start up to and including the first data
+byte. For every data byte after the first byte, the CRC byte is computed for only that byte. In Figure 4-1, using the
+FET_ENABLE subcommand, the CRC for the first byte is computed for [0x10 0x3E 0x22] - the resulting CRC is
+0x63. The CRC for the second byte [0x00] is 0x00.
+
+Figure 4-1. Captured I2C Waveform for FET_ENABLE Subcommand With CRC
+
+12
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+SPI With CRC Examples
+
+Figure 4-2, using the VCell 1 command, the CRC for the first byte is computed for [0x10 0x14 0x11 0x68] - the
+resulting CRC is 0x33. The CRC for the second byte [0x0B] is 0x31.
+
+Figure 4-2. Captured I2C Waveform for VCell 1 Command With CRC
+
+5 SPI With CRC Examples
+The SPI interface on the BQ769x2 family can be enabled in the Settings:Configuration:Comm Type register.
+When changing to SPI mode, the default SPI output logic voltage level is 1.8V since it is referencing the internal
+voltage regulator of the device. To change the logic level, the REG1 LDO should be enabled and programmed
+to the desired voltage level and the SPI Configuration register should be programmed to 0x60 to enable the
+MISO_REG1 bit. Next, the SWAP_COMM_MODE() subcommand should be executed. If using BQStudio, then
+BQStudio should be restarted so that it can detect the new communication mode.
+Some versions of the device will be available that are pre-configured to SPI mode.For information on the
+different part numbers available, see the device-specific data sheet.
+The following examples cover some of the same commands covered in the I2C examples. Some important notes
+on the SPI interface protocol (with CRC):
+• SPI_CS is active low.
+• The first SPI packet is 8 bits. The first bit is the R/W bit followed by a 7-bit address.
+• The second packet is 8-bit data.
+• The third packet is the 8-bit CRC calculated over the first and second bytes.
+All of the examples include multiple writes for each transaction. This method is used by the EV2400 and
+BQStudio to verify that the commands have been successfully written. This is because some transactions are
+ignored by the device if the internal oscillator is not running (if the device is in SLEEP mode) or if the processor
+is busy. Once the data on the MISO pin (which should reflect the data previously written on MOSI) shows the
+correct data, then it is confirmed the packets have been written successfully. A more detailed description of the
+SPI interface is available in the device-specific Technical Reference Manual.
+There are a couple of differences to be aware of when using the BQ769x2 family in SPI mode versus I2C mode.
+While I2C mode supports block writes and reads, SPI mode supports only single byte transactions. While I2C
+mode supports clock stretching for direct commands, SPI mode does not have this feature so it is important to
+be aware of the direct command timing in addition to subcommand timing.
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+13
+
+SPI With CRC Examples
+
+www.ti.com
+
+5.1 Direct Command Example: Alarm Enable - 0x66
+Figure 5-1 sets the Alarm Enable register to a value of 0xF082.
+
+Figure 5-1. Alarm Enable Direct Command
+
+14
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+SPI With CRC Examples
+
+5.2 Direct Command Example: Cell 1 Voltage - 0x14
+Figure 5-2 shows how to read the voltage for Cell 1.
+
+Figure 5-2. Cell1 Voltage Read Direct Command
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+15
+
+SPI With CRC Examples
+
+www.ti.com
+
+5.3 Subcommand Example: Device Number - 0x0001
+Figure 5-3 shows how to read the Device Number from Subcommand 0x0001.
+
+Figure 5-3. Device Number Subcommand
+
+5.4 Subcommand Example: FET_ENABLE - 0x0022
+Figure 5-4 shows how to write the FET_ENABLE Subcommand 0x0022.
+
+Figure 5-4. FET_ENABLE Subcommand
+
+16
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+SPI With CRC Examples
+
+5.5 Subcommand Example: RESET - 0x0012
+Figure 5-5 shows how to write the RESET Subcommand 0x0012.
+
+Figure 5-5. RESET Subcommand
+
+5.6 RAM Register Read Example: Enabled Protections A
+Figure 5-6 shows how to read RAM register Enabled Protections A. The address is 0x9261.
+
+Figure 5-6. Read Enabled Protections A
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+17
+
+SPI With CRC Examples
+
+www.ti.com
+
+5.7 RAM Register Write Example: Enabled Protections A
+Figure 5-7 shows how to write RAM register Enabled Protections A with a value of 0x8C.
+
+Figure 5-7. Write Enabled Protections A
+
+18
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+Simple Code Examples
+
+6 Simple Code Examples
+The following example code is written in Python and designed to communicate to the BQ769x2 device from a PC
+through an EV2400 module or through the USB connector on the BQ76942 or BQ76952 Evaluation Module. The
+code shows the creation of simple I2C Read and Write functions, a DataRAM_Read function, (which can also be
+used to execute subcommands since these follow the same format), and a DataRAM_Write function that shows
+the calculation of checksum and length. The main section of the code goes through all of the examples covered
+in the first three sections of this document.
+This simple code example is intended to illustrate the basic command structure for I2C commands.
+Microcontroller code examples are also available for I2C and SPI. The link to the microcontroller code is
+provided in Section 7.
+'''
+/* BQ769x2 example Program demonstrates examples for direct commands, subcommands, and writing /
+reading from device RAM.
+'''
+import pywinusb
+import bqcomm
+import sys
+import time
+from time import sleep
+import sets
+I2C_ADDR = 0x10 # BQ769x2 slave address
+numCells = 10
+# Set to 10 for BQ76942
+####################################################
+## Check to see if EV2400 is connected
+####################################################
+try:
+a = bqcomm.Adapter() # This will use the first found Aardvark or EV2400
+except:
+print "No EV2400 Available"
+sys.exit(1)
+######################################################
+## Define some command functions
+######################################################
+def I2C_Read(device_addr, reg_addr, length):
+'''
+Uses global I2C address and returns value read
+'''
+try:
+value = a.i2c_read_block(device_addr, reg_addr, length)
+except:
+print "Nack received"
+return
+return value
+def I2C_Write(device_addr, reg_addr, block):
+'''
+Uses global I2C address
+'''
+try:
+a.i2c_write_block(device_addr, reg_addr, block)
+except:
+print "Nack received"
+return
+def DataRAM_Read(addr, length):
+'''
+Write address location to 0x3E and read back from 0x40
+Used to read configuration registers and for subcommands
+'''
+addressBlock = [(addr%256), (addr/256)]
+I2C_Write(I2C_ADDR, 0x3E, addressBlock)
+value = I2C_Read(I2C_ADDR, 0x40,length)
+return value
+def DataRAM_Write(addr, block):
+'''
+Write address location to 0x3E and Checksum,length to 0x60
+Used to write configuration registers
+'''
+addressBlock = [(addr%256), (addr/256)]
+wholeBlock = addressBlock + block
+I2C_Write(I2C_ADDR, 0x3E, wholeBlock)
+# Write Data Block
+# Write Data Checksum and length to 0x60, required for RAM writes
+I2C_Write(I2C_ADDR, 0x60, [~sum(wholeBlock) & 0xff, len(wholeBlock)+2])
+return
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+19
+
+Simple Code Examples
+
+www.ti.com
+
+def crc8(b,key):
+crc = 0
+ptr = 0
+for j in range(len(b),0,-1):
+for k in range(8):
+i = 128 / (2**k)
+if ((crc & 0x80) != 0):
+crc = crc * 2
+crc = crc ^ key
+else:
+crc = crc * 2
+if ((b[ptr] & i) != 0):
+crc = crc ^ key
+ptr = ptr + 1
+return crc
+##########################################
+# Start of Main Script
+##########################################
+################ Direct Command Examples ################
+#Write Alarm Enable to 0xF082
+I2C_Write(I2C_ADDR, 0x66, [0x82, 0xF0])
+#Read Voltage on Cell #1
+result = I2C_Read(I2C_ADDR, 0x14, 2)
+print "Cell 1 = ", (result[1]*256 + result[0]), " mV"
+#Read Internal Temperature
+result = I2C_Read(I2C_ADDR, 0x68, 2)
+print "Internal Temp = ", ((result[1]*256 + result[0])/10 - 273.15), "degrees C"
+#Read CC2 Current Measurement
+result = I2C_Read(I2C_ADDR, 0x3A, 2)
+print "CC2 = ", (result[1]*256 + result[0]), " mA"
+################ Subcommand Examples ################
+#Read Device Number
+b = DataRAM_Read(0x0001,6)
+print "Device_Number = " '{0:04X}'.format(b[1]*256+b[0])
+#Read Manufacturing Status
+b = DataRAM_Read(0x0057,2)
+print "Manufacturing Status = " '{0:04X}'.format(b[0]+256*b[1])
+## Command-only Subcomands ##
+#FET_ENABLE
+I2C_Write(I2C_ADDR, 0x3E, [0x22, 0x00])
+#RESET - returns device to default settings
+I2C_Write(I2C_ADDR, 0x3E, [0x12, 0x00])
+sleep(1)
+############ Reading and Writing to RAM Registers ##########
+# Read 'Enabled Protections A' RAM register 0x9261
+b = DataRAM_Read(0x9261,1)
+print "Enabled Protections A = 0x" '{0:02X}'.format(b[0])
+#Set CONFIG_UPDATE Mode (RAM registers should be written while in
+#CONFIG_UPDATE mode and will take effect after exiting CONFIG_UPDATE mode
+I2C_Write(I2C_ADDR, 0x3E, [0x90, 0x00])
+#Write to 'Enabled Protections A' RAM register to enable CUV protection
+DataRAM_Write(0x9261, [0x8C])
+#Write to 'VCell Mode' RAM register to configure for a 9-cell battery
+DataRAM_Write(0x9304, [0x03, 0x7f])
+#Exit CONFIG_UPDATE Mode
+I2C_Write(I2C_ADDR, 0x3E, [0x92, 0x00])
+# CRC8 Example Calculation
+TestValue = [0x10, 0x14, 0x11, 0x68]
+crcKey = 0x107
+check = 0xff & crc8(TestValue,crcKey)
+print "crc8 check = 0x" '{0:02X}'.format(check)
+
+The output from running the example Python script on a BQ76942 Evaluation Module follows.
+Cell 1 = 3700 mV
+Internal Temp = 25.05 degrees C
+CC2 = 7 mA
+Device_Number = 7694
+Manufacturing Status = 0040
+Enabled Protections A = 0x88
+crc8 check = 0x33
+
+20
+
+BQ769x2 Software Development Guide
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+www.ti.com
+
+References
+
+7 References
+•
+•
+•
+•
+
+Texas Instruments: BQ76952 3S-16S Battery Monitor and Protector Data Sheet
+Texas Instruments: BQ76942 3S-160S Battery Monitor and Protector Data Sheet
+Texas Instruments: BQ76952 Technical Reference Manual
+Texas Instruments: BQ76942 Technical Reference Manual
+
+8 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision A (October 2020) to Revision B (August 2021)
+Page
+• Updated the numbering format for tables, figures and cross-references throughout the document...................3
+• Updates were made in Section 2........................................................................................................................6
+• Updates were made in Section 5......................................................................................................................13
+• Changes were made in Section 6.....................................................................................................................19
+
+SLUAA11B – FEBRUARY 2020 – REVISED AUGUST 2021
+Submit Document Feedback
+Copyright © 2021 Texas Instruments Incorporated
+
+BQ769x2 Software Development Guide
+
+21
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these
+resources.
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for
+TI products.
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2022, Texas Instruments Incorporated
+
+

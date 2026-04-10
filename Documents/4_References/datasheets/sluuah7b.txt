@@ -1,0 +1,811 @@
+User's Guide
+SLUUAH7B – June 2013 – Revised August 2014
+
+Quickstart Guide for bq27421-G1
+The bq27421-G1 is the easiest-to-use lithium battery gauge in the industry. For fast time-to-market and
+virtually no development effort, battery characterization, nor learning cycle is required. Once assembled
+into the end-system, only a few simple registers need to be configured before accurate gauging results
+can be read from the IC. This document outlines the minimum procedure required.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+Contents
+Overview ...................................................................................................................... 2
+Choose Between bq27421-G1A, bq27421-G1B, and bq27421-G1D ................................................. 2
+Hardware...................................................................................................................... 2
+Programming the Configuration ............................................................................................ 3
+Reading the Gauge Registers.............................................................................................. 5
+Gauge Learning .............................................................................................................. 7
+Recommended Flowchart .................................................................................................. 8
+Other Configuration Options................................................................................................ 9
+Fast HIBERNATE ............................................................................................................ 9
+Summary .................................................................................................................... 10
+Related Documentation from Texas Instruments ...................................................................... 11
+List of Figures
+
+1
+
+Flowchart for Updating the Gauge Configuration Parameters ......................................................... 4
+
+2
+
+Configure Standard Data Memory Parameters .......................................................................... 5
+
+3
+
+Gauge Register Commands ................................................................................................ 6
+
+4
+
+Recommended System Operation Flowchart ............................................................................ 8
+
+5
+
+Configure HIBERNATE Mode Data Memory Parameters ............................................................ 10
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Quickstart Guide for bq27421-G1
+
+1
+
+Overview
+
+1
+
+www.ti.com
+
+Overview
+The bq27421-G1 fuel gauge utilizes a standard lithium battery profile that matches typical batteries
+available in the market. On IC power-up, default settings are loaded into the gauge RAM. These should be
+over-written by the system to match the actual battery capacity. Additionally, the full and empty battery
+conditions should be updated to match the system requirements. By configuring only these four
+parameters, the battery capacity predictions by the gauge can be utilized with confidence. During field
+operation in the end-equipment, the Impedance Track™ algorithm continually optimizes accuracy by
+learning the battery capacity and resistance profile to account for cell-to-cell variations and battery aging.
+
+2
+
+Choose Between bq27421-G1A, bq27421-G1B, and bq27421-G1D
+Because the bq27421-G1 utilizes standard battery profiles, the system designer can select between three
+different flavors of the fuel gauge:
+• The bq27421-G1A fuel gauge should be used for LiCoO2-based batteries for 4.2-V maximum charge
+voltage.
+• The bq27421-G1B fuel gauge should be used for LiCoO2-based batteries for 4.3-V or 4.35-V maximum
+charge voltage.
+• The bq27421-G1D fuel gauge should be used for LiCoO2-based batteries for 4.35-V or 4.4-V maximum
+charge voltage.
+The other types of rechargeable lithium chemistries are not currently supported by the bq27421.
+To give further confidence in the suitability of bq27421-G1A, bq27421-G1B, or bq27421-G1D for a
+particular battery application, the corresponding EVM can be ordered and tested with the target battery.
+The results of a battery cycle can be logged with the GaugeStudio companion software and reviewed for
+accuracy.
+The log of a battery cycle can also be analyzed using the Mathcad™ Chemistry Selection Tool (SLUC138)
+to assist in the choice.
+
+3
+
+Hardware
+The bq27421-G1 fuel gauge comes in a tiny 9-pin, 1.62 mm × 1.58 mm, CSP package and only requires a
+single 0.47-µF capacitor to be connected between the VDD and VSS pins. It is also recommended to have a
+1.0 uF capacitor connected between the BAT and VSS pins, but this capacitor is optional if the connection
+between the gauge and the battery is stable.
+The fuel gauge has the ability to provide interrupts to the system when state-of-charge (SOC) changes
+through the GPOUT pin. The GPOUT pin is an open-drain output and should be pulled up, typically with a
+4.7-kΩ or 10-kΩ resistor. It should not be left floating, even if unused. The GPOUT pin can also be
+configured to simply change polarity when SOC drops below a specific threshold. The polarity of the
+GPOUT pin can also be configured. For more details on configuration options, see SLUUAC5, bq27421G1 Technical Reference Manual.
+For accurate gauging the fuel gauge needs to be able to detect that the battery has been inserted into the
+system. The fuel gauge will not be actively gauging unless the [BAT_DET] bit in the Flags( ) register is set.
+By default, [BAT_DET] is set if the BIN pin is low. Alternatively, the gauge can be configured to rely on the
+host to inform it when the battery is inserted and removed, thereby setting and clearing the [BAT_DET] bit.
+If Operation Configuration bit [BIE] = 1 (default), a logic low on the pin is detected as battery insertion.
+For a removable pack, the BIN pin can be connected to VSS through a pulldown resistor on the pack,
+typically the 10-kΩ thermistor in the battery pack; the system board should use a 1.8-MΩ pullup resistor to
+VDD to ensure the BIN pin is high when a battery is removed. If the battery is embedded in the system, it is
+recommended to leave [BIE] = 1 and use a 10-kΩ (or the battery thermistor) pulldown resistor from BIN to
+VSS.
+If [BIE] = 0, then the host must inform the gauge of battery insertion and removal with the BAT_INSERT
+and BAT_REMOVE subcommands. A 10-kΩ pulldown resistor should be connected to the BIN pin, even if
+the pin is not used.
+
+Impedance Track is a trademark of Texas Instruments.
+Mathcad is a trademark of Mathsoft, Inc..
+2
+
+Quickstart Guide for bq27421-G1
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Programming the Configuration
+
+www.ti.com
+
+NOTE: The BIN pin should not be shorted directly to VCC or VSS, and any pullup resistor on the BIN
+pin should only be connected to the bq27421 VDD and not an external voltage rail.
+
+NOTE: The fuel gauge needs accurate measurements of the battery pack voltage. The BAT and VSS
+pins should be Kelvin-connected directly to the battery terminals for maximum gauging
+accuracy, with system current flowing through separate traces. Any I×R drop caused by
+current flowing through voltage measurement traces between the fuel gauge and the battery
+will reduce accuracy. Typically, the fuel gauge should be placed as close to the battery as
+possible to ensure its on-board temperature sensor is reflecting the battery temperature.
+However, since no sense resistor is required, more flexibility in layout is allowed as long as a
+Kelvin connection is ensured.
+
+4
+
+Programming the Configuration
+A number of configuration parameters are available in the bq27421-G1 so that it can be tuned to match
+the target battery as well as the system requirements. Most of the defaults can be left alone if desired, but
+there are four important parameters that should be configured in order to achieve accurate gauging of the
+target battery. These parameters are Design Capacity, Design Energy, Terminate Voltage, and Taper
+Rate. If you are using the bq27421-G1 EVM, then GaugeStudio can be used to configure the gauge to fit
+the target battery. You can download GaugeStudio at www.ti.com/product/bq27421-g1.
+Design Capacity should be set to the nominal battery capacity printed on the battery label or found in the
+battery datasheet. It gives a starting point for the gauge predictions, and actual battery capacity (which
+varies from battery to battery and changes over time) is learned during operation.
+Design Energy should be set to be Design Capacity × 3.7 if using the bq27421-G1A or Design
+Capacity × 3.8 if using the bq27421-G1B or bq27421-G1D. Design Energy is used when the gauge is
+operating in constant-power model. The bq27421-G1 defaults to constant-power model and this is
+reflected by the [LDMD] bit in the Control() register being set.
+NOTE: When updating the fuel gauge with an EVM using GaugeStudio, Design Energy is
+automatically calculated based on the type of gauge connected and the Design Capacity.
+
+Terminate Voltage should be set to the minimum operating voltage of your system. This is the target
+where the gauge typically reports 0% capacity. It is not usually necessary to include a guard band when
+selecting this value, because the gauge also learns the level of load spikes in the system and
+automatically uses a higher voltage when necessary to ensure that load spikes, aging, and low
+temperatures do not allow sudden voltage drops below Terminate Voltage before 0% is reported. The
+actual point at which 0% is reported is therefore dynamic, so Terminate Voltage should be set to the
+minimum operating voltage supported by the system. If additional reserve capacity is desired between the
+0% point and the actual Terminate Voltage, then the optional Reserve Capacity memory parameter can
+also be configured. This ensures that a known amount of energy is available for shutdown activities once
+0% SOC is reported, but before Terminate Voltage is actually reached.
+Taper Rate should be set to the current threshold in mA below which your charger IC is set to stop
+charging once it considers the battery to be full. The Taper Rate is stored in units of 0.1-hr rate and can
+be derived from the taper current value in mA by the following equation:
+Taper Rate = Design Capacity / (0.1 * Taper Current)
+This is simply a way to store the taper current value with respect to Design Capacity. The Taper Rate
+value allows the gauge to synchronize its full charge detection point with that of the charger. The gauge
+Taper Rate should be set to a value slightly higher than the taper current detection threshold of the
+charger (including charger tolerances).
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Quickstart Guide for bq27421-G1
+
+3
+
+Programming the Configuration
+
+www.ti.com
+
+For example, if using a 1000-mA battery and the charger is set to stop charging when the voltage is 4.2 V
+and the current tapers to less than 100 mA (±15%), then the bq27421-G1 Taper Rate should be set to 87
+(Taper Rate = 1000 / (0.1 × 115 mA) where Taper Current = 115 mA) to give a slight guard band. It is
+important that the gauge detect full charge (StateOfCharge() = 100%) before the charger shuts off. An
+alternative system design to improve synchronization is to have the system read the [FC] (full charge) bit
+from the Flags() register and then disable the charger when it is set.
+NOTE: When updating the fuel gauge with an EVM using GaugeStudio, Taper Rate is calculated
+automatically based on the Taper Current value.
+
+The procedure and commands required to update the configuration parameters are shown in the flowchart
+of Figure 1.
+
+Figure 1. Flowchart for Updating the Gauge Configuration Parameters
+
+NOTE: The process for updating the RAM can also be handled through parsing the data contents in
+a *.dffs file generated by GaugeStudio. A *.dffs is a series of I2C commands that can be
+processed by the host. Using the *.dffs file will allow the host an alternative route to updating
+the RAM instead of following the flow outlined in Figure 1.
+
+4
+
+Quickstart Guide for bq27421-G1
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Reading the Gauge Registers
+
+www.ti.com
+
+Figure 2. Configure Standard Data Memory Parameters
+
+5
+
+Reading the Gauge Registers
+There are a total of 15 registers available for the system to read from the bq27421. The registers most
+commonly used are Voltage( ), Temperature( ), AverageCurrent( ), and StateOfCharge( ). The commands
+to read these registers are shown in Figure 3. Other useful registers include Control(), Flags(),
+RemainingCapacity(), FullChargeCapacity(), and StateOfHealth().
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Quickstart Guide for bq27421-G1
+
+5
+
+Reading the Gauge Registers
+Start
+
+www.ti.com
+
+Details of the I2CReadSubCommand() function
+Note that the fuel gauge
+address is 0x55
+
+Voltage[2] = I2CReadSubCommand(0x04, 2, 100)
+
+I2CWrite(0x04, 100)
+Buffer[2] = I2CRead(2, 100)
+
+Temperature[2] = I2CReadSubCommand(0x02, 2, 100)
+
+AvgCurrent[2] = I2CReadSubCommand(0x10, 2, 100)
+
+SOC[2] = I2CReadSubCommand(0x1C, 2, 100)
+
+ControlStatus[2] = I2CReadSubCommand(0x00, 2, 100)
+
+Flags[2] = I2CReadSubCommand(0x06, 2, 100)
+
+Additional recommended commands to read from
+the fuel gauge. However, the basic set of
+Voltage(), Temperature(), AverageCurrent() and
+StateOfCharge() will suffice for most applications.
+
+SOH[2] = I2CReadSubCommand(0x20, 2, 100)
+
+RemCap[2] = I2CReadSubCommand(0x0C, 2, 100)
+
+FullChgCap[2] = I2CReadSubCommand(0x0E, 2, 100)
+
+End
+
+Figure 3. Gauge Register Commands
+
+6
+
+Quickstart Guide for bq27421-G1
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Gauge Learning
+
+www.ti.com
+
+6
+
+Gauge Learning
+The gauge makes initial capacity predictions using the value entered in Design Capacity. However, as
+the battery is charged and discharged, the gauge is learning the true battery capacity which is usually
+slightly different from the nominal capacity. It stores the learned maximum battery chemical capacity in
+Qmax, as well as the learned resistance profile in the Ra table. As long as the gauge has power, Qmax
+and the Ra profile will update once the proper conditions for an update have been met.
+The [QMAX_UP] bit in the Control() register can be checked by the host to see if there has been a Qmax
+update. The [QMAX_UP] bit is set on the first Qmax update after a reset or battery insertion event. Once
+the [QMAX_UP] bit has set, resistance updates are allowed. The [RES_UP] bit in the Control() register is
+set once there has been an update to the Ra profile during discharge. Both the [QMAX_UP] and
+[RES_UP] bits remain set until the gauge is reset or a battery insertion event occurs.
+It is recommended that the host save the Qmax and Ra profile in the system NVM once the [QMAX_UP]
+and [RES_UP] bits have set. After the initial Qmax update, updates to Qmax most likely occur upon:
+• Entering discharge mode
+• Exiting discharge mode
+• Being in relaxation mode for a while after a certain amount of charge has been removed or added to
+the battery.
+Subsequent resistance profile updates occur only during discharge as long as a Qmax update has
+previously occurred which can be verified by the [QMAX_UP] bit in the Control() register being set.
+Ideally, the system should be designed so that the bq27421-G1 is always powered by the battery, even
+during system shutdown. The gauge maintains the learned values in RAM as long as it is powered and
+operates in NORMAL, SLEEP, or HIBERNATE mode. The gauge automatically transitions to SLEEP
+mode when the system current is low to minimize power consumption.
+If the battery is removed or the gauge is put into SHUTDOWN mode, the learned values stored in RAM
+are lost. Once powered up again, the [ITPOR] bit in the Flags() register is set indicating that all values are
+initialized to the defaults, including Design Capacity, Design Energy, Terminate Voltage, and Taper
+Current. The [ITPOR] bit indicates one of the following:
+• The fuel gauge has been reset due to loss in power.
+• A full RESET (0x0041) Control() subcommand has been sent to the gauge.
+• The gauge has exited the SHUTDOWN mode.
+Sending a SOFT_RESET (0x0042) Control() subcommand to the gauge clears the [ITPOR] bit. The host
+can use the [ITPOR] bit to determine if the gauge memory parameters need to be reloaded. If the [ITPOR]
+bit is set, at a minimum the Design Capacity, Design Energy, Terminate Voltage, and Taper Current
+values should be reloaded to the gauge. Additionally, the host has the option of saving the learned Qmax
+and Ra values into the system NVM periodically.
+NOTE: The SOFT_RESET subcommand is used to exit the RAM update process. Therefore, the
+[ITPOR] bit clears after the RAM has been updated.
+
+See Figure 1 for more details on the RAM update process.
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Quickstart Guide for bq27421-G1
+
+7
+
+Recommended Flowchart
+
+7
+
+www.ti.com
+
+Recommended Flowchart
+Figure 4 incorporates all of the best practices described above and describes the recommendation for
+system software implementation in programming and interacting with the bq27421-G1 fuel gauge. As seen
+in Figure 4, the host system can decide to check the bq27421-G1 for updating the RAM or storing some of
+the memory parameters into system NVM based on when the gauge has entered or exited discharge
+mode. By default, the bq27421-G1 issues an interrupt on the GPOUT pin when the device enters into
+discharge mode, the host can then check to see if the [DSG] bit in the Flags() register is set to verify that
+the gauge is in discharge mode. Using interrupts from the gauge allow the system to reduce power. The
+alternative approach to when the host system can decide to check the bq27421-G1 is after a certain
+amount of time between checks has passed. The time limit of 12 hours is only a suggested amount of time
+between checks and this value can be reduced or increase based upon the needs of the system.
+
+Figure 4. Recommended System Operation Flowchart
+
+8
+
+Quickstart Guide for bq27421-G1
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Other Configuration Options
+
+www.ti.com
+
+8
+
+Other Configuration Options
+The previous instructions outlined the minimum registers to update for accurate fuel gauging. Other
+registers are available for configuration to enable different options (such as interrupt conditions) as well as
+to pre-optimize the battery profile.
+When configured with the nominal battery capacity, the fuel gauge automatically begins learning the true
+battery capacity and resistance profile during operation in the end-equipment. This means accuracy
+automatically optimizes itself as the user charges and discharges the battery. If desired, the system
+designer can perform a simple one-day optimization cycle before production to determine the best settings
+for the fuel gauge. This refinement is easiest to perform using the bq27421EVM, but the actual system
+can also be used. Once determined, these optimized parameters can be included in the configuration
+update outlined above and require no additional overhead. This pre-optimized golden file allows the end
+user to experience higher initial accuracy out of the box without having to wait for the gauge to learn
+during operation.
+Whether the optimization is performed during R&D or in the field operation of the end-equipment, the
+patented Impedance Track™ algorithm continually learns and updates the battery capacity and resistance
+profile as the battery ages. This enables it to be the only gauging algorithm available in the market that
+can maintain the same accuracy for aged batteries as for new ones. Even if the user swaps between
+batteries of different ages, the fuel gauge quickly learns and regains optimum accuracy.
+
+9
+
+Fast HIBERNATE
+The bq27421-G1D by default is configured to enter HIBERNATE mode in approximately 3 seconds. Other
+devices in the bq27421-G1 family are configured by default to enter HIBERNATE mode on the order of
+minutes.
+The fast HIBERNATE configuration, though only the default configuration for the bq27421-G1D, can be
+used in all devices in the bq27421-G1 family. However, for all devices, when in normal operation the
+gauge configuration should be set to normal HIBERNATE mode settings. See Figure 4 for a general
+system flow and Figure 5 for a detailed flow on updating HIBERNATE mode settings.
+See SLUUAC5, bq27421-G1 Technical Reference Manual, for more details on Fast HIBERNATE mode
+configuration.
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Quickstart Guide for bq27421-G1
+
+9
+
+Summary
+
+www.ti.com
+
+Figure 5. Configure HIBERNATE Mode Data Memory Parameters
+
+10
+
+Summary
+By requiring no battery characterization and only needing a minimum of four registers to be updated on
+power-on reset (POR), the bq27421-G1 fuel gauge allows system designers to quickly incorporate fuel
+gauging functionality into their design with minimal effort. Using the patented features of the Impedance
+Track™ algorithm allows the gauge to continually optimize its predictions during end-equipment operation
+to account for battery variations and aging.
+
+10
+
+Quickstart Guide for bq27421-G1
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Related Documentation from Texas Instruments
+
+www.ti.com
+
+11
+
+Related Documentation from Texas Instruments
+To obtain a copy of any of the following TI documents, call the Texas Instruments Literature Response
+Center at (800) 477-8924 or the Product Information Center (PIC) at (972) 644-5580. When ordering,
+identify this document by its title and literature number. Updated documents also can be obtained through
+the TI Web site at www.ti.com.
+1. bq27421-G1, System-Side Impedance Track™ Fuel Gauge with Integrated Sense Resistor Data Sheet
+(SLUSB85)
+2. bq27421-G1, Technical Reference Manual (SLUUAC5)
+3. bq27421-G1, EVM: Single-Cell Impedance Track Technology User's Guide (SLUUA63)
+
+Revision History
+Changes from A Revision (September 2013) to B Revision .......................................................................................... Page
+•
+•
+•
+•
+
+Added bq27421-G1D and Fast HIBERNATE to the Quickstart Guide .............................................................
+Updated Section 2, Choose Between bq27421-G1A, bq27421-G1B, and bq27421-G1D ......................................
+Updated Section 3, Hardware ...........................................................................................................
+Added Section 9, Fast HIBERNATE ....................................................................................................
+
+SLUUAH7B – June 2013 – Revised August 2014
+Submit Documentation Feedback
+Copyright © 2013–2014, Texas Instruments Incorporated
+
+Revision History
+
+2
+2
+2
+9
+
+11
+
+ADDITIONAL TERMS AND CONDITIONS, WARNINGS, RESTRICTIONS, AND DISCLAIMERS FOR
+EVALUATION MODULES
+Texas Instruments Incorporated (TI) markets, sells, and loans all evaluation boards, kits, and/or modules (EVMs) pursuant to, and user
+expressly acknowledges, represents, and agrees, and takes sole responsibility and risk with respect to, the following:
+1.
+
+User agrees and acknowledges that EVMs are intended to be handled and used for feasibility evaluation only in laboratory and/or
+development environments. Notwithstanding the foregoing, in certain instances, TI makes certain EVMs available to users that do not
+handle and use EVMs solely for feasibility evaluation only in laboratory and/or development environments, but may use EVMs in a
+hobbyist environment. All EVMs made available to hobbyist users are FCC certified, as applicable. Hobbyist users acknowledge, agree,
+and shall comply with all applicable terms, conditions, warnings, and restrictions in this document and are subject to the disclaimer and
+indemnity provisions included in this document.
+2. Unless otherwise indicated, EVMs are not finished products and not intended for consumer use. EVMs are intended solely for use by
+technically qualified electronics experts who are familiar with the dangers and application risks associated with handling electrical
+mechanical components, systems, and subsystems.
+3. User agrees that EVMs shall not be used as, or incorporated into, all or any part of a finished product.
+4. User agrees and acknowledges that certain EVMs may not be designed or manufactured by TI.
+5. User must read the user's guide and all other documentation accompanying EVMs, including without limitation any warning or
+restriction notices, prior to handling and/or using EVMs. Such notices contain important safety information related to, for example,
+temperatures and voltages. For additional information on TI's environmental and/or safety programs, please visit www.ti.com/esh or
+contact TI.
+6. User assumes all responsibility, obligation, and any corresponding liability for proper and safe handling and use of EVMs.
+7. Should any EVM not meet the specifications indicated in the user’s guide or other documentation accompanying such EVM, the EVM
+may be returned to TI within 30 days from the date of delivery for a full refund. THE FOREGOING LIMITED WARRANTY IS THE
+EXCLUSIVE WARRANTY MADE BY TI TO USER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED, IMPLIED, OR
+STATUTORY, INCLUDING ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE. TI SHALL
+NOT BE LIABLE TO USER FOR ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES RELATED TO THE
+HANDLING OR USE OF ANY EVM.
+8. No license is granted under any patent right or other intellectual property right of TI covering or relating to any machine, process, or
+combination in which EVMs might be or are used. TI currently deals with a variety of customers, and therefore TI’s arrangement with
+the user is not exclusive. TI assumes no liability for applications assistance, customer product design, software performance, or
+infringement of patents or services with respect to the handling or use of EVMs.
+9. User assumes sole responsibility to determine whether EVMs may be subject to any applicable federal, state, or local laws and
+regulatory requirements (including but not limited to U.S. Food and Drug Administration regulations, if applicable) related to its handling
+and use of EVMs and, if applicable, compliance in all respects with such laws and regulations.
+10. User has sole responsibility to ensure the safety of any activities to be conducted by it and its employees, affiliates, contractors or
+designees, with respect to handling and using EVMs. Further, user is responsible to ensure that any interfaces (electronic and/or
+mechanical) between EVMs and any human body are designed with suitable isolation and means to safely limit accessible leakage
+currents to minimize the risk of electrical shock hazard.
+11. User shall employ reasonable safeguards to ensure that user’s use of EVMs will not result in any property damage, injury or death,
+even if EVMs should fail to perform as described or expected.
+12. User shall be solely responsible for proper disposal and recycling of EVMs consistent with all applicable federal, state, and local
+requirements.
+Certain Instructions. User shall operate EVMs within TI’s recommended specifications and environmental considerations per the user’s
+guide, accompanying documentation, and any other applicable requirements. Exceeding the specified ratings (including but not limited to
+input and output voltage, current, power, and environmental ranges) for EVMs may cause property damage, personal injury or death. If
+there are questions concerning these ratings, user should contact a TI field representative prior to connecting interface electronics including
+input power and intended loads. Any loads applied outside of the specified output range may result in unintended and/or inaccurate
+operation and/or possible permanent damage to the EVM and/or interface electronics. Please consult the applicable EVM user's guide prior
+to connecting any load to the EVM output. If there is uncertainty as to the load specification, please contact a TI field representative. During
+normal operation, some circuit components may have case temperatures greater than 60°C as long as the input and output are maintained
+at a normal ambient operating temperature. These components include but are not limited to linear regulators, switching transistors, pass
+transistors, and current sense resistors which can be identified using EVMs’ schematics located in the applicable EVM user's guide. When
+placing measurement probes near EVMs during normal operation, please be aware that EVMs may become very warm. As with all
+electronic evaluation tools, only qualified personnel knowledgeable in electronic measurement and diagnostics normally found in
+development environments should use EVMs.
+Agreement to Defend, Indemnify and Hold Harmless. User agrees to defend, indemnify, and hold TI, its directors, officers, employees,
+agents, representatives, affiliates, licensors and their representatives harmless from and against any and all claims, damages, losses,
+expenses, costs and liabilities (collectively, "Claims") arising out of, or in connection with, any handling and/or use of EVMs. User’s
+indemnity shall apply whether Claims arise under law of tort or contract or any other legal theory, and even if EVMs fail to perform as
+described or expected.
+Safety-Critical or Life-Critical Applications. If user intends to use EVMs in evaluations of safety critical applications (such as life support),
+and a failure of a TI product considered for purchase by user for use in user’s product would reasonably be expected to cause severe
+personal injury or death such as devices which are classified as FDA Class III or similar classification, then user must specifically notify TI
+of such intent and enter into a separate Assurance and Indemnity Agreement.
+
+RADIO FREQUENCY REGULATORY COMPLIANCE INFORMATION FOR EVALUATION MODULES
+Texas Instruments Incorporated (TI) evaluation boards, kits, and/or modules (EVMs) and/or accompanying hardware that is marketed, sold,
+or loaned to users may or may not be subject to radio frequency regulations in specific countries.
+General Statement for EVMs Not Including a Radio
+For EVMs not including a radio and not subject to the U.S. Federal Communications Commission (FCC) or Industry Canada (IC)
+regulations, TI intends EVMs to be used only for engineering development, demonstration, or evaluation purposes. EVMs are not finished
+products typically fit for general consumer use. EVMs may nonetheless generate, use, or radiate radio frequency energy, but have not been
+tested for compliance with the limits of computing devices pursuant to part 15 of FCC or the ICES-003 rules. Operation of such EVMs may
+cause interference with radio communications, in which case the user at his own expense will be required to take whatever measures may
+be required to correct this interference.
+General Statement for EVMs including a radio
+User Power/Frequency Use Obligations: For EVMs including a radio, the radio included in such EVMs is intended for development and/or
+professional use only in legally allocated frequency and power limits. Any use of radio frequencies and/or power availability in such EVMs
+and their development application(s) must comply with local laws governing radio spectrum allocation and power limits for such EVMs. It is
+the user’s sole responsibility to only operate this radio in legally acceptable frequency space and within legally mandated power limitations.
+Any exceptions to this are strictly prohibited and unauthorized by TI unless user has obtained appropriate experimental and/or development
+licenses from local regulatory authorities, which is the sole responsibility of the user, including its acceptable authorization.
+U.S. Federal Communications Commission Compliance
+For EVMs Annotated as FCC – FEDERAL COMMUNICATIONS COMMISSION Part 15 Compliant
+Caution
+This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions: (1) This device may not cause
+harmful interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.
+Changes or modifications could void the user's authority to operate the equipment.
+FCC Interference Statement for Class A EVM devices
+This equipment has been tested and found to comply with the limits for a Class A digital device, pursuant to part 15 of the FCC Rules.
+These limits are designed to provide reasonable protection against harmful interference when the equipment is operated in a commercial
+environment. This equipment generates, uses, and can radiate radio frequency energy and, if not installed and used in accordance with the
+instruction manual, may cause harmful interference to radio communications. Operation of this equipment in a residential area is likely to
+cause harmful interference in which case the user will be required to correct the interference at its own expense.
+FCC Interference Statement for Class B EVM devices
+This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules.
+These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment
+generates, uses and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause
+harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If
+this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and
+on, the user is encouraged to try to correct the interference by one or more of the following measures:
+• Reorient or relocate the receiving antenna.
+• Increase the separation between the equipment and receiver.
+• Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
+• Consult the dealer or an experienced radio/TV technician for help.
+Industry Canada Compliance (English)
+For EVMs Annotated as IC – INDUSTRY CANADA Compliant:
+This Class A or B digital apparatus complies with Canadian ICES-003.
+Changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate the
+equipment.
+Concerning EVMs Including Radio Transmitters
+This device complies with Industry Canada licence-exempt RSS standard(s). Operation is subject to the following two conditions: (1) this
+device may not cause interference, and (2) this device must accept any interference, including interference that may cause undesired
+operation of the device.
+Concerning EVMs Including Detachable Antennas
+Under Industry Canada regulations, this radio transmitter may only operate using an antenna of a type and maximum (or lesser) gain
+approved for the transmitter by Industry Canada. To reduce potential radio interference to other users, the antenna type and its gain should
+be so chosen that the equivalent isotropically radiated power (e.i.r.p.) is not more than that necessary for successful communication.
+This radio transmitter has been approved by Industry Canada to operate with the antenna types listed in the user guide with the maximum
+permissible gain and required antenna impedance for each antenna type indicated. Antenna types not included in this list, having a gain
+greater than the maximum gain indicated for that type, are strictly prohibited for use with this device.
+
+Canada Industry Canada Compliance (French)
+Cet appareil numérique de la classe A ou B est conforme à la norme NMB-003 du Canada
+Les changements ou les modifications pas expressément approuvés par la partie responsable de la conformité ont pu vider l’autorité de
+l'utilisateur pour actionner l'équipement.
+Concernant les EVMs avec appareils radio
+Le présent appareil est conforme aux CNR d'Industrie Canada applicables aux appareils radio exempts de licence. L'exploitation est
+autorisée aux deux conditions suivantes : (1) l'appareil ne doit pas produire de brouillage, et (2) l'utilisateur de l'appareil doit accepter tout
+brouillage radioélectrique subi, même si le brouillage est susceptible d'en compromettre le fonctionnement.
+Concernant les EVMs avec antennes détachables
+Conformément à la réglementation d'Industrie Canada, le présent émetteur radio peut fonctionner avec une antenne d'un type et d'un gain
+maximal (ou inférieur) approuvé pour l'émetteur par Industrie Canada. Dans le but de réduire les risques de brouillage radioélectrique à
+l'intention des autres utilisateurs, il faut choisir le type d'antenne et son gain de sorte que la puissance isotrope rayonnée équivalente
+(p.i.r.e.) ne dépasse pas l'intensité nécessaire à l'établissement d'une communication satisfaisante.
+Le présent émetteur radio a été approuvé par Industrie Canada pour fonctionner avec les types d'antenne énumérés dans le manuel
+d’usage et ayant un gain admissible maximal et l'impédance requise pour chaque type d'antenne. Les types d'antenne non inclus dans
+cette liste, ou dont le gain est supérieur au gain maximal indiqué, sont strictement interdits pour l'exploitation de l'émetteur.
+
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2014, Texas Instruments Incorporated
+
+spacer
+Important Notice for Users of EVMs Considered “Radio Frequency Products” in Japan
+EVMs entering Japan are NOT certified by TI as conforming to Technical Regulations of Radio Law of Japan.
+If user uses EVMs in Japan, user is required by Radio Law of Japan to follow the instructions below with respect to EVMs:
+1.
+
+2.
+3.
+
+Use EVMs in a shielded room or any other test facility as defined in the notification #173 issued by Ministry of Internal Affairs and
+Communications on March 28, 2006, based on Sub-section 1.1 of Article 6 of the Ministry’s Rule for Enforcement of Radio Law of
+Japan,
+Use EVMs only after user obtains the license of Test Radio Station as provided in Radio Law of Japan with respect to EVMs, or
+Use of EVMs only after user obtains the Technical Regulations Conformity Certification as provided in Radio Law of Japan with respect
+to EVMs. Also, do not transfer EVMs, unless user gives the same notice above to the transferee. Please note that if user does not
+follow the instructions above, user will be subject to penalties of Radio Law of Japan.
+
+http://www.tij.co.jp
+【無線電波を送信する製品の開発キットをお使いになる際の注意事項】 本開発キットは技術基準適合証明を受けておりません。 本製品の
+ご使用に際しては、電波法遵守のため、以下のいずれかの措置を取っていただく必要がありますのでご注意ください。
+1.
+2.
+3.
+
+電波法施行規則第6条第1項第1号に基づく平成18年3月28日総務省告示第173号で定められた電波暗室等の試験設備でご使用いただく。
+実験局の免許を取得後ご使用いただく。
+技術基準適合証明を取得後ご使用いただく。。
+
+なお、本製品は、上記の「ご使用にあたっての注意」を譲渡先、移転先に通知しない限り、譲渡、移転できないものとします
+上記を遵守頂けない場合は、電波法の罰則が適用される可能性があることをご留意ください。
+日本テキサス・インスツルメンツ株式会社
+東京都新宿区西新宿６丁目２４番１号
+西新宿三井ビル
+http://www.tij.co.jp
+Texas Instruments Japan Limited
+(address) 24-1, Nishi-Shinjuku 6 chome, Shinjuku-ku, Tokyo, Japan
+
+IMPORTANT NOTICE
+Texas Instruments Incorporated and its subsidiaries (TI) reserve the right to make corrections, enhancements, improvements and other
+changes to its semiconductor products and services per JESD46, latest issue, and to discontinue any product or service per JESD48, latest
+issue. Buyers should obtain the latest relevant information before placing orders and should verify that such information is current and
+complete. All semiconductor products (also referred to herein as “components”) are sold subject to TI’s terms and conditions of sale
+supplied at the time of order acknowledgment.
+TI warrants performance of its components to the specifications applicable at the time of sale, in accordance with the warranty in TI’s terms
+and conditions of sale of semiconductor products. Testing and other quality control techniques are used to the extent TI deems necessary
+to support this warranty. Except where mandated by applicable law, testing of all parameters of each component is not necessarily
+performed.
+TI assumes no liability for applications assistance or the design of Buyers’ products. Buyers are responsible for their products and
+applications using TI components. To minimize the risks associated with Buyers’ products and applications, Buyers should provide
+adequate design and operating safeguards.
+TI does not warrant or represent that any license, either express or implied, is granted under any patent right, copyright, mask work right, or
+other intellectual property right relating to any combination, machine, or process in which TI components or services are used. Information
+published by TI regarding third-party products or services does not constitute a license to use such products or services or a warranty or
+endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property of the
+third party, or a license from TI under the patents or other intellectual property of TI.
+Reproduction of significant portions of TI information in TI data books or data sheets is permissible only if reproduction is without alteration
+and is accompanied by all associated warranties, conditions, limitations, and notices. TI is not responsible or liable for such altered
+documentation. Information of third parties may be subject to additional restrictions.
+Resale of TI components or services with statements different from or beyond the parameters stated by TI for that component or service
+voids all express and any implied warranties for the associated TI component or service and is an unfair and deceptive business practice.
+TI is not responsible or liable for any such statements.
+Buyer acknowledges and agrees that it is solely responsible for compliance with all legal, regulatory and safety-related requirements
+concerning its products, and any use of TI components in its applications, notwithstanding any applications-related information or support
+that may be provided by TI. Buyer represents and agrees that it has all the necessary expertise to create and implement safeguards which
+anticipate dangerous consequences of failures, monitor failures and their consequences, lessen the likelihood of failures that might cause
+harm and take appropriate remedial actions. Buyer will fully indemnify TI and its representatives against any damages arising out of the use
+of any TI components in safety-critical applications.
+In some cases, TI components may be promoted specifically to facilitate safety-related applications. With such components, TI’s goal is to
+help enable customers to design and create their own end-product solutions that meet applicable functional safety standards and
+requirements. Nonetheless, such components are subject to these terms.
+No TI components are authorized for use in FDA Class III (or similar life-critical medical equipment) unless authorized officers of the parties
+have executed a special agreement specifically governing such use.
+Only those TI components which TI has specifically designated as military grade or “enhanced plastic” are designed and intended for use in
+military/aerospace applications or environments. Buyer acknowledges and agrees that any military or aerospace use of TI components
+which have not been so designated is solely at the Buyer's risk, and that Buyer is solely responsible for compliance with all legal and
+regulatory requirements in connection with such use.
+TI has specifically designated certain components as meeting ISO/TS16949 requirements, mainly for automotive use. In any case of use of
+non-designated products, TI will not be responsible for any failure to meet ISO/TS16949.
+Products
+
+Applications
+
+Audio
+
+www.ti.com/audio
+
+Automotive and Transportation
+
+www.ti.com/automotive
+
+Amplifiers
+
+amplifier.ti.com
+
+Communications and Telecom
+
+www.ti.com/communications
+
+Data Converters
+
+dataconverter.ti.com
+
+Computers and Peripherals
+
+www.ti.com/computers
+
+DLP® Products
+
+www.dlp.com
+
+Consumer Electronics
+
+www.ti.com/consumer-apps
+
+DSP
+
+dsp.ti.com
+
+Energy and Lighting
+
+www.ti.com/energy
+
+Clocks and Timers
+
+www.ti.com/clocks
+
+Industrial
+
+www.ti.com/industrial
+
+Interface
+
+interface.ti.com
+
+Medical
+
+www.ti.com/medical
+
+Logic
+
+logic.ti.com
+
+Security
+
+www.ti.com/security
+
+Power Mgmt
+
+power.ti.com
+
+Space, Avionics and Defense
+
+www.ti.com/space-avionics-defense
+
+Microcontrollers
+
+microcontroller.ti.com
+
+Video and Imaging
+
+www.ti.com/video
+
+RFID
+
+www.ti-rfid.com
+
+OMAP Applications Processors
+
+www.ti.com/omap
+
+TI E2E Community
+
+e2e.ti.com
+
+Wireless Connectivity
+
+www.ti.com/wirelessconnectivity
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2014, Texas Instruments Incorporated
+
+

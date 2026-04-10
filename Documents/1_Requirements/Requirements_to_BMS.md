@@ -1,17 +1,21 @@
 # WAFEL BMS: Requirements & Specifications
 
 ## 1. Electrical Characteristics
-*   **Cell Configuration:** 6S - 16S Li-ion / LiFePO4 (Voltage range: 21V - 67V).
+*   **Cell Configuration:** 6S - 10S Li-ion / LiFePO4 (Voltage range: 21V - 42V).
 *   **Operating Current:** 30A Continuous.
 *   **Peak Current:** 60A Maximum (Peak discharge).
 *   **Charging:** 5A Regular Charge / Up to 15A Regenerative Braking (Recuperation).
     *   *Note: Excess energy above 15A must be handled/shunted.*
-*   **MOSFET Specifications:** Vgs/Vds redundancy target: $\ge$ 167V (Pack Max Voltage x 2.5).
+*   **MOSFET Specifications:** Vgs/Vds redundancy target: $\ge$ 105V (Pack Max Voltage x 2.5).
 
 ## 2. Hardware Architecture
-*   **AFE:** Texas Instruments **BQ769x2** series.
+*   **AFE:** Texas Instruments **BQ7694204** (10S version).
+    *   Provides SPI interface with CRC at 3.3V for reliable communication.
+    *   Utilizes **REG1** for 3.3V output (perfect for MCU and logic).
+    *   Utilizes **REG2** for 5V output (perfect for CAN transceivers).
 *   **MCU:** STMicroelectronics **STM32L432KC** (or L431 variant).
 *   **ESC Compatibility:** Optimized for **Go-Foc S100** (VESC-compatible).
+    *   *Improvement (Ref: Go-FOC Manual):* The Go-FOC S100 features a dedicated "SWITCH" pin (on the COMM port) for ultra-low power sleep mode. The BMS hardware MUST include a logic-level control line (e.g., an isolated optocoupler or small solid-state relay) to interface directly with this switch pin. This allows the BMS to gracefully shut down or wake up the ESC (e.g., during NFC lock, inactivity, or soft-faults) without needing to abruptly cut the heavy main discharge MOSFETs under load.
 *   **Motor Support:** Compatible with 300W - 500W electric engines (including spikes).
 *   **Physical Dimensions:** 245mm x 64mm x 16mm.
     *   *Max Height Constraint: 55mm (including batteries).*
@@ -35,11 +39,18 @@
 *   **Communication:** CAN bus ESD and transient protection.
 *   **Fusing:** Integrated high-current chemical fuse (Self-Control Protector) for catastrophic failures.
 *   **Regen current:** 15A for continuous  burst about 5 to 10 seconds from top speed for 300W engine (500W in spike)
+    *   *Improvement (Ref: VESC Manual & Go-FOC):* A hardware brake shunt is often too bulky and generates too much heat for a standard 300W-500W scooter chassis. Instead, the preferred and standard industry solution is **Dynamic CAN Throttling combined with VESC Ramping**. As the battery approaches 100% SoC, the BMS must use the CAN bus to *smoothly ramp down* the allowed charge current limit toward 0A. The VESC's internal algorithms (and parameters like Negative Ramping Time) will gracefully fade the electronic braking force without sudden jerks. At 100% SoC, the rider will naturally have reduced electronic brakes and must rely on the scooter's mechanical brakes. **Critical Safety Requirement:** The BMS must NEVER abruptly open the CHG MOSFETs during regen, as this instantly disconnects the battery, causing a massive voltage spike, a VESC OVER_VOLTAGE fault, and a violent, instantaneous loss of all motor resistance.
+*   **Voltage Cutoff Coordination:** 
+    *   *Improvement (Ref: VESC Manual - Motor Wizard FOC):* The BMS Under-Voltage Protection (UVP) must be set slightly *lower* (e.g., 2.9V - 3.0V/cell) than the VESC's configured hard cutoff (e.g., 3.1V/cell). This ensures the VESC performs a graceful power taper rather than the BMS abruptly cutting system power and throwing the rider.
+*   **Overcurrent Protection (OCP) Tuning:**
+    *   *Improvement:* The AFE (BQ76942) short-circuit and over-current delays must be carefully tuned to tolerate harmless micro-second inrush/transient spikes from the Go-FOC S100 (which can theoretically pull up to 200A) without tripping the 60A peak limit prematurely.
 
 ## 5. Software & Firmware
 *   **Platform:** **Rust-based** firmware implementation.
 *   **Protocol:** SPI for AFE communication (enhanced noise immunity).
 *   **Features:** Real-time cell monitoring, NFC-triggered Wake-on-CAN boot sequence.
+*   **VESC CAN Integration:**
+    *   *Improvement:* Firmware must explicitly support the **VESC CAN Protocol**. The BMS must broadcast its real-time status (pack voltage, cell voltages, temperature, dynamic discharge/charge limits) to the Go-FOC S100. By smoothly broadcasting a decreasing charge limit as the battery hits 100% SoC, the VESC will safely and gradually reduce electronic braking power, keeping the hardware safe while giving the rider a smooth, predictable transition to mechanical brakes.
 
 ## 6. Assembly requirement
 * Not use complex to sold components!

@@ -4,13 +4,13 @@ The STM32 has multiple hardware SPI blocks. We are using SPI1, which means the p
 *   MISO (PB4): Alternate Function 5
 *   MOSI (PB5): Alternate Function 5
 *   CS (PA4): Standard Push-Pull Output (You must control the Chip Select manually in software).
-2. The AFE SPI Requirements (BQ76952)
-To talk to the BQ76952 AFE over SPI, you must configure the STM32 SPI peripheral exactly like this:
+2. The AFE SPI Requirements (BQ7694204)
+To talk to the BQ7694204 AFE over SPI, you must configure the STM32 SPI peripheral exactly like this:
 *   Frequency (Baud Rate): Maximum 2 MHz (Start testing at 500 kHz or 1 MHz to be safe).
 *   Data Size: 8-bit frames.
 *   Clock Polarity (CPOL): 0 (Clock idles LOW).
 *   Clock Phase (CPHA): 0 or 1 (Depending on the exact timing chart in the BQ datasheet, usually Mode 0 or Mode 1 is standard).
-*   CRC: By default, the BQ76952 SPI interface requires an 8-bit CRC byte at the end of every transaction to guarantee safety.
+*   CRC: By default, the BQ7694204 SPI interface requires an 8-bit CRC byte at the end of every transaction to guarantee safety.
 3. How to write it in Rust (Example using Embassy-STM32)
 Here is the exact Rust code architecture you will use to initialize and run the SPI bus:
 
@@ -38,7 +38,7 @@ async fn main(_spawner: embassy_executor::Spawner) {
     // 4. Configure our PA4 pin as the manual Chip Select (CS) output
     let mut cs = Output::new(p.PA4, Level::High, Speed::VeryHigh);
     // --- HOW TO SEND A COMMAND TO THE AFE ---
-    // Example: Reading a register from the BQ76952
+    // Example: Reading a register from the BQ7694204
     // We send 3 bytes (Command + Reg Address + CRC), and read back the data.
     let mut tx_buffer = [0x12, 0x34, 0x56]; // Dummy data
     let mut rx_buffer = [0; 3];

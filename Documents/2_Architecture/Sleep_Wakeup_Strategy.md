@@ -5,7 +5,7 @@ This document outlines the exact hardware and firmware sequence required to put 
 ## The Hardware Actors
 1. **MCU (STM32L432KC):** Acts as the master controller. Capable of ultra-low-power STOP modes while retaining RAM and GPIO interrupt capabilities.
 2. **CAN Transceiver (TCAN1042 / TJA1051T):** Interfaces with the physical CAN bus. Has a dedicated Standby (`STB`) pin and outputs wake-up events on the `RXD` pin.
-3. **AFE (e.g., TI BQ76952):** Monitors battery cells. Has its own DEEPSLEEP/SHUTDOWN modes to minimize cell drain.
+3. **AFE (e.g., TI BQ7694204):** Monitors battery cells. Has its own DEEPSLEEP/SHUTDOWN modes to minimize cell drain.
 
 ---
 
@@ -14,7 +14,7 @@ When the scooter is locked, the BMS must reduce its power consumption from ~50-1
 
 **Firmware Steps:**
 1. **Put AFE to Sleep:** The STM32 sends a command over SPI to put the AFE into `DEEPSLEEP` mode.
-   * *Reference:* BQ76952 Technical Reference Manual (TRM) - "Power Modes" (DEEPSLEEP disables the ADC but keeps internal regulators alive, drawing ~9µA).
+   * *Reference:* BQ7694204 Technical Reference Manual (TRM) - "Power Modes" (DEEPSLEEP disables the ADC but keeps internal regulators alive, drawing ~9µA).
 2. **Put CAN Transceiver to Sleep:** The STM32 drives the `STB` pin (PB0) **HIGH**.
    * *Reference:* TCAN1042/TJA1051T Datasheet - "Operating Modes". Driving STB high disables the transmitter, dropping current from ~50mA to ~2µA. The receiver remains active in a low-power listening state.
 3. **Configure the Wake-Up Interrupt:** The STM32 configures the `RXD` pin (PA11) as an External Interrupt (EXTI) mapped to trigger on a **Falling Edge** (High-to-Low transition).
@@ -74,7 +74,7 @@ You must select a DC-DC converter with an **Ultra-Low Quiescent Current (Iq)** s
 When the scooter is parked and locked, the power consumption is distributed as follows:
 *   **STM32L432KC (STOP 2 Mode):** ~1.5 µA
 *   **CAN Transceiver (Standby):** ~2.0 µA
-*   **AFE (Deep Sleep, e.g., BQ76952):** ~9.0 µA
+*   **AFE (Deep Sleep, e.g., BQ7694204):** ~9.0 µA
 *   **DC-DC Converter (e.g., LM5163 Eco-Mode):** ~10.0 µA
 *   **Total BMS Standby Drain:** **~22.5 µA**
 
@@ -82,8 +82,28 @@ At 22.5 µA, the BMS alone would take decades to drain a standard 10Ah e-scooter
 
 ---
 
-## 6. AFE (BQ769x2) Specific Functional Modes
-To ensure the BMS perfectly tracks the scooter's real-world states and can recover from edge cases (like extreme low voltage), the firmware must manage the 4 hardware states of the BQ769x2 AFE:
+## 6. Disabling the Go-FOC ESC (Graceful Shutdown)
+When the scooter is parked, locked via NFC, or encounters a non-critical fault, the BMS must shut down the motor controller to save power and secure the vehicle. 
+
+**The Wrong Way (Hardware Cutoff):** Abruptly opening the massive CHG/DSG MOSFETs on the battery line while the ESC is powered on. This can cause voltage spikes and stresses the BMS hardware.
+
+**The Right Way (Go-FOC SWITCH Pin):**
+As documented in the *Go-FOC Series ESC - General Operation Manual (Page 3, Port Description)*, the Go-FOC S100 features a dedicated **SWITCH** pin on its 8-pin COMM port. This pin allows the device "to be set into ultra-low power sleep mode."
+
+### Hardware Requirement:
+*   The BMS schematic MUST include a dedicated, logic-level control line connected to an STM32 GPIO.
+*   Because the BMS and ESC might have slight ground offsets or noise, this control line should ideally use a small **optocoupler** or solid-state relay to interface with the Go-FOC's `SWITCH` pin. 
+*   *Wiring:* The optocoupler will short the Go-FOC's `SWITCH` pin to the Go-FOC's `GND` pin (both located on the COMM port) to toggle its power state, exactly as a physical push-button would.
+
+### Firmware Requirement:
+*   **Sleep Sequence Addition:** During the Sleep Sequence (Section 1), before the STM32 puts the AFE and CAN transceiver to sleep, it must assert the GPIO connected to the Go-FOC `SWITCH` optocoupler to put the ESC into its ultra-low power sleep mode.
+*   **Wake Sequence Addition:** During the Wake-Up Sequence (Section 3), after the STM32 wakes up and restores CAN, it must toggle the Go-FOC `SWITCH` optocoupler to wake the ESC up.
+*   **Software Configuration:** The Go-FOC must be configured via the VESC Tool to recognize this pin. As per the manual (Page 8), the "Shutdown Mode" in VESC App Settings must be configured (e.g., `OFF_AFTER_30M` or another appropriate setting that enables the switch functionality) rather than `ALWAYS ON`.
+
+---
+
+## 7. AFE (BQ7694204) Specific Functional Modes
+To ensure the BMS perfectly tracks the scooter's real-world states and can recover from edge cases (like extreme low voltage), the firmware must manage the 4 hardware states of the BQ7694204 AFE:
 
 ### State 1: NORMAL MODE (Active Riding)
 *   **Behavior:** Full ADC monitoring, all protections active, regulators on.

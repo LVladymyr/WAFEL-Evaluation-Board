@@ -32,17 +32,17 @@
             }
           },
           {
-            "id": "023526ff50447b8e",
+            "id": "6f59c3215452d485",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todos.md",
+                "file": "2_Architecture/Table of configuration BQ7694204.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Todos"
+              "title": "Table of configuration BQ7694204"
             }
           }
         ],
@@ -215,7 +215,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 509.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,8 +233,45 @@
       "smart-connections:Smart Lookup: Open lookup view": false
     }
   },
-  "active": "023526ff50447b8e",
+  "active": "6f59c3215452d485",
   "lastOpenFiles": [
+    "4_References/datasheets/TIDA-010208.pdf",
+    "4_References/datasheets/bq76952_1.pdf",
+    "4_References/datasheets/BQ769x2 Calibration and OTP Programming Guide.pdf",
+    "4_References/datasheets/BQ769x2 Software Development Guide.pdf",
+    "4_References/datasheets/sluuah7b.txt",
+    "4_References/datasheets/sluaa11b.txt",
+    "4_References/datasheets/BQ76942 Technical Reference Manual.pdf",
+    "4_References/datasheets/sluubz5a.pdf",
+    "4_References/datasheets/bq76952.txt",
+    "4_References/datasheets/sluub41d.pdf",
+    "4_References/datasheets/sluub41d.txt",
+    "2_Architecture/Sleep_Wakeup_Strategy.md",
+    "2_Architecture/Table of configuration BQ7694204.md",
+    "4_References/SLUAA09A Translation.md",
+    "2_Architecture/Recuperation_Strategy.md",
+    "4_References/78af5f924c08/_page_2_Picture_1.jpeg",
+    "4_References/78af5f924c08/_page_1_Picture_5.jpeg",
+    "4_References/78af5f924c08/_page_1_Picture_4.jpeg",
+    "4_References/78af5f924c08/_page_1_Figure_7.jpeg",
+    "4_References/78af5f924c08/_page_1_Figure_6.jpeg",
+    "4_References/78af5f924c08/_page_0_Figure_11.jpeg",
+    "4_References/78af5f924c08/78af5f924c08.md",
+    "Assets/sluaan9a-fig9-3.png",
+    "Assets/sluaan9a-fig9-2.png",
+    "Assets/sluaan9a-fig9-1.png",
+    "Assets/sluaan9a-fig8-21.png",
+    "4_References/tps79333-ep/tps79333-ep.md",
+    "4_References/lm5164/lm5164.md",
+    "3_Hardware_Design/Switch 6s4p to 8s3p.md",
+    "3_Hardware_Design/Reverse charge protection.md",
+    "3_Hardware_Design/MOSFET protections.md",
+    "2_Architecture/Шини живлення.md",
+    "2_Architecture/SPI MCU AFE.md",
+    "2_Architecture/MCU.md",
+    "1_Requirements/budget_estimate.md",
+    "1_Requirements/Requirements_to_BMS.md",
+    "Todos.md",
     "Шини живлення.md",
     "Switch 6s4p to 8s3p.md",
     "SPI MCU AFE.md",
@@ -243,43 +280,6 @@
     "Reverse charge protection.md",
     "Requirements_to_BMS.md",
     "budget_estimate.md",
-    "MCU.md",
-    "Todos.md",
-    "tps79333-ep/tps79333-ep.md",
-    "78af5f924c08/_page_2_Picture_1.jpeg",
-    "78af5f924c08/_page_1_Figure_7.jpeg",
-    "78af5f924c08/_page_1_Figure_6.jpeg",
-    "78af5f924c08/_page_1_Picture_5.jpeg",
-    "78af5f924c08/_page_1_Picture_4.jpeg",
-    "78af5f924c08/_page_0_Figure_11.jpeg",
-    "78af5f924c08/78af5f924c08_meta.json",
-    "78af5f924c08/78af5f924c08.md",
-    "78af5f924c08",
-    "tps79333-ep/_page_21_Figure_4.jpeg",
-    "tps79333-ep/_page_21_Picture_8.jpeg",
-    "lm5164/lm5164.md",
-    "tps79333-ep/_page_20_Picture_8.jpeg",
-    "tps79333-ep/_page_20_Figure_4.jpeg",
-    "tps79333-ep/tps79333-ep_meta.json",
-    "tps79333-ep",
-    "lm5164/lm5164_meta.json",
-    "lm5164",
-    "Requirements to bms.md~",
-    "Requirements to bms.md",
-    "MOSFET protections.md",
-    "README.md",
-    "SLUAA09A Translation.md.tmp.377917.1774805729934",
-    "SLUAA09A Translation.md.tmp.377917.1774805723405",
-    "SLUAA09A Translation.md.tmp.377917.1774805719090",
-    "SLUAAN9 Translation.md",
-    "copilot/copilot-conversations/hi@20260329_180130.md",
-    "copilot/memory/Recent Conversations.md",
-    "copilot/copilot-conversations/If_a_lead_ball_and_a_feather_are_dropped_simultaneously@20260329_175957.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md"
+    "MCU.md"
   ]
 }

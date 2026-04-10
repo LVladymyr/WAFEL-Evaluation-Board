@@ -1620,7 +1620,7 @@
 
 (property "Reference" "C904" (at 60.96 118.1162 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 60.96 120.6562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 60.96 120.6562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 58.42 119.38 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1628,7 +1628,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 58.42 119.38 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 60.96 118.1162 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "9e90a239-d9dc-4b17-be56-10d3b62750d5")) (pin "1" (uuid "2db6673c-7abd-4d03-b810-db5bd545306b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C904") (unit 1))))) 
+(property "LCSC" "C5378" (at 60.96 118.1162 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "9e90a239-d9dc-4b17-be56-10d3b62750d5")) (pin "1" (uuid "2db6673c-7abd-4d03-b810-db5bd545306b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C904") (unit 1))))) 
 
 (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 171.45 54.61 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no) (uuid "3a06cf60-cf82-4d9c-b478-a0bd6e1c5ce1") 
 
@@ -1660,7 +1660,7 @@
 
 (property "Reference" "C911" (at 119.38 118.1162 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 120.6562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 120.6562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 119.38 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1668,13 +1668,13 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 119.38 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 118.1162 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "4cbf696c-e8e8-4b40-8666-8404e3ae8a19")) (pin "1" (uuid "70ddddbd-b49c-43d4-b51b-dfd35f97fffc")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C911") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 118.1162 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "4cbf696c-e8e8-4b40-8666-8404e3ae8a19")) (pin "1" (uuid "70ddddbd-b49c-43d4-b51b-dfd35f97fffc")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C911") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 58.42 144.78 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "54a48803-8c2b-4f99-9886-b5e98e82e577") 
 
 (property "Reference" "C905" (at 60.96 143.5162 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 60.96 146.0562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 60.96 146.0562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 58.42 144.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1682,13 +1682,13 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 58.42 144.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 60.96 143.5162 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "e8dd306b-d01a-4082-b4c9-4944b1ce99e8")) (pin "1" (uuid "184bfeb8-9509-4d77-9d03-dddcbd8d7e82")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C905") (unit 1))))) 
+(property "LCSC" "C5378" (at 60.96 143.5162 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "e8dd306b-d01a-4082-b4c9-4944b1ce99e8")) (pin "1" (uuid "184bfeb8-9509-4d77-9d03-dddcbd8d7e82")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C905") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 58.42 176.53 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "5955b9e7-4e81-41c8-b63c-345403fb83ef") 
 
 (property "Reference" "C906" (at 60.96 175.2662 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 60.96 177.8062 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 60.96 177.8062 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 58.42 176.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1696,7 +1696,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 58.42 176.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 60.96 175.2662 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "fb6f6c25-f6e8-4ae1-8151-190711721fef")) (pin "1" (uuid "04e554a2-80d7-4aa9-ad21-34279de9517b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C906") (unit 1))))) 
+(property "LCSC" "C5378" (at 60.96 175.2662 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "fb6f6c25-f6e8-4ae1-8151-190711721fef")) (pin "1" (uuid "04e554a2-80d7-4aa9-ad21-34279de9517b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C906") (unit 1))))) 
 
 (symbol (lib_id "power:GND") (at 223.52 148.59 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "704e39df-72c5-493a-a174-38fda69368dc") 
 
@@ -1740,7 +1740,7 @@
 
 (property "Reference" "C912" (at 119.38 143.5162 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 146.0562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 146.0562 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 144.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1748,13 +1748,13 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 144.78 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 143.5162 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "d2d811e4-951d-41e3-bbf8-212020eae699")) (pin "1" (uuid "02623a3e-73d0-4fae-bad8-774b7e73162e")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C912") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 143.5162 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "d2d811e4-951d-41e3-bbf8-212020eae699")) (pin "1" (uuid "02623a3e-73d0-4fae-bad8-774b7e73162e")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C912") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 116.84 92.71 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "909a0bf2-59f7-4d96-8076-1689731c4dbf") 
 
 (property "Reference" "C910" (at 119.38 91.4462 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 93.9862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 93.9862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1762,13 +1762,13 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 91.4462 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "1c35151b-a3cc-472f-8d80-49f1873877f8")) (pin "1" (uuid "314870d4-4313-4b7d-8051-b226a32c740c")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C910") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 91.4462 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "1c35151b-a3cc-472f-8d80-49f1873877f8")) (pin "1" (uuid "314870d4-4313-4b7d-8051-b226a32c740c")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C910") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 58.42 92.71 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "921f7232-14e5-4e24-bf8f-69ecc8039547") 
 
 (property "Reference" "C903" (at 60.96 91.4462 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 60.96 93.9862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 60.96 93.9862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 58.42 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1776,7 +1776,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 58.42 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 60.96 91.4462 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "41b61cac-268f-4d35-836b-14f9561abc41")) (pin "1" (uuid "2b0cbf8a-2bb7-4d8d-a125-dfd8e39c6224")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C903") (unit 1))))) 
+(property "LCSC" "C5378" (at 60.96 91.4462 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "41b61cac-268f-4d35-836b-14f9561abc41")) (pin "1" (uuid "2b0cbf8a-2bb7-4d8d-a125-dfd8e39c6224")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C903") (unit 1))))) 
 
 (symbol (lib_id "Device:D_Zener") (at 63.5 41.91 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "92b163e2-319d-46e7-9c11-59bbeed2d98a") 
 
@@ -1796,7 +1796,7 @@
 
 (property "Reference" "C902" (at 60.96 66.0462 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 60.96 68.5862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 60.96 68.5862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 58.42 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1804,13 +1804,13 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 58.42 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 60.96 66.0462 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "d9a97789-8065-4b92-bc5d-c69813d77406")) (pin "1" (uuid "b398370d-efe6-4bdc-a1f0-bf829d9459fd")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C902") (unit 1))))) 
+(property "LCSC" "C5378" (at 60.96 66.0462 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "d9a97789-8065-4b92-bc5d-c69813d77406")) (pin "1" (uuid "b398370d-efe6-4bdc-a1f0-bf829d9459fd")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C902") (unit 1))))) 
 
 (symbol (lib_id "Device:C_Small") (at 116.84 49.53 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "a410fe86-2ca3-4161-94c7-8af03a97aa0f") 
 
 (property "Reference" "C908" (at 119.38 48.2662 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 50.8062 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 50.8062 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 49.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1818,7 +1818,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 49.53 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 48.2662 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "cad3f834-5725-4f26-a6bd-7e34499fb99d")) (pin "1" (uuid "bec69520-806e-4a53-9114-dfaf05f6870b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C908") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 48.2662 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "cad3f834-5725-4f26-a6bd-7e34499fb99d")) (pin "1" (uuid "bec69520-806e-4a53-9114-dfaf05f6870b")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C908") (unit 1))))) 
 
 (symbol (lib_id "power:GND") (at 58.42 53.34 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "af42ca9c-e98c-4a72-9974-c16bcd3962be") 
 
@@ -1860,7 +1860,7 @@
 
 (property "Reference" "C909" (at 119.38 66.0462 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 68.5862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 68.5862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1868,7 +1868,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 67.31 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 66.0462 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "af5839d3-d85f-4522-bf2a-4b74ec50e5b1")) (pin "1" (uuid "b50ff1db-b7a0-4cd6-ad46-a50dbef74222")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C909") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 66.0462 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "af5839d3-d85f-4522-bf2a-4b74ec50e5b1")) (pin "1" (uuid "b50ff1db-b7a0-4cd6-ad46-a50dbef74222")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C909") (unit 1))))) 
 
 (symbol (lib_id "Device:R_Small") (at 43.18 166.37 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "cd7b42c7-2ecc-4385-b0b4-6a6eee979735") 
 
@@ -1912,7 +1912,7 @@
 
 (property "Reference" "C907" (at 119.38 40.6462 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
-(property "Value" "100n 50V 0805" (at 119.38 43.1862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
+(property "Value" "220n" (at 119.38 43.1862 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
 (property "Footprint" "" (at 116.84 41.91 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
@@ -1920,7 +1920,7 @@
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 116.84 41.91 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C49678" (at 119.38 40.6462 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "33bf0099-e361-4b7c-bdfa-a482f497e88b")) (pin "1" (uuid "569db634-282a-4444-b67a-1d3367a18722")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C907") (unit 1))))) 
+(property "LCSC" "C5378" (at 119.38 40.6462 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left))) (pin "2" (uuid "33bf0099-e361-4b7c-bdfa-a482f497e88b")) (pin "1" (uuid "569db634-282a-4444-b67a-1d3367a18722")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0" (reference "C907") (unit 1))))) 
 
 (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 171.45 69.85 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no) (uuid "e9beb68e-dc9f-42e9-af3c-66222da52cb9") 
 

@@ -3151,12 +3151,6 @@
 		(uuid "b02fea08-5974-4abe-9162-662c0a6846e9")
 	)
 	(junction
-		(at 138.43 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b13a05d9-bc40-45bf-b8b2-671fa060b6f7")
-	)
-	(junction
 		(at 91.44 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4073,16 +4067,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 133.35) (xy 143.51 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cb172f4-79f1-456d-9022-3f0324a7c6d5")
-	)
-	(wire
-		(pts
 			(xy 212.09 139.7) (xy 212.09 135.89)
 		)
 		(stroke
@@ -4193,7 +4177,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 133.35) (xy 138.43 133.35)
+			(xy 134.62 133.35) (xy 143.51 133.35)
 		)
 		(stroke
 			(width 0)
@@ -5652,7 +5636,7 @@
 				)
 			)
 		)
-		(property "Value" "NC"
+		(property "Value" "0"
 			(at 123.19 120.65 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9437,7 +9421,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 138.43 133.35 0)
+		(at 162.56 133.35 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9447,7 +9431,7 @@
 		(dnp no)
 		(uuid "f561e563-fa4f-4e57-9664-bb5b59466c10")
 		(property "Reference" "+5V101"
-			(at 135.89 128.27 0)
+			(at 160.02 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9458,7 +9442,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 140.97 131.3179 0)
+			(at 165.1 131.3179 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9470,7 +9454,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 143.51 133.35 0)
+			(at 167.64 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9481,7 +9465,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143.51 133.35 0)
+			(at 167.64 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9492,7 +9476,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 138.43 133.35 0)
+			(at 162.56 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

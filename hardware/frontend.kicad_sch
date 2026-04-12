@@ -637,6 +637,158 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -3819,7 +3971,7 @@
 		(uuid "1ba34d73-f9f6-4d10-a584-30f4038dc7f8")
 	)
 	(no_connect
-		(at 135.89 44.45)
+		(at 143.51 44.45)
 		(uuid "3932181f-f0f9-46f6-8355-b95c86b75f6c")
 	)
 	(no_connect
@@ -3827,7 +3979,7 @@
 		(uuid "3e3fd55b-c134-4127-80ec-9a10cefce65a")
 	)
 	(no_connect
-		(at 135.89 36.83)
+		(at 143.51 36.83)
 		(uuid "439c6451-64ea-425c-8638-a99b4bc22a0d")
 	)
 	(no_connect
@@ -4200,6 +4352,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 67.31) (xy 151.13 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d574b75-d582-44ec-b7f0-a0ebe5305839")
+	)
+	(wire
+		(pts
 			(xy 35.56 83.82) (xy 45.72 83.82)
 		)
 		(stroke
@@ -4520,16 +4682,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 62.23) (xy 135.89 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3245c5f9-f497-417f-9e9b-afd131815b8a")
-	)
-	(wire
-		(pts
 			(xy 91.44 107.95) (xy 106.68 107.95)
 		)
 		(stroke
@@ -4780,7 +4932,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 52.07) (xy 135.89 53.34)
+			(xy 143.51 52.07) (xy 143.51 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5390,7 +5542,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 62.23) (xy 135.89 60.96)
+			(xy 143.51 62.23) (xy 143.51 60.96)
 		)
 		(stroke
 			(width 0)
@@ -5427,6 +5579,16 @@
 			(type default)
 		)
 		(uuid "c011cf8e-0b84-48e8-b485-5e35e54e4353")
+	)
+	(wire
+		(pts
+			(xy 132.08 62.23) (xy 133.35 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0b41f27-22cc-4da4-a4fe-5d193fd72efa")
 	)
 	(wire
 		(pts
@@ -5477,6 +5639,16 @@
 			(type default)
 		)
 		(uuid "c8f1fd69-1657-499d-a09a-cebf3303e2a2")
+	)
+	(wire
+		(pts
+			(xy 140.97 62.23) (xy 143.51 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c943bb45-ced0-49bd-827d-00a52e618ab4")
 	)
 	(wire
 		(pts
@@ -5577,6 +5749,16 @@
 			(type default)
 		)
 		(uuid "d4326615-7e23-434e-9fd8-0b835e4bc860")
+	)
+	(wire
+		(pts
+			(xy 151.13 73.66) (xy 151.13 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6131eac-e642-4e59-b2d9-eae3182e95de")
 	)
 	(wire
 		(pts
@@ -7552,7 +7734,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 151.13 69.85 180)
+		(at 151.13 71.12 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7563,7 +7745,7 @@
 		(fields_autoplaced yes)
 		(uuid "3aafce3b-e0a0-4957-9f2c-98c5413dfb1d")
 		(property "Reference" "C208"
-			(at 153.67 68.5735 0)
+			(at 153.67 69.8435 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7574,7 +7756,7 @@
 			)
 		)
 		(property "Value" "2.2u"
-			(at 153.67 71.1135 0)
+			(at 153.67 72.3835 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7585,7 +7767,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 151.13 69.85 0)
+			(at 151.13 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7596,7 +7778,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 69.85 0)
+			(at 151.13 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7607,7 +7789,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 151.13 69.85 0)
+			(at 151.13 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7618,7 +7800,7 @@
 			)
 		)
 		(property "LCSC" "C577211"
-			(at 151.13 69.85 0)
+			(at 151.13 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7890,7 +8072,8 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 135.89 52.07 0)
+		(at 143.51 52.07 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7901,7 +8084,7 @@
 		(fields_autoplaced yes)
 		(uuid "4b358440-5752-4a36-b7f8-95089adb2769")
 		(property "Reference" "#PWR0213"
-			(at 135.89 55.88 0)
+			(at 143.51 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7912,7 +8095,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 135.89 46.99 0)
+			(at 143.51 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7922,7 +8105,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 52.07 0)
+			(at 143.51 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7933,7 +8116,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 52.07 0)
+			(at 143.51 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7944,7 +8127,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 135.89 52.07 0)
+			(at 143.51 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8555,7 +8738,8 @@
 	)
 	(symbol
 		(lib_id "Diode:BAT54SDW")
-		(at 135.89 57.15 270)
+		(at 143.51 57.15 90)
+		(mirror x)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8565,7 +8749,7 @@
 		(dnp no)
 		(uuid "5d485122-eff2-4513-b30e-dfff13a91d38")
 		(property "Reference" "D202"
-			(at 138.43 55.5624 90)
+			(at 140.97 55.5624 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8576,7 +8760,7 @@
 			)
 		)
 		(property "Value" "BAT54SDW"
-			(at 138.43 58.1024 90)
+			(at 140.97 58.1024 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8588,7 +8772,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 131.445 57.15 0)
+			(at 147.955 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8599,7 +8783,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/BAT54TW_ADW_CDW_SDW_BRW.pdf"
-			(at 138.43 57.15 0)
+			(at 140.97 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8610,7 +8794,7 @@
 			)
 		)
 		(property "Description" "Schottky diode array 2 pair Com A, SOT-363"
-			(at 135.89 57.15 0)
+			(at 143.51 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8737,7 +8921,8 @@
 	)
 	(symbol
 		(lib_id "Diode:BAT54SDW")
-		(at 135.89 40.64 270)
+		(at 143.51 40.64 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8745,10 +8930,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6cdeae70-522c-4a31-8917-d040ff5f7cae")
 		(property "Reference" "D202"
-			(at 138.43 39.0524 90)
+			(at 140.97 39.0524 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8759,7 +8943,7 @@
 			)
 		)
 		(property "Value" "BAT54SDW"
-			(at 138.43 41.5924 90)
+			(at 140.97 41.5924 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8771,7 +8955,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 131.445 40.64 0)
+			(at 147.955 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8782,7 +8966,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/BAT54TW_ADW_CDW_SDW_BRW.pdf"
-			(at 138.43 40.64 0)
+			(at 140.97 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8793,7 +8977,7 @@
 			)
 		)
 		(property "Description" "Schottky diode array 2 pair Com A, SOT-363"
-			(at 135.89 40.64 0)
+			(at 143.51 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11002,7 +11186,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 151.13 72.39 0)
+		(at 151.13 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11013,7 +11197,7 @@
 		(fields_autoplaced yes)
 		(uuid "d3713b5a-5a3d-4441-a790-312a19675232")
 		(property "Reference" "#PWR0215"
-			(at 151.13 78.74 0)
+			(at 151.13 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11024,7 +11208,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 151.13 77.47 0)
+			(at 151.13 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11034,7 +11218,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 72.39 0)
+			(at 151.13 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11045,7 +11229,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 72.39 0)
+			(at 151.13 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11056,7 +11240,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 151.13 72.39 0)
+			(at 151.13 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12303,6 +12487,96 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "#FLG0201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 137.16 62.23 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ecb1a977-d496-4711-8374-dd3f3185c763")
+		(property "Reference" "F201"
+			(at 137.16 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.1A"
+			(at 137.16 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_Littelfuse-NANO2-451_453"
+			(at 137.16 60.452 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 137.16 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C178980"
+			(at 137.16 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4983b04a-42b0-4fe9-b1a0-94b2bc621232")
+		)
+		(pin "1"
+			(uuid "e2efb639-376e-43b9-80ea-6633eff76623")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
+					(reference "F201")
 					(unit 1)
 				)
 			)

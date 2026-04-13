@@ -913,7 +913,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "F201,F801-802,#PWR801,H115",
+    "used_designators": "C804-807,R807,J101-102,U802-804,F201,F801-802,#PWR113,#PWR801,#PWR810-812,H115",
     "variants": []
   },
   "sheets": [

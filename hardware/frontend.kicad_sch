@@ -2464,132 +2464,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:GNDD"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "GNDD"
-				(at 0 -3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GNDD_0_1"
-				(rectangle
-					(start -1.27 -1.524)
-					(end 1.27 -2.032)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GNDD_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:PWR_FLAG"
 			(power global)
 			(pin_numbers
@@ -3680,16 +3554,6 @@
 		)
 		(uuid "2b0c0c3c-b100-4142-bcc4-414e4d4fd664")
 	)
-	(text "<-- Current --"
-		(exclude_from_sim yes)
-		(at 140.97 175.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "130eb72f-d57f-4461-8d85-8ed0d2d74546")
-	)
 	(text "Discharge MOSFETs (DSG FETs)"
 		(exclude_from_sim no)
 		(at 209.55 62.23 0)
@@ -3781,10 +3645,22 @@
 		(uuid "0d1cf421-347a-4089-9107-fdd81c0efbcc")
 	)
 	(junction
+		(at 127 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "137abc36-b49a-4b43-a5fc-65f78a03e12c")
+	)
+	(junction
 		(at 229.87 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "14a64dfe-70f7-4257-b3fc-040e145cbc1e")
+	)
+	(junction
+		(at 160.02 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "18791278-0d20-4b92-bca2-1d319d036ad0")
 	)
 	(junction
 		(at 137.16 74.93)
@@ -3883,12 +3759,6 @@
 		(uuid "66ee2e8e-f75b-4c9a-b286-197935fdc4d8")
 	)
 	(junction
-		(at 151.13 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "675af338-d823-47f4-a520-755313f10272")
-	)
-	(junction
 		(at 207.01 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3923,12 +3793,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8110c21c-ec02-4bdc-829e-31be2754902d")
-	)
-	(junction
-		(at 135.89 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82c343fe-abd7-46e8-8fb7-d9e4c21ec625")
 	)
 	(junction
 		(at 106.68 46.99)
@@ -4284,6 +4148,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 143.51) (xy 160.02 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03f4fb25-9f45-4b80-b4d8-771b33d47dde")
+	)
+	(wire
+		(pts
 			(xy 135.89 128.27) (xy 135.89 130.81)
 		)
 		(stroke
@@ -4314,16 +4188,6 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 143.51) (xy 160.02 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "06c24dde-94ed-424d-9490-b71170c81e75")
-	)
-	(wire
-		(pts
 			(xy 139.7 78.74) (xy 139.7 74.93)
 		)
 		(stroke
@@ -4331,6 +4195,16 @@
 			(type default)
 		)
 		(uuid "08bd7a00-d6df-43ad-bff0-c61af4a2ffd3")
+	)
+	(wire
+		(pts
+			(xy 160.02 143.51) (xy 158.75 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a071d1c-138c-4bfe-bde0-1eb5fadd4f60")
 	)
 	(wire
 		(pts
@@ -4564,16 +4438,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 171.45) (xy 151.13 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "245e3b2a-2aab-4e00-bc0d-3ba5ed11b07e")
-	)
-	(wire
-		(pts
 			(xy 229.87 72.39) (xy 241.3 72.39)
 		)
 		(stroke
@@ -4694,16 +4558,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 143.51) (xy 160.02 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31f8826f-72e3-4af4-86fd-32b95205bd92")
-	)
-	(wire
-		(pts
 			(xy 91.44 107.95) (xy 106.68 107.95)
 		)
 		(stroke
@@ -4811,16 +4665,6 @@
 			(type default)
 		)
 		(uuid "405f058b-f63a-4a4d-ab3f-7cd5e4d475cc")
-	)
-	(wire
-		(pts
-			(xy 127 171.45) (xy 127 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40d3f519-4225-4642-b99b-3a3b86377a44")
 	)
 	(wire
 		(pts
@@ -4994,16 +4838,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 172.72) (xy 154.94 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fdf001b-4c07-4052-b633-316ba10f2ecb")
-	)
-	(wire
-		(pts
 			(xy 63.5 39.37) (xy 63.5 40.64)
 		)
 		(stroke
@@ -5011,6 +4845,16 @@
 			(type default)
 		)
 		(uuid "627d2e9e-b9f5-43bb-9086-d7aefe4cd3e7")
+	)
+	(wire
+		(pts
+			(xy 128.27 143.51) (xy 127 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6285860c-0a8c-4b60-8cb7-38df3d8a13b4")
 	)
 	(wire
 		(pts
@@ -5031,6 +4875,16 @@
 			(type default)
 		)
 		(uuid "642eee7b-7ae3-48b3-97f9-996a87156ad5")
+	)
+	(wire
+		(pts
+			(xy 160.02 171.45) (xy 162.56 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "663ae8fa-2757-4cbc-b933-9dea2b22e5db")
 	)
 	(wire
 		(pts
@@ -5074,16 +4928,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 171.45) (xy 140.97 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72cc69f2-3e3d-4882-8c64-5e84628e9839")
-	)
-	(wire
-		(pts
 			(xy 90.17 67.31) (xy 106.68 67.31)
 		)
 		(stroke
@@ -5121,6 +4965,16 @@
 			(type default)
 		)
 		(uuid "768689ab-4bb2-4e2f-af91-48775e2e52c3")
+	)
+	(wire
+		(pts
+			(xy 124.46 171.45) (xy 127 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77d2410f-821e-4532-9cb9-4896b103ad33")
 	)
 	(wire
 		(pts
@@ -5261,16 +5115,6 @@
 			(type default)
 		)
 		(uuid "8be6dc53-acd1-44e5-822e-f2746a997613")
-	)
-	(wire
-		(pts
-			(xy 128.27 143.51) (xy 127 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bf12549-0bcf-4775-9e05-057244c5191d")
 	)
 	(wire
 		(pts
@@ -5644,6 +5488,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 143.51) (xy 127 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3834389-2ba8-4dba-a31e-fa7e4d7687bb")
+	)
+	(wire
+		(pts
 			(xy 146.05 153.67) (xy 151.13 153.67)
 		)
 		(stroke
@@ -5804,16 +5658,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 143.51) (xy 127 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d73e8328-f819-4180-a43c-d75e2c7adbb9")
-	)
-	(wire
-		(pts
 			(xy 68.58 88.9) (xy 68.58 92.71)
 		)
 		(stroke
@@ -5924,7 +5768,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 171.45) (xy 151.13 171.45)
+			(xy 151.13 171.45) (xy 160.02 171.45)
 		)
 		(stroke
 			(width 0)
@@ -6424,6 +6268,17 @@
 		)
 		(uuid "6aa9c94f-dde6-4dd2-b370-ec053e866c6f")
 	)
+	(hierarchical_label "BAT-"
+		(shape input)
+		(at 162.56 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "71b9b500-9182-486c-8767-1880f4b0df24")
+	)
 	(hierarchical_label "{FET_CTRL}"
 		(shape output)
 		(at 72.39 74.93 180)
@@ -6434,6 +6289,17 @@
 			(justify right)
 		)
 		(uuid "736a92c3-f6ca-494a-9460-e1b406eaefc6")
+	)
+	(hierarchical_label "PACK-"
+		(shape input)
+		(at 124.46 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "744e6e73-acd9-4754-9e00-b7b9d3f2c6fe")
 	)
 	(hierarchical_label "{AFE_CTRL}"
 		(shape bidirectional)
@@ -6740,84 +6606,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "D201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDD")
-		(at 127 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "088baae7-c27b-4ea4-a160-294c748a3a18")
-		(property "Reference" "#PWR0212"
-			(at 127 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PGND"
-			(at 127 177.165 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 127 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "69419b54-f9f9-4734-a520-afeda39679f6")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "#PWR0212")
 					(unit 1)
 				)
 			)
@@ -7147,90 +6935,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "#PWR0203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 154.94 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1be6447d-a772-467e-9405-831f3e0f9fcd")
-		(property "Reference" "#PWR0216"
-			(at 154.94 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 154.94 177.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "63fe300a-870e-4683-bb5f-e243c80298e1")
-		)
-		(instances
-			(project "frontend"
-				(path "/00a1254e-6313-43f2-bc4f-c22473deb189"
-					(reference "#PWR0108")
-					(unit 1)
-				)
-			)
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "#PWR0216")
 					(unit 1)
 				)
 			)
@@ -8344,103 +8048,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 143.51 171.45 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4e2effd2-e1ba-4834-9066-bba462123ceb")
-		(property "Reference" "R211"
-			(at 143.51 166.37 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1m"
-			(at 143.51 168.91 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 143.51 173.228 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 143.51 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 143.51 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C42454010"
-			(at 143.51 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a64650ac-a481-4189-a3c1-c2f1e85149dd")
-		)
-		(pin "2"
-			(uuid "e8eda405-4f04-41e4-b6d3-9e59cc1763dd")
-		)
-		(instances
-			(project "frontend"
-				(path "/00a1254e-6313-43f2-bc4f-c22473deb189"
-					(reference "R107")
-					(unit 1)
-				)
-			)
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "R211")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 246.38 67.31 0)
 		(unit 1)
@@ -9543,85 +9150,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "C201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 144.78 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "780c14e0-4b56-4a16-8f91-2d7e3c29a1da")
-		(property "Reference" "#PWR0211"
-			(at 127 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 127 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c5423a6b-27b2-4c93-83c1-116b0a40bbfb")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "#PWR0211")
 					(unit 1)
 				)
 			)
@@ -12783,84 +12311,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "TH205")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 160.02 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ffd79c52-8e7a-4e83-9960-ab21c81ceddf")
-		(property "Reference" "#PWR0217"
-			(at 160.02 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 160.02 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.02 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a6ab30fa-ae37-400d-a47c-f199dca8e3e0")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "#PWR0217")
 					(unit 1)
 				)
 			)

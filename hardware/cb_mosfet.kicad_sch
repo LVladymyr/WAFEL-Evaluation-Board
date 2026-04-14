@@ -949,7 +949,7 @@
 				)
 			)
 		)
-		(property "Value" "100R 1206"
+		(property "Value" "100R"
 			(at 71.12 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1080,7 +1080,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 0603"
+		(property "Value" "10k"
 			(at 99.06 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1344,7 +1344,7 @@
 				)
 			)
 		)
-		(property "Value" "100R 0603"
+		(property "Value" "100R"
 			(at 99.06 80.01 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1615,7 +1615,7 @@
 				)
 			)
 		)
-		(property "Value" "100R 1206"
+		(property "Value" "100R"
 			(at 71.12 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)

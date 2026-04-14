@@ -7298,34 +7298,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 87.63 45.72 180)
-			(uuid "edec96c1-9ae4-475e-afa1-2fcbef0d4fb5")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 87.63 38.1 180)
-			(uuid "193f992a-23f5-4091-a7a2-25f3238e272a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 114.3 45.72 0)
-			(uuid "0779c679-6a11-4c62-90fe-1bc86441cdbb")
+			(uuid "0d9317ca-b361-4453-910d-87163c53bf7e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 87.63 38.1 180)
+			(uuid "31c55d26-0946-4e8a-9b26-08c61b67ed27")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 87.63 45.72 180)
+			(uuid "993749b6-686c-468f-8dda-f312aef384ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7374,34 +7374,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 87.63 71.12 180)
-			(uuid "7a7d18eb-6158-4ac6-953a-5d32174be9aa")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 87.63 63.5 180)
-			(uuid "8fcee65d-3188-48b8-b86d-856fd1e52764")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 114.3 71.12 0)
-			(uuid "57b09be9-018a-4dff-8d77-9c5ac2b51f2e")
+			(uuid "69587b47-d100-42ea-a6b7-eb7c0c8922d8")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 87.63 63.5 180)
+			(uuid "8b90440e-f998-4b34-ad4d-0ec0aea7baa4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 87.63 71.12 180)
+			(uuid "9e2f486d-ce09-4715-88b2-ffad715c3d61")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7451,34 +7451,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 148.59 180)
-			(uuid "f1507891-c49e-4128-b96d-9420df751910")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 140.97 180)
-			(uuid "211a7753-7719-4669-8bf5-9e51be704ef2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 148.59 0)
-			(uuid "7a04e1ee-0e87-4a3c-a23a-b6be1e6fce04")
+			(uuid "574dac49-4b49-4b15-bc19-7cd73625f13e")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 140.97 180)
+			(uuid "a11a2021-7afb-46a6-a53b-6ad620da564b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 148.59 180)
+			(uuid "86d22461-f048-4d6b-a586-7b0ec415352b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7527,34 +7527,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 71.12 180)
-			(uuid "1635e3cc-ea03-4aef-b193-292a74410a2a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 63.5 180)
-			(uuid "1b174338-abcc-488c-bcc1-c2e934c23abd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 71.12 0)
-			(uuid "4ae967da-8b3d-49cd-ba7c-efb46c2c76c6")
+			(uuid "908ca570-f245-4812-bb7e-af33bca471c5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 63.5 180)
+			(uuid "fc17d74e-9d20-4847-950b-461eb312dc2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 71.12 180)
+			(uuid "c3a6f566-0c34-409f-98fb-6425cf5a949e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7603,34 +7603,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 96.52 180)
-			(uuid "41ac1428-65c2-4286-9018-bd795285c4af")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 88.9 180)
-			(uuid "eee2c4aa-7504-4cf8-aeb0-bb3a64cab609")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 96.52 0)
-			(uuid "a15d285f-b563-40c2-b2b3-be1a0eff9ae5")
+			(uuid "b22f7ccf-79e6-401c-8401-d1d7cf5b83b7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 88.9 180)
+			(uuid "2919107a-6b88-4535-b7e0-0e97c5477bbc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 96.52 180)
+			(uuid "25ed5b8e-1d02-44f9-add9-26d1e1ffc8cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7679,34 +7679,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 87.63 96.52 180)
-			(uuid "a917eb03-27a3-4a98-898c-28c3f0f03d97")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 87.63 88.9 180)
-			(uuid "f2a8171a-ee7b-412b-8266-fac32bb65bd6")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 114.3 96.52 0)
-			(uuid "bfb28086-13dc-4631-bd6a-29d9f74b66f7")
+			(uuid "3d8be0db-f962-4670-b265-6b274c8d4519")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 87.63 88.9 180)
+			(uuid "fd1e98a3-cc9d-4861-8b83-7aaabb5a5f62")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 87.63 96.52 180)
+			(uuid "7d711400-e996-4415-89f2-30d6c333aee5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7756,34 +7756,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 87.63 123.19 180)
-			(uuid "c999239e-b16f-4786-8934-736ed7cb8207")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 87.63 115.57 180)
-			(uuid "66a86869-b2c0-4e86-895d-2ee3a29dfb97")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 114.3 123.19 0)
-			(uuid "e4471d36-cb19-4a85-9dc7-322d0c7d0757")
+			(uuid "2f2af123-2928-473c-a3c7-d22cf557b809")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 87.63 115.57 180)
+			(uuid "60b274aa-536f-4046-ae6f-a9e246a1b08e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 87.63 123.19 180)
+			(uuid "9713cd83-0027-424b-b586-f7183fa0cc2d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7833,34 +7833,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 87.63 148.59 180)
-			(uuid "d80f51b6-ca1e-4e9e-a8bd-17c0c73b9ad2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 87.63 140.97 180)
-			(uuid "43a9eaca-79f4-4da4-be77-ba48d35796a9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 114.3 148.59 0)
-			(uuid "eec191a9-30b8-4795-887a-12dc24121402")
+			(uuid "848e1f81-49ff-4637-a3e0-28ad0ccc5753")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 87.63 140.97 180)
+			(uuid "ab89bec6-ede4-4a59-a35b-af1ed65b3a27")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 87.63 148.59 180)
+			(uuid "06a960b8-2d1e-4f41-b746-49d2003d8a1c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7909,34 +7909,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 45.72 180)
-			(uuid "fb222baa-ca6b-4f65-8ae3-e5158f6663f4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 38.1 180)
-			(uuid "1e8af577-6551-4be3-ae30-45d7448a03d9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 45.72 0)
-			(uuid "1eaf2e09-7110-40cb-8980-d27861c53572")
+			(uuid "771f547d-acfe-4e79-acad-893c1344fe39")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 38.1 180)
+			(uuid "a37f407e-dd83-483c-a8b5-4840e80239e3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 45.72 180)
+			(uuid "97ee4c50-bea6-4973-bfbd-2de1f8105fcb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -7986,34 +7986,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 180.34 180)
-			(uuid "3c0e19a8-4e2d-4803-b411-e48f1c34a96b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 172.72 180)
-			(uuid "46ba9d6e-38f6-430f-9969-0b784504e3d1")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 180.34 0)
-			(uuid "aa1e2d16-7efa-4024-be91-5da02ebacd82")
+			(uuid "84f3c26a-af24-43b7-be22-a14d7d6fd721")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 172.72 180)
+			(uuid "1036b5ee-c410-43cf-809b-cae7535f946f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 180.34 180)
+			(uuid "37f86870-1282-45f5-a6d5-ca13d9659533")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -8063,34 +8063,34 @@
 				(justify left top)
 			)
 		)
-		(pin "cell_bottom" input
-			(at 29.21 123.19 180)
-			(uuid "4769aa34-eac8-4f68-9234-54b236d29500")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "cell_top" input
-			(at 29.21 115.57 180)
-			(uuid "30a23ca0-56fd-4b11-9b26-9f8e49cdac34")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vc_bottom" output
+		(pin "VC_BOTTOM" output
 			(at 55.88 123.19 0)
-			(uuid "4a389e54-c4ad-48fc-b98a-2a7e1cc986aa")
+			(uuid "d69ad64e-1ac1-4f63-890d-1808404b3869")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "BAT_TOP" input
+			(at 29.21 115.57 180)
+			(uuid "3c351c58-47ce-40bd-af02-6330342f5f39")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT_BOTTOM" input
+			(at 29.21 123.19 180)
+			(uuid "0f107a6b-3ee9-4f83-9ce9-7e78328de511")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

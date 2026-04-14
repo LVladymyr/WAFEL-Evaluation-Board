@@ -3499,6 +3499,12 @@
 		(uuid "3f9659d9-f7d1-4d7b-8753-30dfe73bd418")
 	)
 	(junction
+		(at 238.76 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "505477de-496c-45f3-9cb7-87e84b06f9e1")
+	)
+	(junction
 		(at 162.56 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5045,13 +5051,23 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 97.79) (xy 242.57 97.79)
+			(xy 233.68 97.79) (xy 238.76 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f59b19de-a9ab-4424-913a-54553c0ae968")
+	)
+	(wire
+		(pts
+			(xy 238.76 97.79) (xy 242.57 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7a0713d-b7be-43c6-99b9-d2ed4cdb3d79")
 	)
 	(wire
 		(pts
@@ -5122,16 +5138,6 @@
 			(type default)
 		)
 		(uuid "fc69ca07-f8ee-4627-98a5-bf84514b9e10")
-	)
-	(label "CH"
-		(at 241.3 92.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "084aaf5c-5324-4b62-9a66-833eb88fae80")
 	)
 	(label "CELL2"
 		(at 57.15 71.12 180)
@@ -5362,6 +5368,84 @@
 			(justify left bottom)
 		)
 		(uuid "eedbbe8c-9376-47b0-946d-132ca412844e")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 238.76 97.79 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "017368b9-dc9b-48ad-bf17-1e4b56ce33e9")
+		(property "Reference" "#FLG0103"
+			(at 238.76 99.695 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 238.76 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 238.76 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8e7953ea-2ac6-4383-a072-f5a46a172b87")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "#FLG0103")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
@@ -6713,6 +6797,84 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "JP101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 71.12 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59b8a703-c341-479c-8762-5dc321db5fac")
+		(property "Reference" "#FLG0102"
+			(at 71.12 126.365 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 71.12 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 71.12 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc13c3ae-803a-4fd7-9cc3-875063a528dc")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "#FLG0102")
 					(unit 1)
 				)
 			)

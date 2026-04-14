@@ -10761,7 +10761,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Samacsys:SOT96P240X110-3N"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 167.64 40.64 0)
 			(hide yes)
 			(show_name no)

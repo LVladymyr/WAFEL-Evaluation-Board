@@ -874,7 +874,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "NUCLEO-L432KC:MODULE_NUCLEO-L432KC"
+			(property "Footprint" "wafel-eval-board:MODULE_NUCLEO-L432KC"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5525,7 +5525,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NUCLEO-L432KC:MODULE_NUCLEO-L432KC"
+		(property "Footprint" "wafel-eval-board:MODULE_NUCLEO-L432KC"
 			(at 113.03 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -6429,7 +6429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NUCLEO-L432KC:MODULE_NUCLEO-L432KC"
+		(property "Footprint" "wafel-eval-board:MODULE_NUCLEO-L432KC"
 			(at 67.31 118.11 0)
 			(hide yes)
 			(show_name no)

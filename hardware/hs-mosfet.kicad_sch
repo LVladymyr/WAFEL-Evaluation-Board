@@ -994,7 +994,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" "Samacsys:DIOM8059X265N"
+			(property "Footprint" "Diode_SMD:D_SMC"
 				(at 10.16 -93.65 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1254,7 +1254,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Samacsys:DIOM5436X265N"
+			(property "Footprint" "Diode_SMD:D_SMB"
 				(at 10.16 -93.65 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4427,7 +4427,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Samacsys:DIOM8059X265N"
+		(property "Footprint" "Diode_SMD:D_SMC"
 			(at 90.5 88.265 0)
 			(hide yes)
 			(show_name no)
@@ -6439,7 +6439,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Samacsys:DIOM5436X265N"
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 157.15 92.71 0)
 			(hide yes)
 			(show_name no)

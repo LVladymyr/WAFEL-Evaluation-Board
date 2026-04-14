@@ -1,0 +1,6044 @@
+TCAN843-Q1
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+TCAN843-Q1 Automotive CAN FD Transceiver With Sleep Mode
+1 Features
+
+2 Applications
+
+•
+•
+
+•
+•
+•
+•
+•
+•
+•
+
+•
+•
+•
+•
+•
+
+•
+•
+•
+
+•
+
+•
+
+AEC Q100 Qualified for automotive applications
+Functional Safety-Capable
+– Documentation available to aid in functional
+safety system design
+Meets the requirements of ISO 11898-2:2024
+Wide input operational voltage range
+Supports classic CAN and CAN FD up to 5Mbps
+VIO level shifting supports: 3.3V to 5.5V
+Operating modes:
+– Normal mode
+– Silent mode
+– Standby mode
+– Low-power sleep mode
+High-voltage INH output for system power control
+Local wake-up support using the WAKE pin
+Defined behavior when unpowered
+– Bus and IO terminals are high impedance (no
+load to operating bus or application)
+Protection features:
+– ±40V CAN bus fault tolerant
+– Load dump support on VSUP
+– IEC ESD protection
+– Under-voltage protection
+– Thermal shutdown protection
+– TXD dominant state timeout (TXD DTO)
+Available in 14-pin leaded (SOT and SOIC)
+packages and leadless (VSON) package with
+wettable flanks for improved automated optical
+inspection (AOI) capability
+
+Body electronics and lighting
+Automotive gateway
+Advanced driver assistance systems (ADAS)
+Infotainment and cluster
+Hybrid, electric & powertrain systems
+Personal transport vehicles - electric bike
+Industrial transportation
+
+3 Description
+The TCAN843-Q1 is a high-speed Controller Area
+Network (CAN) transceiver that meets the physical
+layer requirements of the ISO 11898-2:2024 highspeed CAN specification. The device supports both
+classical CAN and CAN FD data rates up to 5
+megabits per second (Mbps).
+The TCAN843-Q1 allows for system-level reductions
+in battery current consumption by selectively enabling
+the various power supplies that can be present on
+a system via the INH output pin. This allows a
+low-current sleep state in which power is gated to
+all system components except for the TCAN843-Q1,
+while monitoring the CAN bus. When a wake-up event
+is detected, the TCAN843-Q1 initiates system start-up
+by driving INH high.
+Package Information
+PART NUMBER
+TCAN843-Q1
+
+(1)
+(2)
+
+VBAT
+
+PACKAGE SIZE(2)
+
+DYY (SOT, 14)
+
+4.2mm × 2mm
+
+D (SOIC, 14)
+
+8.65mm × 6mm
+
+DMT (VSON, 14)
+
+4.5mm × 3mm
+
+For more information, see Section 11.
+The package size (length × width) is a nominal value and
+includes pins, where applicable.
+
+3k
+
+EN
+
+VIN
+
+PACKAGE(1)
+
+100k
+
+VREG
+
+100nF
+VSUP
+
+INH
+
+5V VOUT
+VCC
+
+7
+
+22nF
+
+33k
+
+WAKE
+
+10
+
+9
+
+3
+
+VIO
+100nF
+
+VIO
+
+CANH
+
+5
+
+13
+
+100nF
+VDD
+GPIO
+GPIO
+MCU
+
+EN
+
+6
+
+nSTB
+
+14
+
+nFAULT
+
+GPIO
+
+8
+CANL
+
+CAN FD
+Controller
+
+12
+
+1
+
+TXD
+RXD
+
+Optional:
+Terminating
+Node
+
+4
+
+2
+11
+
+Optional:
+Filtering,
+Transient and
+ESD
+
+NC
+
+Simplified Schematic
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+Table of Contents
+1 Features............................................................................1
+2 Applications..................................................................... 1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................3
+5 Specifications.................................................................. 4
+5.1 Absolute Maximum Ratings........................................ 4
+5.2 ESD Ratings............................................................... 4
+5.3 ESD Ratings - IEC Specifications............................... 4
+5.4 Recommended Operating Conditions.........................4
+5.5 Thermal Information....................................................5
+5.6 Power Dissipation Ratings.......................................... 5
+5.7 Power Supply Characteristics..................................... 5
+5.8 Electrical Characteristics.............................................7
+5.9 Timing Requirements.................................................. 9
+5.10 Switching Characteristics........................................10
+5.11 Typical Characteristics.............................................11
+6 Parameter Measurement Information.......................... 12
+7 Detailed Description......................................................15
+
+2
+
+7.1 Overview................................................................... 15
+7.2 Functional Block Diagram......................................... 16
+7.3 Feature Description...................................................17
+7.4 Device Functional Modes..........................................23
+8 Application Information Disclaimer............................. 32
+8.1 Application Information............................................. 32
+8.2 Power Supply Recommendations.............................35
+8.3 Layout....................................................................... 35
+9 Device and Documentation Support............................37
+9.1 Documentation Support............................................ 37
+9.2 Receiving Notification of Documentation Updates....37
+9.3 Support Resources................................................... 37
+9.4 Trademarks............................................................... 37
+9.5 Electrostatic Discharge Caution................................37
+9.6 Glossary....................................................................37
+10 Revision History.......................................................... 37
+11 Mechanical, Packaging, and Orderable
+Information.................................................................... 37
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+4 Pin Configuration and Functions
+
+TXD
+
+1
+
+14
+
+nSTB
+
+GND
+
+2
+
+13
+
+CANH
+
+VCC
+
+3
+
+12
+
+CANL
+
+RXD
+
+4
+
+11
+
+NC
+
+VIO
+
+5
+
+10
+
+VSUP
+
+EN
+
+6
+
+9
+
+WAKE
+
+INH
+
+7
+
+8
+
+nFAULT
+
+TXD
+
+1
+
+14
+
+nSTB
+
+GND
+
+2
+
+13
+
+CANH
+
+VCC
+
+3
+
+12
+
+CANL
+
+RXD
+
+4
+
+11
+
+NC
+
+VIO
+
+5
+
+10
+
+VSUP
+
+EN
+
+6
+
+9
+
+WAKE
+
+INH
+
+7
+
+8
+
+nFAULT
+
+Thermal
+Pad
+
+Not to scale
+
+Figure 4-1. D and DYY Packages, 14 Pin (SOIC)
+and (SOT) (Top View)
+
+PINS
+
+Not to scale
+
+Figure 4-2. DMT Package, 14 Pin (VSON)
+(Top View)
+
+TYPE (1)
+
+DESCRIPTION
+
+NAME
+
+NO.
+
+TXD
+
+1
+
+I
+
+GND
+
+2
+
+GND
+
+Ground connection
+
+VCC
+
+3
+
+P
+
+5V transceiver supply
+
+RXD
+
+4
+
+O
+
+CAN receive data output, tri-state when VIO < UVIO
+
+VIO
+
+5
+
+P
+
+I/O supply voltage
+
+EN
+
+6
+
+I
+
+Enable input for mode control, integrated pull-down
+
+INH
+
+7
+
+O
+
+Inhibit pin to control system voltage regulators and supplies, high-voltage
+
+nFAULT
+
+8
+
+O
+
+Fault output, inverted logic
+
+WAKE
+
+9
+
+I
+
+Local WAKE input terminal, high voltage
+
+VSUP
+
+10
+
+P
+
+High-voltage supply from battery
+
+NC
+
+11
+
+NC
+
+No connect, internally not connected
+
+CANL
+
+12
+
+I/O
+
+Low-level CAN bus input/output line
+
+CANH
+
+13
+
+I/O
+
+High-level CAN bus input/output line
+
+nSTB
+
+14
+
+I
+
+Standby mode control input, integrated pull-down
+
+Thermal Pad
+(1)
+
+—
+
+CAN transmit data input, integrated pull-up
+
+Connect the thermal pad to the printed circuit board (PCB) ground plane for thermal
+relief
+
+I = input, O = output, P = power, GND = ground, NC = not connected
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+3
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN
+
+MAX
+
+UNIT
+
+VSUP
+
+Supply voltage
+
+–0.3
+
+40
+
+V
+
+VCC
+
+Supply voltage
+
+–0.3
+
+6
+
+V
+
+VIO
+
+Supply voltage I/O level shifter
+
+–0.3
+
+6
+
+V
+
+VBUS
+
+CAN bus I/O voltage (CANH, CANL)
+
+–40
+
+40
+
+V
+
+VDIFF
+
+CAN bus differential voltage (VDIFF = VCANH - VCANL)
+
+-40
+
+40
+
+V
+V
+
+VWAKE
+
+WAKE input voltage
+
+–40
+
+40 and VI ≤
+VSUP+0.3
+
+VINH
+
+INH pin voltage
+
+-0.3
+
+40 and VO ≤
+VSUP+0.3
+
+V
+
+VLOGIC
+
+Logic pin voltage
+
+–0.3
+
+6
+
+V
+
+IO(LOGIC)
+
+Logic pin output current
+
+8
+
+mA
+
+IO(INH)
+
+Inhibit pin output current
+
+6
+
+mA
+
+IO(WAKE)
+
+WAKE pin output current
+
+3
+
+mA
+
+TJ
+
+Junction temperature
+
+–40
+
+165
+
+°C
+
+TSTG
+
+Storage temperature
+
+–65
+
+150
+
+°C
+
+(1)
+
+Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute maximum ratings do not imply
+functional operation of the device at these or any other conditions beyond those listed under Recommended Operating Conditions.
+If briefly operating outside the Recommended Operating Conditions but within the Absolute Maximum Ratings, the device may not
+sustain damage, but it may not be fully functional. Operating the device in this manner may affect device reliability, functionality,
+performance, and shorten the device lifetime.
+
+5.2 ESD Ratings
+
+VESD
+
+Electrostatic discharge
+
+Human body model (HBM), per AEC
+Q100-002(1)
+Charged device model (CDM), per AEC
+Q100-011
+
+(1)
+
+VALUE
+
+UNIT
+
+CANH and CANL with respect to GND
+
+±8000
+
+V
+
+All pins except CANH and CANL with
+respect to GND
+
+±2000
+
+V
+
+All pins
+
+±500
+
+V
+
+AEC Q100-002 indicates that HBM stressing shall be in accordance with the ANSI/ESDA/JEDEC JS-001 specification.
+
+5.3 ESD Ratings - IEC Specifications
+System level electro-static
+discharge (ESD)
+
+VESD
+
+(1)
+
+CANH, CANL, and VSUP to GND
+WAKE pin to GND
+
+IEC 62228-3: Unpowered contact
+discharge(1)
+
+VALUE
+
+UNIT
+
+±8000
+
+V
+
+±6000
+
+V
+
+MAX
+
+UNIT
+
+According to IEC 62228-3 Integrated circuits – EMC evaluation of transceivers – Part 3: CAN transceivers.
+
+5.4 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN
+
+4
+
+NOM
+
+VSUP
+
+Supply voltage
+
+4.5
+
+28
+
+V
+
+VIO
+
+I/O supply voltage
+
+2.9
+
+5.5
+
+V
+
+VCC
+
+CAN transceiver supply voltage
+
+4.5
+
+5.5
+
+IOH(DO)
+
+Digital output high-level current
+
+–2
+
+IOL(DO)
+
+Digital output low-level current
+
+2
+
+mA
+
+IO(INH)
+
+Inhibit output current
+
+2
+
+mA
+
+Submit Document Feedback
+
+V
+mA
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.4 Recommended Operating Conditions (continued)
+over operating free-air temperature range (unless otherwise noted)
+MIN
+TJ
+
+Operating junction temperature
+
+-40
+
+TSDR
+
+Thermal shutdown
+
+165
+
+TSDF
+
+Thermal shutdown release
+
+155
+
+TSD(HYS)
+
+Thermal shutdown hysteresis
+
+NOM
+
+MAX
+
+UNIT
+
+150
+
+°C
+°C
+°C
+
+10
+
+°C
+
+UNIT
+
+5.5 Thermal Information
+TCAN843-Q1
+THERMAL METRIC (1)
+
+D (SOIC)
+
+DMT (VSON)
+
+DYY (SOT)
+
+14 PINS
+
+14 PINS
+
+14 PINS
+
+RΘJA
+
+Junction-to-ambient thermal resistance
+
+87.1
+
+39.7
+
+91.0
+
+°C/W
+
+RΘJC(top)
+
+Junction-to-case (top) thermal resistance
+
+41.8
+
+41.1
+
+41.7
+
+°C/W
+
+RΘJB
+
+Junction-to-board thermal resistance
+
+43.7
+
+15.9
+
+25.6
+
+°C/W
+
+ΨJT
+
+Junction-to-top characterization parameter
+
+8.5
+
+0.9
+
+25.4
+
+°C/W
+
+ΨJB
+
+Junction-to-board characterization parameter
+
+43.3
+
+15.9
+
+1.1
+
+°C/W
+
+RΘJC(bot)
+
+Junction-to-case (bottom) thermal resistance
+
+N/A
+
+6.6
+
+N/A
+
+°C/W
+
+(1)
+
+For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+note.
+
+5.6 Power Dissipation Ratings
+PARAMETER
+
+PD
+
+Average power dissipation
+
+TEST CONDITIONS
+
+POWER
+DISSIPATION
+
+UNIT
+
+VSUP = 14 V, VCC = 5 V, VIO = 5 V, TJ = 27°C, RL = 60
+Ω, nSTB = 5 V, EN = 5 V, CL_RXD = 15 pF. Typical CAN
+operating conditions at 500 kbps with 25% transmission
+(dominant) rate.
+
+57
+
+mW
+
+VSUP = 14 V, VCC = 5.5 V, VIO = 5.5 V, TJ = 150°C, RL =
+50 Ω, nSTB = 5.5 V, EN = 5.5 V, CL_RXD = 15 pF. Typical
+high load CAN operating conditions at 1 Mbps with 50%
+transmission (dominant) rate and loaded network.
+
+151
+
+mW
+
+5.7 Power Supply Characteristics
+Over recommended operating conditions with TJ = -40°C to 150°C, unless otherwise noted. All typical values are taken at
+25°C, VSUP = 12V, VIO = 3.3V, VCC = 5V and RL = 60Ω
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX
+
+UNIT
+
+140
+
+µA
+
+60
+
+µA
+
+30
+
+µA
+
+Supply Voltage and Current Characteristics
+ISUP_NORMAL
+
+Supply current
+CAN active
+
+Normal mode, silent mode, go-to-sleep
+mode(1)
+
+ISUP_STBY
+
+Supply current
+
+Standby mode, TJ = –40°C to 85°C
+
+ISUP_SLEEP
+
+Supply current
+
+Sleep mode, TJ = –40°C to 85°C
+
+UVSUP(R)
+
+Undervoltage VSUP threshold rising
+
+3.9
+
+4.3
+
+V
+
+UVSUP(F)
+
+Undervoltage VSUP threshold falling
+
+3.6
+
+4.1
+
+V
+
+ICC_NORMAL
+
+ICC_STBY
+
+18
+
+Supply current
+CAN active: dominant
+
+Normal mode
+TXD = 0V, RL = 60Ω, CL = open
+
+70
+
+mA
+
+VCC supply current normal mode
+Dominant with bus fault
+
+Normal mode
+TXD = 0V, RL = open, CL = open, CANH =
+CANL = ±25V
+
+130
+
+mA
+
+Supply current
+CAN active: recessive
+
+Normal mode
+TXD = VIO, RL = 60Ω, CL = open
+
+7.5
+
+mA
+
+Supply current, Standby mode
+
+Standby mode TJ = –40°C to 85°C
+EN = nSTB = 0V
+
+3.5
+
+µA
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+5
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.7 Power Supply Characteristics (continued)
+Over recommended operating conditions with TJ = -40°C to 150°C, unless otherwise noted. All typical values are taken at
+25°C, VSUP = 12V, VIO = 3.3V, VCC = 5V and RL = 60Ω
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX
+
+UNIT
+
+4
+
+mA
+
+3.2
+
+µA
+V
+
+ICC_SILENT
+
+Supply current, Silent mode
+
+Silent and go-to-sleep mode(1)
+TXD = nSTB = VIO, RL = 60Ω, CL = open
+
+ICC_SLEEP
+
+Supply current, Sleep mode
+
+Sleep mode TJ = –40°C to 85°C
+EN = 0V or VIO, nSTB = 0V
+
+UVCC(R)
+
+Undervoltage VCC threshold rising
+
+3.9
+
+4
+
+4.3
+
+UVCC(F)
+
+Undervoltage VCC threshold falling
+
+3.7
+
+3.9
+
+4.2
+
+V
+
+VHYS(UVCC)
+
+Hysteresis voltage on UVCC
+
+50
+
+300
+
+mV
+
+IIO_NORMAL
+
+I/O supply current
+
+Normal mode
+RXD floating, TXD = 0V
+
+200
+
+µA
+
+IIO_NORMAL
+
+I/O supply current
+
+Normal mode, silent mode, or go-to-sleep
+mode(1)
+RXD floating, TXD = VIO
+
+3
+
+µA
+
+IIO_STBY
+
+I/O supply current
+
+Standby mode TJ = –40°C to 85°C
+RXD floating, TXD = VIO
+
+3
+
+µA
+
+IIO_SLEEP
+
+I/O supply current
+
+Sleep mode TJ = –40°C to 85°C
+nSTB = 0V
+
+2.5
+
+µA
+
+UVIO(R)
+
+Under voltage VIO threshold rising
+
+Ramp up
+
+2.2
+
+2.5
+
+2.8
+
+V
+
+UVIO(F)
+
+Under voltage VIO threshold falling
+
+Ramp down
+
+2.1
+
+2.4
+
+2.7
+
+V
+
+VHYS(UVIO)
+
+Hysteresis voltage on UVIO
+
+40
+
+100
+
+160
+
+mV
+
+(1)
+
+Current consumption in go-to-sleep mode is specified by design
+
+6
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.8 Electrical Characteristics
+Over recommended operating conditions with TJ = –40°C to 150°C, unless otherwise noted. All typical values are taken at
+25°C, VSUP = 12V, VIO = 3.3V, VCC = 5V and RL = 60Ω
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TXD = 0V, 50Ω ≤ RL ≤ 65Ω, CL = open, RCM =
+open
+
+TYP
+
+MAX
+
+UNIT
+
+2.75
+
+4.5
+
+V
+
+0.5
+
+2.25
+
+V
+
+3
+
+V
+
+CAN Driver Characteristics
+VCANH(D)
+
+CANH
+
+VCANL(D)
+
+Dominant output voltage
+Normal mode
+
+VCANH(R)
+VCANL(R)
+
+Recessive output voltage
+Normal mode, Silent mode
+
+TXD = VIO, RL = open (no load), RCM = open
+
+2
+
+VSYM
+
+Driver symmetry
+Normal mode
+(VO(CANH) + VO(CANL) ) / VCC (1)
+
+EN = nSTB= VIO, 4.75V ≤ VCC ≤ 5.25V, RL =
+60Ω, CSPLIT = 4.7nF, CL = Open, RCM = Open,
+TXD = 250kHz, 1MHz, 2.5MHz
+
+0.9
+
+1.1
+
+V/V
+
+VSYM_DC
+
+DC Driver symmetry
+Normal mode
+VCC – VO(CANH) – VO(CANL)
+
+EN = nSTB= VIO, RL = 60Ω, CL = open
+
+-300
+
+300
+
+mV
+
+CANH - CANL
+
+EN = nSTB = VIO, 4.75V ≤ VCC ≤ 5.25V, TXD =
+0V, 50Ω ≤ RL ≤ 65Ω, CL = open
+
+1.5
+
+3
+
+V
+
+CANH - CANL
+
+EN = nSTB = VIO, 4.75V ≤ VCC ≤ 5.25V, TXD =
+0V, 45Ω ≤ RL ≤ 70Ω, CL = open
+
+1.4
+
+3.3
+
+V
+
+CANH - CANL
+
+EN = nSTB = VIO, 4.75V ≤ VCC ≤ 5.25V, TXD =
+0V, RL = 2240Ω, CL = open
+
+1.5
+
+5
+
+V
+
+CANH - CANL
+
+EN = nSTB = VIO, 4.75V ≤ VCC ≤ 5.25V, TXD =
+VIO, RL = open, CL = open
+
+–50
+
+50
+
+mV
+
+CANH
+
+nSTB = 0V, 4.75V ≤ VCC ≤ 5.25V, TXD = VIO,
+RL = open (no load), CL = open
+
+-0.1
+
+0.1
+
+V
+
+CANL
+
+nSTB = 0V, 4.75V ≤ VCC ≤ 5.25V, TXD = VIO,
+RL = open (no load), CL = open
+
+-0.1
+
+0.1
+
+V
+
+CANH - CANL
+
+nSTB = 0V, 4.75V ≤ VCC ≤ 5.25V, TXD = VIO,
+RL = open (no load), CL = open
+
+-0.2
+
+0.2
+
+V
+
+nSTB = VIO, TXD = 0V
+–3V ≤ V(CANH) ≤ 18V
+
+-100
+
+VDIFF(D)
+
+VDIFF(R)
+
+VCAN(INACT)
+
+IOS(DOM)
+
+IOS_REC
+
+Differential output voltage
+Normal mode
+Dominant
+
+Differential output voltage
+Normal mode, Silent mode
+Recessive
+
+Bus output voltage
+Sleep mode, Standby
+mode
+
+CANL
+
+Short-circuit steady-state output current
+Normal mode
+Dominant
+
+2.5
+
+mA
+
+nSTB = VIO, TXD = 0V
+–3V ≤ V(CANL) ≤ 18V
+
+Short-circuit steady-state output current
+Normal mode, Silent mode
+Recessive
+
+nSTB = VIO, VBUS = CANH = CANL
+–27V ≤ VBUS ≤ 40V
+
+100
+
+mA
+
+-3
+
+3
+
+mA
+
+0.9
+
+8
+
+V
+
+-3
+
+0.5
+
+V
+
+CAN Receiver Characteristics
+VDIFF_RX(D)
+
+Receiver dominant state input voltage range
+Normal mode, Silent mode
+
+VDIFF_RX(R)
+
+Receiver recessive state input voltage range
+Normal mode, Silent mode
+
+VHYS
+
+Hysteresis voltage for input threshold
+Normal mode, Silent mode
+
+nSTB = VIO, –12V ≤ VCM ≤ 12V
+
+nSTB = VIO
+
+VDIFF_RX(D_IN Receiver dominant state input voltage range
+Sleep mode, Standby mode
+
+ACT)
+
+80
+
+mV
+
+1.1
+
+9
+
+V
+
+-4
+
+0.4
+
+V
+
+–12
+
+12
+
+V
+
+5
+
+µA
+
+nSTB = 0V, –12V ≤ VCM ≤ 12V
+
+VDIFF_RX(R_IN Receiver recessive state input voltage range
+Sleep mode, Standby mode
+
+ACT)
+
+VCM
+
+Common mode range
+
+nSTB = VIO
+
+ILKG(IOFF)
+
+Power-off (unpowered) input leakage current
+CANH, CANL pins
+
+VSUP = 0V, CANH = CANL = 5V
+
+CI
+
+(1)
+
+20
+
+pF
+
+CID
+
+Differential input capacitance(1)
+
+10
+
+pF
+
+RDIFF
+
+Differential input resistance
+
+50
+
+100
+
+kΩ
+
+RSE_CANH
+RSE_CANL
+
+Input resistance (CANH or CANL)
+
+25
+
+50
+
+kΩ
+
+mR
+
+Input resistance matching:
+[1 – RIN(CANH) / RIN(CANL)] × 100%
+
+–2
+
+2
+
+%
+
+Input capacitance to ground (CANH or CANL)
+
+TXD = VCC = VIO = 5V, nSTB = 5V
+–2V ≤ VCM ≤ 7V
+V(CANH) = V(CANL) = 5V
+
+TXD Characteristics
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+7
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.8 Electrical Characteristics (continued)
+Over recommended operating conditions with TJ = –40°C to 150°C, unless otherwise noted. All typical values are taken at
+25°C, VSUP = 12V, VIO = 3.3V, VCC = 5V and RL = 60Ω
+PARAMETER
+
+TEST CONDITIONS
+
+VIH
+
+High-level input voltage
+
+VIL
+
+Low-level input voltage
+
+IIH
+
+High-level input leakage current
+
+TXD = VIO = 5.5V
+
+IIL
+
+Low-level input leakage current
+
+TXD = 0V, VIO = 5.5V
+
+ILKG(OFF)
+
+Unpowered leakage current
+
+TXD = 5.5V, VSUP = VIO = 0V
+
+CI
+
+Input Capacitance
+
+VIN = 0.4 x sin(2 × π × 2 × 106 × t) + 2.5V
+
+MIN
+
+TYP
+
+MAX
+
+0.7
+
+-1
+
+VIO
+0
+
+0.3
+
+VIO
+
+1
+
+µA
+
+-2.5
+
+µA
+
+0
+
+1
+
+µA
+
+5
+
+10
+
+pF
+
+-115
+–1
+
+UNIT
+
+RXD Characteristics
+VOH
+
+High-level output voltage
+
+IO = –2mA
+
+VOL
+
+Low-level output voltage
+
+IO = 2mA
+
+ILKG(OFF)
+
+Unpowered leakage current
+
+RXD = 5.5V, VSUP = VIO = 0V
+
+0.8
+
+VIO
+
+-1
+
+0.2
+
+VIO
+
+1
+
+µA
+
+nSTB Characteristics
+VIH
+
+High-level input voltage
+
+0.7
+
+VIO
+
+VIL
+
+Low-level input voltage
+
+0.3
+
+VIO
+
+IIH
+
+High-level input leakage current
+
+nSTB = VIO = 5.5V
+
+0.5
+
+115
+
+µA
+
+IIL
+
+Low-level input leakage current
+
+nSTB = 0V, VIO = 5.5V
+
+–1
+
+1
+
+µA
+
+ILKG(OFF)
+
+Unpowered leakage current
+
+nSTB = 5.5V, VIO = 0V
+
+–1
+
+1
+
+µA
+
+0.8
+
+0
+
+nFAULT Characteristics
+VOH
+
+High-level output voltage
+
+IO = –2mA
+
+VOL
+
+Low-level output voltage
+
+IO = 2mA
+
+ILKG(OFF)
+
+Unpowered leakage current
+
+nFAULT = 5.5V, VIO = 0V
+
+–1
+
+VIO
+
+0
+
+0.2
+
+VIO
+
+1
+
+µA
+
+EN Characteristics
+VIH
+
+High-level input voltage
+
+0.7
+
+VIO
+
+VIL
+
+Low-level input voltage
+
+0.3
+
+VIO
+
+IIH
+
+High-level input leakage current
+
+EN = VCC = VIO = 5.5V
+
+0.5
+
+115
+
+µA
+
+IIL
+
+Low-level input leakage current
+
+EN = 0 V, VCC = VIO = 5.5V
+
+-1
+
+1
+
+µA
+
+ILKG(OFF)
+
+Unpowered leakage current
+
+EN = 5.5V, VCC = VIO = 0V
+
+-1
+
+1
+
+µA
+
+RPD
+
+Pull-down resistance
+
+50
+
+2000
+
+kΩ
+
+WAKE Characteristics
+VIH
+
+High-level input voltage
+
+VIL
+
+Low-level input voltage
+
+IIH
+
+High-level input leakage current(2)
+
+IIL
+
+Low-level input leakage current(2)
+
+RWAKE
+
+Pull-up/pull-down resistance(2)
+
+Sleep mode
+
+2.6
+
+V
+
+WAKE = VSUP
+WAKE = 4V
+
+1.8
+
+V
+
+2
+
+µA
+
+-3
+
+µA
+
+WAKE = 1V
+
+3
+600
+
+µA
+kΩ
+
+INH Characteristics
+ΔVH
+
+High-level voltage drop from VSUP to INH
+(VSUP - VINH)
+
+IINH = –2mA
+
+ILKG(INH)
+
+Sleep mode leakage current
+
+INH = 0V
+
+1
+–0.5
+
+2
+
+V
+
+0.5
+
+µA
+
+(1)
+(2)
+
+Specified by design and verified via bench characterization
+The WAKE pin automatically configures itself based on the applied voltage to either an internal pull-up to 5V or pull-down to GND. A
+high-level input results in an internal pull-up to 5V and a low-level input results in an internal pull-down to GND. Current consumption is
+minimized overall when WAKE is connected to VCC or GND.
+
+8
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.9 Timing Requirements
+over operating free-air temperature range (unless otherwise noted)
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX
+
+UNIT
+
+310
+
+1000
+
+µs
+
+350
+
+ms
+
+Supply Characteristics
+tPWRUP
+
+Time required for INH active after VSUP ≥ UVSUP(R)
+
+tUV
+
+Undervoltage filter time VCC and VIO (1)
+
+VCC ≤ UVCC or VIO ≤ UVIO
+
+tUV_det
+
+Undervoltage detection time for VCC and VIO
+
+VCC ≤ UVCC or VIO ≤ UVIO
+
+30
+
+µs
+
+Re-enable time after undervoltage event(1)
+
+Time for device to return to normal operation from
+a UVCC or UVIO undervoltage event
+
+50
+
+µs
+
+RL = 60Ω, CL = 100pF, CL_RXD = 15pF VIO=3V 5.5V
+
+250
+
+ns
+
+RL = 60Ω, CL = 100pF, CL_RXD = 15pF VIO=3V 5.5V
+
+250
+
+ns
+
+tUV(RE-ENABLE)
+
+100
+
+Device Characteristics
+tPROP(LOOP1)
+
+Total loop delay, driver input (TXD) to receiver
+output (RXD) Recessive to dominant
+
+tPROP(LOOP2)
+
+Total loop delay, driver input (TXD) to receiver
+output (RXD) Dominant to recessive
+
+tWK(TIMEOUT)
+
+Bus wake-up timeout value(1)
+
+0.8
+
+2
+
+ms
+
+tWK(FILTER)
+
+Bus time to meet filtered bus requirements for
+wake-up request(1)
+
+0.5
+
+1.8
+
+µs
+
+tFILTER_IO
+
+Filter time for EN/nSTB(1)
+
+1
+
+5
+
+µs
+
+tWAKE_HT
+
+Hold time for which WAKE pin voltage must be
+stable after the rising or falling edge on WAKE pin
+to recognize LWU
+
+5
+
+50
+
+µs
+
+Mode Change Characteristics
+tINH_SLP_STB
+
+Time after WUP or LWU event until INH
+asserted(1)
+
+50
+
+µs
+
+tMODE1
+
+Mode change time from leaving the Sleep mode to Time measured from VCC and VIO crossing UV
+entering Normal or Silent mode(1)
+thresholds to entering normal or silent mode.
+
+50
+
+µs
+
+tMODE2
+
+Mode change time between normal, silent and
+standby mode and from sleep to standby mode(1)
+
+50
+
+µs
+
+tnFAULT_MODE_C
+
+nFAULT stabilization time after mode change
+
+20
+
+µs
+
+50
+
+µs
+
+HANGE
+
+tGOTOSLEEP
+
+(1)
+
+Minimum hold time for transition to sleep mode(1)
+
+Mode change time between normal, silent and
+standby mode and from sleep to standby mode
+
+EN = H and nSTB = L
+
+20
+
+Specified by design and verified using bench characterization
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+9
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.10 Switching Characteristics
+Over recommended operating conditions with TJ = -40°C to 150°C, unless otherwise noted. All typical values are taken at
+25°C, VSUP = 12V, VIO = 3.3V, VCC = 5V and RL = 60Ω
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX
+
+UNIT
+
+Driver Characteristics
+tpHR
+
+Propagation delay time, high TXD to driver recessive
+
+90
+
+ns
+
+tpLD
+
+Propagation delay time, low TXD to driver dominant
+
+tsk(p)
+
+Pulse skew (|tpHR - tpLD|)
+
+75
+
+ns
+
+25
+
+tR
+
+ns
+
+Differential output signal rise time
+
+45
+
+ns
+
+tF
+
+Differential output signal fall time
+
+45
+
+tTXDDTO
+
+Dominant timeout
+
+RL = 60Ω, CL = 100pF, RCM = open
+
+TXD = 0V, RL = 60Ω, CL = open
+
+1.2
+
+ns
+3.8
+
+ms
+
+Receiver Characteristics
+tpRH
+
+Propagation delay time, bus recessive input to high RXD
+
+tpDL
+
+Propagation delay time, bus dominant input to RXD low
+output
+
+65
+
+ns
+
+60
+
+ns
+
+tR
+tF
+
+Output signal rise time (RXD)
+
+10
+
+ns
+
+Output signal fall time (RXD)
+
+10
+
+ns
+
+tBUSDOM
+
+Dominant time out
+
+CL(RXD) = 15pF
+
+RL = 60Ω, CL = open
+
+1.2
+
+3.8
+
+ms
+
+CAN FD Characteristics
+tΔBIT(BUS) (1)
+
+Transmitted recessive bit width variation on CAN bus
+output pins with tBIT(TXD) = 500ns
+
+RL = 60Ω, CL = 100pF, CL_RXD = 15pF
+tΔBit(BUS) = tBIT(BUS) - tBIT(TXD)
+
+-65
+
+30
+
+ns
+
+tΔBIT(BUS) (1)
+
+Transmitted recessive bit width variation on CAN bus
+output pins with tBIT(TXD) = 200ns
+
+RL = 60Ω, CL = 100pF, CL_RXD = 15pF
+tΔBit(BUS) = tBIT(BUS) - tBIT(TXD)
+
+-45
+
+10
+
+ns
+
+tΔBIT(RXD) (1)
+
+Received recessive bit width variation on RXD output pins
+with tBIT(TXD) = 500ns
+
+RL = 60Ω, C2 = 100pF, CL_RXD = 15pF
+tΔBit(RXD) = tBIT(RXD) - tBIT(TXD)
+
+-100
+
+50
+
+ns
+
+tΔBIT(RXD) (1)
+
+Received recessive bit width variation on RXD output pins
+with tBIT(TXD) = 200ns
+
+RL = 60Ω, C2 = 100pF, CL_RXD = 15pF
+tΔBit(RXD) = tBIT(RXD) - tBIT(TXD)
+
+-80
+
+20
+
+ns
+
+Receiver timing symmetry with tBIT(TXD) = 500ns
+
+RL = 60Ω, C2 = 100pF, CL_RXD = 15pF
+ΔtREC = tBIT(RXD) - tBIT(BUS)
+
+–65
+
+40
+
+ns
+
+Receiver timing symmetry with tBIT(TXD) = 200ns
+
+RL = 60Ω, C2 = 100pF, CL_RXD = 15pF
+ΔtREC = tBIT(RXD) - tBIT(BUS)
+
+–45
+
+15
+
+ns
+
+tΔREC
+
+(1)
+
+(1)
+
+The input signal on TXD shall have rise times and fall times (10% to 90%) of less than 10ns
+
+10
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+5.11 Typical Characteristics
+7
+
+3.5
+VCC = 4.5V
+VCC = 5V
+VCC = 5.5V
+
+3
+
+6.5
+6
+5.5
+ICC Recessive (mA)
+
+VOD(D) (V)
+
+2.5
+
+2
+
+1.5
+
+5
+4.5
+4
+3.5
+
+1
+
+3
+0.5
+2.5
+0
+-40
+
+-20
+
+0
+
+2
+-40
+
+20
+40
+60
+80 100 120 140 160
+Junction Te mperature (°C)
+
+RL = 60Ω
+VIO = 3.3V
+
+CL = Open
+
+0
+
+20
+40
+60
+80 100 120 140 160
+Junction Te mperature (°C)
+
+RL = 60Ω
+VCC = 5V
+
+RCM = Open
+
+CL = Open
+VIO = 3.3V
+
+RCM = Open
+
+Figure 5-2. ICC Recessive vs Temperature
+
+Figure 5-1. VOD(DOM) vs Temperature and VCC
+35
+
+130
+
+VSUP = 4.5V
+VSUP = 12V
+VSUP = 28V
+
+25
+
+20
+
+15
+
+VIO = 2.9V
+VIO = 3.3V
+VIO = 5.5V
+
+125
+120
+To tal Loop Delay, tPROP(LOOP1) (ns)
+
+30
+
+ISUP_SLEEP (µA)
+
+-20
+
+115
+110
+105
+100
+95
+90
+85
+80
+75
+
+10
+-40
+
+-20
+
+0
+
+20
+40
+60
+80 100 120 140 160
+Junction Te mperature (°C)
+
+RL = 60Ω
+VCC = 5V
+
+CL = Open
+VIO = 3.3V
+
+RCM = Open
+
+Figure 5-3. ISUP in Sleep Mode vs VSUP and Temperature
+
+70
+-40
+
+-20
+
+0
+
+20
+40
+60
+80 100 120 140 160
+Junction Te mperature (°C)
+
+RL = 60Ω
+VCC = 5V
+
+CL = 100pF
+VSUP = 12V
+
+CL(RXD) = 15pF
+
+Figure 5-4. Loop Propagation Delay vs VIO and Temperature
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+11
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+6 Parameter Measurement Information
+CANH
+2.5 V
+RXD
+
+Bias
+Unit
+GND
+CANL
+
+Figure 6-1. Common-Mode Bias Unit and Receiver
+CANH
+RL/2
+TXD
+CL1
+
+CL2
+RL/2
+
+CANL
+nSTB
+
+RXD
+CL(RXD)
+
+Figure 6-2. Test Circuit
+CANH
+
+TXD
+RL
+
+CL
+
+CANL
+
+Figure 6-3. Supply Test Circuit
+
+12
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+RCM
+
+CANH
+
+VIO
+TXD
+
+70%
+
+TXD
+
+30%
+RL
+
+CL
+
+0V
+
+VCM
+
+VDIFF
+
+tprop(TXD-busdom)
+
+VCANH
+CANL
+
+tprop(TXD-busrec)
+90%
+
+RCM
+
+0.9V
+
+VCANL
+
+VDIFF
+0.5V
+
+10%
+tR
+
+tF
+
+Figure 6-4. Driver Test Circuit and Measurement
+CANH
+
+1.5V
+
+RXD
+
+0.9V
+VDIFF_RX
+
+IO
+
+0.5V
+0V
+
+VDIFF_RX
+tpDL
+
+tpRH
+VO
+
+CL_RXD
+
+CANL
+
+VOH
+
+90%
+70%
+
+VO(RXD)
+
+30%
+10%
+VOL
+tF
+
+tR
+
+Figure 6-5. Receiver Test Circuit and Measurement
+TXD
+
+VI
+70%
+
+tLOOP1
+
+30%
+
+30%
+
+CANH
+
+0V
+VI
+
+TXD
+
+RL
+
+5 x tBIT(TXD)
+
+CL
+
+tBIT(TXD)
+
+CANL
+tBIT(BUS)
+
+900mV
+
+500mV
+
+RXD
+VDIFF
+
+VO
+
+CL_RXD
+RXD
+
+VOH
+70%
+
+30%
+tBIT(RXD)
+
+VOL
+
+tLOOP2
+
+Figure 6-6. Transmitter and Receiver Timing Behavior Test Circuit and Measurement
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+13
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+VIH
+
+CANH
+TXD
+TXD
+
+RL
+
+CL
+
+0V
+
+VOD
+
+VOD(D)
+
+CANL
+0.9V
+VOD
+0.5V
+
+0V
+tTXDDTO
+
+Figure 6-7. TXD Dominant Time Out Test Circuit and Measurement
+
+CANH
+
+200 s
+
+IOS
+
+TXD
+VBUS
+
+IOS
+CANL
+
+VCANH,
+VCANL
+
+VBUS
+
+0V
+or
+0V
+VCANH,
+VCANL
+VBUS
+
+Figure 6-8. Driver Short-Circuit Current Test and Measurement
+VSUP
+
+4.3V
+VSUP
+
+INH
+VSUP
+0V
+
+VO
+
+CVSUP
+tPWRUP
+
+100kΩ
+
+INH = H
+
+(VSUP -1) V
+
+INH
+
+Figure 6-9. Power-Up Timing
+
+14
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+www.ti.com
+
+TCAN843-Q1
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+7 Detailed Description
+7.1 Overview
+The TCAN843-Q1 is a high-speed Controller Area Network (CAN) transceiver that meets the physical layer
+requirements of the ISO 11898-2:2024 high-speed CAN specification. The TCAN843-Q1 supports both classical
+CAN and CAN FD networks up to 5 megabits per second (Mbps).
+The TCAN843-Q1 supports at least the following CAN and CAN FD standards:
+•
+
+•
+
+Physical layer:
+– ISO 11898-2:2024 – High-speed physical medium attachment (PMA) sublayer
+– SAE J2284-1 – High Speed CAN (HSC) for Vehicle Applications at 125kbps
+– SAE J2284-2 – High Speed CAN (HSC) for Vehicle Applications at 250kbps
+– SAE J2284-3 – High Speed CAN (HSC) for Vehicle Applications at 500kbps
+– SAE J2284-4 – High Speed CAN (HSC) for Vehicle Applications at 500kbps with CAN FD Data at 2Mbps
+– SAE J2284-5 – High Speed CAN (HSC) for Vehicle Applications at 500kbps with CAN FD Data at 5Mbps
+Conformance test requirements
+– ISO 16845-2:2018 – High-speed medium access unit – Conformance test plan
+– IOPT.CAN – Interoperability test specification for high-speed CAN transceiver or equivalent devices
+
+The transceiver has three separate supply inputs, VSUP, VCC, and VIO. By using VIO, the TCAN843-Q1 can
+interface directly to a 3.3V, or 5V controller without the need for a level shifter. The TCAN843-Q1 allows for
+system-level reductions in battery current consumption by selectively enabling the various power supplies that
+can be present in the system via the INH output pin. This enables a low-current sleep state in which power
+is gated to all system components except for the TCAN843-Q1, which remains in a low-power state while
+monitoring the CAN bus. When a wake-up pattern is detected on the bus or when a local wake up is requested
+via the WAKE input, the device initiates node start-up by driving INH high.
+The TCAN843-Q1 includes many protection and diagnostic features including undervoltage detection, CAN bus
+fault detection, battery connection detection, thermal shutdown (TSD), driver dominant timeout (TXD DTO), and
+bus fault protection up to ±40V.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+15
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+7.2 Functional Block Diagram
+VCC
+
+VIO
+
+3
+
+5
+
+10
+VCC
+
+VLDO
+
+VIO
+
+TXD
+
+VSUP
+
+1
+
+DOMINANT
+TIME OUT
+
+VSUP
+
+13
+INH
+
+WAKE
+
+nSTB
+
+7
+
+5V
+
+9
+
+Driver
+
+WAKE
+
+12
+
+CANL
+
+14
+
+EN
+
+CONTROL and MODE
+LOGIC
+
+6
+
+nFAULT
+
+CANH
+
+OVER
+TEMP
+
+8
+
+High Speed Receiver
+UNDER
+VOLTAGE
+
+VIO
+
+RXD
+
+4
+
+Logic Output
+
+MUX
+
+Low Power Receiver
+WUP
+Detect
+
+2
+GND
+
+Figure 7-1. TCAN843-Q1 Functional Block Diagram
+
+16
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+7.3 Feature Description
+7.3.1 Supply Pins
+The TCAN843-Q1 implements three independent supply inputs for regulating different portions of the device.
+7.3.1.1 VSUP Pin
+
+This pin is connected to the battery supply. The pin provides the supply to the internal regulators that support the
+digital core and the low power CAN receiver.
+7.3.1.2 VCC Pin
+
+This pin provides the 5V supply voltage for the CAN transceiver.
+7.3.1.3 VIO Pin
+
+This pin provides the digital I/O voltage to match the CAN FD controller's I/O voltage. The pin supports I/O
+voltages from 2.9V to 5.5V providing a wide range of controller support.
+7.3.2 Digital Inputs and Outputs
+7.3.2.1 TXD Pin
+
+TXD is a logic-level input signal, referenced to VIO, from a CAN FD controller to the TCAN843-Q1. TXD is biased
+to the VIO level to force a recessive input in case the pin floats.
+7.3.2.2 RXD Pin
+
+RXD is a logic-level signal output, referenced to VIO, from the TCAN843-Q1 to a CAN FD controller. The RXD
+pin is driven to the VIO level as logic-high outputs once a valid VIO is present.
+When a power-on or wake-up event takes place, the RXD pin is pulled low.
+7.3.2.3 nFAULT Pin
+
+nFAULT is a logic-level output signal, referenced to VIO, from the TCAN843-Q1 to a CAN FD controller. The
+nFAULT output is driven to the VIO level as logic-high output.
+The nFAULT output is used to transmit the TCAN843-Q1 status indicator flags to the CAN FD controller. Please
+see Table 7-1 for the specific fault scenarios that are indicated externally via the nFAULT pin. The TCAN843-Q1
+drives the nFAULT pin high when VIO is present and in the Sleep mode to conserve power because there are no
+fault scenarios that are indicated externally in Sleep mode.
+7.3.2.4 EN Pin
+
+EN is a logic-level input signal, referenced to VIO, from a CAN FD controller to the TCAN843-Q1. The EN input
+pin is for mode selection in conjunction with the nSTB pin. EN is internally pulled low to prevent excessive
+system power and false wake-up events.
+7.3.2.5 nSTB Pin
+
+nSTB is a logic-level input signal, referenced to VIO, from a CAN FD controller to the TCAN843-Q1. The nSTB
+input pin is for mode selection in conjunction with the EN pin. nSTB is internally pulled low to prevent excessive
+system power and false wake-up events.
+7.3.2.6 NC Pin
+
+NC pin is not connected internally, leave this pin floating or connect the pin to GND
+7.3.3 GND
+GND is the ground pin of the transceiver, the pin must be connected to the PCB ground.
+7.3.4 INH Pin
+The INH pin is a high-voltage output. The pin can be used to control external regulators. These regulators are
+typically used to support the microprocessor and VIO pin. The INH function is on in all modes except for sleep
+mod. In sleep mode, the INH pin is turned off, going into a high-impedance state. This allows the node to be
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+17
+
+TCAN843-Q1
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+www.ti.com
+
+placed into the lowest power state while in sleep mode. A 100kΩ load can be added to the INH output for a fast
+transition time from the driven high state to the low state and to force the pin low when left floating.
+This terminal must be considered a high-voltage logic terminal, not a power output. The INH pin must be used
+to drive the EN terminal of the system power management device, and must not be used as a switch for the
+power management supply. This terminal is not reverse-battery protected; thus, must not be connected outside
+the system module.
+7.3.5 WAKE Pin
+The WAKE pin is a high-voltage reverse-blocked input used for the local wake-up (LWU) function. The WAKE pin
+is bi-directional edge-triggered and recognizes a local wake-up (LWU) on either a rising or falling edge of WAKE
+pin transition. The LWU function is explained further in the Local Wake-Up (LWU) via WAKE Input Terminal
+section.
+7.3.6 CAN Bus Pins
+These are the CAN high and CAN low, CANH and CANL, differential bus pins. These pins are internally
+connected to the CAN transceiver and the low-voltage wake receiver.
+7.3.7 Faults
+7.3.7.1 Internal and External Fault Indicators
+
+The following device status indicator flags are implemented to allow for the MCU to determine the status of the
+device and the system. In addition to faults, the nFAULT terminal also signals wake-up requests and a “cold”
+power-up sequence on the VSUP battery terminal so the system can do any diagnostics or cold booting sequence
+necessary. The RXD terminal indicates wake-up request and the faults are multiplexed (ORed) to the nFAULT
+output.
+
+18
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+Table 7-1. TCAN843-Q1 Transceiver Status Indicator
+FLAG NAME
+
+CAUSE
+
+INDICATORS(1)
+
+Power-up
+
+PWRON
+
+Power up on VSUP and any return of VSUP
+after the battery supply has been below
+UVSUP
+
+nFAULT = low upon entering
+silent mode from standby or
+sleep mode
+
+After a transition to normal
+mode
+
+A cold start condition generates
+a local wake-up WAKERQ,
+WAKESR and a PWRON flag.
+
+Wake-up Request
+
+WAKERQ (2)
+
+nFAULT = RXD = low
+after wake-up upon entering
+standby mode
+
+After a transition to normal
+mode
+or VCC < UVCC(F)
+or VIO < UVIO(F) for t ≥ tUV
+
+Wake-up request can only be
+set from standby, go-to-sleep, or
+sleep mode.
+Resets expired timers for UVVCC
+or UVVIO in sleep mode.
+
+Available upon entering
+normal mode(4)
+nFAULT = low indicates a
+local wake-up event from the
+WAKE pin
+nFAULT = high indicates a
+remote wake-up event from
+the CAN bus
+
+After four recessive-todominant edges on TXD in
+normal mode,(5)
+leaving normal mode,
+or VCC < UVCC(F)
+or VIO < UVIO(F) for t ≥ tUV
+
+A cold start condition generates
+a local wake-up WAKERQ,
+WAKESR and a PWRON flag.
+
+EVENT
+
+Wake-up event on CAN bus, state
+transition on WAKE pin, or initial power up
+Wake-up Source
+Recognition(3)
+
+Undervoltage
+
+WAKESR
+
+VCC < UVCC(F)
+
+Not externally indicated
+
+VCC > UVCC(R),
+or a wake-up request occurs
+
+UVIO
+
+VIO < UVIO(F)
+
+Not externally indicated
+
+VIO > UVIO(R),
+or a wake-up request occurs
+
+UVSUP
+
+VSUP < UVSUP(F)
+
+Not externally indicated
+
+VSUP > UVSUP(R)
+
+TXDDTO
+
+TXD dominant time out, dominant (low)
+signal for t ≥ tTXDDTO
+
+nFAULT = low upon entering
+silent mode from normal
+mode
+
+RXD = low and TXD = high for
+4µs,
+or a mode transition into
+normal, standby, go-to-sleep,
+or sleep modes
+
+TXDRXD
+
+TXD and RXD pins are shorted together
+for t ≥ tTXDDTO
+
+CANDOM
+
+CAN bus dominant fault, when dominant
+bus signal received for t ≥ tBUSDOM
+
+RXD = high,
+or a transition into normal,
+standby, go-to-sleep, or sleep
+modes
+
+CAN driver remains enabled
+during CANDOM fault.
+
+Thermal shutdown, TJ ≥ TSDR
+
+TJ < TSDF and
+RXD = low and TXD = high for
+4µs,
+or transition into normal,
+standby, go-to-sleep, or sleep
+modes
+
+CAN driver remains disabled
+until the TSD event is cleared.
+CAN receiver remains active
+during the TSD fault.
+
+TSD
+
+(4)
+(5)
+
+COMMENT
+
+UVCC
+
+Local Faults
+
+(1)
+(2)
+(3)
+
+FLAG IS CLEARED
+
+A VSUP undervoltage event
+generates a cold start condition
+once VSUP > UVSUP(R).
+CAN driver remains disabled
+until the TXDDTO is cleared.
+CAN receiver remains active
+during the TXDDTO fault.
+CAN driver remains disabled
+until the TXDRXD is cleared.
+CAN receiver remains active
+during the TXDRXD fault.
+TXDRXD is detected while TXD
+= RXD = low.
+
+VIO and VSUP are present
+Transitions to go-to-sleep mode is blocked until WAKERQ flag is cleared
+Wake-up source recognition reflects the first wake up source. If additional wake-up events occur the source still indicates the original
+wake-up source
+Indicator is only available in normal mode until the flag is cleared
+A minimum of 4µs between recessive-to-dominant edges is required to clear the WAKESR flag
+
+7.3.7.1.1 Power-Up (PWRON Flag)
+
+This is an internal and external flag that can be used to control the power-up sequence of the system. When a
+new battery connection to the transceiver is made the PWRON flag is set signifying a cold start condition. The
+TCAN843-Q1 treats any undervoltage conditions on the VSUP, VSUP < UVSUP(F), as a cold start. Therefore, when
+the VSUP > UVSUP(R) condition is met the TCAN843-Q1 sets the PWRON flag which can be used by the system
+to enter a routine that is only called upon in cold start situations. The PWRON flag is indicated by nFAULT driven
+low after entering silent mode from either standby mode or sleep mode. This flag is cleared after a transition to
+normal mode.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+19
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+System
+preconditioning
+routine
+
+Go to normal
+mode:
+nSTB = high
+EN = high
+
+Read nFAULT 3
+WAKESR flag
+low = local wake-up
+high = remote wake-up
+
+Normal mode
+
+Yes
+
+Standby mode:1
+INH = high in STB
+mode
+
+Silent mode2
+nSTB = high
+EN = low
+
+Read nFAULT
+low = cold start
+high = wake-up request
+
+1
+
+On entering Standby mode from power-up or Sleep mode
+
+2
+
+VCC and VIO are present
+
+3
+
+Optional
+
+nFAULT = low?
+
+No
+
+Go to normal
+mode:
+nSTB = high
+EN = high
+
+Figure 7-2. Distinguishing between PWRON and Wake Request by Entering Silent Mode
+7.3.7.1.2 Wake-Up Request (WAKERQ Flag)
+
+This is an internal and external flag that can be set in standby, go-to-sleep, or sleep mode. This flag is set when
+either a valid local wake-up (LWU) request occurs, or a valid remote wake request occurs, or on power up on
+VSUP. The setting of this flag clears the tUV timer for the UVCC or UVIO fault detection. This flag is cleared upon
+entering normal mode or during an undervoltage event on VCC or VIO.
+7.3.7.1.3 Undervoltage Faults
+
+The TCAN843-Q1 device implements undervoltage detection circuits on all supply terminals: VSUP, VCC, and
+VIO. The undervoltage flags are internal indicator flags and are not indicated on the nFAULT output pin.
+7.3.7.1.3.1 Undervoltage on VSUP
+
+UVSUP is set when the voltage on VSUP drops below the undervoltage detection voltage threshold, UVSUP. The
+PWRON, WAKERQ, and WAKESR flags are set once VSUP > UVSUP(R).
+7.3.7.1.3.2 Undervoltage on VCC
+
+UVCC is set when the voltage on V CC drops below the undervoltage detection voltage threshold, UVCC, for longer
+than the tUV undervoltage filter time.
+7.3.7.1.3.3 Undervoltage on VIO
+
+UVIO is set when the voltage on VIO drops below the undervoltage detection voltage threshold, UVIO, for longer
+than the tUV undervoltage filter time.
+7.3.7.1.4 TXD Dominant State Timeout (TXDDTO Flag)
+
+TXDDTO is an external flag that is set if the TXD pin is held dominant for t > tTXDDTO. If a TXD DTO condition
+exists, the nFAULT pin is driven low upon entering silent mode from normal mode. The TXDDTO flag is cleared
+when TXD = H and RXD = L in normal mode or upon a transition into normal, standby, go-to-sleep, or sleep
+modes.
+7.3.7.1.5 TXD Shorted to RXD Fault (TXDRXD Flag)
+
+TXDRXD is an external flag that is set if the transceiver detects that the TXD and RXD lines have been shorted
+together. The device requires a dominant signal for t ≥ tTXDDTO for this fault to be detected. If a TXDRXD
+condition exists, the nFAULT pin is driven low upon entering silent mode from normal mode and the CAN
+bus driver is disabled until the TXDRXD fault is cleared. The TXDRXD flag is cleared on the next dominant-torecessive transition with TXD high and RXD low or upon a transition into normal, standby, go-to-sleep, or sleep
+modes.
+7.3.7.1.6 CAN Bus Dominant Fault (CANDOM Flag)
+
+CANDOM is an external flag that is set if the CAN bus is stuck dominant state for t > tBUSDOM. If a CANDOM
+condition exists, the nFAULT pin is driven low upon entering silent mode from normal mode. The CANDOM
+20
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+flag is cleared on the next dominant-to-recessive transition on RXD or upon a transition into normal, standby,
+go-to-sleep, or sleep modes.
+7.3.8 Local Faults
+Local faults are detected in both normal mode and silent mode, but are only indicated via the nFAULT pin when
+the TCAN843-Q1 transitions from normal mode to silent mode. All other mode transitions clear the local fault flag
+indicators.
+7.3.8.1 TXD Dominant Timeout (TXD DTO)
+
+While the CAN driver is in active mode a TXD dominant state timeout circuit prevents the local node from
+blocking network communication in event of a hardware or software failure where TXD is held dominant longer
+than the timeout period, t > tTXDDTO. The TXD dominant state timeout circuit is triggered by a falling edge on the
+TXD pin. If no rising edge is seen before on TXD before t > tTXDDTO than the CAN driver is disabled releasing the
+bus lines to the recessive level. This keeps the bus free for communication between other nodes on the network.
+The CAN driver is activated again once there is a mode transition, or once TXD is high while RXD is low. During
+a TXDDTO fault the high-speed receiver remains active and the RXD output pin mirrors the CAN bus.
+Driver remains
+disabled until
+TXDDTO cleared
+
+TXD fault stuck dominant: example PCB
+failure or bad software
+tTXDDTO
+
+TXD (driver)
+
+Normal CAN communication
+
+Fault is repaired & transmission capability
+restored (TXD = high while RXD = low)
+
+Driver disabled freeing
+bus for other nodes
+
+Bus would be “stuck dominant” blocking communication for the whole network but TXD DTO
+prevents this and frees the bus for communication after the time tTXDDTO.
+
+CAN Bus Signal
+
+tTXDDTO
+
+Communication from other bus node(s)
+
+Communication from repaired node
+
+RXD (receiver)
+
+Communication from local node
+
+Communication from other bus node(s)
+
+Communication from repaired local node
+
+Figure 7-3. Timing Diagram for TXD DTO
+The minimum dominant TXD time allowed by the dominant state timeout circuit limits the minimum possible
+transmitted data rate of the transceiver. The CAN protocol allows a maximum of eleven successive dominant bits
+to be transmitted in the worst case, where five successive dominant bits are followed immediately by an error
+frame. The minimum transmitted data rate is calculated using the minimum tTXDDTO time in Equation 1.
+Minimum Data Rate = 11 bits / tTXDDTO = 11 bits / 1.2ms = 9.2kbps
+
+(1)
+
+7.3.8.2 Thermal Shutdown (TSD)
+
+If the junction temperature of the TCAN843-Q1 exceeds the thermal shutdown threshold the device turns off
+the CAN driver circuits thus blocking the TXD to bus transmission path. The CAN bus terminals are biased to
+recessive level during a TSD fault and the receiver to RXD path remains operational. The TSD fault condition is
+cleared when the junction temperature, TJ, of the device drops below the thermal shutdown release temperature,
+TSDF, of the device and either a mode change into Normal, Standby, or Sleep mode occurs or TXD = H while
+RXD = L. If the fault condition that caused the TSD fault is still present, the temperature can rise again, and the
+device enters thermal shutdown again. Prolonged operation with TSD fault conditions can affect device reliability.
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+21
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+The TSD circuit includes hysteresis to avoid any oscillation of the driver output. During the fault the TSD fault
+condition is indicated to the CAN FD controller via the nFAULT terminal in Silent mode.
+7.3.8.3 Undervoltage Lockout (UVLO)
+
+The supply terminals, VSUP, VIO and VCC, are monitored for undervoltage events. If an undervoltage event
+occurs the TCAN843-Q1 enters a protected state where the bus pins present no load to the CAN bus.
+This protects the CAN bus and system from unwanted glitches and excessive current draw that can impact
+communication between other CAN nodes on the CAN bus.
+If an undervoltage event occurs on VSUP in any mode, the TCAN843-Q1 CAN transceiver enters the CAN off
+state.
+If an undervoltage event occurs on VCC, the TCAN843-Q1 remains in normal or silent mode but the CAN
+transceiver changes to the CAN passive state. During a UVCC event, RXD remains high as long as VIO is
+present and there is no wake-up event being signaled on RXD. The CAN bus is weakly biased to GND. If the
+undervoltage event persists longer than tUV, the TCAN843-Q1 transitions to sleep mode.
+If an undervoltage event occurs on the VIO, the TCAN843-Q1 transitions to standby mode. If the undervoltage
+event persists longer than tUV, the TCAN843-Q1 transitions to sleep mode.
+Once an undervoltage condition is cleared and the supplies have returned to valid levels, the device typically
+needs tMODE1 to transition to normal operation.
+7.3.8.4 Unpowered Devices
+
+The device is designed to be high-impedance to the CAN bus if the device is unpowered. The CANH and CANL
+pins have low leakage currents when the device is unpowered, so no load is present on the bus. This is critical if
+some nodes of the network are unpowered while the rest of the of network remains in operation.
+The logic terminals also have low leakage currents when the device is unpowered, so there is not a load down
+other circuits which can remain powered.
+7.3.8.5 Floating Terminals
+
+The TCAN843-Q1 has internal pull-ups and pull-downs on critical pins to make sure a known operating behavior
+if the pins are left floating. See Table 7-2 for the pin fail-safe biasing protection description.
+Table 7-2. Pin Fail-safe Biasing
+PIN
+
+FAIL-SAFE PROTECTION
+
+TXD
+
+Recessive level
+
+EN
+
+Low-power mode
+
+nSTB
+
+Low-power mode
+
+VALUE
+
+COMMENT
+
+60kΩ
+
+Weak pull-down to GND
+
+Weak pull-up to VIO
+Weak pull-down to GND
+
+This internal bias must not be relied upon by design but rather a fail-safe option. Special care needs to be
+taken when the transceiver is used with a CAN FD controller that has open-drain outputs. The TCAN843-Q1
+implements a weak internal pull-up resistor on the TXD pin. The bit timing requirements for CAN FD data
+rates require special consideration and the pull-up strength must be considered carefully when using open-drain
+outputs. An adequate external pull-up resistor must be used to make sure the TXD output of the CAN FD
+controller maintains proper bit timing input to the CAN device.
+7.3.8.6 CAN Bus Short-Circuit Current Limiting
+
+The TCAN843-Q1 has several protection features that limit the short-circuit current when a CAN bus line is
+shorted. These include CAN driver current limiting in the dominant and recessive states and TXD dominant
+state timeout which prevents permanently having the higher short-circuit current of a dominant state in case of a
+system fault.
+During CAN communication the bus switches between the dominant and recessive states, thus the short-circuit
+current can be viewed either as the current during each bus state or as an average current. The average shortcircuit current must be used when considering system power for the termination resistors and common-mode
+22
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+www.ti.com
+
+TCAN843-Q1
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+choke. The percentage of time that the driver can be dominant is limited by the TXD dominant state timeout
+and the CAN protocol which has forced state changes and recessive bits such as bit stuffing, control fields,
+and interframe spacing. These makes sure there is a minimum recessive time on the bus even if the data field
+contains a high percentage of dominant bits.
+The short-circuit current of the bus depends on the ratio of recessive to dominant bits and the respective
+short-circuit currents. The average short-circuit current can be calculated using Equation 2.
+IOS(AVG) = %Transmit × [(%REC_Bits × IOS(SS)_REC) + (%DOM_Bits × IOS(SS)_DOM)] + [%Receive × IOS(SS)_REC]
+
+(2)
+
+Where:
+• IOS(AVG) is the average short-circuit current
+• %Transmit is the percentage the node is transmitting CAN messages
+• %Receive is the percentage the node is receiving CAN messages
+• %REC_Bits is the percentage of recessive bits in the transmitted CAN messages
+• %DOM_Bits is the percentage of dominant bits in the transmitted CAN messages
+• IOS(SS)_REC is the recessive steady state short-circuit current
+• IOS(SS)_DOM is the dominant steady state short-circuit current
+The short-circuit current and possible fault cases of the network must be taken into consideration when sizing
+the power ratings of the termination resistance and other network components.
+
+7.4 Device Functional Modes
+The TCAN843-Q1 has six operating modes: normal, standby, silent, go-to-sleep, sleep, and off mode. Operating
+mode selection is controlled using the nSTB pin and EN pin in conjunction with supply conditions, temperature
+conditions, and wake events.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+23
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+VSUP < UVVSUP(F)
+
+Power Off
+CAN: High impedance
+INH: High impedance
+RXD: High impedance
+
+Power On
+Start Up
+
+Normal Mode
+CAN driver/receiver active
+CAN bus bias: VCC/2
+INH: VSUP level
+
+(EN = low and nSTB = low) or
+VIO < UVIO
+EN = high and nSTB = high and VIO > UVIO
+EN = low and nSTB = high
+and VIO > UVIO
+
+EN = low and nSTB = high
+
+EN = high and
+nSTB = high
+
+EN = high and
+nSTB = low
+
+EN = high
+and
+nSTB = high
+
+Silent Mode
+CAN receiver active
+CAN driver disabled
+CAN bus bias: VCC/2
+INH: VSUP level
+
+(EN = low or WAKERQ
+set) and nSTB = low
+
+EN = high and nSTB = low
+and WAKERQ Cleared
+
+EN = high and nSTB = low
+and WAKERQ Cleared
+EN = low and
+nSTB = high
+
+Wake-Up Event:
+WUP or LWU
+
+[(EN
+=
+(VIO low and
+>
+nS
+[risin UVIO and TB = hig
+g ed
+ge o VCC > UV h) and
+nn
+UVIO
+C
+and STB and C )] or
+(EN = low and t < tGOTOSLEEP)
+EN =
+VIO >
+2
+lo
+w]
+or WUP or LWU
+
+Go-To-Sleep Mode
+CAN driver/receiver disabled
+CAN bus bias: GND
+WAKE sources: WUP & LWU
+INH: VSUP level
+
+Standby Mode
+CAN driver/receiver disabled
+CAN bus bias: GND
+WAKE sources: WUP & LWU
+RXD: Signals wake-up
+INH: VSUP level
+
+EN = high and t > tGOTOSLEEP
+[(EN = high and nSTB = high) and
+(VIO > UVIO and VCC > UVCC )] or [rising edge on
+nSTB and VIO > UVIO and EN = high]
+
+Sleep Mode
+CAN driver/receiver disabled
+CAN bus bias: GND
+EN: x1
+WAKE sources: WUP & LWU
+INH: High impedance
+nFAULT: High if VIO is present,
+high impedance if VIO < UVIO
+
+VCC falls below UVCC or
+VIO falls below UVIO
+for t > tUV
+
+From any other
+mode
+
+1.
+2.
+
+The enable pin can be in a logical high or low state while in sleep mode but since the pin has an internal pull-down, the lowest
+possible power consumption occurs when the pin is left either floating or pulled low externally.
+First set EN = low at least 0.5μs before setting nSTB = high to produce a transition directly from Sleep mode to Silent mode without
+first passing through Normal mode (and thus inadvertently clearing fault flags).
+
+Figure 7-4. TCAN843-Q1 State Machine
+Table 7-3. TCAN843-Q1 Mode Overview
+
+24
+
+MODE
+
+VCC and VIO
+
+VSUP
+
+EN
+
+nSTB
+
+WAKERQ FLAG
+
+DRIVER
+
+RECEIVER
+
+RXD
+
+INH
+
+Normal
+
+> UVCC and > UVIO
+
+> UVSUP
+
+High
+
+High
+
+X
+
+Enabled
+
+Enabled
+
+Mirrors bus state
+
+On
+
+Silent
+
+> UVCC and > UVIO
+
+> UVSUP
+
+Low
+
+High
+
+X
+
+Disabled
+
+Enabled
+
+Mirrors bus state
+
+On
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+Table 7-3. TCAN843-Q1 Mode Overview (continued)
+MODE
+
+Standby
+
+VCC and VIO
+
+VSUP
+
+EN
+
+nSTB
+
+WAKERQ FLAG
+
+DRIVER
+
+RECEIVER
+
+RXD
+
+INH
+
+Low power bus monitor
+enabled
+
+Low signals wake-up
+
+On
+
+Low signals wake-up
+
+On
+
+> UVCC and > UVIO
+
+> UVSUP
+
+High
+
+Low
+
+Set
+
+Disabled
+
+> UVCC and > UVIO
+
+> UVSUP
+
+Low
+
+Low
+
+X
+
+Disabled
+
+> UVCC and < UVIO
+
+> UVSUP
+
+Low
+
+Low
+
+X
+
+Disabled
+
+Low power bus monitor
+enabled
+
+High impedance
+
+On
+
+High or high impedance
+(no VIO)
+
+On(2)
+
+> UVCC and > UVIO
+
+> UVSUP
+
+High
+
+Low
+
+Cleared
+
+Disabled
+
+Low power bus monitor
+enabled
+
+> UVCC and > UVIO
+
+> UVSUP
+
+High
+
+Low
+
+Cleared
+
+Disabled
+
+Low power bus monitor
+enabled
+
+High or high impedance
+(no VIO)
+
+Impedance
+
+< UVCC or < UVIO
+
+> UVSUP
+
+X
+
+X
+
+X
+
+Disabled
+
+Low power bus monitor
+enabled
+
+High or high impedance
+(no VIO)
+
+High
+impedance
+
+Passive(4)
+
+< UVCC and > UVIO
+
+> UVSUP
+
+X
+
+High
+
+X
+
+Disabled
+
+Disabled
+
+High
+
+On
+
+Protected
+
+X
+
+< UVSUP
+
+X
+
+X
+
+X
+
+Disabled
+
+Disabled
+
+High impedance
+
+High
+impedance
+
+Go-to-sleep(1)
+
+Sleep(3)
+
+(1)
+(2)
+(3)
+(4)
+
+Low power bus monitor
+enabled
+
+High
+
+Go-to-sleep: Transitional mode for EN = H, nSTB = L until tGOTOSLEEP timer has expired. The low-power bus monitor becomes/remains
+enabled in this state.
+The INH pin transitions to high impedance once the tGOTOSLEEP timer has expired and the device transitions to Sleep mode.
+Mode change from Go-to-Sleep mode to Sleep mode once tGOTOSLEEP timer has expired.
+Passive mode is entered from Normal mode or Silent mode when a UVCC event occurs for t > tUV_det. The device transitions from
+Passive mode to Sleep mode once the tUV timer has expired.
+
+7.4.1 Operating Mode Description
+7.4.1.1 Normal Mode
+
+This is the normal operating mode of the device. The CAN driver and receiver are fully operational and CAN
+communication is bi-directional. The driver is translating a digital input on TXD to a differential output on CANH
+and CANL. The receiver is translating the differential signal from CANH and CANL to a digital output on RXD.
+Entering normal mode clears both the WAKERQ and the PWRON flags. If Normal mode is entered while TXD
+is low, the driver is not enabled until TXD becomes high, preventing glitches during state transitions or bus
+interruptions due to TXD faults.
+7.4.1.2 Silent Mode
+
+Silent mode is commonly referred to as listen only and receive only mode. In this mode, the CAN driver is
+disabled but the receiver is fully operational and CAN communication is unidirectional into the device. The
+receiver is translating the differential signal from CANH and CANL to a digital output on the RXD terminal.
+In silent mode, PWRON and Local Failure flags are indicated on the nFAULT pin.
+7.4.1.3 Standby Mode
+
+Standby mode is a low-power mode where the driver and receiver are disabled, reducing current consumption.
+However, this is not the lowest power mode of the device since the INH terminal is on, allowing the rest of the
+system to resume normal operation.
+During standby mode, a wake-up request (WAKERQ) is indicated by the RXD terminal being low. The wake-up
+source is identified via the nFAULT pin after the device is returned to normal mode.
+7.4.1.4 Go-To-Sleep Mode
+
+Go-to-sleep mode is the transitional mode of the device from any state to sleep. In this state, the driver
+and receiver are disabled, reducing the current consumption. The INH pin is active to supply an enable to
+the VIO controller which allows the rest of the system to operate normally. In this mode, the low-power bus
+monitor activates or remains active to monitor for bus wake-up events. If the device is held in this state for t ≥
+tGOTOSLEEP, the device transitions to sleep mode and the INH turns off transitioning to the high impedance state.
+If any wake-up events persist, the TCAN843-Q1 remains in standby mode until the device is switched into
+normal mode to clear the pending wake-up events.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+25
+
+TCAN843-Q1
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+www.ti.com
+
+7.4.1.5 Sleep Mode
+
+Sleep mode is the lowest power mode of the TCAN843-Q1. In sleep mode, the CAN transmitter and the main
+receiver are switched off, and the transceiver cannot send or receive data. The low power receiver is able
+to monitor the bus for any activity that validates the wake-up pattern (WUP) requirements, and the WAKE
+monitoring circuit monitors for state changes on the WAKE terminal for a local wake-up (LWU) event. The INH
+pin is switched off in sleep mode causing any system power supplies controlled by INH to be switched off thus
+reducing system power consumption.
+Sleep mode is exited if:
+• a valid wake-up pattern (WUP) is received via the CAN bus pins
+• a local WAKE (LWU) event occurs
+• nSTB becomes high while VIO > UVIO (the device enters Normal or Silent mode depending upon the logic
+level on the EN pin)
+7.4.1.5.1 Remote Wake Request via Wake-Up Pattern (WUP)
+
+The TCAN843-Q1 implements a low-power wake receiver in the standby and sleep mode that uses the multiple
+filtered dominant wake-up pattern (WUP) defined in the ISO11898-2:2016 standard.
+The wake-up pattern (WUP) consists of a filtered dominant bus, then a filtered recessive bus time followed by
+a second filtered dominant bus time. The first filtered dominant initiates the WUP and the bus monitor is now
+waiting on a filtered recessive. Other bus traffic does not reset the bus monitor. Once a filtered recessive is
+received, the bus monitor is now waiting on a filtered dominant. Other bus traffic does not reset the bus monitor.
+Immediately upon receiving of the second filtered dominant, the bus monitor recognizes the WUP and drives the
+RXD terminal low, if a valid VIO is present signaling to the controller the wake-up request. If a valid, VIO is not
+present when the wake-up pattern is received, the transceiver drives the RXD output pin low once VIO > UV IO(R)
+after tUV(RE-ENABLE).
+The WUP consists of:
+• A filtered dominant bus of at least tWK(FILTER) followed by
+• A filtered recessive bus time of at least tWK(FILTER) followed by
+• A second filtered dominant bus time of at least tWK(FILTER)
+For a dominant or recessive to be considered “filtered,” the bus must be in that state for more than tWK(FILTER)
+time. Due to variability in the tWK(FILTER) the following scenarios are applicable. Bus state times less than the
+tWK(FILTER) minimum are never detected as part of a WUP, and thus, no wake request is generated. Bus state
+times between tWK(FILTER) minimum and tWK(FILTER) maximum can be detected as part of a WUP and a wake
+request can be generated. Bus state times more than tWK(FILTER) maximum is always detected as part of a WUP,
+and thus, a wake request is always generated. See Figure 7-5 for the timing diagram of the WUP.
+The pattern and tWK(FILTER) time used for the WUP and wake request prevents noise and bus stuck dominant
+faults from causing false wake requests while allowing any CAN or CAN FD message to initiate a wake request.
+ISO11898-2:2024 has two sets of times for a short and long wake-up filter times. The tWK(FILTER) timing for the
+TCAN843-Q1 has been picked to be within the min and max values of both filter ranges. This timing has been
+chosen such that a single bit time at 500kbps, or two back to back bit times at 1Mbps trigger the filter in either
+bus state.
+For an additional layer of robustness and to prevent false wake-ups, the transceiver implements the tWK(TIMEOUT)
+timer. For a remote wake-up event to successfully occur, the entire wake-up pattern must be received within the
+timeout value. If the full wake-up pattern is not received before the tWK(TIMEOUT) expires then the internal logic
+is reset and the transceiver remains in sleep mode without waking up. The full pattern must then be transmitted
+again within the tWK(TIMEOUT) window. See Figure 7-5.
+A recessive bus of at least tWK(FILTER) must separate the next WUP pattern if the CAN bus is dominant when the
+tWK(TIMEOUT) expires.
+
+26
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+Wake-Up Pattern (WUP) received in t < tWK_TIMEOUT
+Filtered
+Dominant
+
+Filtered
+Recessive
+
+Waiting for
+Filtered
+Recessive
+
+Waiting for
+Filtered
+Dominant
+
+Wake Request
+Filtered
+Dominant
+
+Bus
+
+Bus VDiff
+
+ tWK_FILTER
+
+tWK_FILTER
+
+ tWK_FILTER
+*
+
+INH
+
+Mode
+
+Sleep Mode
+
+tINH_SLP_STB
+
+Standby Mode
+
+*The RXD pin is only driven once VIO is present.
+
+Figure 7-5. Wake-Up Pattern (WUP)
+7.4.1.5.2 Local Wake-Up (LWU) by WAKE Input Terminal
+
+The WAKE terminal is a bi-directional high-voltage reverse-battery protected input which can be used for local
+wake-up (LWU) requests through a voltage transition. A LWU event is triggered on either a low-to-high or
+high-to-low transition due to the bi-directional input thresholds. The WAKE pin can be used with a switch to VSUP,
+to VCC, to VIO, or to ground. If the terminal is unused, the terminal must be pulled to supply or to ground to avoid
+unwanted parasitic wake-up events. Current consumption is minimized when WAKE is connected to 5V or to
+ground.
+
+Figure 7-6. WAKE Circuit Example
+Figure 7-6 shows two possible configurations for the WAKE pin, a low-side and high-side switch configuration.
+The objective of the series resistor, RSERIES, is to protect the WAKE input of the device from over current
+conditions that can occur in the event of a ground shift or ground loss. The minimum value of RSERIES can be
+calculated using the maximum supply voltage, VSUPMAX, and the maximum allowable current of the WAKE pin,
+IIO(WAKE). RSERIES is calculated using:
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+27
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+(3)
+
+RSERIES = VSUPMAX / IIO(WAKE)
+
+With absolute maximum voltage, VSUPMAX, of 40V and maximum allowable IIO(WAKE) of 3mA, the minimum
+required RSERIES value is 13.3kΩ.
+The LWU circuitry is active in Sleep mode and Standby mode.
+The WAKE circuitry is switched off in Normal mode and Silent mode.
+t  tWAKE_HT
+no wake-up
+
+WAKE
+threshold
+not
+crossed
+
+t > tWAKE_HT
+wake-up
+
+Wake
+
+LWU Request
+
+INH
+
+*
+RXD
+
+Mode
+
+Sleep Mode
+
+Standby Mode
+
+* RXD is driven with valid VIO
+
+Figure 7-7. LWU Request Rising Edge
+
+28
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+WAKE
+threshold
+not
+crossed
+
+t  tWAKE_HT
+no wake-up
+
+t > tWAKE_HT
+wake-up
+
+Wake
+
+LWU Request
+
+INH
+
+*
+RXD
+
+Mode
+
+Sleep Mode
+
+Standby Mode
+
+* RXD is driven with valid VIO
+
+Figure 7-8. LWU Request Falling Edge
+7.4.2 CAN Transceiver
+7.4.2.1 CAN Transceiver Operation
+
+The TCAN843-Q1 supports the ISO 11898-2:2024 CAN physical layer standard normal bus biasing scheme.
+Normal bus biasing means that the CAN bus is biased when the transceiver is in Normal mode or Silent mode.
+In other modes, the CAN pins are either high-impedance or weakly biased to GND.
+7.4.2.1.1 Driver and Receiver Function Tables
+
+Table 7-4. Driver Function Table
+DEVICE MODE TXD INPUTS(1)
+Normal
+
+(1)
+(2)
+
+Low
+
+BUS OUTPUTS
+CANH
+
+CANL
+
+High
+
+Low
+
+DRIVEN BUS STATE(2)
+Dominant
+
+High or Open
+
+High impedance High impedance
+
+VCC/2
+
+Silent
+
+x
+
+High impedance High impedance
+
+VCC/2
+
+Standby
+
+x
+
+High impedance High impedance
+
+Weak bias to GND
+
+Sleep
+
+x
+
+High impedance High impedance
+
+Weak bias to GND
+
+x = irrelevant
+For bus states and typical bus voltages see Figure 7-9
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+29
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+Table 7-5. Receiver Function Table
+DEVICE MODE
+
+Normal / Silent
+
+Standby
+
+Sleep / Go-tosleep(1)
+
+(1)
+
+30
+
+CAN DIFFERENTIAL INPUTS
+VID = VCANH – VCANL
+
+BUS STATE
+
+RXD TERMINAL
+
+VID ≥ 0.9V
+
+Dominant
+
+Low
+
+0.5V < VID < 0.9V
+
+Indeterminate
+
+Indeterminate
+
+VID ≤ 0.5V
+
+Recessive
+
+High
+
+Open (VID ≈ 0V)
+
+Open
+
+High
+
+VID ≥ 1.15V
+
+Dominant
+
+0.4V < VID < 1.15V
+
+Indeterminate
+
+VID ≤ 0.4
+
+Recessive
+
+Open (VID ≈ 0V)
+
+Open
+
+VID ≥ 1.15V
+
+Dominant
+
+0.4V < VID < 1.15V
+
+Indeterminate
+
+VID ≤ 0.4V
+
+Recessive
+
+Open (VID ≈ 0V)
+
+Open
+
+High
+Low if wake-up event persists
+
+High
+Tri-state if VIO or VSUP are not
+present
+
+Low power wake-up receiver is active
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+7.4.2.1.2 CAN Bus States
+
+The CAN bus has two logical states during operation: recessive and dominant. See Figure 7-9.
+A dominant bus state occurs when the bus is driven differentially and corresponds to a logic low on the TXD
+and RXD pins. A recessive bus state occurs when the bus is biased to one half of the CAN transceiver supply
+voltage via the high resistance internal input resistors (RIN) of the receiver and corresponds to a logic high on the
+TXD and RXD pins.
+A dominant state overwrites the recessive state during arbitration. Multiple CAN nodes can be transmitting a
+dominant bit at the same time during arbitration, and in this case the differential voltage of the CAN bus is
+greater than the differential voltage of a single CAN driver. The TCAN843-Q1 CAN transceiver implements
+low-power standby modes which enable a third bus state where the bus pins are biased to ground via the
+high-resistance internal resistors of the receiver.
+
+Normal or Silent Mode
+
+Typical Bus Voltage
+
+Standby, Go-to-sleep, Sleep, or Passive Mode
+CANH
+
+VDIFF
+
+VDIFF
+CANL
+
+Recessive
+
+Dominant
+
+Recessive
+
+Time, t
+
+Figure 7-9. Bus States
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+31
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+8 Application Information Disclaimer
+Note
+Information in the following applications sections is not part of the TI component specification,
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for
+determining suitability of components for their purposes, as well as validating and testing their design
+implementation to confirm system functionality.
+
+8.1 Application Information
+The TCAN843-Q1 transceiver is typically used in applications with a host microprocessor or FPGA that includes
+the data link layer portion of the CAN protocol. These types of applications typically also include power
+management technology that allows for power to be gated to the application using an enable (EN) or inhibit
+(INH) pin. A single 5V regulator can be used to drive both VCC and VIO, or independent 5V and 3.3V regulators
+can be used to drive V CC and VIO separately as shown in Figure 8-1. The bus termination is shown for illustrative
+purposes.
+8.1.1 Typical Application
+
+VBAT
+
+3k
+
+EN
+
+VIN
+
+100k
+
+VREG
+
+100nF
+VSUP
+
+INH
+
+5V VOUT
+VCC
+
+7
+
+22nF
+
+33k
+
+WAKE
+
+10
+
+9
+
+3
+
+VIO
+100nF
+
+VIO
+
+CANH
+
+5
+
+13
+
+100nF
+VDD
+GPIO
+GPIO
+MCU
+
+EN
+
+6
+
+nSTB
+
+14
+
+nFAULT
+
+GPIO
+
+8
+CANL
+
+CAN FD
+Controller
+
+12
+
+1
+
+TXD
+RXD
+
+Optional:
+Terminating
+Node
+
+4
+
+2
+11
+
+Optional:
+Filtering,
+Transient and
+ESD
+
+NC
+
+Figure 8-1. Typical Application
+8.1.2 Design Requirements
+8.1.2.1 Bus Loading, Length and Number of Nodes
+
+A typical CAN application can have a maximum bus length of 40 meters and maximum stub length of 0.3m.
+However, with careful design, users can have longer cables, longer stub lengths, and many more nodes to a
+bus. A high number of nodes requires a transceiver with high input impedance such as the TCAN843-Q1.
+
+32
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+Many CAN organizations and standards have scaled the use of CAN for applications outside the original
+ISO11898-2:2024 standard. These organization and standards made system level trade off decisions for data
+rate, cable length, and parasitic loading of the bus. Examples of these CAN systems level specifications are
+ARINC825, CANopen, DeviceNet, SAEJ2284, SAEJ1939, and NMEA200.
+A CAN network system design is a series of tradeoffs. In the ISO 11898-2:2024 specification the differential
+output driver is specified with a bus load that can range from 50Ω to 65Ω where the differential output must be
+greater than 1.5V. The TCAN843-Q1 is specified to meet the 1.5V requirement down to 50Ω and is specified
+to meet 1.4V differential output at 45Ω bus load. The differential input resistance, RID, of the TCAN843-Q1 is
+a minimum of 50kΩ. If 100 TCAN843-Q1 transceivers are in parallel on a bus, this is equivalent to a 500Ω
+differential load in parallel with the nominal 60Ω bus termination which gives a total bus load of approximately
+54Ω. Therefore, the TCAN843-Q1 theoretically supports over 100 transceivers on a single bus segment.
+However, for CAN network design margin must be given for signal loss across the system and cabling, parasitic
+loadings, timing, network imbalances, ground offsets and signal integrity thus a practical maximum number of
+nodes is often lower. Bus length can also be extended beyond 40 meters by careful system design and data rate
+tradeoffs. For example, CANopen network design guidelines allow the network to be up to 1km with changes in
+the termination resistance, cabling, less than 64 nodes and significantly lowered data rate.
+This flexibility in CAN network design is one of the key strengths allowing for these system level network
+extensions and additional standards to build on the original ISO11898-2 CAN standard. However, when using
+this flexibility, the CAN network system designer must take the responsibility of good network design for a robust
+network operation.
+8.1.3 Detailed Design Procedure
+8.1.3.1 CAN Termination
+
+Termination can be a single 120Ω resistor at each end of the bus, either on the cable or in a terminating node.
+If filtering and stabilization of the common-mode voltage of the bus is desired then split termination can be used,
+see Figure 8-2. Split termination improves the electromagnetic emissions behavior of the network by filtering
+higher-frequency common-mode noise that can be present on the differential signal lines.
+Standard Termination
+
+Split Termination
+
+CANH
+
+CANH
+
+RTERM/2
+
+TCAN Transceiver
+
+RTERM
+
+TCAN Transceiver
+CSPLIT
+RTERM/2
+
+CANL
+
+CANL
+
+Figure 8-2. CAN Bus Termination Concepts
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+33
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+8.1.4 Application Curves
+50
+
+ICC Dominant (mA)
+
+40
+
+30
+
+20
+
+10
+
+0
+4.5
+
+4.6
+
+4.7
+
+4.8
+
+4.9
+
+5
+5.1
+VCC (V)
+
+5.2
+
+RL = 60Ω CL = Open
+
+5.3
+
+5.4
+
+5.5
+
+Temperature = 25°C
+
+VIO = 3.3V VSUP = 12V
+
+Figure 8-3. ICC Dominant over ICC Supply Voltage
+
+34
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+8.2 Power Supply Recommendations
+The TCAN843-Q1 is designed to operate off of three supply rails; VSUP, VCC, and VIO. VSUP is a high-voltage
+supply pin designed to connect to the VBAT rail, V CC is a low-voltage supply pin with an input voltage range from
+4.5V to 5.5V that supports the CAN transceiver and VIO is a low-voltage supply pin with an input voltage range
+from 2.95V to 5.5V that provides the I/O voltage to match the system controller. For a reliable operation, a 100nF
+decoupling capacitor must be placed as close to the supply pins as possible. This helps to reduce supply voltage
+ripple present on the output of switched-mode power supplies, and also helps to compensate for the resistance
+and inductance of the PCB power planes.
+
+8.3 Layout
+Robust and reliable CAN node design can require special layout techniques depending on the application
+and automotive design requirements. Since transient disturbances have high frequency content and a wide
+bandwidth, high-frequency layout techniques must be applied during PCB design.
+8.3.1 Layout Guidelines
+The layout example provides information on components around the device. Place the protection and filtering
+circuitry as close to the bus connector, J1, to prevent transients, ESD and noise from propagating onto the
+board. Transient voltage suppression (TVS) device can be added for extra protection, shown as D1. The
+production solution can be either a bi-directional TVS diode or varistor with ratings matching the application
+requirements. This example also shows optional bus filter capacitors C6 and C7. A series common-mode choke
+(CMC) is placed on the CANH and CANL lines between the device and connector J1.
+Design the bus protection components in the direction of the signal path. Do not force the transient current
+to divert from the signal path to reach the protection device. Use supply and ground planes to provide low
+inductance. Note that high-frequency currents follow the path of least impedance and not the path of least
+resistance. Use at least two vias for supply and ground connections of bypass capacitors and protection devices
+to minimize trace and via inductance.
+•
+•
+•
+
+•
+•
+
+Bypass and bulk capacitors must be placed as close as possible to the supply terminals of transceiver,
+examples are C1 on VCC, C2 on VIO , and C3 and C4 on the VSUP supply.
+VIO pin of the transceiver is connected to the microcontroller IO supply voltage (µC V).
+Bus termination: this layout example shows split termination. This is where the termination is split into two
+resistors, R3 and R4, with the center or split tap of the termination connected to ground via capacitor C5. Split
+termination provides common-mode filtering for the bus. When bus termination is placed on the board instead
+of directly on the bus, additional care must be taken to make sure the terminating node is not removed from
+the bus; thus, also removing the termination.
+INH, pin 7, can have a 100kΩ resistor (R1) to ground.
+WAKE, pin 9, can recognize either a rising or a falling edge of a wake signal and is typically connected to an
+external switch. The pin must be configured as shown with C8 which is a 22nF capacitor to GND where R5 is
+33kΩ and R6 is 3kΩ.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+35
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+8.3.2 Layout Example
+µC V
+
+TXD
+
+nSTB
+
+R2
+
+TXD
+
+C6
+nSTB
+
+GND
+
+CANH
+
+VCC
+
+CANL
+
+R3
+
+GND
+
+C5
+C1
+
+VCC
+
+D1
+J1
+
+RXD
+
+R4
+
+NC
+
+RXD
+VIO
+
+GND
+
+Choke
+
+VSUP
+
+C7
+
+C3 C4
+VSUP
+
+µC V
+C2
+
+EN
+
+EN
+
+WAKE
+
+GND
+R5
+
+INH
+
+To Switch
+
+nFAULT
+
+INH
+
+WAKE
+C8
+
+R1
+R6
+GND
+
+VSUP GND
+
+Figure 8-4. Example Layout
+
+36
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+TCAN843-Q1
+
+www.ti.com
+
+SLLSFY0A – SEPTEMBER 2025 – REVISED DECEMBER 2025
+
+9 Device and Documentation Support
+9.1 Documentation Support
+9.1.1 CAN Transceiver Physical Layer Standards:
+•
+•
+•
+•
+•
+•
+
+ISO 11898-2:2024: Controller area network (CAN) - High-speed physical medium attachment sublayer
+SAE J2284-1: High-Speed CAN for Vehicle Applications at 125kbps
+SAE J2284-2: High-Speed CAN for Vehicle Applications at 250kbps
+SAE J2284-3: High-Speed CAN for Vehicle Applications at 500kbps
+SAE J2284-4: High-Speed CAN for Vehicle Applications at 500kbps with CAN FD Data at 2Mbps
+SAE J2284-5: High-Speed CAN for Vehicle Applications at 500kbps with CAN FD Data at 5Mbps
+
+9.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on
+Notifications to register and receive a weekly digest of any product information that has changed. For change
+details, review the revision history included in any revised document.
+
+9.3 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do
+not necessarily reflect TI's views; see TI's Terms of Use.
+
+9.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+
+9.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published
+specifications.
+
+9.6 Glossary
+TI Glossary
+
+This glossary lists and explains terms, acronyms, and definitions.
+
+10 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision * (September 2025) to Revision A (December 2025)
+Page
+• Changed the document status from Advanced Information to Production data................................................. 1
+• Added the Typical Characteristics section........................................................................................................ 11
+• Added the TXD Dominant Timeout (TXD DTO) section................................................................................... 21
+
+11 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+Submit Document Feedback
+
+Copyright © 2025 Texas Instruments Incorporated
+
+Product Folder Links: TCAN843-Q1
+
+37
+
+PACKAGE OPTION ADDENDUM
+www.ti.com
+
+6-Jan-2026
+
+PACKAGING INFORMATION
+Orderable part number
+
+(1)
+
+Status
+
+Material type
+
+(1)
+
+(2)
+
+Package | Pins
+
+Package qty | Carrier
+
+RoHS
+(3)
+
+Lead finish/
+Ball material
+
+MSL rating/
+Peak reflow
+
+(4)
+
+(5)
+
+Op temp (°C)
+
+Part marking
+(6)
+
+TCAN843DMTRQ1
+
+Active
+
+Production
+
+VSON (DMT) | 14
+
+3000 | LARGE T&R
+
+-
+
+NIPDAU
+
+Level-2-260C-1 YEAR
+
+-40 to 150
+
+TCAN
+843
+
+TCAN843DRQ1
+
+Active
+
+Production
+
+SOIC (D) | 14
+
+3000 | LARGE T&R
+
+-
+
+NIPDAU
+
+Level-1-260C-UNLIM
+
+-40 to 150
+
+TCAN843
+
+TCAN843DYYRQ1
+
+Active
+
+Production
+
+SOT-23-THIN
+(DYY) | 14
+
+3000 | LARGE T&R
+
+Yes
+
+NIPDAU
+
+Level-1-260C-UNLIM
+
+-40 to 150
+
+TCAN843
+
+Status: For more details on status, see our product life cycle.
+
+(2)
+
+Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+(3)
+
+RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+
+Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+(5)
+
+MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+(6)
+
+Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+Addendum-Page 1
+
+PACKAGE MATERIALS INFORMATION
+www.ti.com
+
+23-Jan-2026
+
+TAPE AND REEL INFORMATION
+REEL DIMENSIONS
+
+TAPE DIMENSIONS
+K0
+
+P1
+
+B0 W
+Reel
+Diameter
+Cavity
+A0
+B0
+K0
+W
+P1
+
+A0
+
+Dimension designed to accommodate the component width
+Dimension designed to accommodate the component length
+Dimension designed to accommodate the component thickness
+Overall width of the carrier tape
+Pitch between successive cavity centers
+
+Reel Width (W1)
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Sprocket Holes
+
+Q1
+
+Q2
+
+Q1
+
+Q2
+
+Q3
+
+Q4
+
+Q3
+
+Q4
+
+User Direction of Feed
+
+Pocket Quadrants
+
+*All dimensions are nominal
+
+Device
+
+TCAN843DMTRQ1
+
+Package Package Pins
+Type Drawing
+
+SPQ
+
+VSON
+
+Reel
+Reel
+A0
+Diameter Width (mm)
+(mm) W1 (mm)
+
+B0
+(mm)
+
+K0
+(mm)
+
+P1
+(mm)
+
+W
+Pin1
+(mm) Quadrant
+
+DMT
+
+14
+
+3000
+
+330.0
+
+12.4
+
+3.3
+
+4.8
+
+1.2
+
+8.0
+
+12.0
+
+Q1
+
+TCAN843DRQ1
+
+SOIC
+
+D
+
+14
+
+3000
+
+330.0
+
+16.4
+
+6.5
+
+9.0
+
+2.1
+
+8.0
+
+16.0
+
+Q1
+
+TCAN843DYYRQ1
+
+SOT-23THIN
+
+DYY
+
+14
+
+3000
+
+330.0
+
+12.4
+
+4.8
+
+3.6
+
+1.6
+
+8.0
+
+12.0
+
+Q3
+
+Pack Materials-Page 1
+
+PACKAGE MATERIALS INFORMATION
+www.ti.com
+
+23-Jan-2026
+
+TAPE AND REEL BOX DIMENSIONS
+
+Width (mm)
+
+W
+
+L
+
+H
+
+*All dimensions are nominal
+
+Device
+
+Package Type
+
+Package Drawing
+
+Pins
+
+SPQ
+
+Length (mm)
+
+Width (mm)
+
+Height (mm)
+
+TCAN843DMTRQ1
+
+VSON
+
+DMT
+
+14
+
+3000
+
+367.0
+
+367.0
+
+35.0
+
+TCAN843DRQ1
+
+SOIC
+
+D
+
+14
+
+3000
+
+353.0
+
+353.0
+
+32.0
+
+TCAN843DYYRQ1
+
+SOT-23-THIN
+
+DYY
+
+14
+
+3000
+
+336.6
+
+336.6
+
+31.8
+
+Pack Materials-Page 2
+
+PACKAGE OUTLINE
+
+DYY0014A
+
+SOT-23-THIN - 1.1 mm max height
+
+PLASTIC SMALL OUTLINE
+
+3.36
+3.16
+
+SEATING PLANE
+PIN 1 INDEX
+AREA
+
+A
+
+C
+
+0.1 C
+12X 0.5
+14
+
+1
+
+4.3
+4.1
+NOTE 3
+
+2X
+3
+
+7
+
+4X 0° - 15°
+
+8
+
+B
+
+1.1 MAX
+
+14X 0.3
+0.11
+
+2.1
+1.9
+
+0.1
+
+C A B
+
+4X 4° - 15°
+0.2 TYP
+0.08
+
+SEE DETAIL A
+0.25
+GAUGE PLANE
+
+0°- 8°
+
+0.63
+0.33
+
+DETAIL A
+
+0.1
+0.0
+
+TYP
+
+4224643/D 07/2024
+
+NOTES:
+1.
+2.
+3.
+4.
+5.
+
+All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+This drawing is subject to change without notice.
+This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not exceed
+0.15 per side.
+This dimension does not include interlead flash. Interlead flash shall not exceed 0.50 per side.
+Reference JEDEC Registration MO-345, Variation AB
+
+www.ti.com
+
+EXAMPLE BOARD LAYOUT
+
+DYY0014A
+
+SOT-23-THIN - 1.1 mm max height
+
+PLASTIC SMALL OUTLINE
+
+SYMM
+14X (1.05)
+14
+
+1
+14X (0.3)
+
+SYMM
+
+12X (0.5)
+
+8
+
+7
+(R0.05) TYP
+
+(3)
+
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 20X
+
+SOLDER MASK
+OPENING
+
+METAL
+
+METAL UNDER
+SOLDER MASK
+
+NON- SOLDER MASK
+DEFINED
+(PREFERRED)
+
+SOLDER MASK
+OPENING
+
+SOLDER MASK
+DEFINED
+
+SOLDER MASK DETAILS
+4224643/D 07/2024
+
+NOTES: (continued)
+6.
+7.
+
+Publication IPC-7351 may have alternate designs.
+Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+www.ti.com
+
+EXAMPLE STENCIL DESIGN
+
+DYY0014A
+
+SOT-23-THIN - 1.1 mm max height
+
+PLASTIC SMALL OUTLINE
+
+SYMM
+
+14X (1.05)
+
+1
+
+14
+
+14X (0.3)
+
+SYMM
+
+12X (0.5)
+
+8
+
+7
+(R0.05) TYP
+(3)
+
+SOLDER PASTE EXAMPLE
+
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 20X
+
+4224643/D 07/2024
+
+NOTES: (continued)
+8.
+9.
+
+Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+Board assembly site may have different recommendations for stencil design.
+
+www.ti.com
+
+PACKAGE OUTLINE
+
+D0014A
+
+SOIC - 1.75 mm max height
+SCALE 1.800
+
+SMALL OUTLINE INTEGRATED CIRCUIT
+
+C
+6.2
+TYP
+5.8
+
+SEATING PLANE
+PIN 1 ID
+AREA
+
+A
+
+0.1 C
+12X 1.27
+14
+
+1
+
+2X
+7.62
+
+8.75
+8.55
+NOTE 3
+
+7
+8
+B
+
+4.0
+3.8
+NOTE 4
+
+SEE DETAIL A
+
+14X
+
+0.51
+0.31
+0.25
+
+C A B
+
+1.75 MAX
+
+0.25
+TYP
+0.13
+0.25
+GAGE PLANE
+
+0 -8
+
+0.25
+0.10
+
+1.27
+0.40
+
+DETAIL A
+TYPICAL
+
+4220718/A 09/2016
+
+NOTES:
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+exceed 0.15 mm, per side.
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.43 mm, per side.
+5. Reference JEDEC registration MS-012, variation AB.
+
+www.ti.com
+
+EXAMPLE BOARD LAYOUT
+
+D0014A
+
+SOIC - 1.75 mm max height
+SMALL OUTLINE INTEGRATED CIRCUIT
+
+14X (1.55)
+
+SYMM
+1
+14
+
+14X (0.6)
+
+12X (1.27)
+
+SYMM
+
+8
+
+7
+(R0.05)
+TYP
+
+(5.4)
+
+LAND PATTERN EXAMPLE
+SCALE:8X
+
+SOLDER MASK
+OPENING
+
+METAL
+
+SOLDER MASK
+OPENING
+
+METAL UNDER
+SOLDER MASK
+
+0.07 MAX
+ALL AROUND
+
+0.07 MIN
+ALL AROUND
+SOLDER MASK
+DEFINED
+
+NON SOLDER MASK
+DEFINED
+
+SOLDER MASK DETAILS
+
+4220718/A 09/2016
+
+NOTES: (continued)
+6. Publication IPC-7351 may have alternate designs.
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+www.ti.com
+
+EXAMPLE STENCIL DESIGN
+
+D0014A
+
+SOIC - 1.75 mm max height
+SMALL OUTLINE INTEGRATED CIRCUIT
+
+14X (1.55)
+
+SYMM
+1
+14
+
+14X (0.6)
+
+12X (1.27)
+
+SYMM
+
+7
+
+8
+(5.4)
+
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:8X
+
+4220718/A 09/2016
+
+NOTES: (continued)
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+9. Board assembly site may have different recommendations for stencil design.
+
+www.ti.com
+
+GENERIC PACKAGE VIEW
+
+DMT 14
+
+VSON - 0.9 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+
+3 x 4.5, 0.65 mm pitch
+
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+
+4225088/A
+
+www.ti.com
+
+PACKAGE OUTLINE
+
+DMT0014B
+
+VSON - 1 mm max height
+SCALE 3.200
+
+PLASTIC SMALL OUTLINE - NO LEAD
+
+3.1
+2.9
+
+B
+
+A
+
+PIN 1 INDEX AREA
+4.6
+4.4
+
+0.1 MIN
+
+(0.13)
+1.0
+0.8
+
+SECTION A-A
+SECTION A-A
+SCALE 30.000
+
+TYPICAL
+C
+SEATING PLANE
+0.05
+0.00
+
+0.08 C
+1.6 0.1
+
+EXPOSED
+THERMAL PAD
+
+SYMM
+
+(0.2) TYP
+
+7
+
+8
+
+A
+2X
+3.9
+
+(0.19) TYP
+
+A
+
+15
+
+SYMM
+4.2 0.1
+
+14
+
+1
+12X 0.65
+PIN 1 ID
+(OPTIONAL)
+
+14X
+
+0.45
+0.35
+
+14X
+
+0.35
+0.25
+0.1
+0.05
+
+C A B
+C
+4225087/B 01/2021
+
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. The package thermal pad must be soldered to the printed circuit board for thermal and mechanical performance.
+
+www.ti.com
+
+EXAMPLE BOARD LAYOUT
+
+DMT0014B
+
+VSON - 1 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+
+(1.6)
+14X (0.6)
+
+SYMM
+
+14X (0.3)
+1
+14
+
+2X
+(1.85)
+
+12X (0.65)
+
+15
+
+SYMM
+
+(4.2)
+(0.69)
+TYP
+( 0.2) VIA
+TYP
+
+8
+
+7
+(R0.05) TYP
+
+(0.55) TYP
+(2.8)
+
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:15X
+
+0.07 MAX
+ALL AROUND
+
+0.07 MIN
+ALL AROUND
+
+EXPOSED METAL
+
+EXPOSED METAL
+SOLDER MASK
+OPENING
+
+METAL
+
+METAL UNDER
+SOLDER MASK
+
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+
+SOLDER MASK
+OPENING
+SOLDER MASK
+DEFINED
+
+SOLDER MASK DETAILS
+
+4225087/B 01/2021
+NOTES: (continued)
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+on this view. It is recommended that vias under paste be filled, plugged or tented.
+
+www.ti.com
+
+EXAMPLE STENCIL DESIGN
+
+DMT0014B
+
+VSON - 1 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+
+(1.47)
+14X (0.6)
+1
+
+15
+14
+
+14X (0.3)
+(1.18)
+12X (0.65)
+
+SYMM
+
+(1.38)
+(R0.05) TYP
+
+METAL
+TYP
+
+8
+
+7
+SYMM
+(2.8)
+
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+EXPOSED PAD 15
+77.4% PRINTED SOLDER COVERAGE BY AREA
+SCALE:20X
+
+4225087/B 01/2021
+
+NOTES: (continued)
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+
+www.ti.com
+
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025
+
+

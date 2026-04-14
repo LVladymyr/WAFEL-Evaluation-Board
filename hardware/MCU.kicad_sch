@@ -5140,6 +5140,16 @@
 		)
 		(uuid "7f7ad365-c9d4-4840-8b44-cafdbf39335e")
 	)
+	(label "ALERT"
+		(at 92.71 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8e19f88e-4c64-45ac-a68e-39a87f7bb9c9")
+	)
 	(label "SPI.CS"
 		(at 91.44 34.29 180)
 		(effects
@@ -5220,16 +5230,6 @@
 		)
 		(uuid "c56adb90-3275-4831-bbe2-00e7cad5e529")
 	)
-	(label "ALERT"
-		(at 92.71 113.03 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "da0b6816-82d8-440a-8582-42a2d583d55b")
-	)
 	(label "RST_SHUT"
 		(at 41.91 110.49 0)
 		(effects
@@ -5280,7 +5280,7 @@
 		)
 		(uuid "ffad00c0-5aa3-43d7-8243-3d65356c18fd")
 	)
-	(hierarchical_label "SPI{MOSI MISO SCLK CS} ALERT RST_SHUT"
+	(hierarchical_label "{AFE_CTRL}"
 		(shape bidirectional)
 		(at 62.23 26.67 180)
 		(effects

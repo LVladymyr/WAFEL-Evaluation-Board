@@ -4302,7 +4302,7 @@
 		)
 		(uuid "886a27a6-a2d8-42de-afca-f5355eef9187")
 	)
-	(hierarchical_label "{PCHG PDSG CHG DSG PACK LD}"
+	(hierarchical_label "{FET_CTRL}"
 		(shape input)
 		(at 55.88 144.78 180)
 		(effects

@@ -862,7 +862,25 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
-    "bus_aliases": {},
+    "bus_aliases": {
+      "AFE_CTRL": [
+        "SPI.MISO",
+        "WAKE",
+        "RST_SHUT",
+        "ALERT",
+        "SPI.CS",
+        "SPI.SCLK",
+        "SPI.MOSI"
+      ],
+      "FET_CTRL": [
+        "PCHG",
+        "PDSG",
+        "CHG",
+        "DSG",
+        "PACK",
+        "LD"
+      ]
+    },
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -921,7 +939,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "#FLG102-103,#FLG202-203,#FLG801-803",
+    "used_designators": "C215,#FLG102-103,#FLG202-203,#FLG801-803",
     "variants": []
   },
   "sheets": [

@@ -278,11 +278,19 @@
   "erc": {
     "erc_exclusions": [
       [
+        "label_dangling|1155700|647700|54ce888f-aa2a-4565-a0ac-34fec4d6da5e|00000000-0000-0000-0000-000000000000|/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4||",
+        ""
+      ],
+      [
         "pin_to_pin|1066800|622300|83bf3538-8e5b-4716-bee8-8ade503dc42d|11973bf9-a0e8-47a3-813d-8c6264fbbe3c|/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c|/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c|/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c",
         "It is disabling power"
       ],
       [
         "power_pin_not_driven|1193800|571500|8297128b-8027-4609-adba-dbaf5d9d8cd0|00000000-0000-0000-0000-000000000000|/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c|/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1968500|977900|63061a4e-a5fd-422f-8ead-fb3d5ca2ca74|00000000-0000-0000-0000-000000000000|/3e668e3e-3e16-4665-a807-4735962c41d3|/3e668e3e-3e16-4665-a807-4735962c41d3|",
         ""
       ],
       [
@@ -547,6 +555,7 @@
         "clearance": 0.127,
         "diff_pair_gap": 0.254,
         "diff_pair_width": 0.1524,
+        "line_style": 0,
         "microvia_diameter": 0.6858,
         "microvia_drill": 0.3302,
         "name": "Power",
@@ -556,7 +565,8 @@
         "track_width": 0.6,
         "tuning_profile": "",
         "via_diameter": 0.6,
-        "via_drill": 0.3
+        "via_drill": 0.3,
+        "wire_width": 10
       }
     ],
     "meta": {
@@ -567,19 +577,7 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "/Frontend/CEL_16"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/Frontend/BAT+_pin"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/Frontend/PACK-"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "GND"
+        "pattern": "/CELL10"
       },
       {
         "netclass": "Power",
@@ -587,7 +585,23 @@
       },
       {
         "netclass": "Power",
-        "pattern": "/BAT+J"
+        "pattern": "/PACK+"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/PACK-"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/CH"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "PGND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND"
       }
     ]
   },
@@ -939,7 +953,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "C215,#FLG102-103,#FLG202-203,#FLG801-803",
+    "used_designators": "#PWR113,C215,#FLG102-103,#FLG202-203,#FLG801-803",
     "variants": []
   },
   "sheets": [

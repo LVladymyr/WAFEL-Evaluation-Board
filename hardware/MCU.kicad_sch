@@ -5336,7 +5336,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "054d4a1a-c1ab-450f-9124-669596b27a05")
-		(property "Reference" "#PWR0811"
+		(property "Reference" "#PWR0802"
 			(at 33.02 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -5396,7 +5396,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0811")
+					(reference "#PWR0802")
 					(unit 1)
 				)
 			)
@@ -5815,7 +5815,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18ada7a2-2995-40c0-985f-78a1dabe2c23")
-		(property "Reference" "C804"
+		(property "Reference" "C803"
 			(at 226.06 129.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5837,7 +5837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 223.2152 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -5891,7 +5891,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C804")
+					(reference "C803")
 					(unit 1)
 				)
 			)
@@ -5908,7 +5908,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "29148153-f3d9-4627-848b-e9ec29260c0b")
-		(property "Reference" "R806"
+		(property "Reference" "R805"
 			(at 191.77 41.91 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5928,7 +5928,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 191.77 37.592 90)
 			(hide yes)
 			(show_name no)
@@ -5981,7 +5981,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R806")
+					(reference "R805")
 					(unit 1)
 				)
 			)
@@ -5999,7 +5999,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29d27f31-9415-4ac8-b651-646c577291e8")
-		(property "Reference" "#FLG0803"
+		(property "Reference" "#FLG0801"
 			(at 132.715 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -6060,7 +6060,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#FLG0803")
+					(reference "#FLG0801")
 					(unit 1)
 				)
 			)
@@ -6162,7 +6162,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "382aa6c6-3b38-4d2e-9af0-99362ace0c99")
-		(property "Reference" "R802"
+		(property "Reference" "R803"
 			(at 175.26 121.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6182,7 +6182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 117.602 90)
 			(hide yes)
 			(show_name no)
@@ -6235,7 +6235,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R802")
+					(reference "R803")
 					(unit 1)
 				)
 			)
@@ -6253,7 +6253,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59a552a9-43e6-4df8-be26-886f040b07af")
-		(property "Reference" "#PWR0805"
+		(property "Reference" "#PWR0810"
 			(at 207.01 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -6313,7 +6313,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0805")
+					(reference "#PWR0810")
 					(unit 1)
 				)
 			)
@@ -6719,7 +6719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d30eb0a-2e21-4131-a822-a3653eab6db5")
-		(property "Reference" "#PWR0804"
+		(property "Reference" "#PWR0806"
 			(at 142.24 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -6779,7 +6779,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0804")
+					(reference "#PWR0806")
 					(unit 1)
 				)
 			)
@@ -6797,7 +6797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9053a533-d4a6-4e3d-9c5a-e1724c4449ba")
-		(property "Reference" "C803"
+		(property "Reference" "C804"
 			(at 233.68 93.9799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6819,7 +6819,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 230.8352 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -6873,7 +6873,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "C803")
+					(reference "C804")
 					(unit 1)
 				)
 			)
@@ -6989,7 +6989,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 110.998 90)
 			(hide yes)
 			(show_name no)
@@ -7232,7 +7232,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ae81db54-2f48-4974-a8d2-4a8db3ca68f8")
-		(property "Reference" "D802"
+		(property "Reference" "D801"
 			(at 234.95 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7300,7 +7300,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "D802")
+					(reference "D801")
 					(unit 1)
 				)
 			)
@@ -7318,7 +7318,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b018787f-6df7-40ad-9c1e-d9dd160c43a8")
-		(property "Reference" "#PWR0801"
+		(property "Reference" "#PWR0805"
 			(at 130.81 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -7378,7 +7378,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0801")
+					(reference "#PWR0805")
 					(unit 1)
 				)
 			)
@@ -7509,7 +7509,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 242.2652 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -7580,7 +7580,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b8a0fdee-39e3-4817-a55f-36d1485e625f")
-		(property "Reference" "R807"
+		(property "Reference" "R804"
 			(at 186.69 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7600,7 +7600,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 181.61 105.918 90)
 			(hide yes)
 			(show_name no)
@@ -7653,7 +7653,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R807")
+					(reference "R804")
 					(unit 1)
 				)
 			)
@@ -7671,7 +7671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b94db6c7-3751-4001-8591-cd589affbad4")
-		(property "Reference" "#PWR0807"
+		(property "Reference" "#PWR0811"
 			(at 212.09 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -7731,7 +7731,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0807")
+					(reference "#PWR0811")
 					(unit 1)
 				)
 			)
@@ -7749,7 +7749,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bca8af5b-84c9-4d33-b0c2-942d659951e0")
-		(property "Reference" "#PWR0812"
+		(property "Reference" "#PWR0801"
 			(at 33.02 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -7809,7 +7809,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0812")
+					(reference "#PWR0801")
 					(unit 1)
 				)
 			)
@@ -7849,7 +7849,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 219.4052 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -7920,7 +7920,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c7955a51-af74-49c0-84b4-efdbd994feed")
-		(property "Reference" "R803"
+		(property "Reference" "R802"
 			(at 180.34 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7940,7 +7940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 175.26 116.078 90)
 			(hide yes)
 			(show_name no)
@@ -7993,7 +7993,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R803")
+					(reference "R802")
 					(unit 1)
 				)
 			)
@@ -8011,7 +8011,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cbd59d80-0619-4d20-8c45-e32a8a872010")
-		(property "Reference" "R804"
+		(property "Reference" "R806"
 			(at 219.71 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8033,7 +8033,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 215.392 120.65 90)
 			(hide yes)
 			(show_name no)
@@ -8087,7 +8087,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R804")
+					(reference "R806")
 					(unit 1)
 				)
 			)
@@ -8105,7 +8105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cce43f36-9cd4-40e9-b9eb-bda56c6d96b6")
-		(property "Reference" "#PWR0808"
+		(property "Reference" "#PWR0812"
 			(at 229.87 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -8165,7 +8165,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0808")
+					(reference "#PWR0812")
 					(unit 1)
 				)
 			)
@@ -8205,7 +8205,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 143.2052 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -8265,7 +8265,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d77b0f0b-f119-4065-8d36-5501e136e681")
-		(property "Reference" "U804"
+		(property "Reference" "U803"
 			(at 204.47 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8358,7 +8358,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "U804")
+					(reference "U803")
 					(unit 1)
 				)
 			)
@@ -8467,7 +8467,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3697389-801e-43f8-8787-8bf1e505b1c2")
-		(property "Reference" "#PWR0806"
+		(property "Reference" "#PWR0809"
 			(at 201.93 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8527,7 +8527,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0806")
+					(reference "#PWR0809")
 					(unit 1)
 				)
 			)
@@ -8545,7 +8545,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e686387f-7ad8-41c5-a9ec-b118fd374a70")
-		(property "Reference" "#PWR0810"
+		(property "Reference" "#PWR0807"
 			(at 175.26 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8605,7 +8605,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0810")
+					(reference "#PWR0807")
 					(unit 1)
 				)
 			)
@@ -8623,7 +8623,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e68c02be-2ef0-4ef4-ae5a-5c07173ffcec")
-		(property "Reference" "#PWR0809"
+		(property "Reference" "#PWR0808"
 			(at 186.69 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -8683,7 +8683,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0809")
+					(reference "#PWR0808")
 					(unit 1)
 				)
 			)
@@ -8701,7 +8701,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa8cdd36-9485-485e-8bd3-0553a792eee0")
-		(property "Reference" "R805"
+		(property "Reference" "R807"
 			(at 228.6 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8723,7 +8723,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 224.282 120.65 90)
 			(hide yes)
 			(show_name no)
@@ -8777,7 +8777,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "R805")
+					(reference "R807")
 					(unit 1)
 				)
 			)
@@ -8795,7 +8795,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fc367263-77f7-4b80-8764-7fc7c5edb951")
-		(property "Reference" "#FLG0801"
+		(property "Reference" "#FLG0803"
 			(at 217.17 85.725 0)
 			(hide yes)
 			(show_name no)
@@ -8855,7 +8855,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#FLG0801")
+					(reference "#FLG0803")
 					(unit 1)
 				)
 			)
@@ -8873,7 +8873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe016e79-42c6-425f-b94c-6e5920b3f728")
-		(property "Reference" "#PWR0802"
+		(property "Reference" "#PWR0804"
 			(at 129.54 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -8933,7 +8933,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "#PWR0802")
+					(reference "#PWR0804")
 					(unit 1)
 				)
 			)
@@ -8951,7 +8951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff5bd35d-64ba-4ede-9269-da2c36e53664")
-		(property "Reference" "D801"
+		(property "Reference" "D802"
 			(at 255.27 93.9799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9027,7 +9027,7 @@
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/95f215e1-2c63-4fc6-b759-568a8f71e3cc"
-					(reference "D801")
+					(reference "D802")
 					(unit 1)
 				)
 			)

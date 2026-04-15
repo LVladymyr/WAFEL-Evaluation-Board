@@ -953,7 +953,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "",
+    "used_designators": "C912,R906",
     "variants": []
   },
   "sheets": [
@@ -1032,10 +1032,6 @@
     [
       "d72d673e-fa32-419c-8d5a-dd84f5466010",
       "cb_mosfet_9"
-    ],
-    [
-      "e332d889-cebe-400a-9d60-052f7f7ee759",
-      "cb_mosfet_10"
     ]
   ],
   "text_variables": {},

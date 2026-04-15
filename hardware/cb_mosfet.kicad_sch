@@ -959,7 +959,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 71.12 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -1047,10 +1047,6 @@
 					(reference "R1001")
 					(unit 1)
 				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "R2001")
-					(unit 1)
-				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"
 					(reference "R1601")
 					(unit 1)
@@ -1090,7 +1086,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 99.06 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -1176,10 +1172,6 @@
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e09fd686-bb52-45eb-aef5-6296923cd8d3"
 					(reference "R1003")
-					(unit 1)
-				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "R2003")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"
@@ -1311,10 +1303,6 @@
 					(reference "D1001")
 					(unit 1)
 				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "D2001")
-					(unit 1)
-				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"
 					(reference "D1601")
 					(unit 1)
@@ -1354,7 +1342,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 99.06 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -1440,10 +1428,6 @@
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e09fd686-bb52-45eb-aef5-6296923cd8d3"
 					(reference "R1004")
-					(unit 1)
-				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "R2004")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"
@@ -1582,10 +1566,6 @@
 					(reference "Q1001")
 					(unit 1)
 				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "Q2001")
-					(unit 1)
-				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"
 					(reference "Q1601")
 					(unit 1)
@@ -1625,7 +1605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 71.12 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -1711,10 +1691,6 @@
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e09fd686-bb52-45eb-aef5-6296923cd8d3"
 					(reference "R1002")
-					(unit 1)
-				)
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/e332d889-cebe-400a-9d60-052f7f7ee759"
-					(reference "R2002")
 					(unit 1)
 				)
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0/f2f1bac5-b54a-4a1b-bbb1-051fdc2ebf97"

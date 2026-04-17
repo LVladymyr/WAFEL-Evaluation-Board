@@ -13747,7 +13747,7 @@
 	(footprint "Diode_SMD:D_SOD-123F"
 		(layer "F.Cu")
 		(uuid "3cd77e8c-858e-4a0e-9daa-5b66262c4eb0")
-		(at 198.7804 81.1052 -90)
+		(at 198.7804 75.7144 -90)
 		(descr "D_SOD-123F")
 		(tags "D_SOD-123F")
 		(property "Reference" "D701"
@@ -27541,7 +27541,7 @@
 	(footprint "Diode_SMD:D_SOD-123F"
 		(layer "F.Cu")
 		(uuid "8eb3d189-674e-4985-9574-7a02807d9808")
-		(at 198.882 90.8528 90)
+		(at 199.644 90.9036 90)
 		(descr "D_SOD-123F")
 		(tags "D_SOD-123F")
 		(property "Reference" "D601"
@@ -49220,7 +49220,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "e905b1af-8bab-4d71-ba17-5ab6ccd1b1a8")
-		(at 199.1238 78.1304)
+		(at 199.1238 72.7396)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R701"
@@ -57243,6 +57243,115 @@
 		(uuid "f08c5016-8ab7-4fb4-b4cb-cfbbac3bd07c")
 	)
 	(zone
+		(net "/BAT+")
+		(layers "F.Cu" "B.Cu")
+		(uuid "2e54940a-6ec2-4db3-9392-4c5b1804dd6e")
+		(name "PW_BAT+")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 197.293326 92.960718) (xy 197.188993 137.321792) (xy 268.792701 137.512549) (xy 268.910981 93.17037)
+			)
+		)
+	)
+	(zone
+		(net "/PACK+")
+		(layers "F.Cu" "B.Cu")
+		(uuid "3908fac4-ac69-43cd-8b22-bd5ccb5df82d")
+		(name "PW_PACK+")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 197.421911 25.504494) (xy 197.322262 67.874623) (xy 269.213727 68.066145) (xy 269.326697 25.714987)
+			)
+		)
+	)
+	(zone
+		(layers "F.Cu" "B.Cu")
+		(uuid "3e865def-a6f1-459d-9591-194739a99688")
+		(name "PW_BAT-")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 158.3436 91.3892) (xy 158.235467 137.366345) (xy 192.724633 137.458225) (xy 192.84725 91.490204)
+			)
+		)
+	)
+	(zone
+		(net "PGND")
+		(layers "F.Cu" "B.Cu")
+		(uuid "4078f8d7-a45f-477a-84cf-076fca534fbe")
+		(name "PW_PACK-")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 158.484756 25.296821) (xy 158.331936 90.274731) (xy 193.004093 90.367098) (xy 193.177392 25.398379)
+			)
+		)
+	)
+	(zone
+		(net "/CH")
+		(layers "F.Cu" "B.Cu")
+		(uuid "4fb3443f-2d82-4563-8367-1972135f8389")
+		(name "PW_CH")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+		)
+		(polygon
+			(pts
+				(xy 209.168977 69.423391) (xy 209.118303 90.969113) (xy 269.152208 91.129048) (xy 269.209638 69.599152)
+			)
+		)
+	)
+	(zone
 		(net "GND")
 		(layers "F.Cu" "B.Cu")
 		(uuid "f31736f8-b050-4eaf-a24a-8a91b49fe1e1")
@@ -57259,7 +57368,7 @@
 		)
 		(polygon
 			(pts
-				(xy 51.923662 25.302) (xy 51.923662 126.802) (xy 156.7976 126.802) (xy 156.7976 25.302)
+				(xy 51.923662 25.302) (xy 51.923662 137.16) (xy 156.7976 137.16) (xy 156.7976 25.302)
 			)
 		)
 	)

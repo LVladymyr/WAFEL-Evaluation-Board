@@ -5401,16 +5401,6 @@
 		)
 		(uuid "0a077306-ba94-49e8-966b-db988593eb47")
 	)
-	(label "CELL10"
-		(at 204.47 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0a75cfcb-dd98-4271-a958-d6bbe81bdeff")
-	)
 	(label "FUSE"
 		(at 139.7 77.47 180)
 		(effects
@@ -9222,6 +9212,85 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "H106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 201.93 142.24 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b0dd2f11-c513-48bc-b810-63e2e4f40510")
+		(property "Reference" "H117"
+			(at 193.04 140.97 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BAT+"
+			(at 193.04 143.51 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 201.93 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 201.93 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8d825315-67f3-4fff-8000-c116529f1b33")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "H117")
 					(unit 1)
 				)
 			)

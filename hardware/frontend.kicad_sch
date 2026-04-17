@@ -3741,12 +3741,6 @@
 		(uuid "57b1cda8-bb58-4915-aeed-5afb77a7de2e")
 	)
 	(junction
-		(at 63.5 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59f551a5-9185-4cfa-b3de-0b06f9ce04a1")
-	)
-	(junction
 		(at 35.56 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3793,6 +3787,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8110c21c-ec02-4bdc-829e-31be2754902d")
+	)
+	(junction
+		(at 63.5 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6bef262-1e9a-4cd1-bdd9-4a30304211d5")
 	)
 	(junction
 		(at 106.68 46.99)
@@ -4718,7 +4718,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 39.37) (xy 63.5 39.37)
+			(xy 57.15 39.37) (xy 63.5 39.37)
 		)
 		(stroke
 			(width 0)
@@ -6156,6 +6156,16 @@
 		)
 		(uuid "d3bd8509-fe83-4d96-8e46-5b69a83eac34")
 	)
+	(label "VC10"
+		(at 57.15 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4d17d95-0a18-49ed-8ef7-0858f8de3de8")
+	)
 	(label "TS3"
 		(at 96.52 105.41 0)
 		(effects
@@ -6256,17 +6266,6 @@
 			(justify left)
 		)
 		(uuid "5507b6b6-83cd-4837-9ad8-a4b4e95441e4")
-	)
-	(hierarchical_label "BAT+"
-		(shape input)
-		(at 60.96 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6aa9c94f-dde6-4dd2-b370-ec053e866c6f")
 	)
 	(hierarchical_label "BAT-"
 		(shape input)

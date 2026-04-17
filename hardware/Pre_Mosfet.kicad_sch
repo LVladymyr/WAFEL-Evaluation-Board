@@ -1,477 +1,1825 @@
-(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "05b5db78-fffe-4558-844e-c154174bd660") (paper "A4") (title_block (rev "v0.0.7")) (lib_symbols 
-
-(symbol "Device:R" (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "R" (at 2.032 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "R" (at 0 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "" (at -1.778 0 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "R res resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_fp_filters" "R_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "R_0_1" 
-
-(rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))) 
-
-(symbol "R_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
-
-(symbol "Diode:BZT52Bxx" (pin_numbers (hide yes)) (pin_names (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "D" (at 0 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "BZT52Bxx" (at 0 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Diode_SMD:D_SOD-123F" (at 0 -4.445 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "500mW Zener Diode, SOD-123F" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "zener diode" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_fp_filters" "D?SOD?123F*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "BZT52Bxx_0_1" 
-
-(polyline (pts 
-
-(xy -1.27 -1.27) 
-
-(xy -1.27 1.27) 
-
-(xy -0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 1.27 0) 
-
-(xy -1.27 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 1.27 -1.27) 
-
-(xy 1.27 1.27) 
-
-(xy -1.27 0) 
-
-(xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))) 
-
-(symbol "BZT52Bxx_1_1" (pin passive line (at -3.81 0 0) (length 2.54) (name "K" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 3.81 0 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
-
-(symbol "Simulation_SPICE:PMOS" (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "Q" (at 5.08 1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "PMOS" (at 5.08 -1.27 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "" (at 5.08 2.54 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs" (at 0 -12.7 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "P-MOSFET transistor, drain/source/gate" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Device" "PMOS" (at 0 -17.145 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Type" "VDMOS" (at 0 -19.05 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Pins" "1=D 2=G 3=S" (at 0 -15.24 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET simulation" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "PMOS_0_1" 
-
-(polyline (pts 
-
-(xy 0.254 1.905) 
-
-(xy 0.254 -1.905)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.254 0) 
-
-(xy -2.54 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 2.286) 
-
-(xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 1.778) 
-
-(xy 3.302 1.778) 
-
-(xy 3.302 -1.778) 
-
-(xy 0.762 -1.778)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 0.508) 
-
-(xy 0.762 -0.508)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 -1.27) 
-
-(xy 0.762 -2.286)) (stroke (width 0.254) (type default)) (fill (type none))) (circle (center 1.651 0) (radius 2.794) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 2.286 0) 
-
-(xy 1.27 0.381) 
-
-(xy 1.27 -0.381) 
-
-(xy 2.286 0)) (stroke (width 0) (type default)) (fill (type outline))) 
-
-(polyline (pts 
-
-(xy 2.54 2.54) 
-
-(xy 2.54 1.778)) (stroke (width 0) (type default)) (fill (type none))) (circle (center 2.54 1.778) (radius 0.254) (stroke (width 0) (type default)) (fill (type outline))) (circle (center 2.54 -1.778) (radius 0.254) (stroke (width 0) (type default)) (fill (type outline))) 
-
-(polyline (pts 
-
-(xy 2.54 -2.54) 
-
-(xy 2.54 0) 
-
-(xy 0.762 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 2.794 -0.508) 
-
-(xy 2.921 -0.381) 
-
-(xy 3.683 -0.381) 
-
-(xy 3.81 -0.254)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 3.302 -0.381) 
-
-(xy 2.921 0.254) 
-
-(xy 3.683 0.254) 
-
-(xy 3.302 -0.381)) (stroke (width 0) (type default)) (fill (type none)))) 
-
-(symbol "PMOS_1_1" (pin passive line (at 2.54 5.08 270) (length 2.54) (name "D" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin input line (at -5.08 0 0) (length 2.54) (name "G" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
-
-(symbol "power:GND" (power global) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "#PWR" (at 0 -6.35 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "GND" (at 0 -3.81 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "global power" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "GND_0_1" 
-
-(polyline (pts 
-
-(xy 0 0) 
-
-(xy 0 -1.27) 
-
-(xy 1.27 -1.27) 
-
-(xy 0 -2.54) 
-
-(xy -1.27 -1.27) 
-
-(xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))) 
-
-(symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))) 
-
-(rectangle (start 167.64 76.2) (end 185.42 101.6) (stroke (width 0) (type default)) (fill (type none)) (uuid "9275cf2b-8c8a-483a-a8d3-b5cebc1de763")) 
-
-(text "3W power" (exclude_from_sim no) (at 172.72 78.74 0) (effects (font (size 1.27 1.27))) (uuid "c3858872-6865-458d-929c-9046a109b7bf")) 
-
-(junction (at 124.46 108.585) (diameter 0) (color 0 0 0 0) (uuid "2c72ed9f-2ee1-4741-ab18-b109b5220fe1")) 
-
-(junction (at 171.45 87.63) (diameter 0) (color 0 0 0 0) (uuid "4b5cf478-f18a-4f56-817c-db19c3ea0582")) 
-
-(junction (at 148.59 108.585) (diameter 0) (color 0 0 0 0) (uuid "5460eb7d-bbd5-44bb-bb29-f58f20e1b727")) 
-
-(junction (at 148.59 87.63) (diameter 0) (color 0 0 0 0) (uuid "56a6746f-5704-482c-b3bc-189061038fcb")) 
-
-(junction (at 181.61 87.63) (diameter 0) (color 0 0 0 0) (uuid "8ee5cc6d-43fa-47b2-8e30-45efffac08aa")) 
-
-(junction (at 138.43 108.585) (diameter 0) (color 0 0 0 0) (uuid "9f78b70e-f887-4233-9cb2-7e24e5d2a198")) 
-
-(junction (at 138.43 87.63) (diameter 0) (color 0 0 0 0) (uuid "b927b3e6-ae65-4a49-bfbe-8454ecb34d7b")) 
-
-(wire (pts 
-
-(xy 180.34 82.55) 
-
-(xy 181.61 82.55)) (stroke (width 0) (type default)) (uuid "04efe8ea-55a2-4618-a6fb-fdf5cd23d426")) 
-
-(wire (pts 
-
-(xy 171.45 93.98) 
-
-(xy 172.72 93.98)) (stroke (width 0) (type default)) (uuid "139a83b7-ab70-4bb3-8414-d7b3e4717cbe")) 
-
-(wire (pts 
-
-(xy 128.27 108.585) 
-
-(xy 124.46 108.585)) (stroke (width 0) (type default)) (uuid "1eeff25c-d2f6-4208-9c0d-b2809af675df")) 
-
-(wire (pts 
-
-(xy 181.61 93.98) 
-
-(xy 180.34 93.98)) (stroke (width 0) (type default)) (uuid "24349375-c4f8-4ffc-a6e8-0b189d08e0c9")) 
-
-(wire (pts 
-
-(xy 138.43 101.6) 
-
-(xy 138.43 108.585)) (stroke (width 0) (type default)) (uuid "35f21a93-83b0-47e6-b85a-91706fb06217")) 
-
-(wire (pts 
-
-(xy 148.59 87.63) 
-
-(xy 152.4 87.63)) (stroke (width 0) (type default)) (uuid "369cfd41-1392-4921-8aaf-0e9471f22146")) 
-
-(wire (pts 
-
-(xy 115.57 108.585) 
-
-(xy 124.46 108.585)) (stroke (width 0) (type default)) (uuid "43b69483-dbd2-41b7-af23-63adc43a8786")) 
-
-(wire (pts 
-
-(xy 138.43 108.585) 
-
-(xy 148.59 108.585)) (stroke (width 0) (type default)) (uuid "45cc33f5-527d-4841-a64b-9890defb2e4c")) 
-
-(wire (pts 
-
-(xy 162.56 87.63) 
-
-(xy 171.45 87.63)) (stroke (width 0) (type default)) (uuid "4dae1ece-038e-4605-963b-fd6c8ba065a6")) 
-
-(wire (pts 
-
-(xy 138.43 87.63) 
-
-(xy 138.43 93.98)) (stroke (width 0) (type default)) (uuid "5f3da478-bda9-44ed-9459-29abb0d95df2")) 
-
-(wire (pts 
-
-(xy 124.46 128.905) 
-
-(xy 124.46 123.825)) (stroke (width 0) (type default)) (uuid "61d38644-98c5-4411-90e3-108f4200971b")) 
-
-(wire (pts 
-
-(xy 148.59 87.63) 
-
-(xy 148.59 93.98)) (stroke (width 0) (type default)) (uuid "626e8256-e16b-4659-8847-4c1bfb031dd3")) 
-
-(wire (pts 
-
-(xy 124.46 116.205) 
-
-(xy 124.46 108.585)) (stroke (width 0) (type default)) (uuid "66da7fdf-52de-443b-8b47-7af911692a75")) 
-
-(wire (pts 
-
-(xy 157.48 108.585) 
-
-(xy 148.59 108.585)) (stroke (width 0) (type default)) (uuid "8b018733-156b-4164-8d6e-93456ae8332c")) 
-
-(wire (pts 
-
-(xy 157.48 95.25) 
-
-(xy 157.48 108.585)) (stroke (width 0) (type default)) (uuid "9f83ee17-ea36-43f5-b534-10c9dce28ec5")) 
-
-(wire (pts 
-
-(xy 135.89 108.585) 
-
-(xy 138.43 108.585)) (stroke (width 0) (type default)) (uuid "a235f686-a0a7-4f59-9b32-484448c52846")) 
-
-(wire (pts 
-
-(xy 171.45 82.55) 
-
-(xy 171.45 87.63)) (stroke (width 0) (type default)) (uuid "a3b2cf46-2a69-4562-820d-ff668704bf8c")) 
-
-(wire (pts 
-
-(xy 181.61 87.63) 
-
-(xy 190.5 87.63)) (stroke (width 0) (type default)) (uuid "a959603b-5124-458b-96d5-5b9d4daa22ee")) 
-
-(wire (pts 
-
-(xy 181.61 87.63) 
-
-(xy 181.61 93.98)) (stroke (width 0) (type default)) (uuid "b518ea0b-6e26-415a-883a-e518e00f0e9f")) 
-
-(wire (pts 
-
-(xy 171.45 82.55) 
-
-(xy 172.72 82.55)) (stroke (width 0) (type default)) (uuid "b5667e2c-e584-4389-90b5-6375a22401e0")) 
-
-(wire (pts 
-
-(xy 181.61 82.55) 
-
-(xy 181.61 87.63)) (stroke (width 0) (type default)) (uuid "c4ac2643-0235-4a1a-8d40-0acf06b79389")) 
-
-(wire (pts 
-
-(xy 171.45 87.63) 
-
-(xy 171.45 93.98)) (stroke (width 0) (type default)) (uuid "cbf84b09-9627-4b88-a0b3-c678ab189675")) 
-
-(wire (pts 
-
-(xy 148.59 101.6) 
-
-(xy 148.59 108.585)) (stroke (width 0) (type default)) (uuid "d186863a-4db8-455a-8b38-44c291a67155")) 
-
-(wire (pts 
-
-(xy 138.43 87.63) 
-
-(xy 148.59 87.63)) (stroke (width 0) (type default)) (uuid "d2353b05-620e-49e7-85cd-4b4f58a88b36")) 
-
-(wire (pts 
-
-(xy 115.57 87.63) 
-
-(xy 138.43 87.63)) (stroke (width 0) (type default)) (uuid "d5c16823-f66d-4dff-a831-f04bdd3d2c01")) (hierarchical_label "SOURCE" (shape input) (at 115.57 87.63 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "04c03377-9bc5-4c33-a48f-b557c3440bd3")) (hierarchical_label "GATE" (shape input) (at 115.57 108.585 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "16e0d4ce-4417-4537-b25a-648f1fdf6fcb")) (hierarchical_label "DRAIN" (shape output) (at 190.5 87.63 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ad214208-8898-49e7-92ef-c433741c0a1d")) 
-
-(symbol (lib_id "Simulation_SPICE:PMOS") (at 157.48 90.17 270) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "2d03c4e1-bf1a-4604-867d-954686fed678") 
-
-(property "Reference" "Q601" (at 157.48 81.28 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "IRFR9024" (at 157.48 83.82 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2" (at 160.02 85.09 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs" (at 144.78 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "P-MOSFET transistor, drain/source/gate" (at 157.48 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Device" "PMOS" (at 140.335 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Type" "VDMOS" (at 138.43 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Sim.Pins" "1=D 2=G 3=S" (at 142.24 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "3086c177-7251-4ee2-a1a3-2b832d6c8d9e")) (pin "1" (uuid "b95f0890-0571-4cbd-a591-ba2c46c6d373")) (pin "3" (uuid "b2d248c0-293d-4b06-9434-e523890bcb75")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "Q701") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "Q601") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 176.53 93.98 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "31a319b3-8f67-4c08-b67c-040037d80494") 
-
-(property "Reference" "R604" (at 176.53 100.33 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "510" (at 176.53 97.79 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 176.53 92.202 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 176.53 93.98 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 176.53 93.98 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "0f713a72-73d6-4383-bab0-03d02ffb190c")) (pin "1" (uuid "764219b4-9030-4ef4-8792-48d4bea223fd")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "R704") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "R604") (unit 1))))) 
-
-(symbol (lib_id "Diode:BZT52Bxx") (at 148.59 97.79 90) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "61c223f9-1b6e-44ce-b344-1418b5529721") 
-
-(property "Reference" "D602" (at 151.13 99.0601 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
-
-(property "Value" "BZT52B16" (at 151.13 96.5201 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify right))) 
-
-(property "Footprint" "Diode_SMD:D_SOD-123F" (at 153.035 97.79 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf" (at 148.59 97.79 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "500mW Zener Diode, SOD-123F" (at 148.59 97.79 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "6a8f2f61-3d56-4006-ab60-3c6826d4ad24")) (pin "2" (uuid "7917da94-ff14-4a2a-a681-705260e55294")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "D702") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "D602") (unit 1))))) 
-
-(symbol (lib_id "power:GND") (at 124.46 128.905 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "6f16f5fc-ffba-40b3-812b-b1ea05388f82") 
-
-(property "Reference" "#PWR0601" (at 124.46 135.255 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "GND" (at 124.46 133.985 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "" (at 124.46 128.905 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 124.46 128.905 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 124.46 128.905 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "dc5c9873-8f33-4d9b-9d37-644efdbcb18d")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "#PWR0701") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "#PWR0601") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 132.08 108.585 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "7ebceb6d-c858-4ca1-b24b-8d5d76ad421b") 
-
-(property "Reference" "R601" (at 132.08 102.235 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "51" (at 132.08 104.775 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 132.08 110.363 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 132.08 108.585 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 132.08 108.585 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "64ac5ba9-af5d-455b-b7e5-d51b3ead5dd3")) (pin "1" (uuid "6f67f298-1ead-4c7b-8061-00653085fdb9")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "R701") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "R601") (unit 1))))) 
-
-(symbol (lib_id "Diode:BZT52Bxx") (at 124.46 120.015 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "92d0993f-37a7-4f8e-986a-4cf58d0b7a6b") 
-
-(property "Reference" "D601" (at 127 118.7449 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "BZT52B75" (at 127 121.2849 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Diode_SMD:D_SOD-123F" (at 120.015 120.015 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf" (at 124.46 120.015 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "500mW Zener Diode, SOD-123F" (at 124.46 120.015 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "a592add0-0ceb-4857-9851-2bb16042224b")) (pin "1" (uuid "e8e67cd5-f091-4052-876a-c42b6217dd22")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "D701") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "D601") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 176.53 82.55 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "ea3d1b21-d467-437c-832f-eeae26aa4545") 
-
-(property "Reference" "R603" (at 176.53 88.9 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "510" (at 176.53 86.36 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 176.53 80.772 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 176.53 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 176.53 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "055efcf7-892b-492b-94f4-a1a26ee58f7b")) (pin "1" (uuid "47406e7e-9aa8-412f-b5a6-cb4afd80300e")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "R703") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "R603") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 138.43 97.79 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "ee168491-6a73-4aea-a47e-7f9e8532ec54") 
-
-(property "Reference" "R602" (at 140.97 96.5199 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "1M" (at 140.97 99.0599 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 136.652 97.79 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 138.43 97.79 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 138.43 97.79 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "7944f76e-60cb-4b13-bd7e-528bc959e704")) (pin "1" (uuid "3436736d-e635-4136-855b-02fd6187ce4f")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398" (reference "R702") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc" (reference "R602") (unit 1))))))
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "05b5db78-fffe-4558-844e-c154174bd660")
+	(paper "A4")
+	(title_block
+		(rev "v0.0.7")
+	)
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Diode:BZT52Bxx"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BZT52Bxx"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-123F"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "500mW Zener Diode, SOD-123F"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "zener diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D?SOD?123F*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BZT52Bxx_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BZT52Bxx_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Simulation_SPICE:PMOS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "PMOS"
+				(at 5.08 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "P-MOSFET transistor, drain/source/gate"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "PMOS"
+				(at 0 -17.145 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "VDMOS"
+				(at 0 -19.05 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=D 2=G 3=S"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET simulation"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PMOS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PMOS_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 167.64 76.2)
+		(end 185.42 101.6)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "9275cf2b-8c8a-483a-a8d3-b5cebc1de763")
+	)
+	(text "3W power"
+		(exclude_from_sim no)
+		(at 172.72 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c3858872-6865-458d-929c-9046a109b7bf")
+	)
+	(junction
+		(at 124.46 108.585)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c72ed9f-2ee1-4741-ab18-b109b5220fe1")
+	)
+	(junction
+		(at 171.45 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b5cf478-f18a-4f56-817c-db19c3ea0582")
+	)
+	(junction
+		(at 148.59 108.585)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5460eb7d-bbd5-44bb-bb29-f58f20e1b727")
+	)
+	(junction
+		(at 148.59 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56a6746f-5704-482c-b3bc-189061038fcb")
+	)
+	(junction
+		(at 181.61 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ee5cc6d-43fa-47b2-8e30-45efffac08aa")
+	)
+	(junction
+		(at 138.43 108.585)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f78b70e-f887-4233-9cb2-7e24e5d2a198")
+	)
+	(junction
+		(at 138.43 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b927b3e6-ae65-4a49-bfbe-8454ecb34d7b")
+	)
+	(wire
+		(pts
+			(xy 180.34 82.55) (xy 181.61 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04efe8ea-55a2-4618-a6fb-fdf5cd23d426")
+	)
+	(wire
+		(pts
+			(xy 171.45 93.98) (xy 172.72 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "139a83b7-ab70-4bb3-8414-d7b3e4717cbe")
+	)
+	(wire
+		(pts
+			(xy 128.27 108.585) (xy 124.46 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eeff25c-d2f6-4208-9c0d-b2809af675df")
+	)
+	(wire
+		(pts
+			(xy 181.61 93.98) (xy 180.34 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24349375-c4f8-4ffc-a6e8-0b189d08e0c9")
+	)
+	(wire
+		(pts
+			(xy 138.43 101.6) (xy 138.43 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35f21a93-83b0-47e6-b85a-91706fb06217")
+	)
+	(wire
+		(pts
+			(xy 148.59 87.63) (xy 152.4 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "369cfd41-1392-4921-8aaf-0e9471f22146")
+	)
+	(wire
+		(pts
+			(xy 115.57 108.585) (xy 124.46 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b69483-dbd2-41b7-af23-63adc43a8786")
+	)
+	(wire
+		(pts
+			(xy 138.43 108.585) (xy 148.59 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45cc33f5-527d-4841-a64b-9890defb2e4c")
+	)
+	(wire
+		(pts
+			(xy 162.56 87.63) (xy 171.45 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dae1ece-038e-4605-963b-fd6c8ba065a6")
+	)
+	(wire
+		(pts
+			(xy 138.43 87.63) (xy 138.43 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f3da478-bda9-44ed-9459-29abb0d95df2")
+	)
+	(wire
+		(pts
+			(xy 124.46 128.905) (xy 124.46 123.825)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61d38644-98c5-4411-90e3-108f4200971b")
+	)
+	(wire
+		(pts
+			(xy 148.59 87.63) (xy 148.59 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "626e8256-e16b-4659-8847-4c1bfb031dd3")
+	)
+	(wire
+		(pts
+			(xy 124.46 116.205) (xy 124.46 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66da7fdf-52de-443b-8b47-7af911692a75")
+	)
+	(wire
+		(pts
+			(xy 157.48 108.585) (xy 148.59 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b018733-156b-4164-8d6e-93456ae8332c")
+	)
+	(wire
+		(pts
+			(xy 157.48 95.25) (xy 157.48 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f83ee17-ea36-43f5-b534-10c9dce28ec5")
+	)
+	(wire
+		(pts
+			(xy 135.89 108.585) (xy 138.43 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a235f686-a0a7-4f59-9b32-484448c52846")
+	)
+	(wire
+		(pts
+			(xy 171.45 82.55) (xy 171.45 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3b2cf46-2a69-4562-820d-ff668704bf8c")
+	)
+	(wire
+		(pts
+			(xy 181.61 87.63) (xy 190.5 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a959603b-5124-458b-96d5-5b9d4daa22ee")
+	)
+	(wire
+		(pts
+			(xy 181.61 87.63) (xy 181.61 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b518ea0b-6e26-415a-883a-e518e00f0e9f")
+	)
+	(wire
+		(pts
+			(xy 171.45 82.55) (xy 172.72 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5667e2c-e584-4389-90b5-6375a22401e0")
+	)
+	(wire
+		(pts
+			(xy 181.61 82.55) (xy 181.61 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4ac2643-0235-4a1a-8d40-0acf06b79389")
+	)
+	(wire
+		(pts
+			(xy 171.45 87.63) (xy 171.45 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf84b09-9627-4b88-a0b3-c678ab189675")
+	)
+	(wire
+		(pts
+			(xy 148.59 101.6) (xy 148.59 108.585)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d186863a-4db8-455a-8b38-44c291a67155")
+	)
+	(wire
+		(pts
+			(xy 138.43 87.63) (xy 148.59 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2353b05-620e-49e7-85cd-4b4f58a88b36")
+	)
+	(wire
+		(pts
+			(xy 115.57 87.63) (xy 138.43 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5c16823-f66d-4dff-a831-f04bdd3d2c01")
+	)
+	(hierarchical_label "SOURCE"
+		(shape input)
+		(at 115.57 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "04c03377-9bc5-4c33-a48f-b557c3440bd3")
+	)
+	(hierarchical_label "GATE"
+		(shape input)
+		(at 115.57 108.585 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "16e0d4ce-4417-4537-b25a-648f1fdf6fcb")
+	)
+	(hierarchical_label "DRAIN"
+		(shape output)
+		(at 190.5 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ad214208-8898-49e7-92ef-c433741c0a1d")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:PMOS")
+		(at 157.48 90.17 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2d03c4e1-bf1a-4604-867d-954686fed678")
+		(property "Reference" "Q601"
+			(at 157.48 81.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFR9024"
+			(at 157.48 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2"
+			(at 160.02 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+			(at 144.78 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, drain/source/gate"
+			(at 157.48 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "PMOS"
+			(at 140.335 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 138.43 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 142.24 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3086c177-7251-4ee2-a1a3-2b832d6c8d9e")
+		)
+		(pin "1"
+			(uuid "b95f0890-0571-4cbd-a591-ba2c46c6d373")
+		)
+		(pin "3"
+			(uuid "b2d248c0-293d-4b06-9434-e523890bcb75")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "Q701")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "Q601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 176.53 93.98 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "31a319b3-8f67-4c08-b67c-040037d80494")
+		(property "Reference" "R604"
+			(at 176.53 100.33 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 176.53 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 176.53 92.202 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 176.53 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0f713a72-73d6-4383-bab0-03d02ffb190c")
+		)
+		(pin "1"
+			(uuid "764219b4-9030-4ef4-8792-48d4bea223fd")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "R704")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "R604")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BZT52Bxx")
+		(at 148.59 97.79 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "61c223f9-1b6e-44ce-b344-1418b5529721")
+		(property "Reference" "D602"
+			(at 151.13 99.0601 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "BZT52B16"
+			(at 151.13 96.5201 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 153.035 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf"
+			(at 148.59 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "500mW Zener Diode, SOD-123F"
+			(at 148.59 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a8f2f61-3d56-4006-ab60-3c6826d4ad24")
+		)
+		(pin "2"
+			(uuid "7917da94-ff14-4a2a-a681-705260e55294")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "D702")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "D602")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 124.46 128.905 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f16f5fc-ffba-40b3-812b-b1ea05388f82")
+		(property "Reference" "#PWR0601"
+			(at 124.46 135.255 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 124.46 133.985 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.46 128.905 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 124.46 128.905 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 124.46 128.905 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc5c9873-8f33-4d9b-9d37-644efdbcb18d")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "#PWR0701")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "#PWR0601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132.08 108.585 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ebceb6d-c858-4ca1-b24b-8d5d76ad421b")
+		(property "Reference" "R601"
+			(at 132.08 102.235 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "51"
+			(at 132.08 104.775 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 132.08 110.363 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 108.585 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 132.08 108.585 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "64ac5ba9-af5d-455b-b7e5-d51b3ead5dd3")
+		)
+		(pin "1"
+			(uuid "6f67f298-1ead-4c7b-8061-00653085fdb9")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "R701")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "R601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BZT52Bxx")
+		(at 124.46 120.015 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92d0993f-37a7-4f8e-986a-4cf58d0b7a6b")
+		(property "Reference" "D601"
+			(at 127 118.7449 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BZT52B75"
+			(at 127 121.2849 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 120.015 120.015 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf"
+			(at 124.46 120.015 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "500mW Zener Diode, SOD-123F"
+			(at 124.46 120.015 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a592add0-0ceb-4857-9851-2bb16042224b")
+		)
+		(pin "1"
+			(uuid "e8e67cd5-f091-4052-876a-c42b6217dd22")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "D701")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "D601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 176.53 82.55 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ea3d1b21-d467-437c-832f-eeae26aa4545")
+		(property "Reference" "R603"
+			(at 176.53 88.9 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "510"
+			(at 176.53 86.36 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 176.53 80.772 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 176.53 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "055efcf7-892b-492b-94f4-a1a26ee58f7b")
+		)
+		(pin "1"
+			(uuid "47406e7e-9aa8-412f-b5a6-cb4afd80300e")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "R703")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "R603")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 138.43 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee168491-6a73-4aea-a47e-7f9e8532ec54")
+		(property "Reference" "R602"
+			(at 140.97 96.5199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1M"
+			(at 140.97 99.0599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 136.652 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 138.43 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7944f76e-60cb-4b13-bd7e-528bc959e704")
+		)
+		(pin "1"
+			(uuid "3436736d-e635-4136-855b-02fd6187ce4f")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/1ed1b631-44e8-47fe-8167-eec9969fc398"
+					(reference "R702")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/39136857-ec23-4c0a-a04a-23d2df30ebfc"
+					(reference "R602")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

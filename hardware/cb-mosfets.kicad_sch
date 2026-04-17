@@ -634,397 +634,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Jumper:SolderJumper_2_Bridged"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Bridged"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Bridged*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_0_1"
-				(rectangle
-					(start -0.508 0.508)
-					(end 0.508 -0.508)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 -1.016)
-					(mid -1.2656 0)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.2656 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_FET:Q_NMOS_GDS"
 			(pin_names
 				(offset 0)
@@ -1472,9 +1081,9 @@
 		)
 		(uuid "6d7dd13e-6dd9-4944-bec9-282a7d788145")
 	)
-	(text "Preconnected jumpers"
+	(text "Instead of jumper:\nWe could try change C to 0R that joins VC3-9. \nBut required adjustment of Fuse3T"
 		(exclude_from_sim no)
-		(at 151.13 16.51 0)
+		(at 163.83 17.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1928,16 +1537,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 69.85) (xy 166.37 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "068b9d2e-ba98-44df-a57c-5469d030cfde")
-	)
-	(wire
-		(pts
 			(xy 26.67 88.9) (xy 29.21 88.9)
 		)
 		(stroke
@@ -2098,16 +1697,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 85.09) (xy 167.64 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2697c8ce-e2e2-4b6b-bd30-665c0739706d")
-	)
-	(wire
-		(pts
 			(xy 58.42 147.32) (xy 58.42 148.59)
 		)
 		(stroke
@@ -2188,16 +1777,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 80.01) (xy 167.64 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3152709d-a524-4013-bfa6-6006d47b9e61")
-	)
-	(wire
-		(pts
 			(xy 223.52 135.89) (xy 223.52 138.43)
 		)
 		(stroke
@@ -2205,16 +1784,6 @@
 			(type default)
 		)
 		(uuid "324b198d-b5aa-4401-bf80-b5ced9b55f92")
-	)
-	(wire
-		(pts
-			(xy 156.21 49.53) (xy 166.37 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "337695ae-8918-43f0-ad9d-b27c0452234c")
 	)
 	(bus
 		(pts
@@ -2235,16 +1804,6 @@
 			(type default)
 		)
 		(uuid "3bb9c76c-119b-4bb2-b377-84cfbfa5a4d9")
-	)
-	(wire
-		(pts
-			(xy 175.26 80.01) (xy 185.42 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3be6737d-095a-4ae3-8cd7-472837fa88d9")
 	)
 	(wire
 		(pts
@@ -2398,16 +1957,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 64.77) (xy 166.37 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5867378a-8e18-4068-899d-c80d7b79d25b")
-	)
-	(wire
-		(pts
 			(xy 114.3 123.19) (xy 116.84 123.19)
 		)
 		(stroke
@@ -2435,16 +1984,6 @@
 			(type default)
 		)
 		(uuid "59e6c3ec-af3c-4a15-a2f8-a1c255fe8d00")
-	)
-	(wire
-		(pts
-			(xy 176.53 54.61) (xy 185.42 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a9aeeb1-92e7-4696-bc68-4197f77aa56f")
 	)
 	(wire
 		(pts
@@ -2818,16 +2357,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 74.93) (xy 185.42 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d93935a-07ad-4edf-bd54-5adfa54fa921")
-	)
-	(wire
-		(pts
 			(xy 63.5 38.1) (xy 58.42 38.1)
 		)
 		(stroke
@@ -2915,16 +2444,6 @@
 			(type default)
 		)
 		(uuid "af853499-d377-4592-ba7d-2a88306fcb0e")
-	)
-	(wire
-		(pts
-			(xy 176.53 59.69) (xy 185.42 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b17934b4-18a9-4a85-80fd-dada2ffd341d")
 	)
 	(bus
 		(pts
@@ -3188,16 +2707,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 49.53) (xy 185.42 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca0af929-f342-4259-a25e-05bbceca04d2")
-	)
-	(wire
-		(pts
 			(xy 86.36 134.62) (xy 86.36 140.97)
 		)
 		(stroke
@@ -3235,16 +2744,6 @@
 			(type default)
 		)
 		(uuid "cef4c92f-6a45-4709-a059-3d38be14da39")
-	)
-	(wire
-		(pts
-			(xy 175.26 85.09) (xy 185.42 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0a328c5-a9ad-4817-bf82-09b18f4f1a30")
 	)
 	(wire
 		(pts
@@ -3338,16 +2837,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 74.93) (xy 167.64 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4d7cf1d-81d9-4afa-aa67-fbd9c92626c2")
-	)
-	(wire
-		(pts
 			(xy 58.42 69.85) (xy 58.42 71.12)
 		)
 		(stroke
@@ -3355,16 +2844,6 @@
 			(type default)
 		)
 		(uuid "e6bae6e7-602f-413f-a132-2023db34fa6c")
-	)
-	(wire
-		(pts
-			(xy 176.53 64.77) (xy 185.42 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e8428bc8-278d-4a00-b71d-63a89d82f3bf")
 	)
 	(wire
 		(pts
@@ -3385,16 +2864,6 @@
 			(type default)
 		)
 		(uuid "ece56f82-0e24-47bc-8b53-81ca8fcbf7e8")
-	)
-	(wire
-		(pts
-			(xy 156.21 59.69) (xy 166.37 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed12bb8e-e839-4db3-8524-cc190944c44d")
 	)
 	(wire
 		(pts
@@ -3468,16 +2937,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 54.61) (xy 166.37 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f540e959-162f-4b3c-a1b1-963a98f148be")
-	)
-	(wire
-		(pts
 			(xy 68.58 38.1) (xy 67.31 38.1)
 		)
 		(stroke
@@ -3485,16 +2944,6 @@
 			(type default)
 		)
 		(uuid "f54dc44c-7017-40a2-826f-d33724e0816b")
-	)
-	(wire
-		(pts
-			(xy 176.53 69.85) (xy 185.42 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5bac56d-4565-4ab7-9fb0-fd3376e43594")
 	)
 	(wire
 		(pts
@@ -3575,16 +3024,6 @@
 			(type default)
 		)
 		(uuid "ff313edc-72ea-489e-b942-4f2bf69e8f53")
-	)
-	(label "VC7"
-		(at 156.21 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "00be09b5-b9ed-4199-8dbc-b5c28d76efca")
 	)
 	(label "CELL9"
 		(at 26.67 140.97 180)
@@ -3676,16 +3115,6 @@
 		)
 		(uuid "1e92fffd-17a0-41dd-8057-7d65f88b5472")
 	)
-	(label "VC7"
-		(at 185.42 54.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "220c1103-3de1-4a6b-b0f7-7e0cb36009c2")
-	)
 	(label "CELL5"
 		(at 26.67 88.9 180)
 		(effects
@@ -3715,26 +3144,6 @@
 			(justify right bottom)
 		)
 		(uuid "2cb0362a-8d5c-4a47-9f32-e00da1a43e9f")
-	)
-	(label "VC8"
-		(at 185.42 49.53 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2f04e763-06b0-4a8a-8cc9-b0aaeea06e27")
-	)
-	(label "VC3"
-		(at 156.21 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "37bb1826-c2b3-41f5-9929-20decdb01354")
 	)
 	(label "BAT.EN"
 		(at 232.41 135.89 0)
@@ -3786,16 +3195,6 @@
 		)
 		(uuid "4555e6c9-7fec-4de2-9c7b-b07343d89358")
 	)
-	(label "VC6"
-		(at 185.42 59.69 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "48b7587d-273d-40d9-9608-4362586648d1")
-	)
 	(label "VC1"
 		(at 247.65 72.39 0)
 		(effects
@@ -3815,26 +3214,6 @@
 			(justify right bottom)
 		)
 		(uuid "49e8ad8f-a3e2-4a76-8c96-285a47ce8631")
-	)
-	(label "VC8"
-		(at 156.21 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5a27d0cb-2aef-4245-8771-b9b252a3c5db")
-	)
-	(label "VC6"
-		(at 156.21 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5b281f2a-332c-43e1-97d2-a9190b095b04")
 	)
 	(label "CELL1"
 		(at 85.09 45.72 180)
@@ -3865,36 +3244,6 @@
 			(justify right bottom)
 		)
 		(uuid "6348b94d-0909-4a8e-968a-45e6339e5ad1")
-	)
-	(label "VC6"
-		(at 156.21 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "63febf28-2868-43df-a6a0-ee85b4e62f7c")
-	)
-	(label "VC5"
-		(at 185.42 64.77 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "643c0fae-c429-4965-8fc0-367309aa8891")
-	)
-	(label "VC5"
-		(at 185.42 69.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "64ba3031-086f-48ea-82da-bbd8d37930ea")
 	)
 	(label "VC6"
 		(at 247.65 46.99 0)
@@ -3935,26 +3284,6 @@
 			(justify right bottom)
 		)
 		(uuid "69a90cea-c290-4890-b121-68665c430e0b")
-	)
-	(label "VC4"
-		(at 156.21 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7075eb4b-83e6-46a5-a533-936749deaa4a")
-	)
-	(label "VC2"
-		(at 185.42 85.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "78166214-eb22-4c31-8efd-78c42d585aae")
 	)
 	(label "CELL10"
 		(at 213.36 111.76 0)
@@ -4176,16 +3505,6 @@
 		)
 		(uuid "cc04d967-eb47-4e71-a800-9fa892e518f8")
 	)
-	(label "VC9"
-		(at 156.21 49.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cc3cd545-dd9d-4d27-b026-7ee0d8167245")
-	)
 	(label "VC4"
 		(at 127 63.5 180)
 		(effects
@@ -4286,16 +3605,6 @@
 		)
 		(uuid "e8030569-ec26-4b1f-9921-43336740a2a7")
 	)
-	(label "VC5"
-		(at 156.21 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e97fc086-58ac-4de4-a443-862601293d18")
-	)
 	(label "CELL8"
 		(at 240.03 36.83 180)
 		(effects
@@ -4315,26 +3624,6 @@
 			(justify right bottom)
 		)
 		(uuid "ec84655b-7767-42ab-ac7d-7c75c01f18b1")
-	)
-	(label "VC4"
-		(at 185.42 74.93 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ece98e2b-e005-4d6f-a27e-ff0f3e8b01d3")
-	)
-	(label "VC3"
-		(at 185.42 80.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "eebf66de-ddd3-47bd-8369-8db0e9bcd693")
 	)
 	(label "CELL0"
 		(at 240.03 77.47 180)
@@ -4508,88 +3797,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "Q901")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 171.45 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "07b20cfe-257f-4820-9af1-272d811f0454")
-		(property "Reference" "JP908"
-			(at 173.99 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 170.1801 87.63 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
-			(at 171.45 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 171.45 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "50d686d3-7516-4578-a4bf-6f35588242db")
-		)
-		(pin "2"
-			(uuid "98de43c4-327c-405a-95cc-653eae325101")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP908")
 					(unit 1)
 				)
 			)
@@ -4776,90 +3983,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 171.45 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2e6b9505-8c73-4646-b8a5-42e9e9b91b69")
-		(property "Reference" "JP907"
-			(at 173.99 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 170.1801 82.55 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
-			(at 171.45 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 171.45 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "24582e6c-b9a2-4cb4-bc8d-ff1dbaad5cdb")
-		)
-		(pin "2"
-			(uuid "a7cf1ea5-1499-4aee-93b7-a3dd713c44b0")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP907")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 58.42 119.38 0)
+		(lib_id "Device:R_Small")
+		(at 58.42 119.38 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4868,30 +3993,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "361ea070-4a2b-40f3-9723-161a57e24682")
-		(property "Reference" "C904"
-			(at 60.96 118.1162 0)
+		(uuid "2f1b1ac3-3bbb-4bca-86b5-9045cbc4bbd4")
+		(property "Reference" "R907"
+			(at 60.96 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "220n"
-			(at 60.96 120.6562 0)
+		(property "Value" "0"
+			(at 60.96 120.6499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 58.42 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -4913,7 +4038,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Resistor, small symbol"
 			(at 58.42 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -4924,67 +4049,57 @@
 				)
 			)
 		)
-		(property "LCSC" "C5378"
-			(at 60.96 118.1162 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "1"
+			(uuid "3c26badf-1da9-4732-9532-18a13cac21b1")
 		)
 		(pin "2"
-			(uuid "9e90a239-d9dc-4b17-be56-10d3b62750d5")
-		)
-		(pin "1"
-			(uuid "2db6673c-7abd-4d03-b810-db5bd545306b")
+			(uuid "085a656a-470c-491a-bb13-e9259dfb273c")
 		)
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "C904")
+					(reference "R907")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 171.45 54.61 0)
+		(lib_id "Device:R_Small")
+		(at 116.84 119.38 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3a06cf60-cf82-4d9c-b478-a0bd6e1c5ce1")
-		(property "Reference" "JP902"
-			(at 171.45 57.15 0)
+		(fields_autoplaced yes)
+		(uuid "3332e9fd-bf1d-453a-b7eb-a8a558fde51b")
+		(property "Reference" "R908"
+			(at 119.38 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "SolderJumper_2_Bridged"
-			(at 171.45 50.8 0)
-			(hide yes)
+		(property "Value" "0"
+			(at 119.38 120.6499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
-			(at 171.45 54.61 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 116.84 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4995,7 +4110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 60.96 0)
+			(at 116.84 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5005,8 +4120,8 @@
 				)
 			)
 		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 171.45 59.69 0)
+		(property "Description" "Resistor, small symbol"
+			(at 116.84 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5017,15 +4132,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "0418aeb5-ef0c-49c0-bce7-356e6dc69cc6")
+			(uuid "9919f7b1-d724-4495-8024-08eb5b907bca")
 		)
 		(pin "2"
-			(uuid "f823eb0b-312e-4325-a015-b0039d9efc5f")
+			(uuid "9e7f48bb-f4a6-4626-992c-39ecff086fe3")
 		)
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP902")
+					(reference "R908")
 					(unit 1)
 				)
 			)
@@ -5126,8 +4241,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 116.84 119.38 0)
+		(lib_id "Device:R_Small")
+		(at 58.42 144.78 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5136,124 +4251,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "45501af7-8d6c-40d8-a091-a76e787d0cd1")
-		(property "Reference" "C910"
-			(at 119.38 118.1162 0)
+		(uuid "56be27e9-bbe9-4841-be79-c6ff49ffad7f")
+		(property "Reference" "R909"
+			(at 60.96 143.5099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "220n"
-			(at 119.38 120.6562 0)
+		(property "Value" "0"
+			(at 60.96 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 116.84 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C5378"
-			(at 119.38 118.1162 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "2"
-			(uuid "4cbf696c-e8e8-4b40-8666-8404e3ae8a19")
-		)
-		(pin "1"
-			(uuid "70ddddbd-b49c-43d4-b51b-dfd35f97fffc")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "C910")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 58.42 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54a48803-8c2b-4f99-9886-b5e98e82e577")
-		(property "Reference" "C905"
-			(at 60.96 143.5162 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "220n"
-			(at 60.96 146.0562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 58.42 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -5275,7 +4296,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" "Resistor, small symbol"
 			(at 58.42 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -5286,28 +4307,16 @@
 				)
 			)
 		)
-		(property "LCSC" "C5378"
-			(at 60.96 143.5162 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "1"
+			(uuid "ed6bbc17-296e-470e-9183-779ec7721b2b")
 		)
 		(pin "2"
-			(uuid "e8dd306b-d01a-4082-b4c9-4944b1ce99e8")
-		)
-		(pin "1"
-			(uuid "184bfeb8-9509-4d77-9d03-dddcbd8d7e82")
+			(uuid "e8f40bdf-8a47-4153-ac82-d3306da4255f")
 		)
 		(instances
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "C905")
+					(reference "R909")
 					(unit 1)
 				)
 			)
@@ -5648,88 +4657,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "R903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 171.45 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8f52af23-bb43-468c-b015-01160bffaf8f")
-		(property "Reference" "JP906"
-			(at 173.99 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 170.1801 77.47 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
-			(at 171.45 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 171.45 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c143dec3-ac1c-4670-bc76-102f1c00509d")
-		)
-		(pin "2"
-			(uuid "6f234004-554b-460b-9858-f667ef32bcc0")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP906")
 					(unit 1)
 				)
 			)
@@ -6467,166 +5394,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 171.45 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b93b9c1a-b8e3-4384-a816-be8668c143cb")
-		(property "Reference" "JP904"
-			(at 171.45 67.31 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Bridged"
-			(at 171.45 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
-			(at 171.45 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 171.45 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8073f88e-9830-41d0-8b5e-b827ee32d765")
-		)
-		(pin "2"
-			(uuid "c30d1c3b-7d43-4336-8b6e-bd9dc7f184ff")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP904")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 171.45 59.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bf0d5a07-4e26-48eb-9544-5dcac4f407f0")
-		(property "Reference" "JP903"
-			(at 171.45 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Bridged"
-			(at 171.45 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
-			(at 171.45 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 171.45 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8821ccd2-3d8e-40b5-bbad-e09a975d8a82")
-		)
-		(pin "2"
-			(uuid "40a5a29e-56a7-4a8b-9166-a9ee9de64aea")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 116.84 67.31 0)
 		(unit 1)
@@ -6715,86 +5482,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "C908")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 171.45 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cf432a24-3689-4190-957b-604131fb1489")
-		(property "Reference" "JP901"
-			(at 171.45 52.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Bridged"
-			(at 171.45 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
-			(at 171.45 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 171.45 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb652479-7f4a-4a59-b1e6-e3e981f19c75")
-		)
-		(pin "2"
-			(uuid "76878333-8495-40f2-a6de-42555d3d239f")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP901")
 					(unit 1)
 				)
 			)
@@ -6967,86 +5654,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
 					(reference "C906")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 171.45 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e9beb68e-dc9f-42e9-af3c-66222da52cb9")
-		(property "Reference" "JP905"
-			(at 171.45 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Bridged"
-			(at 171.45 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
-			(at 171.45 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 171.45 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8c80c017-3341-442f-a952-4ac122777049")
-		)
-		(pin "2"
-			(uuid "dc81bbef-39ef-41ec-9b76-6709743ff780")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/fccae5ab-0edb-40a2-a80c-4f346b23f9c0"
-					(reference "JP905")
 					(unit 1)
 				)
 			)

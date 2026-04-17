@@ -2605,12 +2605,6 @@
 		(uuid "9fcdfe8c-9e08-4f8c-b5a0-008e7695d113")
 	)
 	(junction
-		(at 74.93 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a4b744e8-11d6-4715-9030-c6999536819e")
-	)
-	(junction
 		(at 200.66 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2651,6 +2645,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb9bcc06-3638-44d9-9a9f-10c32da65639")
+	)
+	(junction
+		(at 63.5 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f38b7a1f-b938-4416-b29c-54f083d2687e")
 	)
 	(junction
 		(at 115.57 64.77)
@@ -3160,16 +3160,6 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 95.25) (xy 74.93 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a16cf2e-4019-44ee-99be-e21060a5ca26")
-	)
-	(wire
-		(pts
 			(xy 118.11 109.22) (xy 125.73 109.22)
 		)
 		(stroke
@@ -3197,6 +3187,16 @@
 			(type default)
 		)
 		(uuid "669ab299-5e06-45a9-96ab-ab7c5bcb48f0")
+	)
+	(wire
+		(pts
+			(xy 54.61 95.25) (xy 63.5 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66b5ba31-838d-4d8a-bfd8-3cd542c66751")
 	)
 	(wire
 		(pts
@@ -4300,6 +4300,17 @@
 			(justify right)
 		)
 		(uuid "886a27a6-a2d8-42de-afca-f5355eef9187")
+	)
+	(hierarchical_label "BAT-"
+		(shape input)
+		(at 54.61 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9b2fe051-04c8-400c-8594-a152118f2d12")
 	)
 	(hierarchical_label "{FET_CTRL}"
 		(shape input)
@@ -5423,84 +5434,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4"
 					(reference "D303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 74.93 97.79 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "51138766-3f0a-4adc-a9b3-99313ef5565e")
-		(property "Reference" "#PWR0301"
-			(at 74.93 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 97.79 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bc710773-3a6b-44e7-bf61-01c374a30143")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4"
-					(reference "#PWR0301")
 					(unit 1)
 				)
 			)

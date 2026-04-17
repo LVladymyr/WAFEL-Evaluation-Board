@@ -4273,16 +4273,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 101.6) (xy 101.6 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41d692c9-4af5-4af9-a6c4-850d909b0fde")
-	)
-	(wire
-		(pts
 			(xy 53.34 149.86) (xy 53.34 140.97)
 		)
 		(stroke
@@ -4431,6 +4421,16 @@
 		)
 		(uuid "5a957855-1106-4388-80b8-86a3c0be55fa")
 	)
+	(wire
+		(pts
+			(xy 142.24 97.79) (xy 149.86 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b409b49-3c8e-44a8-978d-56b0e942722c")
+	)
 	(bus
 		(pts
 			(xy 187.96 60.96) (xy 199.39 60.96)
@@ -4573,16 +4573,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 72.39) (xy 106.68 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7190ec0e-9a49-4232-a25a-2fd41c80f7ed")
-	)
-	(wire
-		(pts
 			(xy 187.96 87.63) (xy 196.85 87.63)
 		)
 		(stroke
@@ -4683,7 +4673,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 97.79) (xy 149.86 97.79)
+			(xy 142.24 92.71) (xy 149.86 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4760,6 +4750,16 @@
 			(type default)
 		)
 		(uuid "9022d5dd-c103-4e40-988f-58b1862f0660")
+	)
+	(wire
+		(pts
+			(xy 39.37 87.63) (xy 39.37 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90244b6b-374e-4d9d-b2ba-dd8e8e7a9bb9")
 	)
 	(wire
 		(pts
@@ -5033,7 +5033,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 78.74) (xy 39.37 83.82)
+			(xy 39.37 78.74) (xy 39.37 82.55)
 		)
 		(stroke
 			(width 0)
@@ -5421,15 +5421,15 @@
 		)
 		(uuid "1bbc9b0d-2ade-425f-b14e-191f816d0710")
 	)
-	(label "BAT+"
-		(at 96.52 72.39 0)
+	(label "BAT-"
+		(at 142.24 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "2c3f06a3-240b-4bd7-9968-0b26fe97a5b8")
+		(uuid "2fac4f9a-00be-4647-9e54-a7e9d4c9a794")
 	)
 	(label "FUSE"
 		(at 204.47 120.65 180)
@@ -5490,6 +5490,16 @@
 			(justify left bottom)
 		)
 		(uuid "7ee74818-9cb4-45a9-9a0d-0b09067b5208")
+	)
+	(label "BAT-"
+		(at 101.6 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8d9baa80-27f7-4f9d-8e5a-62d2744fb752")
 	)
 	(label "CELL5"
 		(at 57.15 63.5 180)
@@ -5591,6 +5601,16 @@
 		)
 		(uuid "c8800631-2385-489c-8b29-11025a0089b8")
 	)
+	(label "BAT-"
+		(at 39.37 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca514e1e-9407-4671-ae9b-1d553919dc25")
+	)
 	(label "CAN.H"
 		(at 210.82 58.42 180)
 		(effects
@@ -5612,7 +5632,7 @@
 		(uuid "ed905c3d-0494-402b-a7a3-af037a81c04b")
 	)
 	(label "BAT+"
-		(at 142.24 97.79 0)
+		(at 142.24 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6745,84 +6765,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 101.6 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4ef3f111-3422-4d3e-8cae-12f94ad9bab3")
-		(property "Reference" "#PWR0105"
-			(at 101.6 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 101.6 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 101.6 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "542e5318-32e1-432b-a6f9-8ca3748826d5")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "#PWR0105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 143.51 140.97 0)
 		(unit 1)
@@ -7929,7 +7871,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 119.38 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -9000,7 +8942,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
 			(at 254 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -9061,7 +9003,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 39.37 83.82 0)
+		(at 39.37 91.44 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9073,7 +9015,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9aa8502-cc28-4c73-8608-8e688eb04d71")
 		(property "Reference" "#PWR0101"
-			(at 39.37 90.17 0)
+			(at 39.37 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9084,7 +9026,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 39.37 88.9 0)
+			(at 39.37 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9094,7 +9036,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 83.82 0)
+			(at 39.37 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9105,7 +9047,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 83.82 0)
+			(at 39.37 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9116,7 +9058,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 39.37 83.82 0)
+			(at 39.37 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9827,7 +9769,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 119.38 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -10787,6 +10729,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 39.37 85.09 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "df3fb5f5-e7fb-4413-ae97-b9f751f5af43")
+		(property "Reference" "R112"
+			(at 40.64 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 40.64 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 39.37 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 39.37 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24273509-fcd8-492c-99c6-e45f8a9cebc5")
+		)
+		(pin "2"
+			(uuid "85480843-fd0e-4f42-881d-ca9df7def5f6")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "R112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 48.26 50.8 90)
 		(unit 1)
@@ -11424,16 +11448,6 @@
 				(justify left top)
 			)
 		)
-		(pin "BAT+" input
-			(at 106.68 72.39 180)
-			(uuid "e4dee126-4245-416d-bf3a-fdc0abb54bd2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "{FET_CTRL}" output
 			(at 132.08 85.09 0)
 			(uuid "1bbf3108-441e-42d2-8d8d-300e42b463c0")
@@ -11551,7 +11565,7 @@
 			)
 		)
 		(pin "BAT+" input
-			(at 149.86 97.79 180)
+			(at 149.86 92.71 180)
 			(uuid "15f34dbc-4e21-4876-b614-a7fdf66a2c31")
 			(effects
 				(font
@@ -11573,6 +11587,16 @@
 		(pin "{FET_CTRL}" input
 			(at 149.86 85.09 180)
 			(uuid "4ea8320d-b6ae-4006-bed8-c4359e737cc5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT-" input
+			(at 149.86 97.79 180)
+			(uuid "817709a9-9423-4d72-9566-a85a65a21ef6")
 			(effects
 				(font
 					(size 1.27 1.27)

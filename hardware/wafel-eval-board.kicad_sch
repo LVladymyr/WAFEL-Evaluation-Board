@@ -5896,7 +5896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "wafel-eval-board:Fuse_SMD-3P_5.4x3.2mm"
+		(property "Footprint" "wafel-eval-board:Fuse_ITV5432"
 			(at 215.9 134.62 0)
 			(hide yes)
 			(show_name no)

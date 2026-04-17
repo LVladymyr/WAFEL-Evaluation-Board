@@ -4547,7 +4547,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 171.45 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -4809,7 +4809,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 171.45 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -4983,7 +4983,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
 			(at 171.45 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -5687,7 +5687,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 171.45 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -6498,7 +6498,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
 			(at 171.45 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6578,7 +6578,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
 			(at 171.45 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -6752,7 +6752,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
 			(at 171.45 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -7004,7 +7004,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
 			(at 171.45 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -7074,7 +7074,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BSS123"
+		(property "Value" "DMG2302UK"
 			(at 248.92 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)

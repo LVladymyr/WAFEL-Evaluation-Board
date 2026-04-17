@@ -598,10 +598,6 @@
       {
         "netclass": "Power",
         "pattern": "PGND"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "GND"
       }
     ]
   },

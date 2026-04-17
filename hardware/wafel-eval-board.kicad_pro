@@ -552,7 +552,7 @@
         "wire_width": 6
       },
       {
-        "clearance": 1.27,
+        "clearance": 0.5,
         "diff_pair_gap": 0.254,
         "diff_pair_width": 0.1524,
         "line_style": 0,
@@ -562,7 +562,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 11.0,
+        "track_width": 2.0,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,

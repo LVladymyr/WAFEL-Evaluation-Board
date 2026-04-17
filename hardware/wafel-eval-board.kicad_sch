@@ -3422,6 +3422,18 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -0.127)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(arc
 					(start 0.635 0)
 					(mid 0.821 0.449)
@@ -3503,7 +3515,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 5.08 270)
+					(at 0 -5.08 90)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -3531,6 +3543,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3749,6 +3779,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db025374-5fcf-4c98-b5f3-6c5ddb9a1b65")
+	)
+	(no_connect
+		(at 210.82 134.62)
+		(uuid "097c6473-a91d-47a9-971c-0a5e7ef475a1")
 	)
 	(no_connect
 		(at 210.82 63.5)
@@ -5832,6 +5866,91 @@
 		)
 	)
 	(symbol
+		(lib_id "wafel-eval-board:Fuse_3Terminal")
+		(at 215.9 134.62 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "210f3387-126f-49fe-8eb7-75b43ae0dbea")
+		(property "Reference" "F103"
+			(at 215.9 123.19 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse_3Terminal"
+			(at 215.9 125.73 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "wafel-eval-board:Fuse_SMD-3P_5.4x3.2mm"
+			(at 215.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "3-Terminal Battery Protection Fuse"
+			(at 215.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "ccb22e58-0696-42e6-8b38-ab6502f85c6e")
+		)
+		(pin "1"
+			(uuid "473f5c9e-37c7-4667-ae22-65341d9ced6e")
+		)
+		(pin "4"
+			(uuid "30239539-9524-40d8-84d0-5678d070f397")
+		)
+		(pin "2"
+			(uuid "67bed842-7e85-42ad-94c0-bff2841929aa")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "F103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 48.26 60.96 90)
 		(unit 1)
@@ -6270,7 +6389,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 233.68 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -7035,7 +7154,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm"
 			(at 242.57 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -11193,88 +11312,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "U101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "wafel-eval-board:Fuse_3Terminal")
-		(at 215.9 134.62 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fcaf302a-09f4-4e4e-ae32-f4fb6a345b7f")
-		(property "Reference" "F103"
-			(at 220.98 138.43 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Fuse3T"
-			(at 220.98 140.97 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3-Terminal Battery Protection Fuse"
-			(at 215.9 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9dec542e-136b-4e27-905f-9785b90fcc70")
-		)
-		(pin "2"
-			(uuid "53f568d8-eeef-4e2a-b53f-9659ae560396")
-		)
-		(pin "3"
-			(uuid "57ea234a-a7b7-4d54-8838-51a6889b1e1d")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "F103")
 					(unit 1)
 				)
 			)

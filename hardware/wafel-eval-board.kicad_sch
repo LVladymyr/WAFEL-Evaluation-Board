@@ -5541,6 +5541,16 @@
 		)
 		(uuid "a22f864a-7605-4ed4-801d-c20e4ebba632")
 	)
+	(label "xBAT+"
+		(at 208.28 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a5bc1c03-43a6-4626-97b5-f91ada1c837e")
+	)
 	(label "CELL7"
 		(at 57.15 58.42 180)
 		(effects

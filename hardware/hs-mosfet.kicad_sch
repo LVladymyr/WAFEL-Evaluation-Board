@@ -1644,7 +1644,7 @@
 
 (property "Value" "2N7002K" (at 161.29 99.695 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 159.385 101.6 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27) (italic yes)) (justify left))) 
+(property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 159.385 101.6 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27) (italic yes)) (justify left))) 
 
 (property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" (at 157.48 101.6 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
 
@@ -1738,13 +1738,15 @@
 
 (property "Value" "100n" (at 71.12 82.5437 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 74.93 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 74.93 82.55 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 74.93 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 74.93 82.55 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 74.93 82.55 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "5c2a13b6-79a1-4d5a-b869-9403d6d055a6")) (pin "1" (uuid "b9d5e83a-b0dc-4911-80f2-b85d1b3d6134")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C301") (unit 1))))) 
+(property "LCSC" "C110255" (at 74.93 82.55 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "5c2a13b6-79a1-4d5a-b869-9403d6d055a6")) (pin "1" (uuid "b9d5e83a-b0dc-4911-80f2-b85d1b3d6134")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C301") (unit 1)))) 
+
+(property "Voltage" "100V" (at 68.58 82.5437 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "Device:R") (at 121.92 123.19 0) (mirror y) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "572a06bf-c359-46ca-a526-004b11c757e4") 
 
@@ -1848,13 +1850,15 @@
 
 (property "Value" "100n" (at 71.12 90.1637 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 74.93 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 74.93 90.17 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 74.93 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 74.93 90.17 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 74.93 90.17 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "556f122e-1550-4241-ab90-3c6299494127")) (pin "1" (uuid "7da4ed3d-e423-430d-b01c-2c3598d94679")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C302") (unit 1))))) 
+(property "LCSC" "C110255" (at 74.93 90.17 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "556f122e-1550-4241-ab90-3c6299494127")) (pin "1" (uuid "7da4ed3d-e423-430d-b01c-2c3598d94679")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C302") (unit 1)))) 
+
+(property "Voltage" "100V" (at 68.58 90.1637 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "Samacsys:SMBJ70A") (at 63.5 82.55 90) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "82d588ae-e954-471c-9482-42e4dbf1783c") 
 
@@ -1952,13 +1956,15 @@
 
 (property "Value" "100n" (at 189.23 87.6237 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 193.04 87.63 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 193.04 87.63 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 193.04 87.63 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 193.04 87.63 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 193.04 87.63 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "c61c3b39-06f4-4265-8dda-8e87a72ea48d")) (pin "1" (uuid "ba93d3c9-07be-4b3d-be61-c0a1e89f9bb3")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C306") (unit 1))))) 
+(property "LCSC" "C110255" (at 193.04 87.63 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "c61c3b39-06f4-4265-8dda-8e87a72ea48d")) (pin "1" (uuid "ba93d3c9-07be-4b3d-be61-c0a1e89f9bb3")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C306") (unit 1)))) 
+
+(property "Voltage" "100V" (at 186.69 87.6237 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "Device:R") (at 93.98 93.98 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "a41403fb-1eee-4710-8781-eaf82cb6763d") 
 
@@ -1978,13 +1984,15 @@
 
 (property "Value" "100n" (at 120.0213 33.02 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 120.015 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 120.015 36.83 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 120.015 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 120.015 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 120.015 36.83 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "17dc00de-03a3-4419-baca-ff602cbf6d6f")) (pin "1" (uuid "1cdc7c73-6c95-447d-81d9-0cfb9806b97a")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C304") (unit 1))))) 
+(property "LCSC" "C110255" (at 120.015 36.83 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "17dc00de-03a3-4419-baca-ff602cbf6d6f")) (pin "1" (uuid "1cdc7c73-6c95-447d-81d9-0cfb9806b97a")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C304") (unit 1)))) 
+
+(property "Voltage" "100V" (at 120.0213 30.48 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "Device:C_Small") (at 193.04 80.01 180) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "ae0da9c6-7127-42ca-8740-61b5a99b8afd") 
 
@@ -1992,13 +2000,15 @@
 
 (property "Value" "100n" (at 189.23 80.0037 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 193.04 80.01 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 193.04 80.01 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 193.04 80.01 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 193.04 80.01 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 193.04 80.01 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "ee3988ff-35bc-4464-a94b-460b54cc8953")) (pin "1" (uuid "3d85b217-3aa3-4ab8-bf69-b9bbbf3896ad")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C305") (unit 1))))) 
+(property "LCSC" "C110255" (at 193.04 80.01 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "ee3988ff-35bc-4464-a94b-460b54cc8953")) (pin "1" (uuid "3d85b217-3aa3-4ab8-bf69-b9bbbf3896ad")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C305") (unit 1)))) 
+
+(property "Voltage" "100V" (at 186.69 80.0037 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "power:GNDD") (at 220.98 156.21 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "b14e4de5-ed39-4ccd-872f-53e0096efc07") 
 
@@ -2066,13 +2076,15 @@
 
 (property "Value" "100n" (at 112.4013 33.02 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 112.395 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 112.395 36.83 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
 
 (property "Datasheet" "" (at 112.395 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
 (property "Description" "Unpolarized capacitor, small symbol" (at 112.395 36.83 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
 
-(property "LCSC" "C14663" (at 112.395 36.83 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "7cffddbd-ba14-4fa9-93ee-f4fe0e81a402")) (pin "1" (uuid "1a409d0f-f17f-48e0-b1cb-c79bd7d510f0")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C303") (unit 1))))) 
+(property "LCSC" "C110255" (at 112.395 36.83 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "7cffddbd-ba14-4fa9-93ee-f4fe0e81a402")) (pin "1" (uuid "1a409d0f-f17f-48e0-b1cb-c79bd7d510f0")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4" (reference "C303") (unit 1)))) 
+
+(property "Voltage" "100V" (at 112.4013 30.48 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))) 
 
 (symbol (lib_id "Device:R_Small") (at 236.22 120.65 90) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "f0cbfb3b-02bd-4878-a4ca-88620f6633cd") 
 

@@ -1,449 +1,2022 @@
-(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "e7f247bf-f593-4a1a-88d2-e63b6f907adb") (paper "A4") (title_block (rev "v0.0.7")) (lib_symbols 
-
-(symbol "Device:R" (pin_numbers (hide yes)) (pin_names (offset 0)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "R" (at 2.032 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "R" (at 0 0 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "" (at -1.778 0 90) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "R res resistor" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_fp_filters" "R_*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "R_0_1" 
-
-(rectangle (start -1.016 -2.54) (end 1.016 2.54) (stroke (width 0.254) (type default)) (fill (type none)))) 
-
-(symbol "R_1_1" (pin passive line (at 0 3.81 270) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 1.27) (name "" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
-
-(symbol "Diode:BZT52Bxx" (pin_numbers (hide yes)) (pin_names (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "D" (at 0 2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "BZT52Bxx" (at 0 -2.54 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Diode_SMD:D_SOD-123F" (at 0 -4.445 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "500mW Zener Diode, SOD-123F" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "zener diode" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_fp_filters" "D?SOD?123F*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "BZT52Bxx_0_1" 
-
-(polyline (pts 
-
-(xy -1.27 -1.27) 
-
-(xy -1.27 1.27) 
-
-(xy -0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 1.27 0) 
-
-(xy -1.27 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 1.27 -1.27) 
-
-(xy 1.27 1.27) 
-
-(xy -1.27 0) 
-
-(xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))) 
-
-(symbol "BZT52Bxx_1_1" (pin passive line (at -3.81 0 0) (length 2.54) (name "K" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 3.81 0 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
-
-(symbol "Transistor_FET:Q_NMOS_GDS" (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (duplicate_pin_numbers_are_jumpers no) 
-
-(property "Reference" "Q" (at 5.08 1.905 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "Q_NMOS_GDS" (at 5.08 0 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "" (at 5.08 2.54 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "N-MOSFET transistor, gate/drain/source" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)))) 
-
-(symbol "Q_NMOS_GDS_0_1" 
-
-(polyline (pts 
-
-(xy 0.254 1.905) 
-
-(xy 0.254 -1.905)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.254 0) 
-
-(xy -2.54 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 2.286) 
-
-(xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 0.508) 
-
-(xy 0.762 -0.508)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 -1.27) 
-
-(xy 0.762 -2.286)) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 0.762 -1.778) 
-
-(xy 3.302 -1.778) 
-
-(xy 3.302 1.778) 
-
-(xy 0.762 1.778)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 1.016 0) 
-
-(xy 2.032 0.381) 
-
-(xy 2.032 -0.381) 
-
-(xy 1.016 0)) (stroke (width 0) (type default)) (fill (type outline))) (circle (center 1.651 0) (radius 2.794) (stroke (width 0.254) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 2.54 2.54) 
-
-(xy 2.54 1.778)) (stroke (width 0) (type default)) (fill (type none))) (circle (center 2.54 1.778) (radius 0.254) (stroke (width 0) (type default)) (fill (type outline))) (circle (center 2.54 -1.778) (radius 0.254) (stroke (width 0) (type default)) (fill (type outline))) 
-
-(polyline (pts 
-
-(xy 2.54 -2.54) 
-
-(xy 2.54 0) 
-
-(xy 0.762 0)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 2.921 0.381) 
-
-(xy 3.683 0.381)) (stroke (width 0) (type default)) (fill (type none))) 
-
-(polyline (pts 
-
-(xy 3.302 0.381) 
-
-(xy 2.921 -0.254) 
-
-(xy 3.683 -0.254) 
-
-(xy 3.302 0.381)) (stroke (width 0) (type default)) (fill (type none)))) 
-
-(symbol "Q_NMOS_GDS_1_1" (pin input line (at -5.08 0 0) (length 2.54) (name "G" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 5.08 270) (length 2.54) (name "D" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin passive line (at 2.54 -5.08 90) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))) 
-
-(junction (at 95.25 63.5) (diameter 0) (color 0 0 0 0) (uuid "0c2b3891-543c-42c4-88cc-d58454dc2a5e")) 
-
-(junction (at 95.25 107.95) (diameter 0) (color 0 0 0 0) (uuid "1274b112-cabf-40a1-afd0-578dee630e91")) 
-
-(junction (at 115.57 63.5) (diameter 0) (color 0 0 0 0) (uuid "2ba7de99-c408-4ec2-9527-ba5945516bd4")) 
-
-(junction (at 82.55 63.5) (diameter 0) (color 0 0 0 0) (uuid "4288f70a-1b0b-4661-b9a4-685e9cd4331b")) 
-
-(junction (at 151.13 63.5) (diameter 0) (color 0 0 0 0) (uuid "b6a0b373-4e03-4361-b11d-fe053f11fb81")) 
-
-(junction (at 133.35 101.6) (diameter 0) (color 0 0 0 0) (uuid "c650d2d9-4628-4775-9e37-7041ffb8d30e")) 
-
-(junction (at 82.55 107.95) (diameter 0) (color 0 0 0 0) (uuid "e068840a-bd8c-4bee-b7e5-1a8e86b8f83e")) 
-
-(wire (pts 
-
-(xy 133.35 96.52) 
-
-(xy 133.35 101.6)) (stroke (width 0) (type default)) (uuid "07ca16f6-c054-42d5-921b-ada8c541ae45")) 
-
-(wire (pts 
-
-(xy 82.55 63.5) 
-
-(xy 82.55 81.915)) (stroke (width 0) (type default)) (uuid "082dcf80-7bcd-40a5-b395-5be9c0332820")) 
-
-(wire (pts 
-
-(xy 138.43 63.5) 
-
-(xy 151.13 63.5)) (stroke (width 0) (type default)) (uuid "0a70ff74-e87c-46e6-a357-c325dc41d931")) 
-
-(wire (pts 
-
-(xy 151.13 63.5) 
-
-(xy 151.13 76.2)) (stroke (width 0) (type default)) (uuid "0e3dceb3-a762-4905-adcb-6353783b8054")) 
-
-(wire (pts 
-
-(xy 146.05 101.6) 
-
-(xy 146.05 96.52)) (stroke (width 0) (type default)) (uuid "19427cba-b73e-461d-87c3-5019d0b5b576")) 
-
-(wire (pts 
-
-(xy 151.13 50.8) 
-
-(xy 151.13 63.5)) (stroke (width 0) (type default)) (uuid "23805975-6621-455d-9192-d9dde4eee37c")) 
-
-(wire (pts 
-
-(xy 82.55 63.5) 
-
-(xy 95.25 63.5)) (stroke (width 0) (type default)) (uuid "276ebe57-7971-4fdc-9c2b-4bbabf05a3dd")) 
-
-(wire (pts 
-
-(xy 115.57 63.5) 
-
-(xy 128.27 63.5)) (stroke (width 0) (type default)) (uuid "29a582d1-2c2f-487c-a8d8-00d6d998172b")) 
-
-(wire (pts 
-
-(xy 151.13 63.5) 
-
-(xy 153.67 63.5)) (stroke (width 0) (type default)) (uuid "2b43ab5c-4f3f-4ede-8e4d-c4000efeda45")) 
-
-(wire (pts 
-
-(xy 120.65 96.52) 
-
-(xy 120.65 101.6)) (stroke (width 0) (type default)) (uuid "44572c01-3332-4cc6-9fa5-63c62775954b")) 
-
-(wire (pts 
-
-(xy 133.35 101.6) 
-
-(xy 146.05 101.6)) (stroke (width 0) (type default)) (uuid "5c921985-15a5-4e24-8b84-544c45522fb0")) 
-
-(wire (pts 
-
-(xy 76.2 63.5) 
-
-(xy 82.55 63.5)) (stroke (width 0) (type default)) (uuid "7a806b9b-3797-4a3f-9ae8-da2d60b4bf87")) 
-
-(wire (pts 
-
-(xy 115.57 50.8) 
-
-(xy 115.57 63.5)) (stroke (width 0) (type default)) (uuid "875c7684-1e02-4628-b638-4aae8c8774b8")) 
-
-(wire (pts 
-
-(xy 146.05 83.82) 
-
-(xy 146.05 88.9)) (stroke (width 0) (type default)) (uuid "907248be-1a94-4d34-b63d-375ed7c4c697")) 
-
-(wire (pts 
-
-(xy 125.73 50.8) 
-
-(xy 151.13 50.8)) (stroke (width 0) (type default)) (uuid "96c030ab-d8d1-4a1a-8193-6f27c511fe78")) 
-
-(wire (pts 
-
-(xy 120.65 58.42) 
-
-(xy 120.65 88.9)) (stroke (width 0) (type default)) (uuid "9c05c65b-df02-4c58-bf27-858019e36b39")) 
-
-(wire (pts 
-
-(xy 95.25 89.535) 
-
-(xy 95.25 107.95)) (stroke (width 0) (type default)) (uuid "a84bd3ee-6e46-4d33-a6e1-fba1c0d2ef06")) 
-
-(wire (pts 
-
-(xy 82.55 107.95) 
-
-(xy 95.25 107.95)) (stroke (width 0) (type default)) (uuid "baf51a22-516d-49da-bf4f-3cf681266e32")) 
-
-(wire (pts 
-
-(xy 76.2 107.95) 
-
-(xy 82.55 107.95)) (stroke (width 0) (type default)) (uuid "bb1e7c2a-3502-4389-80c8-e85b79243d1b")) 
-
-(wire (pts 
-
-(xy 115.57 76.2) 
-
-(xy 140.97 76.2)) (stroke (width 0) (type default)) (uuid "d4e29e81-6aa2-4f8d-9fcd-17d70d13e2cb")) 
-
-(wire (pts 
-
-(xy 133.35 107.95) 
-
-(xy 133.35 101.6)) (stroke (width 0) (type default)) (uuid "dcef8285-ed70-4baa-a816-8abb1f824436")) 
-
-(wire (pts 
-
-(xy 115.57 63.5) 
-
-(xy 115.57 76.2)) (stroke (width 0) (type default)) (uuid "dd30221d-0fcf-4fb3-898c-18643bb3900b")) 
-
-(wire (pts 
-
-(xy 120.65 101.6) 
-
-(xy 133.35 101.6)) (stroke (width 0) (type default)) (uuid "dd74f41d-0871-4412-9b8f-73ffa0f8e6da")) 
-
-(wire (pts 
-
-(xy 82.55 89.535) 
-
-(xy 82.55 107.95)) (stroke (width 0) (type default)) (uuid "e2b820af-9a1e-4fae-9c24-91abe79ba03f")) 
-
-(wire (pts 
-
-(xy 95.25 63.5) 
-
-(xy 95.25 81.915)) (stroke (width 0) (type default)) (uuid "e74644c9-41b2-41d4-bd6f-656081c13f5f")) 
-
-(wire (pts 
-
-(xy 133.35 71.12) 
-
-(xy 133.35 88.9)) (stroke (width 0) (type default)) (uuid "ea05e997-2e21-463a-b3ca-f7eb275f156e")) 
-
-(wire (pts 
-
-(xy 95.25 107.95) 
-
-(xy 133.35 107.95)) (stroke (width 0) (type default)) (uuid "f5766f9f-1067-4c44-9e22-dfd6ee173457")) 
-
-(wire (pts 
-
-(xy 95.25 63.5) 
-
-(xy 115.57 63.5)) (stroke (width 0) (type default)) (uuid "f7570fad-d038-41e7-8f0d-aea8715bbcc6")) (hierarchical_label "SOURCE" (shape input) (at 76.2 63.5 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "14815a56-ea4f-4901-b865-c523406d9e96")) (hierarchical_label "GATE" (shape input) (at 76.2 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a3561f39-936a-4d88-86c5-2ad9e2d47171")) (hierarchical_label "DRAIN" (shape output) (at 153.67 63.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d3a89878-e6f3-4794-a51f-45ce95a48ca6")) 
-
-(symbol (lib_id "Device:R") (at 133.35 92.71 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "0d57b102-4b75-45c9-a342-136476b6be54") 
-
-(property "Reference" "R403" (at 135.89 91.4399 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "600R" (at 135.89 93.9799 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 131.572 92.71 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 133.35 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 133.35 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "0179e33a-da1e-462c-8b5d-fdb5cf0acfe6")) (pin "1" (uuid "80234a29-ae00-4d52-a8a6-f70e148f0c73")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "R403") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "R503") (unit 1)))) 
-
-(property "LCSC" "C139183" (at 135.89 91.4399 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))) 
-
-(symbol (lib_id "Device:R") (at 146.05 92.71 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "2061c47f-58cc-45ba-bb98-39a50759e370") 
-
-(property "Reference" "R404" (at 148.59 91.4399 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "600R" (at 148.59 93.9799 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 144.272 92.71 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 146.05 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 146.05 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "f6f5bf7f-7e35-4d58-a21b-cbcdd365d5d2")) (pin "1" (uuid "2542c1e1-7da2-4a88-a6e1-662d9d42339e")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "R404") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "R504") (unit 1)))) 
-
-(property "LCSC" "C139183" (at 148.59 91.4399 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))) 
-
-(symbol (lib_id "Diode:BZT52Bxx") (at 95.25 85.725 270) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "298e0b89-5eb2-4c48-ba4c-60106eb71ba7") 
-
-(property "Reference" "D401" (at 97.79 84.4549 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "BZT52B16" (at 97.79 86.9949 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Diode_SMD:D_SOD-123F" (at 90.805 85.725 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf" (at 95.25 85.725 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "500mW Zener Diode, SOD-123F" (at 95.25 85.725 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "1" (uuid "94e6c835-513a-490c-a826-448e81469d49")) (pin "2" (uuid "ea8f5dc1-681b-4b64-b858-577450fb46cc")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "D401") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "D501") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 120.65 92.71 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "4208278b-5f68-492e-b917-79cec4887184") 
-
-(property "Reference" "R402" (at 123.19 91.4399 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "600R" (at 123.19 93.9799 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 118.872 92.71 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 120.65 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 120.65 92.71 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "83189742-9a85-4004-b409-3d8e4955b283")) (pin "1" (uuid "4d025a0f-94cb-4515-b8d6-500259c04e66")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "R402") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "R502") (unit 1)))) 
-
-(property "LCSC" "C139183" (at 123.19 91.4399 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))) 
-
-(symbol (lib_id "Transistor_FET:Q_NMOS_GDS") (at 120.65 53.34 270) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "73ab618d-f32f-4fde-b2d2-2da049dc90dd") 
-
-(property "Reference" "Q401" (at 120.65 44.45 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "IPB085N15NM6" (at 120.65 46.99 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Package_TO_SOT_SMD:TO-263-2" (at 123.19 48.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf" (at 120.65 53.34 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "N-MOSFET transistor, gate/drain/source" (at 120.65 53.34 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "3" (uuid "42fad533-1f92-4838-a9d6-b3869bf700c1")) (pin "2" (uuid "05502017-3eba-4e8b-8205-8616818da12a")) (pin "1" (uuid "d1a0f0c7-cd53-49f2-8d51-be53573f1935")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "Q401") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "Q501") (unit 1))))) 
-
-(symbol (lib_id "Transistor_FET:Q_NMOS_GDS") (at 133.35 66.04 270) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "c20dae04-ff92-4209-8cf9-5fa6cd864877") 
-
-(property "Reference" "Q402" (at 133.35 57.15 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "IPB085N15NM6" (at 133.35 59.69 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Package_TO_SOT_SMD:TO-263-2" (at 135.89 60.96 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf" (at 133.35 66.04 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "N-MOSFET transistor, gate/drain/source" (at 133.35 66.04 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "3" (uuid "d1b2b8db-e377-467f-94bb-84a5d7d3a075")) (pin "2" (uuid "1e21b389-506e-4e0b-abeb-bdeabf58ff7e")) (pin "1" (uuid "375ee58a-2ab9-4489-937b-28608a0bdfeb")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "Q402") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "Q502") (unit 1))))) 
-
-(symbol (lib_id "Transistor_FET:Q_NMOS_GDS") (at 146.05 78.74 270) (mirror x) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "c6e6be56-1f9e-4131-afc6-c8f3d339a177") 
-
-(property "Reference" "Q403" (at 146.05 69.85 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Value" "IPB085N15NM6" (at 146.05 72.39 90) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Footprint" "Package_TO_SOT_SMD:TO-263-2" (at 148.59 73.66 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf" (at 146.05 78.74 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "N-MOSFET transistor, gate/drain/source" (at 146.05 78.74 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "3" (uuid "9a191210-86b8-4e27-a655-aa6f84a5fd6f")) (pin "2" (uuid "2c82a1cb-6af2-4c19-8a1b-ce95453e03a6")) (pin "1" (uuid "9de882c9-6b17-4c5f-a5ac-c3633ee8b7ed")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "Q403") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "Q503") (unit 1))))) 
-
-(symbol (lib_id "Device:R") (at 82.55 85.725 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "d06479c2-0616-4743-9922-5ef363f14edd") 
-
-(property "Reference" "R401" (at 85.09 84.4549 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Value" "10M" (at 85.09 86.9949 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left))) 
-
-(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 80.772 85.725 90) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Datasheet" "" (at 82.55 85.725 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) 
-
-(property "Description" "Resistor" (at 82.55 85.725 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)))) (pin "2" (uuid "8d3038c6-7fb7-4399-9d4b-8bc6b3d03154")) (pin "1" (uuid "f6a13c13-1d22-468b-af93-4a6313315f10")) (instances (project "wafel-eval-board" (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b" (reference "R401") (unit 1)) (path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f" (reference "R501") (unit 1))))))
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e7f247bf-f593-4a1a-88d2-e63b6f907adb")
+	(paper "A4")
+	(title_block
+		(rev "v0.0.7")
+	)
+	(lib_symbols
+		(symbol "Device:L_Ferrite"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L_Ferrite"
+				(at 2.794 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor with ferrite core"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_Ferrite_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 2.286) (xy 1.016 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.27) (xy 1.016 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0.254) (xy 1.016 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -0.762) (xy 1.016 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.778) (xy 1.016 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -2.794) (xy 1.016 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 2.794) (xy 1.524 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.778) (xy 1.524 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.254) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.27) (xy 1.524 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -2.286) (xy 1.524 -2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_Ferrite_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Diode:BZT52Bxx"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BZT52Bxx"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-123F"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "500mW Zener Diode, SOD-123F"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "zener diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D?SOD?123F*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BZT52Bxx_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BZT52Bxx_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Transistor_FET:Q_NMOS_GDS"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS_GDS"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "N-MOSFET transistor, gate/drain/source"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GDS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GDS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 95.25 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c2b3891-543c-42c4-88cc-d58454dc2a5e")
+	)
+	(junction
+		(at 95.25 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1274b112-cabf-40a1-afd0-578dee630e91")
+	)
+	(junction
+		(at 115.57 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ba7de99-c408-4ec2-9527-ba5945516bd4")
+	)
+	(junction
+		(at 82.55 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4288f70a-1b0b-4661-b9a4-685e9cd4331b")
+	)
+	(junction
+		(at 151.13 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b6a0b373-4e03-4361-b11d-fe053f11fb81")
+	)
+	(junction
+		(at 133.35 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c650d2d9-4628-4775-9e37-7041ffb8d30e")
+	)
+	(junction
+		(at 82.55 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e068840a-bd8c-4bee-b7e5-1a8e86b8f83e")
+	)
+	(wire
+		(pts
+			(xy 133.35 96.52) (xy 133.35 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07ca16f6-c054-42d5-921b-ada8c541ae45")
+	)
+	(wire
+		(pts
+			(xy 82.55 63.5) (xy 82.55 81.915)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "082dcf80-7bcd-40a5-b395-5be9c0332820")
+	)
+	(wire
+		(pts
+			(xy 138.43 63.5) (xy 151.13 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a70ff74-e87c-46e6-a357-c325dc41d931")
+	)
+	(wire
+		(pts
+			(xy 151.13 63.5) (xy 151.13 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e3dceb3-a762-4905-adcb-6353783b8054")
+	)
+	(wire
+		(pts
+			(xy 146.05 101.6) (xy 146.05 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19427cba-b73e-461d-87c3-5019d0b5b576")
+	)
+	(wire
+		(pts
+			(xy 151.13 50.8) (xy 151.13 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23805975-6621-455d-9192-d9dde4eee37c")
+	)
+	(wire
+		(pts
+			(xy 82.55 63.5) (xy 95.25 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "276ebe57-7971-4fdc-9c2b-4bbabf05a3dd")
+	)
+	(wire
+		(pts
+			(xy 115.57 63.5) (xy 128.27 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29a582d1-2c2f-487c-a8d8-00d6d998172b")
+	)
+	(wire
+		(pts
+			(xy 151.13 63.5) (xy 153.67 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b43ab5c-4f3f-4ede-8e4d-c4000efeda45")
+	)
+	(wire
+		(pts
+			(xy 120.65 96.52) (xy 120.65 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44572c01-3332-4cc6-9fa5-63c62775954b")
+	)
+	(wire
+		(pts
+			(xy 133.35 101.6) (xy 146.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c921985-15a5-4e24-8b84-544c45522fb0")
+	)
+	(wire
+		(pts
+			(xy 76.2 63.5) (xy 82.55 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a806b9b-3797-4a3f-9ae8-da2d60b4bf87")
+	)
+	(wire
+		(pts
+			(xy 115.57 50.8) (xy 115.57 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "875c7684-1e02-4628-b638-4aae8c8774b8")
+	)
+	(wire
+		(pts
+			(xy 146.05 83.82) (xy 146.05 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "907248be-1a94-4d34-b63d-375ed7c4c697")
+	)
+	(wire
+		(pts
+			(xy 125.73 50.8) (xy 151.13 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96c030ab-d8d1-4a1a-8193-6f27c511fe78")
+	)
+	(wire
+		(pts
+			(xy 120.65 58.42) (xy 120.65 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c05c65b-df02-4c58-bf27-858019e36b39")
+	)
+	(wire
+		(pts
+			(xy 95.25 89.535) (xy 95.25 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a84bd3ee-6e46-4d33-a6e1-fba1c0d2ef06")
+	)
+	(wire
+		(pts
+			(xy 82.55 107.95) (xy 95.25 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baf51a22-516d-49da-bf4f-3cf681266e32")
+	)
+	(wire
+		(pts
+			(xy 76.2 107.95) (xy 82.55 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb1e7c2a-3502-4389-80c8-e85b79243d1b")
+	)
+	(wire
+		(pts
+			(xy 115.57 76.2) (xy 140.97 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4e29e81-6aa2-4f8d-9fcd-17d70d13e2cb")
+	)
+	(wire
+		(pts
+			(xy 133.35 107.95) (xy 133.35 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcef8285-ed70-4baa-a816-8abb1f824436")
+	)
+	(wire
+		(pts
+			(xy 115.57 63.5) (xy 115.57 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd30221d-0fcf-4fb3-898c-18643bb3900b")
+	)
+	(wire
+		(pts
+			(xy 120.65 101.6) (xy 133.35 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd74f41d-0871-4412-9b8f-73ffa0f8e6da")
+	)
+	(wire
+		(pts
+			(xy 82.55 89.535) (xy 82.55 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2b820af-9a1e-4fae-9c24-91abe79ba03f")
+	)
+	(wire
+		(pts
+			(xy 95.25 63.5) (xy 95.25 81.915)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e74644c9-41b2-41d4-bd6f-656081c13f5f")
+	)
+	(wire
+		(pts
+			(xy 133.35 71.12) (xy 133.35 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea05e997-2e21-463a-b3ca-f7eb275f156e")
+	)
+	(wire
+		(pts
+			(xy 95.25 107.95) (xy 133.35 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5766f9f-1067-4c44-9e22-dfd6ee173457")
+	)
+	(wire
+		(pts
+			(xy 95.25 63.5) (xy 115.57 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7570fad-d038-41e7-8f0d-aea8715bbcc6")
+	)
+	(hierarchical_label "SOURCE"
+		(shape input)
+		(at 76.2 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "14815a56-ea4f-4901-b865-c523406d9e96")
+	)
+	(hierarchical_label "GATE"
+		(shape input)
+		(at 76.2 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a3561f39-936a-4d88-86c5-2ad9e2d47171")
+	)
+	(hierarchical_label "DRAIN"
+		(shape output)
+		(at 153.67 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d3a89878-e6f3-4794-a51f-45ce95a48ca6")
+	)
+	(symbol
+		(lib_id "Device:L_Ferrite")
+		(at 133.35 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d57b102-4b75-45c9-a342-136476b6be54")
+		(property "Reference" "R403"
+			(at 135.89 91.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "600R"
+			(at 135.89 93.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 133.35 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor with ferrite core"
+			(at 133.35 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C139183"
+			(at 135.89 91.4399 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "0179e33a-da1e-462c-8b5d-fdb5cf0acfe6")
+		)
+		(pin "1"
+			(uuid "80234a29-ae00-4d52-a8a6-f70e148f0c73")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "R403")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "R503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L_Ferrite")
+		(at 146.05 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2061c47f-58cc-45ba-bb98-39a50759e370")
+		(property "Reference" "R404"
+			(at 148.59 91.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "600R"
+			(at 148.59 93.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 146.05 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor with ferrite core"
+			(at 146.05 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C139183"
+			(at 148.59 91.4399 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "f6f5bf7f-7e35-4d58-a21b-cbcdd365d5d2")
+		)
+		(pin "1"
+			(uuid "2542c1e1-7da2-4a88-a6e1-662d9d42339e")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "R404")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "R504")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BZT52Bxx")
+		(at 95.25 85.725 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "298e0b89-5eb2-4c48-ba4c-60106eb71ba7")
+		(property "Reference" "D401"
+			(at 97.79 84.4549 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BZT52B16"
+			(at 97.79 86.9949 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 90.805 85.725 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzt52b2v4.pdf"
+			(at 95.25 85.725 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "500mW Zener Diode, SOD-123F"
+			(at 95.25 85.725 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "94e6c835-513a-490c-a826-448e81469d49")
+		)
+		(pin "2"
+			(uuid "ea8f5dc1-681b-4b64-b858-577450fb46cc")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "D401")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "D501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L_Ferrite")
+		(at 120.65 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4208278b-5f68-492e-b917-79cec4887184")
+		(property "Reference" "R402"
+			(at 123.19 91.4399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "600R"
+			(at 123.19 93.9799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 120.65 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor with ferrite core"
+			(at 120.65 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C139183"
+			(at 123.19 91.4399 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "83189742-9a85-4004-b409-3d8e4955b283")
+		)
+		(pin "1"
+			(uuid "4d025a0f-94cb-4515-b8d6-500259c04e66")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "R402")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "R502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 120.65 53.34 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73ab618d-f32f-4fde-b2d2-2da049dc90dd")
+		(property "Reference" "Q401"
+			(at 120.65 44.45 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IPB085N15NM6"
+			(at 120.65 46.99 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 123.19 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf"
+			(at 120.65 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 120.65 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "42fad533-1f92-4838-a9d6-b3869bf700c1")
+		)
+		(pin "2"
+			(uuid "05502017-3eba-4e8b-8205-8616818da12a")
+		)
+		(pin "1"
+			(uuid "d1a0f0c7-cd53-49f2-8d51-be53573f1935")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "Q401")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "Q501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 133.35 66.04 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c20dae04-ff92-4209-8cf9-5fa6cd864877")
+		(property "Reference" "Q402"
+			(at 133.35 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IPB085N15NM6"
+			(at 133.35 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 135.89 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d1b2b8db-e377-467f-94bb-84a5d7d3a075")
+		)
+		(pin "2"
+			(uuid "1e21b389-506e-4e0b-abeb-bdeabf58ff7e")
+		)
+		(pin "1"
+			(uuid "375ee58a-2ab9-4489-937b-28608a0bdfeb")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "Q402")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "Q502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 146.05 78.74 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6e6be56-1f9e-4131-afc6-c8f3d339a177")
+		(property "Reference" "Q403"
+			(at 146.05 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IPB085N15NM6"
+			(at 146.05 72.39 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 148.59 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://no.mouser.com/datasheet/3/70/1/Infineon_IPB085N15NM6_DataSheet_v01_00_EN.pdf"
+			(at 146.05 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 146.05 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "9a191210-86b8-4e27-a655-aa6f84a5fd6f")
+		)
+		(pin "2"
+			(uuid "2c82a1cb-6af2-4c19-8a1b-ce95453e03a6")
+		)
+		(pin "1"
+			(uuid "9de882c9-6b17-4c5f-a5ac-c3633ee8b7ed")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "Q403")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "Q503")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 85.725 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d06479c2-0616-4743-9922-5ef363f14edd")
+		(property "Reference" "R401"
+			(at 85.09 84.4549 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10M"
+			(at 85.09 86.9949 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 80.772 85.725 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 85.725 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 85.725 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8d3038c6-7fb7-4399-9d4b-8bc6b3d03154")
+		)
+		(pin "1"
+			(uuid "f6a13c13-1d22-468b-af93-4a6313315f10")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/be7298a7-6fe1-4540-a0ad-84330c0fdd5b"
+					(reference "R401")
+					(unit 1)
+				)
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/5ab6bc33-292e-4a51-947f-86660ef7cdb4/fff85bb6-8e8e-42b2-b656-f76779941b8f"
+					(reference "R501")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

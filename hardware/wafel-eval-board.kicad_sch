@@ -5888,6 +5888,7 @@
 	(symbol
 		(lib_id "wafel-eval-board:Fuse_3Terminal")
 		(at 215.9 134.62 270)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5897,7 +5898,7 @@
 		(dnp no)
 		(uuid "210f3387-126f-49fe-8eb7-75b43ae0dbea")
 		(property "Reference" "F103"
-			(at 215.9 123.19 90)
+			(at 215.9 146.05 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5907,7 +5908,7 @@
 			)
 		)
 		(property "Value" "Fuse_3Terminal"
-			(at 215.9 125.73 90)
+			(at 215.9 143.51 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

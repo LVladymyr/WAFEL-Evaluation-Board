@@ -3571,6 +3571,154 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "wafel-eval-board:poka_yoke_txrx"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U102"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "wafel-eval-board:poka-yoke_rxtx"
+				(at 1.27 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "poka_yoke_txrx_0_1"
+				(rectangle
+					(start -5.08 2.54)
+					(end 5.08 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "poka_yoke_txrx_1_1"
+				(pin input line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "Rx_In"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "Tx_In"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -1.27 180)
+					(length 2.54)
+					(name "Tx_Out"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 1.27 180)
+					(length 2.54)
+					(name "Rx_Out"
+						(effects
+							(font
+								(size 0.9 0.9)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Fuse"
 		(exclude_from_sim no)
@@ -3785,11 +3933,11 @@
 		(uuid "097c6473-a91d-47a9-971c-0a5e7ef475a1")
 	)
 	(no_connect
-		(at 210.82 63.5)
+		(at 230.505 63.5)
 		(uuid "28b8992e-e43f-4183-bc3d-fd3650d8b2ae")
 	)
 	(no_connect
-		(at 210.82 55.88)
+		(at 230.505 55.88)
 		(uuid "712e3d29-8e72-441b-b94d-de22de830c16")
 	)
 	(no_connect
@@ -4373,6 +4521,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 58.42) (xy 207.01 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52dfc160-839b-44c3-9e16-bac906e7416d")
+	)
+	(wire
+		(pts
 			(xy 116.84 99.06) (xy 115.57 99.06)
 		)
 		(stroke
@@ -4400,6 +4558,16 @@
 			(type default)
 		)
 		(uuid "585531f2-acd4-415e-8c17-58f936cf7d86")
+	)
+	(wire
+		(pts
+			(xy 222.25 58.42) (xy 230.505 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59b88028-c8b4-4826-b57e-51c7c54769d9")
 	)
 	(wire
 		(pts
@@ -4653,16 +4821,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 60.96) (xy 210.82 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d0e84da-84b4-4c81-a33a-9a3d066e4fea")
-	)
-	(wire
-		(pts
 			(xy 204.47 127) (xy 208.28 127)
 		)
 		(stroke
@@ -4780,16 +4938,6 @@
 			(type default)
 		)
 		(uuid "907f2175-e30d-4feb-8227-906e39c24761")
-	)
-	(wire
-		(pts
-			(xy 201.93 58.42) (xy 210.82 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90b03675-7367-4d5e-bf7c-ffa181984231")
 	)
 	(wire
 		(pts
@@ -5183,6 +5331,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 60.96) (xy 207.01 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cee35aaa-82b6-41fd-a790-d5d0a29d2b65")
+	)
+	(wire
+		(pts
 			(xy 260.35 125.73) (xy 260.35 133.35)
 		)
 		(stroke
@@ -5250,6 +5408,16 @@
 			(type default)
 		)
 		(uuid "d9ce29b6-2900-45be-ad14-1bd8bdb69122")
+	)
+	(wire
+		(pts
+			(xy 222.25 60.96) (xy 230.505 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db34cfa3-0a3a-410d-ba71-416a5dcf1a09")
 	)
 	(wire
 		(pts
@@ -5411,6 +5579,16 @@
 		)
 		(uuid "104e97e9-ae17-4614-bd7a-9385dda81c14")
 	)
+	(label "CAN_L"
+		(at 227.965 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "155fc444-b3b4-4d0d-8595-93d5d6e7102d")
+	)
 	(label "VESC.GND"
 		(at 210.82 72.39 180)
 		(effects
@@ -5451,6 +5629,16 @@
 		)
 		(uuid "3ae3e1d6-ec4a-4ad0-8c01-1ff942054b51")
 	)
+	(label "CAN_H"
+		(at 227.965 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "47b77628-b29c-4fcb-bb69-ebe13600d715")
+	)
 	(label "CELL4"
 		(at 57.15 66.04 180)
 		(effects
@@ -5460,6 +5648,16 @@
 			(justify right bottom)
 		)
 		(uuid "59f2bac4-9cc5-4461-8de9-788f0435ade5")
+	)
+	(label "CAN.H"
+		(at 206.375 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "66e0a742-eb25-4931-ae4b-8f226f8b4d51")
 	)
 	(label "VESC.SW"
 		(at 210.82 69.85 180)
@@ -5582,7 +5780,7 @@
 		(uuid "bbc64916-e300-45cb-9e39-288c821a0b77")
 	)
 	(label "CAN.L"
-		(at 210.82 60.96 180)
+		(at 207.01 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5620,16 +5818,6 @@
 			(justify left bottom)
 		)
 		(uuid "ca514e1e-9407-4671-ae9b-1d553919dc25")
-	)
-	(label "CAN.H"
-		(at 210.82 58.42 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dc621f7a-4d95-4b3b-baf3-30cf9f145690")
 	)
 	(label "CELL10"
 		(at 57.15 50.8 180)
@@ -8844,6 +9032,92 @@
 		)
 	)
 	(symbol
+		(lib_id "wafel-eval-board:poka_yoke_txrx")
+		(at 214.63 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1c23ac0-5a3d-44cd-b00c-41510e22566d")
+		(property "Reference" "U102"
+			(at 214.63 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 214.63 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "wafel-eval-board:poka-yoke_rxtx"
+			(at 215.9 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 214.63 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "e8e97f3b-a61a-4c80-aa21-c56a556475ef")
+		)
+		(pin "1"
+			(uuid "204d05e5-6cef-4412-aefc-6b99e0338c6e")
+		)
+		(pin "2"
+			(uuid "3f409f94-2487-43f7-a71a-78cc41ee931c")
+		)
+		(pin "4"
+			(uuid "4320b054-4b67-4b1e-bec6-ec360ca71b4f")
+		)
+		(instances
+			(project "wafel-eval-board"
+				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
+					(reference "U102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 199.39 97.79 270)
 		(mirror x)
@@ -9830,7 +10104,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 215.9 58.42 0)
+		(at 235.585 58.42 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9842,7 +10116,7 @@
 		(fields_autoplaced yes)
 		(uuid "c8b8cb22-cfb3-409a-968c-13bee8e140b5")
 		(property "Reference" "J101"
-			(at 217.17 58.4199 0)
+			(at 236.855 58.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9853,7 +10127,7 @@
 			)
 		)
 		(property "Value" "CAN PORT"
-			(at 217.17 60.9599 0)
+			(at 236.855 60.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9864,7 +10138,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal"
-			(at 215.9 58.42 0)
+			(at 235.585 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9875,7 +10149,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 58.42 0)
+			(at 235.585 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9886,7 +10160,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 215.9 58.42 0)
+			(at 235.585 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

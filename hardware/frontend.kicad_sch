@@ -3681,12 +3681,6 @@
 		(uuid "218746a3-f43a-4a55-8300-93c0917e55f4")
 	)
 	(junction
-		(at 151.13 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "269f7237-2a66-422e-afda-f162d117b295")
-	)
-	(junction
 		(at 137.16 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3835,12 +3829,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0559657-7c5a-4c8c-b874-c1f043908ea5")
-	)
-	(junction
-		(at 135.89 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e32ef364-ceab-4ea0-a752-88f483a0a1da")
 	)
 	(junction
 		(at 154.94 62.23)
@@ -4156,16 +4144,6 @@
 		)
 		(uuid "03f4fb25-9f45-4b80-b4d8-771b33d47dde")
 	)
-	(wire
-		(pts
-			(xy 135.89 128.27) (xy 135.89 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03f64c76-e766-4118-a0fe-8060c4acc41c")
-	)
 	(polyline
 		(pts
 			(xy 226.06 59.69) (xy 226.06 127)
@@ -4305,16 +4283,6 @@
 			(type default)
 		)
 		(uuid "11efb4e2-171a-40ad-9505-493f9c9851d4")
-	)
-	(wire
-		(pts
-			(xy 151.13 125.73) (xy 151.13 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "137646fd-d8fc-4fbd-a940-75a400912ab8")
 	)
 	(wire
 		(pts
@@ -4998,7 +4966,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 130.81) (xy 151.13 143.51)
+			(xy 151.13 125.73) (xy 151.13 143.51)
 		)
 		(stroke
 			(width 0)
@@ -5138,7 +5106,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 130.81) (xy 135.89 143.51)
+			(xy 135.89 128.27) (xy 135.89 143.51)
 		)
 		(stroke
 			(width 0)
@@ -6410,9 +6378,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "037cca0a-1397-4b42-9ba7-8d845cf5be4a")
 		(property "Reference" "TH204"
@@ -7061,7 +7029,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 212.09 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -7463,9 +7431,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "38ade227-c0bc-4a85-a8e8-135f4dc72b62")
 		(property "Reference" "TH201"
@@ -8080,7 +8048,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 246.38 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -8330,7 +8298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 212.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9155,85 +9123,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 135.89 130.81 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "88672265-398b-430f-b0f7-711f353bab29")
-		(property "Reference" "SRN201"
-			(at 140.97 130.81 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 137.9221 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 135.89 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 135.89 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b60eeaaf-7b67-4bdb-94f0-3a93d6e3e757")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "SRN201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode:BAT54SDW")
 		(at 158.75 62.23 0)
 		(unit 3)
@@ -9534,7 +9423,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 246.38 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -10072,9 +9961,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "bc3d01b7-5efb-471e-ae7a-f690ba5b6bad")
 		(property "Reference" "TH203"
@@ -10154,91 +10043,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
 					(reference "TH203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 151.13 130.81 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bccedb8e-fac7-4cb8-9b5e-e987255c64eb")
-		(property "Reference" "SRP201"
-			(at 156.21 130.81 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 153.1621 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 151.13 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.13 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 151.13 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b790609f-b004-45e3-a10d-96815fc7ee6e")
-		)
-		(instances
-			(project "frontend"
-				(path "/00a1254e-6313-43f2-bc4f-c22473deb189"
-					(reference "SRP101")
-					(unit 1)
-				)
-			)
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3/204526d9-bdaf-4b36-9252-b50630c4791c"
-					(reference "SRP201")
 					(unit 1)
 				)
 			)
@@ -10913,9 +10717,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "d4843635-7b46-4216-a587-51c0b96c89a6")
 		(property "Reference" "TH202"
@@ -11448,7 +11252,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 212.09 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -12228,9 +12032,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "ff3bf8a9-fa42-477f-a459-077b29c1888b")
 		(property "Reference" "TH205"

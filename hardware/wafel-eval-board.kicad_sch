@@ -5351,7 +5351,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 92.71) (xy 196.85 92.71)
+			(xy 187.96 92.71) (xy 204.47 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5800,7 +5800,7 @@
 		(uuid "c0d1ac03-2e5f-4fd2-824d-a01894753836")
 	)
 	(label "CH"
-		(at 193.04 92.71 0)
+		(at 199.39 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9782,85 +9782,6 @@
 			(project "wafel-eval-board"
 				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
 					(reference "R101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 199.39 92.71 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bdce73c4-386e-47fc-84e3-020ab9c6be4b")
-		(property "Reference" "H114"
-			(at 203.2 91.4399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CH"
-			(at 203.2 93.9799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
-			(at 199.39 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 199.39 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 199.39 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "69225e71-25a3-4fa7-984f-2028b65d561b")
-		)
-		(instances
-			(project "wafel-eval-board"
-				(path "/3e668e3e-3e16-4665-a807-4735962c41d3"
-					(reference "H114")
 					(unit 1)
 				)
 			)

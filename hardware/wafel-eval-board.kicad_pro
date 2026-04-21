@@ -205,7 +205,7 @@
         0.2,
         0.4,
         0.6,
-        3.0
+        2.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -535,7 +535,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.127,
+        "clearance": 0.12,
         "diff_pair_gap": 0.254,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1524,
@@ -553,7 +553,7 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.5,
+        "clearance": 0.4,
         "diff_pair_gap": 0.254,
         "diff_pair_width": 0.1524,
         "line_style": 0,

@@ -3734,15 +3734,11 @@
 		(uuid "009eb2a7-050c-4999-9fdf-523a5f721256")
 	)
 	(no_connect
-		(at 97.79 120.65)
-		(uuid "03c0be6e-6f07-4469-9ce6-cfe6f4fa96d2")
-	)
-	(no_connect
 		(at 128.27 102.87)
 		(uuid "143dcb93-0bed-4851-8a8d-65c278af020c")
 	)
 	(no_connect
-		(at 52.07 128.27)
+		(at 44.45 126.365)
 		(uuid "14cda938-5f30-4a97-a947-aa7ead797551")
 	)
 	(no_connect
@@ -3766,7 +3762,7 @@
 		(uuid "84889c7e-f11c-4f8c-88ff-26044f4f7f3d")
 	)
 	(no_connect
-		(at 52.07 125.73)
+		(at 44.45 123.825)
 		(uuid "8d85a53b-b533-47be-9458-219e3517cdc1")
 	)
 	(no_connect
@@ -3834,6 +3830,15 @@
 			(type default)
 		)
 		(uuid "68ead366-3135-4f01-b79a-b220d4113def")
+	)
+	(bus_entry
+		(at 78.74 45.72)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b9b1bd8-5543-4266-ba7f-8140e37fe250")
 	)
 	(bus_entry
 		(at 124.46 31.75)
@@ -3911,7 +3916,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 106.68) (xy 33.02 105.41)
+			(xy 25.4 104.775) (xy 25.4 103.505)
 		)
 		(stroke
 			(width 0)
@@ -3931,7 +3936,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 120.65) (xy 52.07 120.65)
+			(xy 34.29 118.745) (xy 44.45 118.745)
 		)
 		(stroke
 			(width 0)
@@ -4021,7 +4026,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 135.89) (xy 83.82 133.35)
+			(xy 76.2 133.985) (xy 76.2 131.445)
 		)
 		(stroke
 			(width 0)
@@ -4088,16 +4093,6 @@
 			(type default)
 		)
 		(uuid "347dfa09-b964-4077-af52-266b1c0e326a")
-	)
-	(bus
-		(pts
-			(xy 78.74 26.67) (xy 78.74 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36151499-e135-41d4-96bd-c8c6aa56b132")
 	)
 	(wire
 		(pts
@@ -4171,7 +4166,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 110.49) (xy 52.07 110.49)
+			(xy 34.29 108.585) (xy 44.45 108.585)
 		)
 		(stroke
 			(width 0)
@@ -4251,7 +4246,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 105.41) (xy 52.07 105.41)
+			(xy 39.37 103.505) (xy 44.45 103.505)
 		)
 		(stroke
 			(width 0)
@@ -4301,6 +4296,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.805 120.65) (xy 97.79 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "650b737f-43ef-404c-927f-f3e1d4b81530")
+	)
+	(wire
+		(pts
 			(xy 201.93 90.17) (xy 212.09 90.17)
 		)
 		(stroke
@@ -4311,7 +4316,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 118.11) (xy 52.07 118.11)
+			(xy 34.29 116.205) (xy 44.45 116.205)
 		)
 		(stroke
 			(width 0)
@@ -4341,7 +4346,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 118.11) (xy 82.55 118.11)
+			(xy 85.09 116.205) (xy 74.93 116.205)
 		)
 		(stroke
 			(width 0)
@@ -4401,7 +4406,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 118.11) (xy 33.02 119.38)
+			(xy 25.4 116.205) (xy 25.4 117.475)
 		)
 		(stroke
 			(width 0)
@@ -4461,7 +4466,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 113.03) (xy 52.07 113.03)
+			(xy 24.13 111.125) (xy 44.45 111.125)
 		)
 		(stroke
 			(width 0)
@@ -4488,6 +4493,16 @@
 			(type default)
 		)
 		(uuid "800c4147-bb40-4c87-ad0f-61e1a8414e9c")
+	)
+	(bus
+		(pts
+			(xy 78.74 26.67) (xy 78.74 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87208ebf-d7bd-426e-a960-26389f2aac39")
 	)
 	(wire
 		(pts
@@ -4571,7 +4586,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 123.19) (xy 92.71 123.19)
+			(xy 74.93 121.285) (xy 85.09 121.285)
 		)
 		(stroke
 			(width 0)
@@ -4681,7 +4696,17 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 133.35) (xy 82.55 133.35)
+			(xy 81.28 48.26) (xy 91.44 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af1e09c9-878f-42a0-81a1-ea12b53a37cc")
+	)
+	(wire
+		(pts
+			(xy 76.2 131.445) (xy 74.93 131.445)
 		)
 		(stroke
 			(width 0)
@@ -4691,7 +4716,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 110.49) (xy 92.71 110.49)
+			(xy 74.93 108.585) (xy 85.09 108.585)
 		)
 		(stroke
 			(width 0)
@@ -4711,7 +4736,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 113.03) (xy 92.71 113.03)
+			(xy 74.93 111.125) (xy 85.09 111.125)
 		)
 		(stroke
 			(width 0)
@@ -4851,7 +4876,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 118.11) (xy 33.02 118.11)
+			(xy 24.13 116.205) (xy 25.4 116.205)
 		)
 		(stroke
 			(width 0)
@@ -4861,7 +4886,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 105.41) (xy 36.83 105.41)
+			(xy 25.4 103.505) (xy 29.21 103.505)
 		)
 		(stroke
 			(width 0)
@@ -4951,7 +4976,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 120.65) (xy 92.71 120.65)
+			(xy 74.93 118.745) (xy 85.09 118.745)
 		)
 		(stroke
 			(width 0)
@@ -4971,7 +4996,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 115.57) (xy 82.55 115.57)
+			(xy 85.09 113.665) (xy 74.93 113.665)
 		)
 		(stroke
 			(width 0)
@@ -5021,7 +5046,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 115.57) (xy 52.07 115.57)
+			(xy 24.13 113.665) (xy 44.45 113.665)
 		)
 		(stroke
 			(width 0)
@@ -5060,7 +5085,7 @@
 		(uuid "0a6812ce-de33-4f0c-992b-a5b6ecc716f5")
 	)
 	(label "~{CAN_FAULT}"
-		(at 92.71 120.65 180)
+		(at 85.09 118.745 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5080,7 +5105,7 @@
 		(uuid "131c4474-4eb8-4186-8b98-8fb5408b0490")
 	)
 	(label "CAN_EN"
-		(at 92.71 123.19 180)
+		(at 85.09 121.285 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5100,7 +5125,7 @@
 		(uuid "1a6df94c-ee14-42e8-844f-bbec3f3e8070")
 	)
 	(label "CAN_RX"
-		(at 41.91 118.11 0)
+		(at 34.29 116.205 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5120,7 +5145,7 @@
 		(uuid "2a7271b4-f188-4347-8262-50da29a6e137")
 	)
 	(label "~{CAN_STB}"
-		(at 92.71 110.49 180)
+		(at 85.09 108.585 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5140,7 +5165,7 @@
 		(uuid "3ab446ac-03d3-49d5-9ee1-a1697e5f5be4")
 	)
 	(label "CAN_TX"
-		(at 41.91 120.65 0)
+		(at 34.29 118.745 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5230,7 +5255,7 @@
 		(uuid "7f7ad365-c9d4-4840-8b44-cafdbf39335e")
 	)
 	(label "ALERT"
-		(at 92.71 113.03 180)
+		(at 85.09 111.125 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5250,7 +5275,7 @@
 		(uuid "8f9dd86f-69d1-4f66-af55-b0ededa7bc10")
 	)
 	(label "UART.RX"
-		(at 41.91 113.03 0)
+		(at 34.29 111.125 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5309,8 +5334,18 @@
 		)
 		(uuid "a83367ca-3497-45a6-852d-00ba11765766")
 	)
+	(label "WAKE"
+		(at 91.44 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b68d7aad-46cd-4f92-b758-135a66c28113")
+	)
 	(label "UART.TX"
-		(at 41.91 115.57 0)
+		(at 34.29 113.665 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5320,7 +5355,7 @@
 		(uuid "c56adb90-3275-4831-bbe2-00e7cad5e529")
 	)
 	(label "RST_SHUT"
-		(at 41.91 110.49 0)
+		(at 34.29 108.585 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5340,7 +5375,7 @@
 		(uuid "f305c126-02dd-43f9-8f7c-a624c6a32e67")
 	)
 	(label "SPI.MOSI"
-		(at 92.71 118.11 180)
+		(at 85.09 116.205 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5349,8 +5384,18 @@
 		)
 		(uuid "fc86db79-699a-4d33-82c2-0857c9064586")
 	)
+	(label "WAKE"
+		(at 90.805 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc87e4b6-1008-43ed-bfae-48237a98032b")
+	)
 	(label "SPI.MISO"
-		(at 92.71 115.57 180)
+		(at 85.09 113.665 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5415,7 +5460,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 33.02 119.38 0)
+		(at 25.4 117.475 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5426,7 +5471,7 @@
 		(fields_autoplaced yes)
 		(uuid "054d4a1a-c1ab-450f-9124-669596b27a05")
 		(property "Reference" "#PWR0802"
-			(at 33.02 125.73 0)
+			(at 25.4 123.825 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5437,7 +5482,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 124.46 0)
+			(at 25.4 122.555 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5447,7 +5492,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 119.38 0)
+			(at 25.4 117.475 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5458,7 +5503,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 119.38 0)
+			(at 25.4 117.475 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5469,7 +5514,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 119.38 0)
+			(at 25.4 117.475 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6157,7 +6202,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 26.67 115.57 0)
+		(at 19.05 113.665 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6168,7 +6213,7 @@
 		(dnp no)
 		(uuid "33155893-452d-433e-9e7f-8b66f0d90379")
 		(property "Reference" "J801"
-			(at 25.4 114.2999 0)
+			(at 17.78 112.3949 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6179,7 +6224,7 @@
 			)
 		)
 		(property "Value" "UART1"
-			(at 25.4 116.8399 0)
+			(at 17.78 114.9349 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6190,7 +6235,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical"
-			(at 26.67 115.57 0)
+			(at 19.05 113.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6201,7 +6246,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 115.57 0)
+			(at 19.05 113.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6212,7 +6257,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 26.67 115.57 0)
+			(at 19.05 113.665 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6410,7 +6455,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 135.89 0)
+		(at 76.2 133.985 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6421,7 +6466,7 @@
 		(fields_autoplaced yes)
 		(uuid "5b28a9af-e311-4f47-a8e8-2b8a5ee6bce1")
 		(property "Reference" "#PWR0803"
-			(at 83.82 142.24 0)
+			(at 76.2 140.335 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6432,7 +6477,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.82 140.97 0)
+			(at 76.2 139.065 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6442,7 +6487,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 135.89 0)
+			(at 76.2 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6453,7 +6498,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 135.89 0)
+			(at 76.2 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6464,7 +6509,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 135.89 0)
+			(at 76.2 133.985 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6488,7 +6533,7 @@
 	)
 	(symbol
 		(lib_id "NUCLEO-L34KC:NUCLEO-L432KC")
-		(at 67.31 118.11 0)
+		(at 59.69 116.205 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6499,7 +6544,7 @@
 		(fields_autoplaced yes)
 		(uuid "636ed0c8-2393-404e-b690-1a9fcda88d75")
 		(property "Reference" "U801"
-			(at 67.31 92.71 0)
+			(at 59.69 90.805 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6509,7 +6554,7 @@
 			)
 		)
 		(property "Value" "NUCLEO-L432KC"
-			(at 67.31 95.25 0)
+			(at 59.69 93.345 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6519,7 +6564,7 @@
 			)
 		)
 		(property "Footprint" "wafel-eval-board:MODULE_NUCLEO-L432KC"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6531,7 +6576,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/en/evaluation-tools/nucleo-l432kc.html#documentation"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6542,7 +6587,7 @@
 			)
 		)
 		(property "Description" "STM32L432KC, mbed-Enabled Development Nucleo-32 STM32L4 ARM® Cortex®-M4 MCU 32-Bit Embedded Evaluation Board"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6554,7 +6599,7 @@
 			)
 		)
 		(property "MF" "STMicroelectronics"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6566,7 +6611,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "N/A"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6578,7 +6623,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6590,7 +6635,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6602,7 +6647,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/NUCLEO-L432KC/STMicroelectronics/view-part/?ref=eda"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6614,7 +6659,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6626,7 +6671,7 @@
 			)
 		)
 		(property "PARTREV" "N/A"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6638,7 +6683,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/NUCLEO-L432KC/STMicroelectronics/view-part/?ref=snap"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6650,7 +6695,7 @@
 			)
 		)
 		(property "MP" "NUCLEO-L432KC"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6662,7 +6707,7 @@
 			)
 		)
 		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=628463&manufacturer=STMicroelectronics&part_name=NUCLEO-L432KC&search_term=None"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6674,7 +6719,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6686,7 +6731,7 @@
 			)
 		)
 		(property "MANUFACTURER" "ST Microelectronics"
-			(at 67.31 118.11 0)
+			(at 59.69 116.205 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7828,7 +7873,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 33.02 106.68 0)
+		(at 25.4 104.775 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7839,7 +7884,7 @@
 		(fields_autoplaced yes)
 		(uuid "bca8af5b-84c9-4d33-b0c2-942d659951e0")
 		(property "Reference" "#PWR0801"
-			(at 33.02 113.03 0)
+			(at 25.4 111.125 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7850,7 +7895,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 111.76 0)
+			(at 25.4 109.855 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7860,7 +7905,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 106.68 0)
+			(at 25.4 104.775 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7871,7 +7916,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 106.68 0)
+			(at 25.4 104.775 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7882,7 +7927,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 106.68 0)
+			(at 25.4 104.775 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8455,7 +8500,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 41.91 105.41 0)
+		(at 34.29 103.505 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8466,7 +8511,7 @@
 		(fields_autoplaced yes)
 		(uuid "d8b12c55-190f-4b0e-8628-67436575fe34")
 		(property "Reference" "SW801"
-			(at 41.91 97.79 0)
+			(at 34.29 95.885 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8476,7 +8521,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 41.91 100.33 0)
+			(at 34.29 98.425 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8486,7 +8531,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS810"
-			(at 41.91 100.33 0)
+			(at 34.29 98.425 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8497,7 +8542,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 100.33 0)
+			(at 34.29 98.425 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8508,7 +8553,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 41.91 105.41 0)
+			(at 34.29 103.505 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8519,7 +8564,7 @@
 			)
 		)
 		(property "LCSC" "C720477"
-			(at 41.91 105.41 0)
+			(at 34.29 103.505 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -1714,7 +1714,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C306"
-			(at 0 0 90)
+			(at 0 -3.25 90)
 			(layer "F.SilkS")
 			(uuid "bceaedfc-0372-4687-9009-5c9fbaaebd28")
 			(effects
@@ -10227,7 +10227,7 @@
 		(descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R105"
-			(at 0 0 90)
+			(at 0 -3 90)
 			(layer "F.SilkS")
 			(uuid "98199705-3e9f-43b0-94b7-98cdc41bb8e7")
 			(effects
@@ -10385,7 +10385,7 @@
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D303"
-			(at 0 0 0)
+			(at -4.249348 0 0)
 			(layer "F.SilkS")
 			(uuid "cd8524de-36f3-4ad2-9c24-ce3ecd2404dd")
 			(effects
@@ -15366,7 +15366,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C305"
-			(at 0 0 0)
+			(at 0 2.65 0)
 			(layer "F.SilkS")
 			(uuid "b774d049-2a32-46c7-b369-377ff8ed7bf5")
 			(effects
@@ -17997,7 +17997,7 @@
 		(descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R104"
-			(at 0 0 90)
+			(at 0 2.75 90)
 			(layer "F.SilkS")
 			(uuid "bb0c678d-818e-4fbf-964f-a80d755cfc2a")
 			(effects
@@ -24999,7 +24999,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C302"
-			(at 0 -2.6 90)
+			(at 0 2.525 90)
 			(layer "F.SilkS")
 			(uuid "ee3d4964-2106-4006-871d-b32383ae63d9")
 			(effects
@@ -28900,7 +28900,7 @@
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D304"
-			(at 0 0 90)
+			(at 0 1.85 90)
 			(layer "F.SilkS")
 			(uuid "419ef2b9-1901-420b-8aa8-68670703a63d")
 			(effects
@@ -36104,7 +36104,7 @@
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D307"
-			(at 0 0 0)
+			(at 0 -2.075 0)
 			(layer "F.SilkS")
 			(uuid "58083a9d-585f-4398-b297-4dddcde6dfab")
 			(effects
@@ -49395,6 +49395,7 @@
 		(property "Reference" "D305"
 			(at -0.15 0 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "090906b7-b5e1-4cbc-a70d-8b54667582de")
 			(effects
 				(font
@@ -53737,28 +53738,6 @@
 		)
 		(layer "F.SilkS")
 		(uuid "5302c0cc-7574-4a62-add3-a871a64a5b80")
-	)
-	(gr_rect
-		(start 198.475 76.125)
-		(end 206.8 89.5)
-		(stroke
-			(width 0.254)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "6eaa83aa-4a46-47c6-bd09-f7039ec97aaf")
-	)
-	(gr_rect
-		(start 209.6 78.505)
-		(end 219.85 90.255)
-		(stroke
-			(width 0.254)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "093d382d-2d2e-45f8-83a1-56bb02f7b940")
 	)
 	(gr_rect
 		(start 58.625 90.2)

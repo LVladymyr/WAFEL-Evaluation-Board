@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.051028,
-          "width": 1.31318
+          "height": 0.95,
+          "width": 0.9
         },
         "silk_line_width": 0.1524,
         "silk_text_italic": false,
@@ -82,7 +82,7 @@
         "footprint_filters_mismatch": "ignore",
         "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
         "hole_to_hole": "warning",
@@ -950,7 +950,7 @@
         "uuid": "3e668e3e-3e16-4665-a807-4735962c41d3"
       }
     ],
-    "used_designators": "U102,D202-203",
+    "used_designators": "D202-203,U102",
     "variants": []
   },
   "sheets": [

@@ -4791,7 +4791,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C104"
-			(at 0 0 0)
+			(at 4.017501 0 0)
 			(layer "F.SilkS")
 			(uuid "a4810225-c35e-4c67-b98b-0481cd28b8f4")
 			(effects
@@ -7123,6 +7123,7 @@
 		(property "Reference" "R103"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "02b63564-a618-45f2-8015-eabe8b6ab7f1")
 			(effects
 				(font
@@ -7544,7 +7545,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C105"
-			(at 0 0 90)
+			(at 3.325 0 90)
 			(layer "F.SilkS")
 			(uuid "95dc203f-11ea-4664-92bf-0e3d43f8f30e")
 			(effects
@@ -10068,6 +10069,7 @@
 		(property "Reference" "C110"
 			(at 0 0 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5fb700ed-1086-444e-87a0-232dadb39369")
 			(effects
 				(font
@@ -13822,7 +13824,7 @@
 		(descr "HSOP, 8 Pin (https://www.st.com/resource/en/datasheet/l5973d.pdf)")
 		(tags "HSOP SO")
 		(property "Reference" "U101"
-			(at 0 -0.0675 0)
+			(at -0.7 4.555 90)
 			(layer "F.SilkS")
 			(uuid "f5cfc33f-a429-438b-8855-e31b670c4c1c")
 			(effects
@@ -14938,6 +14940,7 @@
 		(property "Reference" "C111"
 			(at 0 0 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "359d98ba-a0b3-485b-9df9-9f9ea46b1bb6")
 			(effects
 				(font
@@ -15841,7 +15844,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R107"
-			(at 0 0 90)
+			(at -3.375 0 90)
 			(layer "F.SilkS")
 			(uuid "b6f02113-ba31-49bc-be47-117f26d811a1")
 			(effects
@@ -24507,6 +24510,7 @@
 		(property "Reference" "R108"
 			(at 0 0 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "9f0de53e-17f3-40d8-9a51-223604824960")
 			(effects
 				(font
@@ -26692,7 +26696,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C109"
-			(at 0 0 90)
+			(at 0 -2.125 90)
 			(layer "F.SilkS")
 			(uuid "c5b8258f-1865-4019-97d9-1233f7124d0c")
 			(effects
@@ -29731,6 +29735,7 @@
 		(property "Reference" "C106"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "5786b251-acc8-4f04-aa5f-ad2efff26c63")
 			(effects
 				(font
@@ -31888,7 +31893,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C102"
-			(at 0 0 90)
+			(at -2.85 -2.2 90)
 			(layer "F.SilkS")
 			(uuid "974868bc-321a-47b6-bdc4-a8ef7e40879f")
 			(effects
@@ -33753,6 +33758,7 @@
 		(property "Reference" "R106"
 			(at 0 0.04 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "dac38b31-8ad2-4412-9705-d054f076c6d4")
 			(effects
 				(font
@@ -34436,6 +34442,7 @@
 		(property "Reference" "C108"
 			(at 0 0 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1c52d70b-6ded-41eb-abb9-f31ee058f761")
 			(effects
 				(font
@@ -44102,9 +44109,9 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C107"
-			(at 0 0 0)
+			(at -1.55 1.2 0)
 			(layer "F.SilkS")
-			(uuid "cdb463c7-431f-46df-8f1d-95c42b72527f")
+			(uuid "10433119-e52a-43df-aa09-b04efa305123")
 			(effects
 				(font
 					(size 1 1)
@@ -44115,7 +44122,7 @@
 		(property "Value" "NC"
 			(at 0 1.43 0)
 			(layer "F.Fab")
-			(uuid "f270cb41-9ec3-4619-b3bf-7c26b28942f7")
+			(uuid "565f0518-4d38-4cc4-95b2-b4890a5b0533")
 			(effects
 				(font
 					(size 1 1)
@@ -44127,7 +44134,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "aab6ff47-4b4a-49b4-967b-7920b885e200")
+			(uuid "ba35fcdd-af90-4dd5-b1e0-1d5977acb545")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44138,7 +44145,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8f375ff9-82a1-4cbb-b920-c325edb64adc")
+			(uuid "2448253b-6d9b-4701-a8d0-ff9aa47d561e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45445,7 +45452,7 @@
 		(descr "Inductor, KOHERelec, MDA7030, 7.1x6.6x2.8mm, (http://www.kohergroup.com/template/default/pdf/MDA7030.pdf)")
 		(tags "high-current power shielded")
 		(property "Reference" "L102"
-			(at 0 0 90)
+			(at 0 -4.475 90)
 			(layer "F.SilkS")
 			(uuid "4c959e8c-6f84-43a6-9975-5800a6d4f4e9")
 			(effects
@@ -47333,6 +47340,7 @@
 		(property "Reference" "R102"
 			(at 0 -0.04 90)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "10862185-8686-4cde-b479-70cce1e92fc1")
 			(effects
 				(font
@@ -49677,6 +49685,7 @@
 		(property "Reference" "R101"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "98fe8fa1-a779-48be-8bef-e9ba3df1de81")
 			(effects
 				(font
@@ -51188,6 +51197,7 @@
 		(property "Reference" "R109"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0020d264-24da-4d71-a15f-7d6dca11b710")
 			(effects
 				(font
@@ -51652,7 +51662,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C103"
-			(at 0 0.065466 0)
+			(at -4.125 0.025 0)
 			(layer "F.SilkS")
 			(uuid "a9c970e8-a6d4-4719-ae4a-ec1c41de47eb")
 			(effects

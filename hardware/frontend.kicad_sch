@@ -5549,6 +5549,16 @@
 		)
 		(uuid "20541c9c-3c7a-4782-b95c-c5cbfc5d124d")
 	)
+	(label "xSR_P"
+		(at 151.13 130.175 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "20f4048c-79ac-47ae-a375-a302ce74a498")
+	)
 	(label "SPI.MISO"
 		(at 96.52 85.09 0)
 		(effects
@@ -5749,6 +5759,16 @@
 		)
 		(uuid "9b4ecfbb-5274-414e-b0d2-3bb96bd5fe9c")
 	)
+	(label "xSR_N"
+		(at 135.89 130.175 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9dcf40c3-deea-41f9-a123-8a1326884d38")
+	)
 	(label "ALERT"
 		(at 78.74 92.71 0)
 		(effects
@@ -5920,7 +5940,7 @@
 		)
 		(uuid "5507b6b6-83cd-4837-9ad8-a4b4e95441e4")
 	)
-	(hierarchical_label "BAT-"
+	(hierarchical_label "SR_P"
 		(shape input)
 		(at 162.56 171.45 0)
 		(effects
@@ -5942,7 +5962,7 @@
 		)
 		(uuid "736a92c3-f6ca-494a-9460-e1b406eaefc6")
 	)
-	(hierarchical_label "PACK-"
+	(hierarchical_label "SR_N"
 		(shape input)
 		(at 124.46 171.45 180)
 		(effects

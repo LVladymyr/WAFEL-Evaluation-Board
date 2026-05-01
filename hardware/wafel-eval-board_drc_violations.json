@@ -1,0 +1,3114 @@
+{
+  "board": "/home/vgs/Projects/hobby/WAFEL_EVAL_BOARD/hardware/wafel-eval-board.kicad_pcb",
+  "timestamp": "2026-04-23T22:26:19",
+  "total_violations": 309,
+  "violation_counts": {
+    "clearance": 3,
+    "starved_thermal": 1,
+    "track_dangling": 5,
+    "isolated_copper": 1,
+    "silk_edge_clearance": 2,
+    "holes_co_located": 1,
+    "lib_footprint_issues": 199,
+    "text_thickness": 60,
+    "silk_over_copper": 8,
+    "silk_overlap": 29
+  },
+  "severity_counts": {
+    "error": 4,
+    "warning": 305,
+    "info": 0
+  },
+  "violations": [
+    {
+      "type": "clearance",
+      "severity": "error",
+      "message": "Clearance violation (netclass 'Default' clearance 0,1200 mm; actual 0,1136 mm)",
+      "location": {
+        "x": 101.4739,
+        "y": 96.583,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "clearance",
+      "severity": "error",
+      "message": "Clearance violation (netclass 'Default' clearance 0,1200 mm; actual 0,1125 mm)",
+      "location": {
+        "x": 145.4,
+        "y": 98.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "clearance",
+      "severity": "error",
+      "message": "Clearance violation (netclass 'Default' clearance 0,1200 mm; actual 0,0875 mm)",
+      "location": {
+        "x": 86.3,
+        "y": 100.75,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "starved_thermal",
+      "severity": "error",
+      "message": "Thermal relief connection to zone incomplete (layer Front; zone min spoke count 2; actual 1)",
+      "location": {
+        "x": 58.5,
+        "y": 46.375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "track_dangling",
+      "severity": "warning",
+      "message": "Track has unconnected end",
+      "location": {
+        "x": 199.875,
+        "y": 81.9,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "track_dangling",
+      "severity": "warning",
+      "message": "Track has unconnected end",
+      "location": {
+        "x": 152.85,
+        "y": 62.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "track_dangling",
+      "severity": "warning",
+      "message": "Track has unconnected end",
+      "location": {
+        "x": 208.8,
+        "y": 61.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "track_dangling",
+      "severity": "warning",
+      "message": "Track has unconnected end",
+      "location": {
+        "x": 207.036427,
+        "y": 102.386427,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "track_dangling",
+      "severity": "warning",
+      "message": "Track has unconnected end",
+      "location": {
+        "x": 191.255,
+        "y": 65.77,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "isolated_copper",
+      "severity": "warning",
+      "message": "Isolated copper fill",
+      "location": {
+        "x": 58.5,
+        "y": 46.375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_edge_clearance",
+      "severity": "warning",
+      "message": "Silkscreen clipped by board edge",
+      "location": {
+        "x": 58.0,
+        "y": 45.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_edge_clearance",
+      "severity": "warning",
+      "message": "Silkscreen clipped by board edge",
+      "location": {
+        "x": 58.0,
+        "y": 45.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "holes_co_located",
+      "severity": "warning",
+      "message": "Drilled holes co-located",
+      "location": {
+        "x": 197.245,
+        "y": 77.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 81.487,
+        "y": 93.886,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.025,
+        "y": 97.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 77.578,
+        "y": 96.484,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 123.225,
+        "y": 98.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 72.6,
+        "y": 97.977,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 214.9,
+        "y": 80.9375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 214.9,
+        "y": 85.9375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 122.625,
+        "y": 73.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 188.375,
+        "y": 57.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 68.45,
+        "y": 77.825,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 102.9364,
+        "y": 96.583,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 128.818182,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 81.487,
+        "y": 95.41,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Fuse' is not enabled in the current configuration",
+      "location": {
+        "x": 247.935,
+        "y": 102.88,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 143.6,
+        "y": 83.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 97.8608,
+        "y": 100.8572,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'LED_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 197.18,
+        "y": 92.12,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 125.5,
+        "y": 71.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 149.625,
+        "y": 78.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.775,
+        "y": 94.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 119.8675,
+        "y": 100.4024,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 124.8,
+        "y": 50.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 108.2,
+        "y": 98.375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 107.6,
+        "y": 48.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 139.015,
+        "y": 77.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 106.9101,
+        "y": 95.4562,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 79.417501,
+        "y": 84.565466,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 63.277,
+        "y": 99.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 143.6,
+        "y": 86.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 191.75,
+        "y": 50.9524,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 120.590909,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 88.65,
+        "y": 48.975,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Inductor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 74.01,
+        "y": 79.3,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.49,
+        "y": 60.58,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 145.0625,
+        "y": 97.9,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 72.6,
+        "y": 100.65,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 211.0055,
+        "y": 81.907,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 121.025,
+        "y": 55.75,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 91.05,
+        "y": 81.81,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 106.4,
+        "y": 97.775,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 91.9,
+        "y": 79.075,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 203.05,
+        "y": 68.78,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 126.0,
+        "y": 61.905,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 210.975,
+        "y": 84.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 99.6,
+        "y": 98.225,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 197.8,
+        "y": 99.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 136.552728,
+        "y": 106.553,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 77.578,
+        "y": 100.328,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 78.4,
+        "y": 48.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'TestPoint' is not enabled in the current configuration",
+      "location": {
+        "x": 139.95,
+        "y": 73.675,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 106.392,
+        "y": 100.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 97.575,
+        "y": 97.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 97.9,
+        "y": 88.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 177.3,
+        "y": 85.725,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 203.399348,
+        "y": 60.475652,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 106.825,
+        "y": 94.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 206.75,
+        "y": 62.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 73.501,
+        "y": 93.98,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 219.3222,
+        "y": 91.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 148.9,
+        "y": 96.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 136.825,
+        "y": 73.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 125.7125,
+        "y": 56.8375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 239.6744,
+        "y": 52.5272,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 145.0375,
+        "y": 101.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 191.5,
+        "y": 108.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 127.9106,
+        "y": 50.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 75.775,
+        "y": 48.95,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 257.9242,
+        "y": 62.4737,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 207.875,
+        "y": 83.2375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 144.3,
+        "y": 95.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 148.425,
+        "y": 98.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_SO' is not enabled in the current configuration",
+      "location": {
+        "x": 85.575,
+        "y": 81.145,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 132.175,
+        "y": 94.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 80.25,
+        "y": 48.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 115.375,
+        "y": 83.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 204.4125,
+        "y": 86.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 94.55,
+        "y": 88.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 115.2714,
+        "y": 93.7866,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 112.363636,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 193.375,
+        "y": 55.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 123.2852,
+        "y": 100.908,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 93.561186,
+        "y": 79.075,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 128.65,
+        "y": 62.5625,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Connector_PinHeader_1.27mm' is not enabled in the current configuration",
+      "location": {
+        "x": 149.26,
+        "y": 69.36,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 115.2987,
+        "y": 95.2536,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 258.1222,
+        "y": 91.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 211.3375,
+        "y": 79.507,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Connector_JST' is not enabled in the current configuration",
+      "location": {
+        "x": 120.075,
+        "y": 53.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 150.2,
+        "y": 98.975,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 123.8382,
+        "y": 95.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 165.15,
+        "y": 85.7375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 209.6,
+        "y": 58.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 95.909091,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 81.0,
+        "y": 100.75,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 141.8,
+        "y": 98.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_DIP' is not enabled in the current configuration",
+      "location": {
+        "x": 113.95,
+        "y": 47.445,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 211.775,
+        "y": 73.3,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Jumper' is not enabled in the current configuration",
+      "location": {
+        "x": 197.525,
+        "y": 95.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 152.4,
+        "y": 91.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 112.95,
+        "y": 76.925,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 113.9,
+        "y": 57.35,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 74.276,
+        "y": 97.689,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 98.675,
+        "y": 95.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 125.0,
+        "y": 98.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 232.3718,
+        "y": 62.4229,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 205.775,
+        "y": 75.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 111.4625,
+        "y": 100.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 62.7875,
+        "y": 93.95,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 112.75,
+        "y": 67.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 150.2,
+        "y": 93.475,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 68.53335,
+        "y": 93.98,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 200.375,
+        "y": 80.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 133.4,
+        "y": 98.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 82.766,
+        "y": 98.649,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 119.8375,
+        "y": 96.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 114.8957,
+        "y": 97.7268,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 225.9874,
+        "y": 69.9227,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 124.425,
+        "y": 65.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 251.4536,
+        "y": 84.9981,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 192.775,
+        "y": 105.015,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Connector_PinHeader_1.27mm' is not enabled in the current configuration",
+      "location": {
+        "x": 138.16,
+        "y": 60.93,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 90.3,
+        "y": 85.775,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 128.2625,
+        "y": 96.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.825,
+        "y": 85.675,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 189.175,
+        "y": 103.925,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 206.2375,
+        "y": 92.775,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 88.175,
+        "y": 70.45,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 98.6778,
+        "y": 93.8612,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 85.9375,
+        "y": 100.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 113.35,
+        "y": 63.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 148.525,
+        "y": 93.3,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 206.525,
+        "y": 52.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 116.6,
+        "y": 98.225,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 101.25,
+        "y": 88.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 209.575,
+        "y": 68.78,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 131.625,
+        "y": 97.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 87.681818,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 200.625,
+        "y": 76.625,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 138.5625,
+        "y": 68.35,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 136.7375,
+        "y": 96.45,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 201.1875,
+        "y": 85.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 149.615,
+        "y": 71.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 202.3,
+        "y": 64.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 90.175,
+        "y": 93.9,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 171.2468,
+        "y": 106.7098,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Connector_PinHeader_1.27mm' is not enabled in the current configuration",
+      "location": {
+        "x": 149.275,
+        "y": 74.08,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 91.025,
+        "y": 83.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 210.275,
+        "y": 73.225,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 138.225,
+        "y": 75.45,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Fuse' is not enabled in the current configuration",
+      "location": {
+        "x": 108.225,
+        "y": 73.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 200.875,
+        "y": 82.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 206.95,
+        "y": 59.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 104.136364,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 94.3796,
+        "y": 96.65,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 205.625,
+        "y": 69.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 195.775,
+        "y": 90.45,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 257.8,
+        "y": 98.875,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 142.86,
+        "y": 60.695,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 79.6,
+        "y": 77.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 69.215,
+        "y": 100.168,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 245.1226,
+        "y": 62.3477,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 90.225,
+        "y": 95.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.0,
+        "y": 100.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 225.6222,
+        "y": 56.375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 135.925,
+        "y": 88.575,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'TestPoint' is not enabled in the current configuration",
+      "location": {
+        "x": 92.0,
+        "y": 88.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 102.9364,
+        "y": 100.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 69.215,
+        "y": 96.52,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 123.8087,
+        "y": 93.9104,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 87.625,
+        "y": 77.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 111.4125,
+        "y": 96.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 139.425,
+        "y": 71.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 79.454545,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'MountingHole' is not enabled in the current configuration",
+      "location": {
+        "x": 71.227273,
+        "y": 106.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 92.0,
+        "y": 85.775,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 238.7438,
+        "y": 69.9227,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 89.45,
+        "y": 100.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 89.425,
+        "y": 97.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 62.7,
+        "y": 91.35,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 251.5002,
+        "y": 69.9227,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 257.625,
+        "y": 55.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 190.3,
+        "y": 61.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Connector_JST' is not enabled in the current configuration",
+      "location": {
+        "x": 142.8,
+        "y": 53.225,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 210.15,
+        "y": 63.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 115.425,
+        "y": 85.125,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 143.6,
+        "y": 87.9,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 225.89,
+        "y": 84.9981,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 128.575,
+        "y": 71.825,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 80.934,
+        "y": 97.991,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Capacitor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 126.35,
+        "y": 50.5,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 114.8692,
+        "y": 100.908,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Diode_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 69.85,
+        "y": 84.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 132.225,
+        "y": 95.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 85.9375,
+        "y": 96.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Button_Switch_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 75.3,
+        "y": 72.125,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 140.825,
+        "y": 95.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_TO_SOT_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 211.4875,
+        "y": 55.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Package_SO' is not enabled in the current configuration",
+      "location": {
+        "x": 119.39,
+        "y": 61.16,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "lib_footprint_issues",
+      "severity": "warning",
+      "message": "The footprint library 'Resistor_SMD' is not enabled in the current configuration",
+      "location": {
+        "x": 128.2625,
+        "y": 100.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 123.22,
+        "y": 49.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 154.0,
+        "y": 48.5648,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 249.45,
+        "y": 48.7172,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 78.1,
+        "y": 93.96,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 69.35,
+        "y": 98.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 185.125,
+        "y": 57.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 137.55,
+        "y": 94.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 104.225,
+        "y": 48.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 65.15,
+        "y": 99.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 117.5,
+        "y": 55.825,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 203.05,
+        "y": 67.44,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 78.4,
+        "y": 50.475,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 94.275,
+        "y": 98.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 103.36,
+        "y": 94.08,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 73.501,
+        "y": 92.25,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 129.47,
+        "y": 56.8375,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 72.2,
+        "y": 48.95,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 128.8,
+        "y": 93.95,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 83.2,
+        "y": 48.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 115.375,
+        "y": 81.98,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 204.5,
+        "y": 89.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 111.99,
+        "y": 93.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 128.65,
+        "y": 59.85,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 95.909091,
+        "y": 110.3,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 109.15,
+        "y": 50.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 110.525,
+        "y": 57.45,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 205.775,
+        "y": 77.18,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 60.1,
+        "y": 94.15,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 151.98,
+        "y": 94.82,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 68.6,
+        "y": 91.95,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 196.325,
+        "y": 80.32,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 140.825,
+        "y": 89.03,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 95.17,
+        "y": 93.86,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 111.6076,
+        "y": 63.525,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 147.06,
+        "y": 90.31,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 203.6,
+        "y": 52.55,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 103.375,
+        "y": 88.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 196.475,
+        "y": 76.625,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 197.275,
+        "y": 85.05,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 86.64,
+        "y": 93.93,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 108.225,
+        "y": 71.0184,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 196.4,
+        "y": 82.295,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 135.925,
+        "y": 90.425,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 88.0,
+        "y": 88.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 120.42,
+        "y": 93.96,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 79.454545,
+        "y": 110.3,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 60.675,
+        "y": 89.75,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 77.825,
+        "y": 98.6,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 78.125,
+        "y": 72.125,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 119.39,
+        "y": 66.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 83.705,
+        "y": 59.67,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 72.25,
+        "y": 47.415,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 60.8386,
+        "y": 102.025,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 98.07,
+        "y": 48.325,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 196.4,
+        "y": 78.760629,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 198.11,
+        "y": 70.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 113.313761,
+        "y": 59.653128,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 143.41,
+        "y": 92.04,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 147.11,
+        "y": 84.9,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "text_thickness",
+      "severity": "warning",
+      "message": "Text thickness out of range (TrueType font characters with insufficient stroke weight)",
+      "location": {
+        "x": 60.725,
+        "y": 71.7,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 191.725,
+        "y": 111.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 73.75,
+        "y": 98.377,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 128.8,
+        "y": 110.1,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 231.872309,
+        "y": 101.15,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 231.872309,
+        "y": 104.35,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 237.272309,
+        "y": 101.15,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 237.272309,
+        "y": 104.35,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_over_copper",
+      "severity": "warning",
+      "message": "Silkscreen clipped by solder mask",
+      "location": {
+        "x": 125.0,
+        "y": 98.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 147.675,
+        "y": 94.91,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 147.675,
+        "y": 94.91,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 147.56,
+        "y": 94.775,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 141.2775,
+        "y": 98.662258,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 108.85,
+        "y": 50.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 192.66,
+        "y": 60.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 149.575,
+        "y": 98.8,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 152.5308,
+        "y": 111.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 152.162742,
+        "y": 91.6975,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 152.4374,
+        "y": 89.1,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 152.5308,
+        "y": 111.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 191.725,
+        "y": 111.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 191.725,
+        "y": 111.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 192.66,
+        "y": 62.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 191.725,
+        "y": 111.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 191.725,
+        "y": 111.9124,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 58.56,
+        "y": 50.4,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 78.4,
+        "y": 50.475,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 72.81,
+        "y": 73.71,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 82.2435,
+        "y": 98.886258,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 90.575,
+        "y": 98.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 125.0,
+        "y": 98.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 118.7525,
+        "y": 85.685,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 120.2725,
+        "y": 85.685,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 119.5125,
+        "y": 86.08,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 125.0,
+        "y": 98.0,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 132.775,
+        "y": 98.2,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 107.55,
+        "y": 98.175,
+        "unit": "mm"
+      }
+    },
+    {
+      "type": "silk_overlap",
+      "severity": "warning",
+      "message": "Silkscreen clearance",
+      "location": {
+        "x": 116.0457,
+        "y": 98.1268,
+        "unit": "mm"
+      }
+    }
+  ]
+}
